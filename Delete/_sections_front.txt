@@ -1,0 +1,904 @@
+<?php get_header(); ?>
+
+        <section class="visual">
+            <div class="container">
+                <div class="text-block">
+                    <div class="heading-holder">
+                        <h1>SEO MARKETING</h1>
+                    </div>
+                    <div class="tagline">&nbsp; <p class="element"></p> &nbsp;</div>
+                    <div class="infos">
+                    <span class="info"><i class="fa fa-star"></i> SEO</span>
+                    <span class="info"><i class="fa fa-star"></i> SEM</span>
+                    <span class="info"><i class="fa fa-star"></i> BACKLINK</span>
+                    <span class="info"><i class="fa fa-star"></i> ONEPAGE SEO</span>
+                    <span class="info"><i class="fa fa-star"></i> VALIDATION</span>
+                    </div>
+                </div>
+            </div>
+            <img src="upload/img-decor-01.jpg" alt="" class="bg-stretch">
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div id="cta">
+                    <a href="seo-analysis.html" class="btn btn-primary rounded">Get a Free SEO Analysis</a>
+                </div>
+
+                <div class="section-title text-center">
+                    <h5>WE BRING YOUR DREAMS</h5>
+                    <h3>WHY CHOOSE US</h3>
+                    <hr>
+                </div><!-- end title -->
+
+                <div class="row-fluid service-list">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="serviceBox">
+                            <div class="service-icon withborder color1 hovicon effect-1 sub-a">
+                                <img src="images/icons/icon_01.png" alt="">
+                            </div>
+                            <div class="service-content">
+                                <h3>Target Catch</h3>
+                                <p>
+                                    Nunc sagittis ex malesuada magna imperdiet, ac pulvinar mi faucibus.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- end col -->
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="serviceBox">
+                            <div class="service-icon withborder color2 hovicon effect-1 sub-a">
+                                <img src="images/icons/icon_02.png" alt="">
+                            </div>
+                            <div class="service-content">
+                                <h3>Ranking Monitoring</h3>
+                                <p>
+                                    Pellentesque at tellus vitae augue sodales lobortis eget in ipsum.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- end col -->
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="serviceBox">
+                            <div class="service-icon withborder color3 hovicon effect-1 sub-a">
+                                <img src="images/icons/icon_03.png" alt="">
+                            </div>
+                            <div class="service-content">
+                                <h3>Worldwide Ranking</h3>
+                                <p>
+                                    Aliquam volutpat odio nec lorem tempor, eget feugiat nisi sodales.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- end col -->
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="serviceBox">
+                            <div class="service-icon withborder color4 hovicon effect-1 sub-a">
+                                <img src="images/icons/icon_04.png" alt="">
+                            </div>
+                            <div class="service-content">
+                                <h3>Number 1 In Search</h3>
+                                <p>
+                                    Nam consequat quam ac metus vestibulum, eget vehicula urna pretium.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- end col -->
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="serviceBox">
+                            <div class="service-icon withborder color5 hovicon effect-1 sub-a">
+                                <img src="images/icons/icon_05.png" alt="">
+                            </div>
+                            <div class="service-content">
+                                <h3>Engine Optimization</h3>
+                                <p>
+                                    In egestas arcu scelerisque lorem euismod, eget sollicitudin orci fringilla.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- end col -->
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="serviceBox">
+                            <div class="service-icon withborder color6 hovicon effect-1 sub-a">
+                                <img src="images/icons/icon_06.png" alt="">
+                            </div>
+                            <div class="service-content">
+                                <h3>Research Optimization</h3>
+                                <p>
+                                    Suspendisse eget ligula a turpis semper accumsan at non tortor.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h5>ALL ABOUT SEARCH ENGINES</h5>
+                    <h3>SEO BLOG</h3>
+                    <hr>
+                </div><!-- end title -->
+
+                <div class="row services-wrapper blog-wrapper text-center">
+                    <?php echo ariana_get_recent_post_home(); ?>
+                </div>
+            </div><!-- end container -->
+        </section>
+
+        <section class="section c1">
+            <img class="rocket hidden-xs" src="upload/rocket.png" alt="">
+            <svg id="clouds" class="hidden-xs" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 85 100" preserveAspectRatio="none">
+                <path d="M-5 100 Q 0 20 5 100 Z
+                    M0 100 Q 5 0 10 100
+                    M5 100 Q 10 30 15 100
+                    M10 100 Q 15 10 20 100
+                    M15 100 Q 20 30 25 100
+                    M20 100 Q 25 -10 30 100
+                    M25 100 Q 30 10 35 100
+                    M30 100 Q 35 30 40 100
+                    M35 100 Q 40 10 45 100
+                    M40 100 Q 45 50 50 100
+                    M45 100 Q 50 20 55 100
+                    M50 100 Q 55 40 60 100
+                    M55 100 Q 60 60 65 100
+                    M60 100 Q 65 50 70 100
+                    M65 100 Q 70 20 75 100
+                    M70 100 Q 75 45 80 100
+                    M75 100 Q 80 30 85 100
+                    M80 100 Q 85 20 90 100
+                    M85 100 Q 90 50 95 100
+                    M90 100 Q 95 25 100 100
+                    M95 100 Q 100 15 105 100 Z">
+                </path>
+            </svg>
+
+            <div class="container">
+                <div class="section-title text-center">
+                    <h5>100% Free Analyze Tool</h5>
+                    <h3>ANALYZE YOUR SITE</h3>
+                    <hr>
+                </div><!-- end title -->
+
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 searchcustom">
+                        <div class="field" id="searchform">
+                            <input type="text" id="searchterm" class="form-control" placeholder="Enter your website url" />
+                            <button type="button" class="btn btn-primary" id="search"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="section-title text-center">
+                            <h5>ALL IN ONE SEARCH ENGINE TOOLS</h5>
+                            <h3>SEO SERVICES</h3>
+                            <hr>
+                        </div><!-- end title -->
+
+                        <div class="seo-carousel owl-carousel owl-theme text-center">
+                            <div class="item">
+                                <div class="item-image">
+                                <img src="upload/seo_01.png" alt="" class="img-responsive">
+                                </div><!-- end item-image -->
+                                <div class="item-desc">
+                                    <h4><a href="single-service.html" title="">Mobile Marketing</a></h4>
+                                    <p>Starting from $50.00</p>
+                                </div><!-- end item-desc -->
+                            </div><!-- end seo-item -->
+
+                            <div class="item">
+                                <div class="item-image">
+                                <img src="upload/seo_02.png" alt="" class="img-responsive">
+                                </div><!-- end item-image -->
+                                <div class="item-desc">
+                                    <h4><a href="single-service.html" title="">Video Marketing</a></h4>
+                                    <p>Starting from $20.00</p>
+                                </div><!-- end item-desc -->
+                            </div><!-- end seo-item -->
+
+                            <div class="item">
+                                <div class="item-image">
+                                <img src="upload/seo_03.png" alt="" class="img-responsive">
+                                </div><!-- end item-image -->
+                                <div class="item-desc">
+                                    <h4><a href="single-service.html" title="">Email Marketing</a></h4>
+                                    <p>Starting from $20.00</p>
+                                </div><!-- end item-desc -->
+                            </div><!-- end seo-item -->
+
+                            <div class="item">
+                                <div class="item-image">
+                                <img src="upload/seo_04.png" alt="" class="img-responsive">
+                                </div><!-- end item-image -->
+                                <div class="item-desc">
+                                    <h4><a href="single-service.html" title="">Digital Marketing</a></h4>
+                                    <p>Starting from $20.00</p>
+                                </div><!-- end item-desc -->
+                            </div><!-- end seo-item -->
+
+                            <div class="item">
+                                <div class="item-image">
+                                <img src="upload/seo_01.png" alt="" class="img-responsive">
+                                </div><!-- end item-image -->
+                                <div class="item-desc">
+                                    <h4><a href="single-service.html" title="">Mobile Marketing</a></h4>
+                                    <p>Starting from $50.00</p>
+                                </div><!-- end item-desc -->
+                            </div><!-- end seo-item -->
+
+                            <div class="item">
+                                <div class="item-image">
+                                <img src="upload/seo_02.png" alt="" class="img-responsive">
+                                </div><!-- end item-image -->
+                                <div class="item-desc">
+                                    <h4><a href="single-service.html" title="">Video Marketing</a></h4>
+                                    <p>Starting from $20.00</p>
+                                </div><!-- end item-desc -->
+                            </div><!-- end seo-item -->
+
+                            <div class="item">
+                                <div class="item-image">
+                                <img src="upload/seo_03.png" alt="" class="img-responsive">
+                                </div><!-- end item-image -->
+                                <div class="item-desc">
+                                    <h4><a href="single-service.html" title="">Email Marketing</a></h4>
+                                    <p>Starting from $20.00</p>
+                                </div><!-- end item-desc -->
+                            </div><!-- end seo-item -->
+
+                            <div class="item">
+                                <div class="item-image">
+                                <img src="upload/seo_04.png" alt="" class="img-responsive">
+                                </div><!-- end item-image -->
+                                <div class="item-desc">
+                                    <h4><a href="single-service.html" title="">Digital Marketing</a></h4>
+                                    <p>Starting from $20.00</p>
+                                </div><!-- end item-desc -->
+                            </div><!-- end seo-item -->
+                        </div><!-- end seo-carousel -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <section class="section db">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h5>WE BUILD SEOMARKT WITH AWESOMENESS</h5>
+                    <h3>SEO EXPERT TEAM</h3>
+                    <hr>
+                </div><!-- end title -->
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="seo-team owl-carousel owl-theme text-center">
+                            <div class="item">
+                                <div class="team-image">
+                                <img src="upload/team_01.png" alt="" class="img-responsive">
+                                </div><!-- end item-image -->
+                                <div class="team-desc">
+                                    <h4><a href="#" title="">Jenny DOE</a></h4>
+                                    <p>FOUNDER / CEO</p>
+                                    <div class="social-icons">
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-github"></i></a>
+                                    </div>
+                                </div><!-- end item-desc -->
+                            </div><!-- end seo-item -->
+
+                            <div class="item">
+                                <div class="team-image">
+                                <img src="upload/team_02.png" alt="" class="img-responsive">
+                                </div><!-- end item-image -->
+                                <div class="team-desc">
+                                    <h4><a href="#" title="">Martin WISTENT</a></h4>
+                                    <p>SEO EXPERT</p>
+                                    <div class="social-icons">
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    </div>
+                                </div><!-- end item-desc -->
+                            </div><!-- end seo-item -->
+
+                            <div class="item">
+                                <div class="team-image">
+                                <img src="upload/team_06.png" alt="" class="img-responsive">
+                                </div><!-- end item-image -->
+                                <div class="team-desc">
+                                    <h4><a href="#" title="">Mark JOLY</a></h4>
+                                    <p>DESIGNER</p>
+                                    <div class="social-icons">
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                                    </div>
+                                </div><!-- end item-desc -->
+                            </div><!-- end seo-item -->
+
+                            <div class="item">
+                                <div class="team-image">
+                                <img src="upload/team_04.png" alt="" class="img-responsive">
+                                </div><!-- end item-image -->
+                                <div class="team-desc">
+                                    <h4><a href="#" title="">Suzanna ATILLA</a></h4>
+                                    <p>DEVELOPER</p>
+                                    <div class="social-icons">
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-github"></i></a>
+                                    </div>
+                                </div><!-- end item-desc -->
+                            </div><!-- end seo-item -->
+
+                            <div class="item">
+                                <div class="team-image">
+                                <img src="upload/team_01.png" alt="" class="img-responsive">
+                                </div><!-- end item-image -->
+                                <div class="team-desc">
+                                    <h4><a href="#" title="">Jenny DOE</a></h4>
+                                    <p>FOUNDER / CEO</p>
+                                    <div class="social-icons">
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-github"></i></a>
+                                    </div>
+                                </div><!-- end item-desc -->
+                            </div><!-- end seo-item -->
+                        </div><!-- end seo-carousel -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <section class="section c2">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h5>WE OFFER 90 DAYS MONEY BACK GUARENTEE</h5>
+                    <h3>PRICING & PLAN</h3>
+                    <hr>
+                </div><!-- end title -->
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <div class="pricing-box-06 color9 hovicon effect-1 sub-a">
+                            <div class="pricing-box-06-head">
+                                <h3><sup>$</sup>55.00</h3>
+                                <h4>SEOMARKT PRO</h4>
+                            </div>
+                            <!-- end pricing-box-09-head -->
+                            <div class="pricing-box-06-body">
+                                <ul>
+                                    <li>HTML5 & CSS Video Course</li>
+                                    <li>English Learning Course</li>
+                                    <li>SEO Strategy Course</li>
+                                </ul>
+                            </div>
+                            <!-- end pricing-box-06-body -->
+                            <div class="pricing-box-06-foot">
+                                <a href="#" class="btn btn-primary">Order Now</a>
+                            </div>
+                            <!-- end pricing-box-06-foot -->
+                        </div>
+                        <!-- end pricing-box-06 -->
+                    </div>
+                    <!-- end col -->
+
+                    <div class="col-md-4 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                        <div class="pricing-box-06 color7 hovicon effect-1 sub-a">
+                            <div class="pricing-box-06-head">
+                                <h3><sup>$</sup>100.00</h3>
+                                <h4>SEOMARKT LOCAL</h4>
+                            </div>
+                            <!-- end pricing-box-09-head -->
+                            <div class="pricing-box-06-body">
+                                <ul>
+                                    <li>HTML5 & CSS Video Course</li>
+                                    <li>English Learning Course</li>
+                                    <li>SEO Strategy Course</li>
+                                </ul>
+                            </div>
+                            <!-- end pricing-box-06-body -->
+                            <div class="pricing-box-06-foot">
+                                <a href="#" class="btn btn-primary">Order Now</a>
+                            </div>
+                            <!-- end pricing-box-06-foot -->
+                        </div>
+                        <!-- end pricing-box-06 -->
+                    </div>
+                    <!-- end col -->
+
+                    <div class="col-md-4 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                        <div class="pricing-box-06 color8 hovicon effect-1 sub-a">
+                            <div class="pricing-box-06-head">
+                                <h3><sup>$</sup>200.00</h3>
+                                <h4>SEOMARKT CONTENT</h4>
+                            </div>
+                            <!-- end pricing-box-09-head -->
+                            <div class="pricing-box-06-body">
+                                <ul>
+                                    <li>HTML5 & CSS Video Course</li>
+                                    <li>English Learning Course</li>
+                                    <li>SEO Strategy Course</li>
+                                </ul>
+                            </div>
+                            <!-- end pricing-box-06-body -->
+                            <div class="pricing-box-06-foot">
+                                <a href="#" class="btn btn-primary">Order Now</a>
+                            </div>
+                            <!-- end pricing-box-06-foot -->
+                        </div>
+                        <!-- end pricing-box-06 -->
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h5>WE THING, WE START, WE COMPLETE</h5>
+                    <h3>WORKING PROCESS</h3>
+                    <hr>
+                </div><!-- end title -->
+
+                <div class="row service-section" id="service-section">
+                    <div class="service-bg hidden-sm hidden-xs">
+                      <span class="service-main-bg"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="service-box-inner">
+                            <div class="col-md-4 pull-right col-sm-5">
+                                <img src="upload/big_icon_01.png" class="icon-srv" alt="">
+                            </div>
+                            <div class="col-md-8 content-box col-sm-7">
+                                <h3 class="block-title">Freelancer</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum nibh dictum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="service-box-inner">
+                            <div class="col-md-4 col-sm-5">
+                                <img src="upload/big_icon_02.png" class="icon-srv" alt="">
+                            </div>
+                            <div class="col-md-8 content-box col-sm-7">
+                                <h3 class="block-title">Development</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum nibh dictum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="service-box-inner">
+                            <div class="col-md-4 pull-right col-sm-5">
+                                <img src="upload/big_icon_03.png" class="icon-srv" alt="">
+                            </div>
+                            <div class="col-md-8 content-box col-sm-7">
+                                <h3 class="block-title">Web Design</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum nibh dictum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="service-box-inner">
+                            <div class="col-md-4 col-sm-5">
+                                <img src="upload/big_icon_04.png" class="icon-srv" alt="">
+                            </div>
+                            <div class="col-md-8 content-box col-sm-7">
+                                <h3 class="block-title">e-Commerce</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum nibh dictum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="service-box-inner">
+                            <div class="col-md-4 pull-right col-sm-5">
+                                <img src="upload/big_icon_05.png" class="icon-srv" alt="">
+                            </div>
+                            <div class="col-md-8 content-box col-sm-7">
+                                <h3 class="block-title">Graphic Design</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum nibh dictum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="service-box-inner">
+                            <div class="col-md-4 col-sm-5">
+                                <img src="upload/big_icon_06.png" class="icon-srv" alt="">
+                            </div>
+                            <div class="col-md-8 content-box col-sm-7">
+                                <h3 class="block-title">Logo Design</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum nibh dictum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end container -->
+        </section>
+
+        <section class="section db casebg">
+            <div class="container-fluid">
+                <div class="section-title text-center">
+                    <h5>OUR RECENT AWESOME CASE STUDIO's</h5>
+                    <h3>CASE STUDIO</h3>
+                    <hr>
+                </div><!-- end title -->
+
+                <div class="seo-studio owl-carousel owl-theme text-center">
+                    <div class="item">
+                        <div class="case-studio">
+                            <div class="post-media">
+                                <a href="single-portfolio.html"><img src="upload/case_01.png" alt="" class="img-responsive"></a>
+                            </div><!-- end media -->
+                        </div><!-- end case -->
+                    </div><!-- end col -->
+
+                    <div class="item">
+                        <div class="case-studio">
+                            <div class="post-media">
+                                <a href="single-portfolio.html"><img src="upload/case_02.png" alt="" class="img-responsive"></a>
+                            </div><!-- end media -->
+                        </div><!-- end case -->
+                    </div><!-- end col -->
+
+                    <div class="item">
+                        <div class="case-studio">
+                            <div class="post-media">
+                                <a href="single-portfolio.html"><img src="upload/case_03.png" alt="" class="img-responsive"></a>
+                            </div><!-- end media -->
+                        </div><!-- end case -->
+                    </div><!-- end col -->
+
+                    <div class="item">
+                        <div class="case-studio">
+                            <div class="post-media">
+                                <a href="single-portfolio.html"><img src="upload/case_04.png" alt="" class="img-responsive"></a>
+                            </div><!-- end media -->
+                        </div><!-- end case -->
+                    </div><!-- end col -->
+
+                    <div class="item">
+                        <div class="case-studio">
+                            <div class="post-media">
+                                <a href="single-portfolio.html"><img src="upload/case_05.png" alt="" class="img-responsive"></a>
+                            </div><!-- end media -->
+                        </div><!-- end case -->
+                    </div><!-- end col -->
+
+                    <div class="item">
+                        <div class="case-studio">
+                            <div class="post-media">
+                                <a href="single-portfolio.html"><img src="upload/case_06.png" alt="" class="img-responsive"></a>
+                            </div><!-- end media -->
+                        </div><!-- end case -->
+                    </div><!-- end col -->
+
+                    <div class="item">
+                        <div class="case-studio">
+                            <div class="post-media">
+                                <a href="single-portfolio.html"><img src="upload/case_01.png" alt="" class="img-responsive"></a>
+                            </div><!-- end media -->
+                        </div><!-- end case -->
+                    </div><!-- end col -->
+
+                    <div class="item">
+                        <div class="case-studio">
+                            <div class="post-media">
+                                <a href="single-portfolio.html"><img src="upload/case_02.png" alt="" class="img-responsive"></a>
+                            </div><!-- end media -->
+                        </div><!-- end case -->
+                    </div><!-- end col -->
+
+                    <div class="item">
+                        <div class="case-studio">
+                            <div class="post-media">
+                                <a href="single-portfolio.html"><img src="upload/case_03.png" alt="" class="img-responsive"></a>
+                            </div><!-- end media -->
+                        </div><!-- end case -->
+                    </div><!-- end col -->
+
+                    <div class="item">
+                        <div class="case-studio">
+                            <div class="post-media">
+                                <a href="single-portfolio.html"><img src="upload/case_04.png" alt="" class="img-responsive"></a>
+                            </div><!-- end media -->
+                        </div><!-- end case -->
+                    </div><!-- end col -->
+
+                    <div class="item">
+                        <div class="case-studio">
+                            <div class="post-media">
+                                <a href="single-portfolio.html"><img src="upload/case_05.png" alt="" class="img-responsive"></a>
+                            </div><!-- end media -->
+                        </div><!-- end case -->
+                    </div><!-- end col -->
+
+                    <div class="item">
+                        <div class="case-studio">
+                            <div class="post-media">
+                                <a href="single-portfolio.html"><img src="upload/case_06.png" alt="" class="img-responsive"></a>
+                            </div><!-- end media -->
+                        </div><!-- end case -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 milestones">
+                        <div class="milestone-counter color1 hovicon effect-1 sub-b noradius">
+                            <img src="images/icons/icon_07.png" alt="" class="alignleft">
+                            <h3 class="stat-count">2901</h3>
+                            <p>Happy Customers</p>
+                        </div>
+
+                        <hr>
+
+                        <div class="milestone-counter color2 hovicon effect-1 sub-b noradius">
+                            <img src="images/icons/icon_08.png" alt="" class="alignleft">
+                            <h3 class="stat-count">304</h3>
+                            <p>Online Strategy</p>
+                        </div>
+
+                        <hr>
+
+                        <div class="milestone-counter color3 hovicon effect-1 sub-b noradius">
+                            <img src="images/icons/icon_09.png" alt="" class="alignleft">
+                            <h3 class="stat-count">890</h3>
+                            <p>Great Results</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7 col-sm-12 mobile30">
+                        <div class="section-title text-left">
+                            <h5>6 REASON TO CHOOSE SEOMARKT</h5>
+                            <h3>WHY SEOMARKT</h3>
+                            <hr>
+                        </div><!-- end title -->
+
+                        <div class="text-widget">
+                            <p> Praesent vel dignissim urna. Nullam non risus tortor. Cras blandit placerat condimentum. Vestibulum egestas ex vehicula orci ultricies, vitae pellentesque velit gravida. Praesent eu blandit lacus, at rhoncus justo. Donec convallis lorem laoreet nibh pretium fringilla. In malesuada nisl vel leo egestas, eget luctus ligula venenatis. </p>
+
+                            <ul class="check m20">
+                                <li>Hundreds of SEO Tools</li>
+                                <li>Powerful User Dashboard</li>
+                                <li>Real Time SEO ANALYZE</li>
+                                <li>Free Backlink Builder Tool</li>
+                                <li>Lifetime Membership - Onetime Price</li>
+                                <li>24/7 Live Chat Support</li>
+                            </ul><!-- end check -->
+
+                        </div><!-- end text-widget -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+
+        </section>
+
+        <section class="section db testibg">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h5>TESTIMONIALS</h5>
+                    <h3>WHAT OTHERS SAY</h3>
+                    <hr>
+                </div><!-- end title -->
+
+                <div class="row">
+                  <?php echo do_shortcode('[testimonials rand=0 max=3]'); ?>
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <section class="section lb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section-title text-left">
+                            <h5>WE ARE AMAZING TEAM OF SEO</h5>
+                            <h3>INTRODUCTION VIDEO</h3>
+                            <hr>
+                        </div><!-- end title -->
+
+                        <div class="boxes">
+                            <div class="post-media clearfix">
+                                <video class="videoplayer" poster="upload/video.png" controls preload="none">
+                                    <!-- MP4 for Safari, IE9, iPhone, iPad, Android, and Windows Phone 7 -->
+                                    <source type="video/mp4" src="https://0.s3.envato.com/h264-video-previews/66d2c1eb-fe17-4822-8e6e-93fbf071e859/913462.mp4" />
+                                    <!-- WebM/VP8 for Firefox4, Opera, and Chrome -->
+                                    <source type="video/webm" src="https://0.s3.envato.com/h264-video-previews/66d2c1eb-fe17-4822-8e6e-93fbf071e859/913462.webm" />
+                                    <!-- Ogg/Vorbis for older Firefox and Opera versions -->
+                                    <source type="video/ogg" src="https://0.s3.envato.com/h264-video-previews/66d2c1eb-fe17-4822-8e6e-93fbf071e859/913462.ogv" />
+                                    <!-- Optional: Add subtitles for each language -->
+                                </video>
+                            </div><!-- end media -->
+                            <h5>Thanks for the awesome video by <a href="http://videohive.net/item/seo-promotion-animated-flat-icons-pack/13025412?ref=wordpressshowcase">Viagraphix</a></h5>
+                        </div><!-- end box -->
+                    </div><!-- end col -->
+
+                    <div class="col-md-6 col-sm-12 mobile30">
+                        <div class="section-title text-left">
+                            <h5>WE BUILD PROFESSIONAL SERVICES</h5>
+                            <h3>OUR SKILLS</h3>
+                            <hr>
+                        </div><!-- end title -->
+
+                        <div class="skills-style">
+                            <div class="skills-wrapper">
+                                <h3>Search Engine Optimization</h3>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success color6 wow slideInLeft" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%">
+                                    </div>
+                                </div>
+                            </div><!-- end skills-wrapper -->
+
+                            <div class="skills-wrapper">
+                                <h3>Conversion Rate Optimization</h3>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info color2 wow slideInLeft" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                    </div>
+                                </div>
+                            </div><!-- end skills-wrapper -->
+
+                            <div class="skills-wrapper">
+                                <h3>Online Reputation Management</h3>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning color3 wow slideInLeft" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                    </div>
+                                </div>
+                            </div><!-- end skills-wrapper -->
+
+                            <div class="skills-wrapper">
+                                <h3>Google AdWords</h3>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger color5 wow slideInLeft" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                    </div>
+                                </div>
+                            </div><!-- end skills-wrapper -->
+
+                            <div class="skills-wrapper">
+                                <h3>Software Development & Web Design</h3>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-primary color8 wow slideInLeft" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                    </div>
+                                </div>
+                            </div><!-- end skills-wrapper -->
+
+                            <div class="skills-wrapper">
+                                <h3>Social Media Marketing</h3>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-primary color1 wow slideInLeft" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                    </div>
+                                </div>
+                            </div><!-- end skills-wrapper -->
+                        </div><!-- end skills -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <section class="section color9">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h5>NEED A CUSTOM SERVICE? GET A QUOTE TODAY</h5>
+                    <h3>GET A QUOTE</h3>
+                    <hr>
+                </div><!-- end title -->
+
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="quoteform">
+                            <form id="contactform" class="row" action="http://showwp.com/demos/seomarkt/contact.php" name="contactform" method="post">
+                                <div class="col-md-6">
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="col-md-6">
+                                <input type="text" name="email" id="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="col-md-6">
+                                <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone">
+                                </div>
+                                <div class="col-md-6">
+                                <input type="text" name="subject" id="subject" class="form-control" placeholder="Max Budget : $1000+">
+                                </div>
+                                <div class="col-md-12">
+                                <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Message Below"></textarea>
+                                <button type="submit" value="SEND" id="submit" class="btn btn-primary btn-block"> Submit Form</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <section class="section lb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="section-title text-center">
+                            <h5>OUR AWESOME CLIENT & WORKING TEAMS</h5>
+                            <h3>MEET CLIENTS</h3>
+                            <hr>
+                        </div><!-- end title -->
+
+                        <div class="text-widget">
+                            <div class="row clients">
+                                <div class="col-md-2 col-sm-6">
+                                    <div class="client-wrapper">
+                                        <img src="upload/client_01.png" alt="" class="img-responsive">
+                                    </div>
+                                </div><!-- end col -->
+
+                                <div class="col-md-2 col-sm-6">
+                                    <div class="client-wrapper">
+                                        <img src="upload/client_02.png" alt="" class="img-responsive">
+                                    </div>
+                                </div><!-- end col -->
+
+                                <div class="col-md-2 col-sm-6">
+                                    <div class="client-wrapper">
+                                        <img src="upload/client_03.png" alt="" class="img-responsive">
+                                    </div>
+                                </div><!-- end col -->
+
+                                <div class="col-md-2 col-sm-6">
+                                    <div class="client-wrapper">
+                                        <img src="upload/client_04.png" alt="" class="img-responsive">
+                                    </div>
+                                </div><!-- end col -->
+
+                                <div class="col-md-2 col-sm-6">
+                                    <div class="client-wrapper">
+                                        <img src="upload/client_05.png" alt="" class="img-responsive">
+                                    </div>
+                                </div><!-- end col -->
+
+                                <div class="col-md-2 col-sm-6">
+                                    <div class="client-wrapper">
+                                        <img src="upload/client_06.png" alt="" class="img-responsive">
+                                    </div>
+                                </div><!-- end col -->
+                            </div>
+                        </div><!-- end text-widget -->
+                    </div><!-- end col -->
+
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <section class="section nopad c3">
+            <div class="container">
+                <div class="row call-out-box">
+                    <div class="col-md-7">
+                        <h2>Did you like our works?</h2>
+                        <p>Here is your content of the callout box lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <a href="#" class="btn btn-primary btn-lg">Ask a Question</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#" class="btn btn-primary btn-lg">Get a Quote</a>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+
+<?php get_footer(); ?>
