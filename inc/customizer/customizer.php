@@ -70,6 +70,8 @@ function digicorp_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'digicorp_customize_register' );
 
 
+load_theme_textdomain( 'digicorpdomain', get_template_directory() . '/languages' );
+
 // add frontpage section creator class
 require_once get_template_directory() . '/inc/customizer/class-digicorp-customizer-frontpage-sections.php';
 
