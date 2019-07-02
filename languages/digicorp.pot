@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-06-28T14:36:32+00:00\n"
+"POT-Creation-Date: 2019-07-02T21:44:14+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.2.0\n"
 "X-Domain: digicorpdomain\n"
@@ -301,21 +301,20 @@ msgstr ""
 msgid "Manage front-page sections"
 msgstr ""
 
-#. Translators: the goal
-#: inc/customizer/customizer.php:85
+#: inc/customizer/customizer.php:79
 msgid "Custom Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:86
+#: inc/customizer/customizer.php:80
 msgid "Manage custom section settings."
 msgstr ""
 
-#: inc/customizer/customizer.php:88
+#: inc/customizer/customizer.php:82
 msgid "Add & Edit Widgets"
 msgstr ""
 
 #. translators: Default Text for Slider CTA
-#: inc/customizer/customizer.php:120
+#: inc/customizer/customizer.php:114
 #: inc/customizer/sections/slider-typed.php:90
 msgid "CTA Button Text"
 msgstr ""

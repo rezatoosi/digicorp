@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DIGICORP 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/digicorp\n"
-"POT-Creation-Date: 2019-06-28 19:07+0430\n"
-"PO-Revision-Date: 2019-06-28 19:07+0430\n"
+"POT-Creation-Date: 2019-07-03 02:15+0430\n"
+"PO-Revision-Date: 2019-07-03 02:15+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -307,21 +307,20 @@ msgstr "بخش های صفحه اصلی"
 msgid "Manage front-page sections"
 msgstr "مدیریت بخش‌های صفحه اصلی"
 
-#. Translators: the goal
-#: inc/customizer/customizer.php:85
+#: inc/customizer/customizer.php:79
 msgid "Custom Section"
 msgstr "بخش سفارشی"
 
-#: inc/customizer/customizer.php:86
+#: inc/customizer/customizer.php:80
 msgid "Manage custom section settings."
 msgstr "مدیریت تنظیمات بخش سفارشی صفحه اول"
 
-#: inc/customizer/customizer.php:88
+#: inc/customizer/customizer.php:82
 msgid "Add & Edit Widgets"
 msgstr "مدیریت ابزارک‌ها"
 
 #. translators: Default Text for Slider CTA
-#: inc/customizer/customizer.php:120
+#: inc/customizer/customizer.php:114
 #: inc/customizer/sections/slider-typed.php:90
 msgid "CTA Button Text"
 msgstr "متن کلید دعوت به عمل"

@@ -162,8 +162,7 @@ class Digicorp_Customizer_Frontpage_Section
               $wp_customize,
               $this->prefix_section . '_widget_button',
               array(
-                  // 'text'         => $this->widget_button_text,__( "Add & Edit Widgets", "digicorpdomain" )
-                  'text'         => __( "Add & Edit Widgets", "digicorpdomain" ),
+                  'text'         => $this->widget_button_text,
                   'section_id'    => $this->widget_button_section_id,
                   'icon'          => 'dashicons-plus',
                   'section'       => $this->prefix_section,
