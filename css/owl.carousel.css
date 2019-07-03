@@ -304,10 +304,22 @@
   left: -15px !important;
   position: absolute;
 }
+.owl-rtl.seo-studio.owl-theme .owl-prev {
+  right: -15px !important;
+  left: auto !important;
+  position: absolute;
+}
+
 .seo-studio.owl-theme .owl-next {
   right: -15px !important;
   position: absolute;
 }
+.owl-rtl.seo-studio.owl-theme .owl-next {
+  left: -15px !important;
+  right: auto !important;
+  position: absolute;
+}
+
 
 .seo-studio.owl-theme .owl-nav [class*="owl-"] {
     background: #f3ad1d none repeat scroll 0 0;
