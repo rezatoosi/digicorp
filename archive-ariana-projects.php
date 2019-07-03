@@ -4,9 +4,101 @@
 // enqueue styles and scripts
 function ariana_projects_archive_scripts() {
   // wp_enqueue_script( 'isotope-js', get_template_directory_uri() . '/js/isotope.js' );
-  wp_enqueue_script( 'isotope-js', get_template_directory_uri() . '/js/isotope.js', false, '1.0', true);
-  wp_enqueue_script( 'imagesloaded-js', get_template_directory_uri() . '/js/imagesloaded.pkgd.js', array(), '1.0', true);
-  wp_enqueue_script( 'portfolio-js', get_template_directory_uri() . '/js/portfolio.js', array(), '1.0', true);
+  wp_enqueue_script( 'isotope-js', get_template_directory_uri() . '/js/isotope.js', array( 'jquery' ), '1.0', true);
+  wp_enqueue_script( 'imagesloaded-js', get_template_directory_uri() . '/js/imagesloaded.pkgd.js', array( 'jquery' ), '1.0', true);
+  // wp_enqueue_script( 'portfolio-js', get_template_directory_uri() . '/js/portfolio.js', array( 'isotope-js' , 'imagesloaded-js' ), '1.0', true);
+
+  ob_start();
+  $locale = get_locale();
+  ?>
+  (function ($) {
+  <?php
+  if ( 'fa_IR' == $locale ) {
+    ?>
+    $.Isotope.prototype._positionAbs = function( x, y ) {
+      return { right: x, top: y };
+    };
+    <?php
+  }
+  ?>
+    var $container = $('.portfolio'),
+
+    colWidth = function () {
+        var w = $container.width(),
+            columnNum = 1,
+            columnWidth = 10;
+        if (w > 1200) {
+            columnNum  = 4;
+        }
+        else if (w > 900) {
+            columnNum  = 4;
+        }
+        else if (w > 600) {
+            columnNum  = 2;
+        }
+        else if (w > 300) {
+            columnNum  = 1;
+        }
+        columnWidth = Math.floor(w/columnNum);
+        $container.find('.pitem').each(function() {
+            var $item = $(this),
+                multiplier_w = $item.attr('class').match(/item-w(\d)/),
+                multiplier_h = $item.attr('class').match(/item-h(\d)/),
+                width = multiplier_w ? columnWidth*multiplier_w[1]-0 : columnWidth-5,
+                height = multiplier_h ? columnWidth*multiplier_h[1]*1-5 : columnWidth*0.5-5;
+            $item.css({
+                width: width,
+                height: height
+            });
+        });
+        return columnWidth;
+    }
+
+    function refreshWaypoints() {
+        setTimeout(function() {
+        }, 3000);
+    }
+
+    $('nav.portfolio-filter ul a').on('click', function() {
+        var selector = $(this).attr('data-filter');
+        $container.isotope({ filter: selector }, refreshWaypoints());
+        $('nav.portfolio-filter ul a').removeClass('active');
+        $(this).addClass('active');
+        return false;
+    });
+
+    function setPortfolio() {
+        setColumns();
+        $container.isotope('reLayout');
+    }
+
+    $container.imagesLoaded( function() {
+      $container.isotope();
+    });
+
+    isotope = function () {
+        $container.isotope({
+            resizable: true,
+            itemSelector: '.pitem',
+            layoutMode : 'masonry',
+            transformsEnabled: <?php echo ( 'fa_IR' == $locale ? 'false' : 'true' ); ?>,
+            gutter: 10,
+            masonry: {
+                columnWidth: colWidth(),
+                gutterWidth: 0
+            }
+        });
+    };
+
+    isotope();
+
+    $(window).smartresize(isotope);
+  }(jQuery));
+
+  <?php
+  $script = ob_get_clean();
+  wp_add_inline_script( 'imagesloaded-js', $script, 'after' );
+
 }
 add_action( 'wp_footer', 'ariana_projects_archive_scripts' );
 
@@ -45,7 +137,7 @@ if ( have_posts() ) {
             <div class="col-md-12">
                 <nav class="portfolio-filter text-center">
                     <ul>
-                        <li><a class="btn btn-default" href="#" data-filter="*"><?php _e('ALL', 'digicorpdomain'); ?></a></li>
+                        <li><a class="btn btn-default active" href="#" data-filter="*"><?php _e('ALL', 'digicorpdomain'); ?></a></li>
                         <?php
                         $terms = get_terms( array(
                           'taxonomy' => 'ariana-type-tags',
@@ -69,7 +161,7 @@ if ( have_posts() ) {
               the_post();
               ?>
 
-              <div class="pitem item-w1 item-h1 <?php echo ariana_term_list_to_css_class(); ?>">
+              <div class="pitem  item-h1 <?php echo ariana_term_list_to_css_class(); ?>">
                   <div class="entry">
                       <?php if ( has_post_thumbnail() ) { ?>
                         <img src="<?php esc_url( the_post_thumbnail_url('small') ); ?>" alt="<?php esc_html( the_title() ); ?>" class="img-responsive img-full">
@@ -92,8 +184,6 @@ if ( have_posts() ) {
        </div>
     </div>
 </section>
-
-
 <?php } ?>
 
 <?php get_footer(); ?>
