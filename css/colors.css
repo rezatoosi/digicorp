@@ -13,6 +13,7 @@
 		a:hover,
 		.visual .info i,
 		a:focus,
+		a.active,
 		.check li:before,
 		.navbar-default .navbar-nav li:hover a,
 		.navbar-default .navbar-nav > .active > a,
