@@ -15,7 +15,7 @@ get_template_part('template-parts/header/header');
                 $object_id = get_queried_object_id();
                 $object_sec_title = esc_html( get_post_meta( $object_id, "post_sec_title", true) );
               ?>
-              <h2 class="mt-0 margin-bottom-md"><?php echo $object_sec_title; ?></h2>
+              <h2 class="font-25px mt-0 margin-bottom-md"><?php echo $object_sec_title; ?></h2>
 
               <?php the_content(); ?>
           </div><!-- end col -->
