@@ -1,27 +1,22 @@
 <?php get_header(); ?>
 
-<section id="page-header" class="visual color13">
-    <div class="container">
-        <div class="text-block">
-            <div class="heading-holder">
-                <h1><?php wp_title(''); ?></h1>
-            </div>
-            <p class="tagline">
-              <?php
-                $page_desc = get_post_meta(get_queried_object_id(), "post_desc", true);
-                echo ($page_desc) ? $page_desc : '';
-              ?>
-            </p>
-        </div>
-    </div>
-</section>
-<?php // TODO: add breadcrumbs ?>
+<?php
+get_template_part('template-parts/header/header');
+?>
 
 <?php if (have_posts()){ the_post(); ?>
 <section class="section">
     <div class="container">
         <div class="row">
           <div class="col-md-7 col-sm-12">
+
+              <!-- get second title -->
+              <?php
+                $object_id = get_queried_object_id();
+                $object_sec_title = esc_html( get_post_meta( $object_id, "post_sec_title", true) );
+              ?>
+              <h2 class="mt-0 margin-bottom-md"><?php echo $object_sec_title; ?></h2>
+
               <?php the_content(); ?>
           </div><!-- end col -->
 

@@ -69,8 +69,8 @@ body {
 li,
 p {
     color: #979797;
-    font-size: 14px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 30px;
 }
 
 h1,
@@ -172,6 +172,14 @@ ol {
 
 .check {
     margin-left: 0;
+}
+
+.mt-0{
+  margin-top: 0;
+}
+
+.pt-0{
+  padding-top: 0;
 }
 
 .m20 {
@@ -2720,7 +2728,8 @@ hr.invis {
 }
 
 .element,
-.visual p {
+.visual p,
+.visual h3 {
     text-transform: uppercase;
     color: rgba(255, 255, 255/*, 0.5*/);
     font-size: 21px !important;
@@ -2729,7 +2738,8 @@ hr.invis {
     margin: 0 0 15px;
 }
 
-.visual p.tagline {
+.visual p.tagline,
+.visual h3.tagline {
     line-height: 1.1;
     font-size: 21px;
 }
