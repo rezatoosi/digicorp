@@ -414,7 +414,8 @@ ol {
 }
 
 .section.lb {
-    background-color: #F8F9FB;
+    /* background-color: #F8F9FB; */
+    background-color: #ececec;
 }
 
 .section.db {
