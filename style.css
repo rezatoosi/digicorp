@@ -2720,7 +2720,7 @@ hr.invis {
 
 .visual h1 {
     margin: 0 0 20px;
-    font-size: 8.2rem;
+    font-size: 6.5rem;
     line-height: 1.12;
     font-weight: bold;
     color: #ffffff;
@@ -2735,7 +2735,12 @@ hr.invis {
 .visual h3 {
     text-transform: uppercase;
     color: rgba(255, 255, 255/*, 0.5*/);
-    font-size: 21px !important;
+    /* font-size: 21px !important; */
+    /* edited */
+    font-size: 3rem !important;
+    padding-top: 1.5em;
+    padding-bottom: .5em;
+    /* edited */
     line-height: 1.1;
     display: inline-block;
     margin: 0 0 15px;
@@ -2749,7 +2754,8 @@ hr.invis {
 
 .visual .info {
     display: inline-block;
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
+    font-size: 2rem;
     line-height: 1.5;
     margin: 0 5px;
     color: #fff;
