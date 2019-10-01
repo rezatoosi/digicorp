@@ -224,9 +224,9 @@ ol {
 .navbar-nav > li > a {
     text-transform: uppercase;
     color: #212121 !important;
-    font-size: 13px;
+    font-size: 15px;
     margin-top: 5px;
-    padding: 10px 13px;
+    padding: 10px 15px;
     font-weight: bold;
 }
 
