@@ -655,6 +655,10 @@ ol {
     color: rgba(255, 255, 255, 0.5);
 }
 
+.footer-copyright{
+  margin: 10px 0 10px 0;
+}
+
 .copyrights {
     padding: 20px 0;
     background-color: #001a37;

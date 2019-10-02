@@ -133,7 +133,7 @@
           'name' => __('Footer - Copyright', 'digicorpdomain'),
           'id' => 'footer-copyright',
           'description' => __('Copyright bar in footer', 'digicorpdomain'),
-          'before_widget' => '<div id="%1$s" class="%2$s">',
+          'before_widget' => '<div id="%1$s" class="footer-copyright %2$s">',
           'after_widget' => '</div><!--end widget-->',
           'before_title' => '',
           'after_title' => ''
