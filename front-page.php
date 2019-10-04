@@ -99,48 +99,12 @@
                 </div><!-- end title -->
               <?php endif;?>
 
-              <div class="services-carousel owl-carousel owl-theme text-center">
-                  <?php echo do_shortcode('[ariana_services mode=carousel]'); ?>
+              <div class="text-center">
+                  <?php echo do_shortcode('[ariana_services mode=homebox]'); ?>
               </div>
             </div>
         </section>
-        <?php
-        add_action( "wp_footer", function() {
-          $locale = get_locale();
-        ?>
-        <script type="text/javascript">
-          jQuery(document).ready(function(){
-            var $ = jQuery.noConflict();
-            $('.services-carousel').owlCarousel({
-                loop:true,
-                margin:10,
-                dots:false,
-                rtl: <?php echo ('fa_IR' == $locale ? 'true' : 'false'); ?>,
-                responsiveClass:true,
-                navText: [
-                   "<i class='fa fa-angle-<?php echo ('fa_IR' == $locale ? 'right' : 'left'); ?>'></i>",
-                   "<i class='fa fa-angle-<?php echo ('fa_IR' == $locale ? 'left' : 'right'); ?>'></i>"
-                ],
-                responsive:{
-                    0:{
-                        items:1,
-                        nav:false
-                    },
-                    600:{
-                        items:2,
-                        nav:false
-                    },
-                    1000:{
-                        items:4,
-                        nav:true,
-                        loop:false
-                    }
-                }
-            });
-          });
-        </script>
       <?php
-      });
       endif;
       ?>
 

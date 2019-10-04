@@ -186,6 +186,10 @@ ol {
     margin-top: 20px;
 }
 
+.mb-30 {
+  margin-bottom: 30px;
+}
+
 .font-25px{
   font-size: 25px !important;
 }
@@ -461,7 +465,11 @@ ol {
     color: #979797;
     margin: 0;
 }
-
+.section-title h2 {
+  font-size: 25px;
+  line-height: 1;
+  font-weight: bold;
+}
 .section-title h3 {
     padding: 10px 0 0;
     margin: 0;
