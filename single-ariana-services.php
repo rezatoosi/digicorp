@@ -14,9 +14,10 @@ get_template_part('template-parts/header/header');
               <?php
                 $object_id = get_queried_object_id();
                 $object_sec_title = esc_html( get_post_meta( $object_id, "post_sec_title", true) );
+                $object_home_subtitle = esc_html( get_post_meta( $object_id, "post_home_subtitle", true) );
               ?>
               <div class="section-title text-left">
-                <!-- <h5>ALL IN ONE PACKAGE</h5> -->
+                <h5><?php echo $object_home_subtitle; ?></h5>
                 <h2><?php echo $object_sec_title; ?></h2>
                 <hr>
               </div>
