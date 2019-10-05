@@ -453,7 +453,7 @@ ol {
     display: block;
     position: relative;
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .section-title h5 {
@@ -476,6 +476,10 @@ ol {
     font-size: 26px;
     line-height: 1;
     font-weight: bold;
+}
+
+.section-content p {
+  text-align: justify;
 }
 
 .service-content hr,

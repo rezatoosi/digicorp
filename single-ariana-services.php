@@ -1,7 +1,10 @@
 <?php get_header(); ?>
 
 <?php
-get_template_part('template-parts/header/header');
+// get_template_part('template-parts/header/header');
+digicorp_page_header_section( array(
+  'section_class' => 'visual color13'
+));
 ?>
 
 <?php if (have_posts()){ the_post(); ?>
@@ -20,9 +23,11 @@ get_template_part('template-parts/header/header');
                 <h5><?php echo $object_home_subtitle; ?></h5>
                 <h2><?php echo $object_sec_title; ?></h2>
                 <hr>
-              </div>
+              </div><!-- end section-title -->
 
-              <?php the_content(); ?>
+              <div class="section-content">
+                <?php the_content(); ?>
+              </div><!-- end section-content -->
           </div><!-- end col -->
 
           <div class="col-md-5 col-sm-12 mobile30">
