@@ -2134,6 +2134,10 @@ li .fa-warning {
     margin-left: 85px;
 }
 
+.serviceBox .service-content p {
+  text-align: justify;
+}
+
 .service-box-inner .content-box > h3,
 .serviceBox .service-content h3 {
     font-size: 16px;
