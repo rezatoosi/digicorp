@@ -48,7 +48,7 @@ digicorp_page_header_section( array(
             <h3>
               <?php
                 /* translators: title of other services section in single page of services */
-                _e( 'OTHER SERVICES', 'digicorp' ); ?></h3>
+                _e( 'OTHER SERVICES', 'digicorpdomain' ); ?></h3>
             <hr>
         </div><!-- end title -->
         <div class="row services-list">

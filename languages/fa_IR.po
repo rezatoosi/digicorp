@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DIGICORP 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/digicorp\n"
-"POT-Creation-Date: 2019-07-03 02:15+0430\n"
-"PO-Revision-Date: 2019-07-03 02:15+0430\n"
+"POT-Creation-Date: 2019-10-05 22:19+0330\n"
+"PO-Revision-Date: 2019-10-05 22:24+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -33,8 +33,8 @@ msgid "Ariana Digital Agency"
 msgstr "فناوری اطلاعات آریانا"
 
 #. Author URI of the theme
-msgid "http://elecombest.com/"
-msgstr "http://elecombest.com"
+msgid "http://arianait.ir/"
+msgstr "http://arianait.ir/"
 
 #: 404.php:13
 msgid "Not Found!"
@@ -50,19 +50,19 @@ msgid ""
 "below or a search?"
 msgstr "انگار هیچی اینجا نیست، شاید جستجو یا پیوندهای زیر کمکت کنه؟"
 
-#: archive-ariana-projects.php:26
+#: archive-ariana-projects.php:118
 msgid "OUR PROJECTS"
 msgstr "پروژه های ما"
 
-#: archive-ariana-projects.php:29
+#: archive-ariana-projects.php:121
 msgid "select a category to filter"
 msgstr "یک دسته را انتخاب کنید"
 
-#: archive-ariana-projects.php:48
+#: archive-ariana-projects.php:140
 msgid "ALL"
 msgstr "نمایش همه"
 
-#: archive-ariana-projects.php:152
+#: archive-ariana-projects.php:242
 msgid "Web Services"
 msgstr "خدمات وب"
 
@@ -307,20 +307,20 @@ msgstr "بخش های صفحه اصلی"
 msgid "Manage front-page sections"
 msgstr "مدیریت بخش‌های صفحه اصلی"
 
-#: inc/customizer/customizer.php:79
+#: inc/customizer/customizer.php:81
 msgid "Custom Section"
 msgstr "بخش سفارشی"
 
-#: inc/customizer/customizer.php:80
+#: inc/customizer/customizer.php:82
 msgid "Manage custom section settings."
 msgstr "مدیریت تنظیمات بخش سفارشی صفحه اول"
 
-#: inc/customizer/customizer.php:82
+#: inc/customizer/customizer.php:84
 msgid "Add & Edit Widgets"
 msgstr "مدیریت ابزارک‌ها"
 
 #. translators: Default Text for Slider CTA
-#: inc/customizer/customizer.php:114
+#: inc/customizer/customizer.php:116
 #: inc/customizer/sections/slider-typed.php:90
 msgid "CTA Button Text"
 msgstr "متن کلید دعوت به عمل"
@@ -412,6 +412,18 @@ msgstr "بخش تصدیق نامه ها"
 msgid "Manage testimonials section settings."
 msgstr "مدیریت بخش تصدیق نامه ها"
 
+#. translators: %s: post date.
+#: inc/template-tags.php:76
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "ثبت شده در تاریخ  %s"
+
+#. translators: %s: post author.
+#: inc/template-tags.php:104
+msgctxt "post author"
+msgid "by %s"
+msgstr "توسط %s"
+
 #. translators: %s: post publish date - Month and Year
 #: inc/template-tags.php:130
 msgid "Click for all articles sent on %s"
@@ -431,6 +443,17 @@ msgstr "در دسته(های): %1$s"
 #: inc/template-tags.php:187
 msgid "Tags: %1$s"
 msgstr "برچسب(ها): %1$s"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:196
+#| msgid ""
+#| "Continue reading<span class=\"screen-reader-text sr-only\"> \"%s\"</span>"
+msgid ""
+"<button class=\"btn\">Edit <span class=\"sr-hidden\">This Post</span><span "
+"class=\"screen-reader-text sr-only\">%s</span></button>"
+msgstr ""
+"<button class=\"btn\">ویرایش <span class=\"sr-hidden\">نوشته </span><span "
+"class=\"screen-reader-text sr-only\">%s</span></button>"
 
 #. translators: %s: Display name of the user
 #: inc/template-tags.php:276
@@ -482,6 +505,11 @@ msgstr "<i class=\"fa fa-angle-right\"></i> پروژه قبلی"
 msgid "Next Project <i class=\"fa fa-angle-right\"></i>"
 msgstr "پروژه بعدی <i class=\"fa fa-angle-left\"></i>"
 
+#. translators: title of other services section in single page of services
+#: single-ariana-services.php:51
+msgid "OTHER SERVICES"
+msgstr "سایر خدمات"
+
 #: template-parts/content/content-none.php:15
 msgid "Nothing Found"
 msgstr "چیزی پیدا نشد"
@@ -528,6 +556,9 @@ msgstr "صفحات - بدون هدر و سایدبار"
 #. Template Name of the theme
 msgid "Default Sidebar for singular posts"
 msgstr "پیشفرض با سایدبار، برای پست های تکی"
+
+#~ msgid "http://elecombest.com/"
+#~ msgstr "http://elecombest.com"
 
 #~ msgid " "
 #~ msgstr " "

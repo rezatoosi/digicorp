@@ -73,7 +73,7 @@ if ( ! function_exists( 'digicorp_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'digicorp' ),
+			esc_html_x( 'Posted on %s', 'post date', 'digicorpdomain' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -101,7 +101,7 @@ if ( ! function_exists( 'digicorp_posted_by' ) ) :
 	function digicorp_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'digicorp' ),
+			esc_html_x( 'by %s', 'post author', 'digicorpdomain' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -193,7 +193,7 @@ if ( ! function_exists( 'digicorp_entry_footer' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( '<button class="btn">Edit <span class="sr-hidden">This Post</span><span class="screen-reader-text sr-only">%s</span></button>', 'digicorp' ),
+					__( '<button class="btn">Edit <span class="sr-hidden">This Post</span><span class="screen-reader-text sr-only"> %s</span></button>', 'digicorpdomain' ),
 					array(
 						'span' => array( 'class' => array() ),
             'button' => array( 'class' => array() ),
