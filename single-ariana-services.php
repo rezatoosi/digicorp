@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <?php
-// get_template_part('template-parts/header/header');
 digicorp_page_header_section( array(
   'section_class' => 'visual color13'
 ));
@@ -46,7 +45,10 @@ digicorp_page_header_section( array(
     <div class="container">
         <div class="section-title text-center">
             <?php //<h5>ALL IN ONE SEARCH ENGINE TOOLS</h5> ?>
-            <h3>OTHER SERVICES</h3>
+            <h3>
+              <?php
+                /* translators: title of other services section in single page of services */
+                _e( 'OTHER SERVICES', 'digicorp' ); ?></h3>
             <hr>
         </div><!-- end title -->
         <div class="row services-list">
