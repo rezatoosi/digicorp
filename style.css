@@ -2756,6 +2756,7 @@ hr.invis {
 
 .infos {
     display: block;
+    padding-top: 20px;
 }
 
 .element,
@@ -2770,7 +2771,7 @@ hr.invis {
     padding-bottom: .5em;
     /* edited */
     line-height: 1.1;
-    display: inline-block;
+    display: inline;
     margin: 0 0 15px;
 }
 
@@ -2792,6 +2793,10 @@ hr.invis {
 
 .visual .text-block {
     padding: 90px 0;
+}
+
+.visual .text-block .heading-holder {
+    padding-bottom: 20px;
 }
 
 #typed-strings {
@@ -3199,6 +3204,9 @@ visibility: hidden;
     }
     .visual .text-block {
         padding: 30px 0;
+    }
+    .visual .text-block .heading-holder {
+        padding-bottom: 0;
     }
     .element,
     .visual p {
