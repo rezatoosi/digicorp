@@ -643,13 +643,22 @@ ol {
     padding-bottom: 10px;
 }
 
+.footer .container .row > div > div .section-title {
+  margin-bottom: 0;
+  padding-top: 30px;
+}
+
+.footer .container .row > div > div:first-child .section-title {
+  padding-top: 0;
+}
+
 .footer .section-title {
-    margin-bottom: 10px;
-    padding-top: 20px;
+    /* margin-bottom: 10px; */
+    /* padding-top: 20px; */
 }
 
 .footer .section-title:first-child {
-  padding-top: 0;
+  /* padding-top: 0; */
 }
 
 .footer .menu-widget p {
