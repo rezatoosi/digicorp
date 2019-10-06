@@ -1,24 +1,23 @@
 <?php get_header(); ?>
 
 <?php
-if (have_posts()){ the_post();
-
-$object_id = get_queried_object_id();
-$object_header_image_src = esc_html( get_post_meta( $object_id, "post_header_image", true) );
-$object_sec_title = esc_html( get_post_meta( $object_id, "post_sec_title", true) );
-$object_home_subtitle = esc_html( get_post_meta( $object_id, "post_home_subtitle", true) );
-
 digicorp_page_header_section( array(
-  'section_class' => 'visual color13',
-  'page_header_image_src' => $object_header_image_src
+  'section_class' => 'visual color13'
 ));
 ?>
 
+<?php if (have_posts()){ the_post(); ?>
 <section class="section">
     <div class="container">
         <div class="row">
           <div class="col-md-7 col-sm-12">
 
+              <!-- get second title -->
+              <?php
+                $object_id = get_queried_object_id();
+                $object_sec_title = esc_html( get_post_meta( $object_id, "post_sec_title", true) );
+                $object_home_subtitle = esc_html( get_post_meta( $object_id, "post_home_subtitle", true) );
+              ?>
               <div class="section-title text-left">
                 <h5><?php echo $object_home_subtitle; ?></h5>
                 <h2><?php echo $object_sec_title; ?></h2>

@@ -1601,7 +1601,8 @@ li .fa-warning {
 .portfoliobg,
 .casebg,
 .seobg,
-.testibg {
+.testibg,
+.imagebg {
     background-attachment: scroll;
     background-position: center center !important;
     background-repeat: no-repeat;

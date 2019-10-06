@@ -88,16 +88,20 @@ function(t,e,i,s){var n=function(e){this._core=e,this._timeout=null,this._paused
 
 
     $(function(){
-        var typed = new Typed('#typed-slider-typed-element', {
-          stringsElement: "#typed-slider-typed-strings",
-          typeSpeed: 80,
-          backSpeed: 20,
-          backDelay: 2500,
-          loop: true,
-          smartBackspace: true,
-          showCursor: true,
-          cursorChar: '|'
-        });
+
+        if ( $('#typed-slider-typed-element').length ) {
+          var typed = new Typed('#typed-slider-typed-element', {
+            stringsElement: "#typed-slider-typed-strings",
+            typeSpeed: 80,
+            backSpeed: 20,
+            backDelay: 2500,
+            loop: true,
+            smartBackspace: true,
+            showCursor: true,
+            cursorChar: '|'
+          });
+        }
+
     });
 
 
@@ -132,6 +136,13 @@ ELEMENTS
 ************************************************/
 
   $(document).ready(function(){
+    $('[data-bg-color]').each(function() {
+        $(this).css("cssText", "background: " + $(this).data("bg-color") + " !important;");
+    });
+    $('[data-bg-img]').each(function() {
+        $(this).css('background-image', 'url(' + $(this).data("bg-img") + ')');
+    });
+
     // Target your .container, .wrapper, .post, etc.
     $(".post-media").fitVids();
 

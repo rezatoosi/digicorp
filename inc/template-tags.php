@@ -16,15 +16,20 @@
     $defaults = array(
       'section_class' => 'visual',
       'page_title' => get_the_title( $object_id ),
-      'page_desc' => get_post_meta( $object_id, "post_desc", true)
+      'page_desc' => get_post_meta( $object_id, "post_desc", true),
+      'page_header_image_src' => ''
     );
     $args = wp_parse_args( $args, $defaults );
 
     if ( '' !== $args['page_desc'] ) {
       $args['page_desc'] = sprintf( '<p class="tagline">%s</p>', wp_strip_all_tags( $args['page_desc'] ) );
     }
+    if ( '' !== $args['page_header_image_src'] ) {
+      $args['page_header_image_src'] = sprintf( ' data-bg-img="%s"', $args['page_header_image_src'] );
+      $args['section_class'] .= ' imagebg';
+    }
 
-    echo '<section id="page-header" class="' . esc_attr( $args['section_class'] ) . '">';
+    echo '<section id="page-header" class="' . esc_attr( $args['section_class'] ) . '"' . $args['page_header_image_src'] . '>';
     echo     '<div class="container">';
     echo         '<div class="text-block">';
     echo             '<div class="heading-holder">';
