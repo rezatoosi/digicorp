@@ -17,7 +17,7 @@ digicorp_page_header_section( array(
 <section class="section">
     <div class="container">
         <div class="row">
-          <div class="col-md-7 col-sm-12">
+          <div class="col-sm-12">
 
               <div class="section-title text-left">
                 <h5><?php echo $object_home_subtitle; ?></h5>
@@ -30,13 +30,6 @@ digicorp_page_header_section( array(
               </div><!-- end section-content -->
           </div><!-- end col -->
 
-          <div class="col-md-5 col-sm-12 mobile30">
-              <?php if (has_post_thumbnail()) { ?>
-                <img src="<?php esc_url(the_post_thumbnail_url('medium')); ?>" alt="<?php esc_html(the_post_thumbnail_caption()); ?>" class="img-responsive img-full">
-              <?php } else { ?>
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/post-default.png'); ?>" alt="<?php esc_html(the_title()); ?>" class="img-responsive">
-              <?php } ?>
-          </div>
         </div><!-- end row -->
     </div><!-- end container -->
 </section>
