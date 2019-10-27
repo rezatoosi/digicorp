@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <?php
-get_template_part('template-parts/header/header');
+digicorp_page_header_section();
 ?>
 
 <section class="section lb">
@@ -14,7 +14,7 @@ get_template_part('template-parts/header/header');
                   // Load posts loop.
                   while ( have_posts() ) {
                     the_post();
-                    get_template_part( 'template-parts/content/content' );
+                    get_template_part( 'template-parts/content/content-excerpt' );
                   }
 
                   // Previous/next page navigation.
