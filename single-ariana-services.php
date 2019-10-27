@@ -4,13 +4,11 @@
 if (have_posts()){ the_post();
 
 $object_id = get_queried_object_id();
-$object_header_image_src = esc_html( get_post_meta( $object_id, "post_header_image", true) );
 $object_sec_title = esc_html( get_post_meta( $object_id, "post_sec_title", true) );
 $object_home_subtitle = esc_html( get_post_meta( $object_id, "post_home_subtitle", true) );
 
 digicorp_page_header_section( array(
-  'section_class' => 'visual color13',
-  'page_header_image_src' => $object_header_image_src
+  'section_class' => 'visual color13'
 ));
 ?>
 

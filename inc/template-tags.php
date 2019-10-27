@@ -17,7 +17,7 @@
       'section_class' => 'visual',
       'page_title' => get_the_title( $object_id ),
       'page_desc' => get_post_meta( $object_id, "post_desc", true),
-      'page_header_image_src' => ''
+      'page_header_image_src' => get_post_meta( $object_id, "post_header_image", true)
     );
     $args = wp_parse_args( $args, $defaults );
 

@@ -1,21 +1,10 @@
 <?php get_header(); ?>
 
-<section id="page-header" class="visual color5">
-    <div class="container">
-        <div class="text-block">
-            <div class="heading-holder">
-                <h1><?php wp_title(''); ?></h1>
-            </div>
-            <p class="tagline">
-              <?php
-                $page_desc = get_post_meta(get_queried_object_id(), "post_desc", true);
-                echo ($page_desc) ? $page_desc : '';
-              ?>
-            </p>
-        </div>
-    </div>
-</section>
-<?php // TODO: add breadcrumbs ?>
+<?php
+digicorp_page_header_section( array(
+  'section_class' => 'visual color8'
+));
+?>
 
 <?php if (have_posts()){ the_post();
   $fields = get_post_custom();

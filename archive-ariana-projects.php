@@ -108,21 +108,13 @@ add_action( 'wp_footer', 'ariana_projects_archive_scripts' );
 // die();
 //
 query_posts( "post_type=ariana-projects&posts_per_page=-1" );
+
+digicorp_page_header_section( array(
+  'page_title' => __( 'OUR PROJECTS', 'digicorpdomain' ),
+  'page_desc' => __( 'select a category to filter', 'digicorpdomain' ),
+  'section_class' => 'visual color8'
+));
 ?>
-
-
-<section id="page-header" class="visual color8">
-    <div class="container">
-        <div class="text-block">
-          <div class="heading-holder">
-              <h1><?php _e( 'OUR PROJECTS', 'digicorpdomain' ); ?></h1>
-          </div>
-          <p class="tagline">
-              <?php _e( 'select a category to filter', 'digicorpdomain' ); ?>
-          </p>
-        </div>
-    </div>
-</section>
 
 <?php // TODO: add a search form for archive ?>
 
