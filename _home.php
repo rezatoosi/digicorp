@@ -1,7 +1,7 @@
-<?php
-get_header();
+<?php get_header(); ?>
 
-digicorp_page_header_section();
+<?php
+  digicorp_page_header_section();
 ?>
 
 <?php
@@ -12,10 +12,10 @@ $query = new WP_Query(array(
 ));
 if ( $query->have_posts() ) {
 ?>
-<section class="section lb">
+<section class="section">
     <div class="container">
         <div class="row">
-            <div class="content col-md-9 col-sm-12">
+            <div class="col-md-12">
               <?php
                 while ( $query->have_posts() ) {
                   $query->the_post();
@@ -26,16 +26,11 @@ if ( $query->have_posts() ) {
 
                 wp_reset_postdata();
               ?>
-            </div><!-- end content -->
-
-            <div class="sidebar col-md-3 col-sm-12">
-              <?php get_sidebar(); ?>
-            </div><!-- end sidebar -->
-        </div><!-- end row -->
-    </div><!-- end container -->
+            </div>
+        </div>
+    </div>
 </section>
 <?php } ?>
-
 
 <?php
   $sticky = get_option('sticky_posts');
@@ -50,7 +45,7 @@ if ( $query->have_posts() ) {
     ));
     if ( $query->have_posts() ) {
 ?>
-<section class="section">
+<section class="section lb">
     <div class="container">
         <div class="section-title text-left">
             <h5><?php _e('Latest', 'digicorpdomain') ?></h5>
@@ -83,7 +78,7 @@ $query = new WP_Query(array(
 ));
 if ( $query->have_posts() ) {
 ?>
-<section class="section lb">
+<section class="section">
     <div class="container">
         <div class="section-title text-left">
             <h5><?php _e('Latest in', 'digicorpdomain') ?></h5>
