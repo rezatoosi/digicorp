@@ -33,6 +33,7 @@ class Ariana_Widget_Tag_Cloud extends WP_Widget_Tag_Cloud {
      'order'   => 'DESC',
      'number'  => 20
     ));
+    $tag_cloud = '';
     foreach ( (array) $tags as $tag ) {
      $tag_cloud .= '<a href="' . get_tag_link ($tag->term_id) . '" rel="tag">' . $tag->name . '</a>';
     }
