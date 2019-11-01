@@ -69,6 +69,22 @@ function(t,e,i,s){var n=function(e){this._core=e,this._timeout=null,this._paused
             }
         });
 
+        $('.cm_banner-carousel-five').owlCarousel({
+
+            rtl:true,
+            items: 1,
+            loop: true,
+            lazyLoad: false,
+            margin: 0,
+            smartSpeed: 800,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        });
+
 
 
   /************************************************
