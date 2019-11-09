@@ -1,0 +1,83 @@
+
+/*! rtl.scss */
+
+/*
+RTL Fix
+*/
+
+@font-face {
+  font-family: shabnam;
+  src: url('../fonts/fa/shabnam/Shabnam.eot');
+  src: url('../fonts/fa/shabnam/Shabnam.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/fa/shabnam/Shabnam.woff') format('woff'),
+       url('../fonts/fa/shabnam/Shabnam.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: shabnam;
+  src: url('../fonts/fa/shabnam/Shabnam-Bold.eot');
+  src: url('../fonts/fa/shabnam/Shabnam-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/fa/shabnam/Shabnam-Bold.woff') format('woff'),
+       url('../fonts/fa/shabnam/Shabnam-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: shabnam;
+  src: url('../fonts/fa/shabnam/Shabnam-Light.eot');
+  src: url('../fonts/fa/shabnam/Shabnam-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/fa/shabnam/Shabnam-Light.woff') format('woff'),
+       url('../fonts/fa/shabnam/Shabnam-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url('../fonts/fa/AIranianSans.ttf');
+  src: url('../fonts/fa/AIranianSans.ttf') format('truetype'),
+       url('../fonts/fa/IranianSans.woff') format('woff');
+}
+
+/* @font-face {
+  font-family: notosans;
+  src: url('../fonts/fa/NotoSansArabic-Regular.woff') format('woff');
+} */
+
+.btn,
+.copyrights a,
+.pricing-box-06 .btn,
+.pricing-box-05,
+.searchcustom .form-control,
+h1,
+h2,
+h3,
+h4,
+h5,
+.mini-widget-title a,
+h6,
+.navbar-nav > li > a {
+    font-family: "shabnam", tahoma, Arial, sans-serif;
+}
+
+small,
+body,
+li,
+p {
+    font-family: "iransans", "shabnam", tahoma, Arial, sans-serif;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+body {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+.check li:before{
+    content: "\f104";
+}
+span.service-main-bg{
+    background: url("upload/seobg.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+}

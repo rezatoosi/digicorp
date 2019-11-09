@@ -25,12 +25,12 @@ if ($sticky) {
   ?>
   <section class="section ph-60">
       <div class="container">
-          <div class="cm_banner cm_banner-five">
+          <div class="blog-banner blog-banner-1">
               <div class="banner-inner">
                   <div class="row">
                       <div class="col-md-6 col-sm-12 col-xs-12 gutter-left">
                         <article class="card">
-                              <div class="owl-carousel cm_banner-carousel-five">
+                              <div class="owl-carousel blog-banner-carousel-1">
                                   <?php
                                   $count = 0;
                                   while( $banner_query->have_posts() ) {
