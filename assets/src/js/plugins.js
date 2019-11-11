@@ -5,7 +5,6 @@ var typedjs = require('typed.js');
 
 (function($) {
   $(document).ready(function(){
-
     /* Run Owl-Carousel ------------------------------------- */
     var dir = $("html").attr("dir");
     var isRtl = false;
