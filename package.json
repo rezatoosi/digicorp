@@ -4,7 +4,8 @@
   "description": "a wordpress theme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp development",
+    "build": "NODE_ENV=production gulp"
   },
   "repository": {
     "type": "git",
@@ -21,11 +22,14 @@
   "homepage": "https://github.com/rezatoosi/digicorp#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
+    "child_process": "^1.0.2",
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
+    "gulp-if": "^3.0.0",
     "gulp-imagemin": "^6.1.1",
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^3.2.0",
@@ -37,6 +41,8 @@
     "gulp-uglifycss": "^1.1.0"
   },
   "dependencies": {
-    "owl.carousel": "^2.3.4"
+    "owl.carousel": "^2.3.4",
+    "smooth-scroll": "^16.1.0",
+    "typed.js": "^2.0.11"
   }
 }

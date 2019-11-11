@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-10-05T18:49:29+00:00\n"
+"POT-Creation-Date: 2019-11-09T23:07:31+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.2.0\n"
 "X-Domain: digicorpdomain\n"
@@ -46,20 +46,26 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
-#: archive-ariana-projects.php:118
+#: archive-ariana-projects.php:113
 msgid "OUR PROJECTS"
 msgstr ""
 
-#: archive-ariana-projects.php:121
+#: archive-ariana-projects.php:114
 msgid "select a category to filter"
 msgstr ""
 
-#: archive-ariana-projects.php:140
+#: archive-ariana-projects.php:132
 msgid "ALL"
 msgstr ""
 
-#: archive-ariana-projects.php:242
+#: archive-ariana-projects.php:234
 msgid "Web Services"
+msgstr ""
+
+#. translators: title of other services section in single page of services
+#: backup/_single-ariana-services.php:51
+#: single-ariana-services.php:43
+msgid "OTHER SERVICES"
 msgstr ""
 
 #. translators: %s: post title
@@ -230,19 +236,21 @@ msgstr ""
 msgid "Toggle navigation"
 msgstr ""
 
-#: home.php:51
-msgid "Latest"
+#: home.php:103
+msgid "Featured Categories"
 msgstr ""
 
-#: home.php:52
-msgid "Suggested Articles"
-msgstr ""
-
-#: home.php:84
+#: home.php:144
+#: templates/template-home-sidebar.php:90
+#: _home.php:84
+#: __home.php:89
 msgid "Latest in"
 msgstr ""
 
-#: home.php:103
+#: home.php:163
+#: templates/template-home-sidebar.php:109
+#: _home.php:103
+#: __home.php:108
 msgid "More articles in this category"
 msgstr ""
 
@@ -405,95 +413,90 @@ msgid "Manage testimonials section settings."
 msgstr ""
 
 #. translators: %s: post date.
-#: inc/template-tags.php:76
+#: inc/template-tags.php:81
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
 #. translators: %s: post author.
-#: inc/template-tags.php:104
+#: inc/template-tags.php:109
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
 #. translators: %s: post publish date - Month and Year
-#: inc/template-tags.php:130
+#: inc/template-tags.php:135
 msgid "Click for all articles sent on %s"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:154
+#: inc/template-tags.php:159
 msgid "Edit<span class=\"screen-reader-text sr-only\">%s</span>"
 msgstr ""
 
 #. translators: 1: list of categories.
-#: inc/template-tags.php:181
+#: inc/template-tags.php:186
 msgid "In Categories: %1$s"
 msgstr ""
 
 #. translators: 1: list of tags.
-#: inc/template-tags.php:187
+#: inc/template-tags.php:192
 msgid "Tags: %1$s"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:196
-msgid "<button class=\"btn\">Edit <span class=\"sr-hidden\">This Post</span><span class=\"screen-reader-text sr-only\">%s</span></button>"
+#: inc/template-tags.php:201
+msgid "<button class=\"btn\">Edit <span class=\"sr-hidden\">This Post</span><span class=\"screen-reader-text sr-only\"> %s</span></button>"
 msgstr ""
 
 #. translators: %s: Display name of the user
-#: inc/template-tags.php:276
+#: inc/template-tags.php:281
 msgid "Visit archive page of %s"
 msgstr ""
 
-#: inc/template-tags.php:298
+#: inc/template-tags.php:303
 msgid "«"
 msgstr ""
 
-#: inc/template-tags.php:299
+#: inc/template-tags.php:304
 msgid "»"
 msgstr ""
 
 #. translators: % is page number
-#: inc/template-tags.php:323
+#: inc/template-tags.php:328
 msgid "Page %"
 msgstr ""
 
-#: single-ariana-projects.php:52
+#: single-ariana-projects.php:41
 msgid "ABOUT THE PROJECT"
 msgstr ""
 
-#: single-ariana-projects.php:60
+#: single-ariana-projects.php:49
 msgid "Published Date:"
 msgstr ""
 
-#: single-ariana-projects.php:63
+#: single-ariana-projects.php:52
 msgid "Project Type:"
 msgstr ""
 
-#: single-ariana-projects.php:66
+#: single-ariana-projects.php:55
 msgid "Technologies:"
 msgstr ""
 
-#: single-ariana-projects.php:69
+#: single-ariana-projects.php:58
 msgid "Client:"
 msgstr ""
 
-#: single-ariana-projects.php:74
+#: single-ariana-projects.php:63
 msgid "Launch Project"
 msgstr ""
 
-#: single-ariana-projects.php:82
+#: single-ariana-projects.php:71
 msgid "<i class=\"fa fa-angle-left\"></i> Previous Project"
 msgstr ""
 
-#: single-ariana-projects.php:83
+#: single-ariana-projects.php:72
 msgid "Next Project <i class=\"fa fa-angle-right\"></i>"
-msgstr ""
-
-#. translators: title of other services section in single page of services
-#: single-ariana-services.php:51
-msgid "OTHER SERVICES"
 msgstr ""
 
 #: template-parts/content/content-none.php:15
@@ -520,6 +523,22 @@ msgstr ""
 
 #: template-parts/content/content.php:39
 msgid "Pages:"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Default Sidebar for Blog Home - 1"
+msgstr ""
+
+#: templates/template-home-sidebar.php:57
+#: _home.php:51
+#: __home.php:56
+msgid "Latest"
+msgstr ""
+
+#: templates/template-home-sidebar.php:58
+#: _home.php:52
+#: __home.php:57
+msgid "Suggested Articles"
 msgstr ""
 
 #. Template Name of the theme

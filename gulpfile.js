@@ -1,4 +1,7 @@
 var gulp          = require('gulp'),
+    del           = require('del'),
+    exec            = require('child_process').exec,
+    gulpif        = require('gulp-if'),
     sass          = require('gulp-sass'),
     cssnano       = require('gulp-cssnano'),
     uglifycss     = require('gulp-uglifycss'),
@@ -14,6 +17,8 @@ var gulp          = require('gulp'),
     browserify    = require('gulp-browserify'),
     browsersync   = require("browser-sync").create();
 
+const isProduction = [ process.env.NODE_ENV === 'production' ? true : false ];
+
 var
 src   = {
   css:    './assets/src/scss/',
@@ -28,17 +33,21 @@ dist  = {
   fonts:  './assets/dist/fonts/'
 }
 
+function clean() {
+  return del(['assets/dist/**', '!assets/dist']);
+}
+
 function stylesltr() {
   return gulp
-  .src(src.css + 'main.scss', { sourcemaps: true })
+  .src(src.css + 'main.scss', { sourcemaps: !isProduction })
   // .pipe(sourcemaps.init())
   .pipe(sass({
-			errLogToConsole: true,
-			outputStyle: 'compressed',
-			// outputStyle: 'compact',
-			// outputStyle: 'nested',
-			// outputStyle: 'expanded',
-			precision: 10
+			// errLogToConsole: true,
+			// outputStyle: 'compressed',
+			// // outputStyle: 'compact',
+			// // outputStyle: 'nested',
+			// // outputStyle: 'expanded',
+			// precision: 10
 		}).on('error', sass.logError))
   .pipe(autoprefixer('last 2 versions'))
   .pipe(cssnano())
@@ -56,7 +65,7 @@ function stylesrtl() {
     src.css + 'mediaelementplayer.scss',
     src.css + 'custom.scss',
     src.css + 'blogbanner.scss'
-  ], {sourcemaps: true})
+  ], {sourcemaps: !isProduction})
   // .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
   .pipe(rtlcss())
@@ -64,7 +73,7 @@ function stylesrtl() {
     src.css + 'owlcarousel.scss',
     src.css + 'fontawesome.scss',
     src.css + 'rtl.scss'
-  ], {sourcemaps: true}))
+  ], {sourcemaps: !isProduction}))
   .pipe(sass().on('error', sass.logError))
   .pipe(autoprefixer('last 2 versions'))
   .pipe(cssnano())
@@ -76,18 +85,19 @@ function stylesrtl() {
 };
 
 const jsfiles = [
-  src.js + 'bootstrap.js',
+  // src.js + 'bootstrap.js',
   // src.js + 'vendor/owlcarousel.js',
   src.js + 'plugins.js'
 ];
 
 function scripts() {
 	return gulp
-  .src(jsfiles, {sourcemaps: true})
+  .src(jsfiles, {sourcemaps: !isProduction})
 	.pipe(concat('bundle.js'))
   .pipe(browserify())
 	// .pipe(gulp.dest('assets/dist/js'))
-	// .pipe(uglify())
+	// .pipe(gulpif(isProduction, uglify()))
+  .pipe(uglify())
 	.pipe(gulp.dest(dist.js, {sourcemaps: './'}))
 	.pipe(notify({ message: 'Scripts task complete', onLast: true }))
   .pipe(browsersync.stream());
@@ -132,6 +142,14 @@ function php() {
   .pipe(browsersync.stream());
 }
 
+function pot(cb) {
+  exec('wp i18n make-pot . languages/digicorp.pot --domain=digicorpdomain', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+}
+
 function watch() {
   gulp.watch(src.css + '**/*', styles);
   // gulp.watch(src.js + '**/*', scripts);
@@ -157,10 +175,21 @@ function browserSyncReload(done) {
 }
 
 const styles = gulp.series(stylesltr, stylesrtl);
+// const production = gulp.series( clean, gulp.parallel(styles, scripts, images, fonts));
+// const development = gulp.parallel(styles, scripts, images, fonts);
 
+var tasks = {
+  production: gulp.series( clean, gulp.parallel(styles, scripts, images, fonts, pot)),
+  development: gulp.parallel(styles, scripts, images, fonts)
+}
+
+exports.clean = clean;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.images = images;
 exports.fonts = fonts;
 exports.watch = gulp.parallel(watch, browserSync);
-exports.default = gulp.parallel(styles, scripts, images, fonts);
+exports.pot = pot;
+exports.production = tasks['production'];
+exports.development = tasks['development'];
+exports.default = tasks[process.env.NODE_ENV];
