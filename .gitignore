@@ -4,3 +4,5 @@ wp-config.php
 /.htaccess
 
 /node_modules
+
+*.map
