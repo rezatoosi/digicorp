@@ -11,7 +11,7 @@
             <?php if (has_post_thumbnail()) { ?>
               <img src="<?php esc_url(the_post_thumbnail_url('small')); ?>" alt="<?php esc_html(the_post_thumbnail_caption()); ?>" class="img-responsive">
             <?php } else { ?>
-              <img src="<?php echo esc_url(get_template_directory_uri() . '/img/post-default.png'); ?>" alt="<?php esc_html(the_title()); ?>" class="img-responsive">
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/dist/images/post-default.png'); ?>" alt="<?php esc_html(the_title()); ?>" class="img-responsive">
             <?php } ?>
           </a>
         </div><!-- entry -->

@@ -45,7 +45,6 @@
                           dynamic_sidebar('footer-copyright');
                         endif;
                       ?>
-                        <!-- <a class="footer-brand" href="index.html"><img src="images/flogo.png" alt=""></a> -->
                     </div>
                     <div class="col-md-8 text-right">
                       <?php

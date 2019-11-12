@@ -38,7 +38,7 @@
             } else {
               printf(
                 '<img src="%1$s" alt="%2$s" class="bg-stretch" id="typed-slider-bg">',
-                get_template_directory_uri() . '/images/slider-bg.jpg',
+                get_template_directory_uri() . '/assets/dist/images/slider-bg.jpg',
                 get_theme_mod( 'digicorp_typed_slider_title' )
               );
             }

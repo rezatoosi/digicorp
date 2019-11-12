@@ -9,7 +9,7 @@
               </a>
             <?php } else { ?>
               <a href="<?php esc_url(the_permalink()); ?>">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/post-default.png'); ?>" alt="<?php esc_html(the_title()); ?>" class="img-responsive">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/dist/images/post-default.png'); ?>" alt="<?php esc_html(the_title()); ?>" class="img-responsive">
               </a>
             <?php } ?>
 
@@ -19,7 +19,7 @@
             <?php
             // TODO: add user avatar here
             //<span class="avatar">
-            //  <a href="author.html"><img src="upload/avatar_01.png" alt="" class="img-circle"> Jenny DOE</a>
+            //  <a href="author.html"><img src="assets/dist/images/avatar_01.png" alt="" class="img-circle"> Jenny DOE</a>
             //</span>
             ?>
             <span class="avatar">
@@ -71,7 +71,7 @@
             $prev_post = get_previous_post(true);
             if (!empty($prev_post)) {
               $prev_thumb_url = get_the_post_thumbnail_url($prev_post,'thumbnail');
-              if ( empty($prev_thumb_url) ) { $prev_thumb_url = get_template_directory_uri() . '/img/post-default.png'; }
+              if ( empty($prev_thumb_url) ) { $prev_thumb_url = get_template_directory_uri() . '/assets/dist/images/post-default.png'; }
               ?>
                 <div class="post">
                     <div class="mini-widget-thumb">
@@ -91,7 +91,7 @@
             $next_post = get_next_post(true);
             if (!empty($next_post)) {
               $next_thumb_url = get_the_post_thumbnail_url($next_post,'thumbnail');
-              if ( empty($next_thumb_url) ) { $next_thumb_url = get_template_directory_uri() . '/img/post-default.png'; }
+              if ( empty($next_thumb_url) ) { $next_thumb_url = get_template_directory_uri() . '/assets/dist/images/post-default.png'; }
               ?>
                 <div class="post">
                     <div class="mini-widget-thumb">

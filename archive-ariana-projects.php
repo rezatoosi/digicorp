@@ -161,7 +161,7 @@ if ( have_posts() ) {
                             <div class="magnibutton"><a href="<?php esc_url( the_permalink() ); ?>" target="_blank"<?php if ( get_the_post_thumbnail_caption() ) { echo ' title="' . get_the_post_thumbnail_caption() . '"'; } ?>><i class="fa fa-search"></i></a></div>
                         </div>
                       <?php } else { ?>
-                        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/projects-default.png'); ?>" alt="<?php esc_html(get_the_title()); ?>" class="img-responsive">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/dist/images/projects-default.png'); ?>" alt="<?php esc_html(get_the_title()); ?>" class="img-responsive">
                       <?php } ?>
                   </div>
                   <div class="portfolio-title">

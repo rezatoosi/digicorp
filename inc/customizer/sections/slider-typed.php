@@ -74,7 +74,7 @@ $wp_customize->add_control(  new WP_Customize_Control( $wp_customize, $prefix . 
 // Background
 $wp_customize->add_setting( $prefix . '_typed_slider_background', array(
 	'sanitize_callback' => 'wp_kses_post',
-	'default'           => get_template_directory_uri() . '/images/slider-bg.jpg',
+	'default'           => get_template_directory_uri() . '/assets/dist/images/slider-bg.jpg',
 	'transport'         => 'postMessage',
 ) );
 $wp_customize->add_control(  new WP_Customize_Image_Control( $wp_customize, $prefix . '_typed_slider_background', array(

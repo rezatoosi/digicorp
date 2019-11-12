@@ -12,7 +12,7 @@
                 <?php if (has_post_thumbnail()) { ?>
                   <img src="<?php esc_url(the_post_thumbnail_url('small')); ?>" alt="<?php esc_html(the_post_thumbnail_caption()); ?>" class="img-responsive">
                 <?php } else { ?>
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/img/post-default.png'); ?>" alt="<?php esc_html(the_title()); ?>" class="img-responsive">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/dist/images/post-default.png'); ?>" alt="<?php esc_html(the_title()); ?>" class="img-responsive">
                 <?php } ?>
               </a>
             </div><!-- end post-media -->
@@ -23,7 +23,7 @@
                 <?php
                 // TODO: add user avatar here
                 //<span class="avatar">
-                //  <a href="author.html"><img src="upload/avatar_01.png" alt="" class="img-circle"> Jenny DOE</a>
+                //  <a href="author.html"><img src="assets/dist/images/avatar_01.png" alt="" class="img-circle"> Jenny DOE</a>
                 //</span>
                 ?>
                 <span class="avatar">
