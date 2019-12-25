@@ -57,6 +57,87 @@ digicorp_page_header_section( array(
     </div>
 </section>
 
+<section class="section-twice">
+    <div class="section-head bg-light-gray">
+        <div class="container">
+            <div class="section-title text-center">
+                <img src="http://localhost/wp1/wp-content/themes/digicorp/assets/dist/images/svg/diamond.svg" title="" class="img-responsive">
+                <!-- <img src="http://localhost/wp1/wp-content/themes/digicorp/assets/dist/images/head-swirl-crown.png" title="" class="img-responsive medium-icon"> -->
+                <h5>تاریخچه آریانا</h5>
+                <h3>ما که هستیم؟</h3>
+            </div><!-- end title -->
+
+            <div class="row mh-20">
+                <div class="col-md-8 col-md-offset-2">
+                    <p class="font-header text-center padding-x-md">
+                      از سال 1386، به عنوان یک آژانس طراحی و توسعه وب سایت، این افتخار را داشته ایم که به ده‌ها شرکت، سازمان و کسب‌و‌کار در اندازه‌های مختلف خدمت‌رسانی کنیم.
+                      برخی از برندهای شناخته شده که از آریانا خدمات گرفته‌اند:
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-body">
+        <div class="container equal-height">
+
+            <div class="row service-list service-list-center noborder">
+                <div class="col-md-3 col-sm-6">
+                    <div class="serviceBox bg-white border-round-5 shadow-light-2 shadow-hover ph-50 pv-30 mb-30">
+                        <div class="service-icon withborder color0 hovicon effect-1 sub-a">
+                            <i class="fa fa fa-anchor"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Target Catch</h3>
+                            <p>
+                                Nunc sagittis ex malesuada magna imperdiet, ac pulvinar mi faucibus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="serviceBox bg-white border-round-5 shadow-light-2 shadow-hover ph-50 pv-30 mb-30">
+                        <div class="service-icon withborder color0 hovicon effect-1 sub-a">
+                            <i class="fa fa fa-anchor"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Target Catch</h3>
+                            <p>
+                                Nunc sagittis ex malesuada magna imperdiet, ac pulvinar mi faucibus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="serviceBox bg-white border-round-5 shadow-light-2 shadow-hover ph-50 pv-30 mb-30">
+                        <div class="service-icon withborder color0 hovicon effect-1 sub-a">
+                            <i class="fa fa fa-anchor"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Target Catch</h3>
+                            <p>
+                                Nunc sagittis ex malesuada magna imperdiet, ac pulvinar mi faucibus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="serviceBox bg-white border-round-5 shadow-light-2 shadow-hover ph-50 pv-30 mb-30">
+                        <div class="service-icon withborder color0 hovicon effect-1 sub-a">
+                            <i class="fa fa fa-anchor"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Target Catch</h3>
+                            <p>
+                                Nunc sagittis ex malesuada magna imperdiet, ac pulvinar mi faucibus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <section class="section bg-light-gray">
     <div class="container">
