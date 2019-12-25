@@ -73,7 +73,7 @@
                 </div><!-- end title -->
               <?php endif;?>
 
-                <div class="row-fluid service-list">
+                <div class="row-fluid service-list service-list-center noborder">
                   <?php
                     if ( is_active_sidebar('frontpage_features') ) :
                       dynamic_sidebar('frontpage_features');

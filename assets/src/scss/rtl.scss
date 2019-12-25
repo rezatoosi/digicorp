@@ -43,7 +43,11 @@ RTL Fix
   font-family: notosans;
   src: url('../fonts/fa/NotoSansArabic-Regular.woff') format('woff');
 } */
-
+.contact-list p,
+.btn-contact,
+.font-header,
+.srv-box-home .box-content p,
+.visual p,
 .btn,
 .copyrights a,
 .pricing-box-06 .btn,
@@ -65,6 +69,10 @@ body,
 li,
 p {
     font-family: "iransans", "shabnam", tahoma, Arial, sans-serif;
+}
+
+.font-header {
+    font-weight: bold;
 }
 
 .ltr {

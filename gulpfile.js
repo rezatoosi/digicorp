@@ -61,6 +61,7 @@ var Development = {
     .src([
       src.css + 'bootstrap.scss',
       src.css + 'mediaelementplayer.scss',
+      src.css + 'colors.scss',
       src.css + 'custom.scss',
       src.css + 'blogbanner.scss'
     ], {sourcemaps: true})
@@ -121,6 +122,7 @@ var Production = {
     .src([
       src.css + 'bootstrap.scss',
       src.css + 'mediaelementplayer.scss',
+      src.css + 'colors.scss',
       src.css + 'custom.scss',
       src.css + 'blogbanner.scss'
     ])

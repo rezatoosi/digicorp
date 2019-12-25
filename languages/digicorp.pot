@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-11T16:32:18+00:00\n"
+"POT-Creation-Date: 2019-12-25T13:19:22+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.2.0\n"
 "X-Domain: digicorpdomain\n"
@@ -60,6 +60,32 @@ msgstr ""
 
 #: archive-ariana-projects.php:234
 msgid "Web Services"
+msgstr ""
+
+#: backup/_home.php:51
+#: backup/__home.php:56
+#: templates/template-home-sidebar.php:57
+msgid "Latest"
+msgstr ""
+
+#: backup/_home.php:52
+#: backup/__home.php:57
+#: templates/template-home-sidebar.php:58
+msgid "Suggested Articles"
+msgstr ""
+
+#: backup/_home.php:84
+#: backup/__home.php:89
+#: home.php:144
+#: templates/template-home-sidebar.php:90
+msgid "Latest in"
+msgstr ""
+
+#: backup/_home.php:103
+#: backup/__home.php:108
+#: home.php:163
+#: templates/template-home-sidebar.php:109
+msgid "More articles in this category"
 msgstr ""
 
 #. translators: title of other services section in single page of services
@@ -238,20 +264,6 @@ msgstr ""
 
 #: home.php:103
 msgid "Featured Categories"
-msgstr ""
-
-#: home.php:144
-#: templates/template-home-sidebar.php:90
-#: _home.php:84
-#: __home.php:89
-msgid "Latest in"
-msgstr ""
-
-#: home.php:163
-#: templates/template-home-sidebar.php:109
-#: _home.php:103
-#: __home.php:108
-msgid "More articles in this category"
 msgstr ""
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:112
@@ -527,18 +539,6 @@ msgstr ""
 
 #. Template Name of the theme
 msgid "Default Sidebar for Blog Home - 1"
-msgstr ""
-
-#: templates/template-home-sidebar.php:57
-#: _home.php:51
-#: __home.php:56
-msgid "Latest"
-msgstr ""
-
-#: templates/template-home-sidebar.php:58
-#: _home.php:52
-#: __home.php:57
-msgid "Suggested Articles"
 msgstr ""
 
 #. Template Name of the theme
