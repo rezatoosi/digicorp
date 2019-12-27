@@ -211,4 +211,9 @@
     add_filter( 'ariana_widget_feature_icon_con_class_default', function() { return 'service-icon withborder hovicon effect-1 sub-a'; } );
     add_filter( 'ariana_widget_feature_content_con_class_default', function() { return 'service-content'; } );
 
+    // Ariana Widgets Plugin Hooks
+    add_filter( 'ariana_widget_box_con_class_default', function() { return 'srv-box-home'; } );
+    add_filter( 'ariana_widget_box_icon_con_class_default', function() { return 'box-icon'; } );
+    add_filter( 'ariana_widget_box_content_con_class_default', function() { return 'box-content'; } );
+
 ?>
