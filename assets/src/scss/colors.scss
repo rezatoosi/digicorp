@@ -163,9 +163,14 @@ fieldset[disabled] .btn-primary.focus,
 }
 
 .bg-grd-1 {
-  background: linear-gradient(114deg,#ed1748,#ed1748);
-  background-size: 1000% 10000%;
-    // background: linear-gradient(114deg,#ed1748,#ed1748,#ffd600,#ffd600,#008abb,#008abb,#ed1748,#ffd600,#ffd600,#008abb);
+  background: linear-gradient(114deg,#ff003a,#ed1748);
+  background-size: 100% 100%;
+  // background: linear-gradient(114deg,#ed1748,#ed1748,#ffd600,#ffd600,#008abb,#008abb,#ed1748,#ffd600,#ffd600,#008abb);
+}
+
+.bg-grd-2 {
+  background: linear-gradient(-114deg, #c10d47, #c10d0d);
+  background-size: 100% 100%;
 }
 
 .bg-white {

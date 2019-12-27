@@ -7,7 +7,7 @@ digicorp_page_header_section( array(
 ?>
 
 
-<section class="section pt-90">
+<section class="section pt-90" id="section-about-brands">
     <div class="container">
         <div class="section-title text-center">
             <h5>فناوری اطلاعات آریانا</h5>
@@ -57,7 +57,7 @@ digicorp_page_header_section( array(
     </div>
 </section>
 
-<section class="section-twice">
+<section class="section-twice" id="section-about-history">
     <div class="section-head bg-light-gray">
         <div class="container">
             <div class="section-title text-center">
@@ -420,7 +420,7 @@ digicorp_page_header_section( array(
         <div class="row">
             <div class="col-md-6 col-sm-8">
 
-              <div class="p-40 bg-white-transparent shadow-dark-2">
+              <div class="p-40 bg-white shadow-dark-2">
 
                   <div class="section-title text-center">
                       <h5>ما چگونه فکر می‌کنیم؟</h5>
@@ -452,7 +452,7 @@ digicorp_page_header_section( array(
         <div class="row">
             <div class="col-md-6 col-sm-8">
 
-              <div class="p-40 bg-white shadow-dark-2">
+              <div class="p-40 bg-white-transparent shadow-dark-2">
 
                   <div class="section-title text-center">
                       <h5>ما چگونه فکر می‌کنیم؟</h5>
@@ -913,6 +913,7 @@ digicorp_page_header_section( array(
 
     </div>
 </section>
+
 <section class="section bg-img bg-img-15">
     <div class="container">
         <div class="section-title text-center">
@@ -931,6 +932,7 @@ digicorp_page_header_section( array(
 
     </div>
 </section>
+
 <section class="section bg-floral-2 bg-light-gray">
     <div class="container">
         <div class="section-title text-center">
@@ -969,7 +971,7 @@ digicorp_page_header_section( array(
     </div>
 </section>
 
-<section class="section-twice">
+<section class="section-twice" id="section-general-services">
     <div class="section-head">
         <div class="container">
             <div class="section-title text-center">
@@ -1028,7 +1030,7 @@ digicorp_page_header_section( array(
     </div>
 </section>
 
-<section class="section">
+<section class="section" id="section-contact-addresses">
     <div class="container">
         <div class="section-title text-center">
             <h5>ما چگونه فکر می‌کنیم؟</h5>
@@ -1140,7 +1142,7 @@ digicorp_page_header_section( array(
     </div>
 </section>
 
-<section class="section p-0 bg-light-gray">
+<section class="section p-0 bg-light-gray" id="section-contact-shortcuts">
     <div class="container-fluid equal-height">
         <div class="row no-gutters">
             <div class="col-md-6">

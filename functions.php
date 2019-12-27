@@ -138,6 +138,26 @@
           'before_title' => '',
           'after_title' => ''
         ));
+
+        // About us widgets
+        register_sidebar(array(
+          'name' => __('About us - Brands', 'digicorpdomain'),
+          'id' => 'aboutus_brands',
+          'description' => __('Brands section in aboutus or frontpage', 'digicorpdomain'),
+          'before_widget' => '<div id="%1$s" class="%2$s"><div class="col-md-2 col-sm-4 col-xs-6"><div class="bg-light-gray p-10 mb-10 text-center">',
+          'after_widget' => '</div></div></div><!--end widget-->',
+          'before_title' => '',
+          'after_title' => ''
+        ));
+        register_sidebar(array(
+          'name' => __('About us - Our History', 'digicorpdomain'),
+          'id' => 'aboutus_history',
+          'description' => __('Our history section in aboutus or frontpage', 'digicorpdomain'),
+          'before_widget' => '<div class="col-md-3 col-sm-6"><div id="%1$s" class="%2$s">',
+          'after_widget' => '</div></div><!--end widget-->',
+          'before_title' => '',
+          'after_title' => ''
+        ));
       }
     endif;
     add_action('widgets_init','ariana_widgets_init');

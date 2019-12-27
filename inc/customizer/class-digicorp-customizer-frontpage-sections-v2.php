@@ -1,9 +1,9 @@
 <?php
 /**
- * Class to create front page sections
+* Class to create front page sections - Version 2
  * in customizer
  */
-class Digicorp_Customizer_Frontpage_Section
+class Digicorp_Customizer_Frontpage_Section_V2
 {
 
   /**
@@ -56,10 +56,14 @@ class Digicorp_Customizer_Frontpage_Section
     '_enabled',
     '_title',
     '_subtitle',
+    '_desctext',
     '_widget_button',
+    '_icon_class',
+    '_icon_img',
     '_css_class',
     '_background_color',
-    '_background_image'
+    '_background_image',
+    '_background_image_position'
   );
 
   function __construct( $section, $section_selector, $section_name, $section_desc = '', $section_priority = 0, $widget_button_text = '', $widget_button_section_id = '', $panel = 'digicorp_frontpage_panel' )
@@ -133,7 +137,7 @@ class Digicorp_Customizer_Frontpage_Section
     // SubTitle
     $wp_customize->add_setting( $this->prefix_section . '_subtitle', array(
       'sanitize_callback' => 'wp_kses_post',
-      'default'           => 'sub title',
+      'default'           => '',
       'transport'         => 'postMessage',
     ) );
     $wp_customize->add_control(  new WP_Customize_Control( $wp_customize, $this->prefix_section . '_subtitle', array(
@@ -144,6 +148,23 @@ class Digicorp_Customizer_Frontpage_Section
     $wp_customize->selective_refresh->add_partial( $this->prefix_section . '_subtitle', array(
       'selector'        => $this->section_selector . ' .section-title > h5',
       'render_callback' => function() { return get_theme_mod( $this->prefix_section . '_subtitle', 'Title Here' ); },
+      // 'render_callback' => self::PARTIAL_PREFIX . $this->section . '_subtitle',
+    ) );
+
+    // Description Text
+    $wp_customize->add_setting( $this->prefix_section . '_desctext', array(
+      'sanitize_callback' => 'wp_kses_post',
+      'default'           => '',
+      'transport'         => 'postMessage',
+    ) );
+    $wp_customize->add_control(  new WP_Customize_Control( $wp_customize, $this->prefix_section . '_desctext', array(
+      'label'       => __( 'Description Text', 'digicorpdomain' ),
+      'type' 				=> 'textarea',
+      'section'     => $this->prefix_section,
+    ) ) );
+    $wp_customize->selective_refresh->add_partial( $this->prefix_section . '_desctext', array(
+      'selector'        => $this->section_selector . ' p.section-desctext',
+      'render_callback' => function() { return get_theme_mod( $this->prefix_section . '_desctext', 'Desc Text' ); },
       // 'render_callback' => self::PARTIAL_PREFIX . $this->section . '_subtitle',
     ) );
 
@@ -172,10 +193,34 @@ class Digicorp_Customizer_Frontpage_Section
 
     }
 
+    // Icon Class
+    $wp_customize->add_setting( $this->prefix_section . '_icon_class', array(
+      'sanitize_callback' => 'wp_kses_post',
+      'default'           => '',
+      'transport'         => 'postMessage',
+    ) );
+    $wp_customize->add_control(  new WP_Customize_Control( $wp_customize, $this->prefix_section . '_icon_class', array(
+      'label'       => __( 'Section Icon Class', 'digicorpdomain' ),
+      'type' 				=> 'text',
+      'section'     => $this->prefix_section,
+    ) ) );
+
+    // Icon Image
+    $wp_customize->add_setting( $this->prefix_section . '_icon_image', array(
+    	'sanitize_callback' => 'esc_url',
+    	'default'           => '',
+    	'transport'         => 'postMessage',
+    ) );
+    $wp_customize->add_control(  new WP_Customize_Image_Control( $wp_customize, $this->prefix_section . '_icon_image', array(
+    	'label'       => __( 'Icon Image', 'digicorpdomain' ),
+    	'description' => __( 'Max Height: 40px', 'digicorpdomain' ),
+    	'section'     => $this->prefix_section,
+    ) ) );
+
     // Css Class
     $wp_customize->add_setting( $this->prefix_section . '_css_class', array(
       'sanitize_callback' => 'wp_kses_post',
-      'default'           => 'section',
+      'default'           => '',
       'transport'         => 'postMessage',
     ) );
     $wp_customize->add_control(  new WP_Customize_Control( $wp_customize, $this->prefix_section . '_css_class', array(
@@ -243,9 +288,27 @@ class Digicorp_Customizer_Frontpage_Section
               } );
             } );
 
+            wp.customize( '<?php echo $this->prefix_section ?>_desctext', function( value ) {
+              value.bind( function( to ) {
+                $( '<?php echo $this->section_selector ?> p.section-desctext' ).html( to );
+              } );
+            } );
+
             wp.customize( '<?php echo $this->prefix_section ?>_css_class', function( value ) {
               value.bind( function( to ) {
                 $( '<?php echo $this->section_selector ?>' ).attr( 'class', to );
+              } );
+            } );
+
+            wp.customize( '<?php echo $this->prefix_section ?>_icon_class', function( value ) {
+              value.bind( function( to ) {
+                $( '<?php echo $this->section_selector ?> .section-title > i' ).attr( 'class', to );
+              } );
+            } );
+
+            wp.customize( '<?php echo $this->prefix_section ?>_icon_image', function( value ) {
+              value.bind( function( to ) {
+                $( '<?php echo $this->section_selector ?> .section-title > img' ).attr( 'src', to );
               } );
             } );
 
@@ -266,7 +329,7 @@ class Digicorp_Customizer_Frontpage_Section
             console.log('<?php echo $this->prefix_section ?> - Live Preview Created');
 
           } );
-      })( jQuery );
+      } )( jQuery );
 
     <?php
 

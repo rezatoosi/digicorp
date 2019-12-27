@@ -456,7 +456,14 @@ ol {
     overflow: hidden;
     margin-bottom: 10px;
 
-    img {
+    &> i {
+      margin-bottom: 30px;
+      font-size: 30px;
+      // color: #ed1748;
+      color: #000;
+    }
+
+    &> img {
       max-height: 40px;
       margin: 0 auto 30px auto;
 
@@ -2395,6 +2402,18 @@ li .fa-warning {
 }
 /* ------- end: service-list-center */
 
+.serviceBox-v2 {
+  @extend .serviceBox;
+  // @extend .bg-white;
+  @extend .border-round-5;
+  @extend .shadow-light-2;
+  @extend .shadow-hover;
+  @extend .ph-50;
+  @extend .pv-30;
+  @extend .mb-30;
+}
+
+
 .item-desc {
     padding: 20px;
     background-color: #103754;
@@ -3603,11 +3622,11 @@ p {
 }
 
 .customizer-display-none {
-	display: none;
+	display: none !important;
 }
 
 .customizer-display-block {
-	display: block;
+	display: block !important;
 }
 
 div.wpcf7-response-output{
@@ -3977,6 +3996,7 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
     &> .row {
       display: flex;
 
+      // &> div[class^="col"] div[class^="bg-"] {
       &> div[class^="col"] > div {
         flex: 1;
         height: 100%;

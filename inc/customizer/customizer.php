@@ -52,7 +52,8 @@ function digicorp_customize_register( $wp_customize ) {
 	 require_once get_template_directory() . '/inc/customizer/sections/slider-typed.php';
 
 	 // frontpage - section Features
-	 require_once get_template_directory() . '/inc/customizer/sections/features.php';
+	 // require_once get_template_directory() . '/inc/customizer/sections/features.php';
+	 // this section redesigned with new class Digicorp_Customizer_Frontpage_Section_V2
 
 	 // frontpage - section Services
 	 require_once get_template_directory() . '/inc/customizer/sections/services.php';
@@ -85,9 +86,46 @@ $frontpage_section_custom = new Digicorp_Customizer_Frontpage_Section(
 	'sidebar-widgets-frontpage_custom'
 );
 
+// add frontpage section creator class - Version 2
+require_once get_template_directory() . '/inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php';
 
+$about_section_brands = new Digicorp_Customizer_Frontpage_Section_V2(
+	'_sections_features',
+	'#section-features',
+	__( 'Features Section', 'digicorpdomain' ),
+	__( "Manage features section settings.", "digicorpdomain" ),
+	2,
+	__( "Add & Edit features", "digicorpdomain" ),
+	'sidebar-widgets-frontpage_features'
+);
 
+$about_section_brands = new Digicorp_Customizer_Frontpage_Section_V2(
+	'_sections_about_brands',
+	'#section-about-brands',
+	__( 'About us - Brands', 'digicorpdomain' ),
+	__( "Manage brands section in about us page.", "digicorpdomain" ),
+	8,
+	__( "Add & Edit Widgets", "digicorpdomain" ),
+	'sidebar-widgets-aboutus_brands'
+);
 
+$about_section_history = new Digicorp_Customizer_Frontpage_Section_V2(
+	'_sections_about_history',
+	'#section-about-history',
+	__( 'About us - History', 'digicorpdomain' ),
+	__( "Manage history section in about us page.", "digicorpdomain" ),
+	8,
+	__( "Add & Edit Widgets", "digicorpdomain" ),
+	'sidebar-widgets-aboutus_history'
+);
+
+$about_section_philosophy = new Digicorp_Customizer_Frontpage_Section_V2(
+	'_sections_about_philosophy',
+	'#section-about-philosophy',
+	__( 'About us - Our Philosophy', 'digicorpdomain' ),
+	__( "Manage our philosophy section in about us page.", "digicorpdomain" ),
+	9
+);
 /**
  * Render the site title for the selective refresh partial.
  *

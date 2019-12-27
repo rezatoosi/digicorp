@@ -60,31 +60,9 @@
       endif;
       ?>
 
-      <?php
-      if ( get_theme_mod( 'digicorp_sections_features_enabled' ) ):
-      ?>
-        <section class="section" id="section-features">
-            <div class="container">
-              <?php if ( ! empty( get_theme_mod( 'digicorp_sections_features_title' ) ) ): ?>
-                <div class="section-title text-center">
-                    <h5><?php echo get_theme_mod( 'digicorp_sections_features_subtitle' ); ?></h5>
-                    <h3><?php echo get_theme_mod( 'digicorp_sections_features_title' ); ?></h3>
-                    <hr>
-                </div><!-- end title -->
-              <?php endif;?>
+      <?php get_template_part( 'template-parts/sections/about', 'brands' ); ?>
 
-                <div class="row-fluid service-list service-list-center noborder">
-                  <?php
-                    if ( is_active_sidebar('frontpage_features') ) :
-                      dynamic_sidebar('frontpage_features');
-                    endif;
-                  ?>
-                </div>
-            </div>
-        </section>
-      <?php
-      endif;
-      ?>
+      <?php get_template_part( 'template-parts/sections/frontpage', 'features' ); ?>
 
       <?php
       if ( get_theme_mod( 'digicorp_sections_services_enabled' ) ):
