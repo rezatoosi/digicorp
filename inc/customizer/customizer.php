@@ -126,6 +126,16 @@ $about_section_philosophy = new Digicorp_Customizer_Frontpage_Section_V2(
 	__( "Manage our philosophy section in about us page.", "digicorpdomain" ),
 	9
 );
+
+$service_section_mainservices = new Digicorp_Customizer_Frontpage_Section_V2(
+	'_sections_service_mainservices',
+	'#section-services-mainservices',
+	__( 'Services - Our Main Services', 'digicorpdomain' ),
+	__( "Manage our main services section in services page.", "digicorpdomain" ),
+	10,
+	__( "Add & Edit Widgets", "digicorpdomain" ),
+	'sidebar-widgets-services_mainservice'
+);
 /**
  * Render the site title for the selective refresh partial.
  *

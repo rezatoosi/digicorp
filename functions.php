@@ -158,6 +158,17 @@
           'before_title' => '',
           'after_title' => ''
         ));
+
+        // Service widgets
+        register_sidebar(array(
+          'name' => __('Services - Main(General) Services', 'digicorpdomain'),
+          'id' => 'services_mainservice',
+          'description' => __('Main services section in services or frontpage', 'digicorpdomain'),
+          'before_widget' => '<div id="%1$s" class="%2$s"><div class="col-sm-6">',
+          'after_widget' => '</div></div><!--end widget-->',
+          'before_title' => '',
+          'after_title' => ''
+        ));
       }
     endif;
     add_action('widgets_init','ariana_widgets_init');

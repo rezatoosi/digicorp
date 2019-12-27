@@ -62,6 +62,8 @@
 
       <?php get_template_part( 'template-parts/sections/about', 'brands' ); ?>
 
+      <?php get_template_part( 'template-parts/sections/services', 'mainservices' ); ?>
+
       <?php get_template_part( 'template-parts/sections/frontpage', 'features' ); ?>
 
       <?php

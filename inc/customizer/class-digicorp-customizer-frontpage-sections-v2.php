@@ -108,7 +108,7 @@ class Digicorp_Customizer_Frontpage_Section_V2
     // display this section?
     $wp_customize->add_setting( $this->prefix_section . '_enabled', array(
       'sanitize_callback' => 'digicorp_sanitize_checkbox',
-      'default'           => 1,
+      'default'           => 0,
       'transport'         => 'postMessage',
     ) );
     $wp_customize->add_control(  new Epsilon_Control_Toggle( $wp_customize, $this->prefix_section . '_enabled', array(
