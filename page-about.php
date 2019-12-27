@@ -2,7 +2,8 @@
 get_header();
 
 digicorp_page_header_section( array(
-  'section_class' => 'visual bg-grd-2'
+  'section_class' => 'visual'
+  // 'section_class' => 'visual bg-grd-2'
   // 'section_class' => 'visual section-hero'
 
 ));
