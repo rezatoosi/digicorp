@@ -13964,6 +13964,7 @@ RTL Fix
   font-family: notosans;
   src: url('../fonts/fa/NotoSansArabic-Regular.woff') format('woff');
 } */
+.breadcrumb,
 .contact-list p,
 .btn-contact,
 .font-header,
