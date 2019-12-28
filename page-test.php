@@ -895,6 +895,38 @@ digicorp_page_header_section( array(
     </div>
 </section>
 
+<br/>
+<br/>
+
+<section class="section bg-img bg-img-07 bg-highlight text-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="">
+              <div class="section-title text-left">
+                  <h5>ما چگونه فکر می‌کنیم؟</h5>
+                  <h3>فلسفه ما</h3>
+                  <hr class="hr-gray">
+              </div><!-- end title -->
+
+              <div>
+
+                <p class="font-header font-large text-left padding-x-md">
+                  از سال 1386، به عنوان یک آژانس طراحی و توسعه وب سایت، این افتخار را داشته ایم که به ده‌ها شرکت، سازمان و کسب‌و‌کار در اندازه‌های مختلف خدمت‌رسانی کنیم.
+                  برخی از برندهای شناخته شده که از آریانا خدمات گرفته‌اند:
+                </p>
+                <a href="#" title="" class="btn btn-lg btn-border border-light btn-icon-right">بیشتر <i class="fa fa-chevron-left"></i></a>
+
+              </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+</section>
+
 <section class="section bg-floral-1 bg-light-blue">
     <div class="container">
         <div class="section-title text-center">
@@ -1030,7 +1062,7 @@ digicorp_page_header_section( array(
     </div>
 </section>
 
-<section class="section" id="section-contact-addresses">
+<section class="section" id="section-contact-address">
     <div class="container">
         <div class="section-title text-center">
             <h5>ما چگونه فکر می‌کنیم؟</h5>
@@ -1141,6 +1173,65 @@ digicorp_page_header_section( array(
 
     </div>
 </section>
+
+
+<br/>
+<br/>
+
+
+<section class="section lb">
+    <div class="container">
+      <div class="row">
+        <div class="section-title text-center">
+            <h5>ما چگونه فکر می‌کنیم؟</h5>
+            <h3>فلسفه ما</h3>
+        </div><!-- end title -->
+
+        <div class="row mh-20">
+            <div class="col-md-8 col-md-offset-2">
+                <p class="font-header text-center padding-x-md">
+                  از سال 1386، به عنوان یک آژانس طراحی و توسعه وب سایت، این افتخار را داشته ایم که به ده‌ها شرکت، سازمان و کسب‌و‌کار در اندازه‌های مختلف خدمت‌رسانی کنیم.
+                  برخی از برندهای شناخته شده که از آریانا خدمات گرفته‌اند:
+                </p>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 col-xs-12">
+          <div class="section-title text-center">
+              <h3>پشتیبانی</h3>
+              <p>
+                  <a href="tel:+985138468533" title="برای تماس کلیک کنید" class="ltr btn btn-link text-left pl-0 pt-30 btn-lg" target="_blank">
+                    +98 51 3846 53 88 - 89
+                  </a>
+              </p>
+          </div><!-- end title -->
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <div class="section-title text-center">
+              <h3>فروش</h3>
+              <p>
+                  <a href="tel:+985138468533" title="برای تماس کلیک کنید" class="ltr btn btn-link text-left pl-0 pt-30 btn-lg" target="_blank">
+                    +98 51 3846 85 32 - 33
+                  </a>
+              </p>
+          </div><!-- end title -->
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <div class="section-title text-center">
+              <h3>تماس ضروری</h3>
+              <p>
+                  <a href="tel:+985138468533" title="برای تماس کلیک کنید" class="ltr btn btn-link text-left pl-0 pt-30 btn-lg" target="_blank">
+                    +98 935 410 9161
+                  </a>
+              </p>
+          </div><!-- end title -->
+        </div>
+      </div>
+
+    </div>
+</section>
+
 
 <section class="section p-0 bg-light-gray" id="section-contact-shortcuts">
     <div class="container-fluid equal-height">

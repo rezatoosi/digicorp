@@ -169,6 +169,47 @@
           'before_title' => '',
           'after_title' => ''
         ));
+
+        // contactus widgets
+        register_sidebar(array(
+          'name' => __('Contact - Address', 'digicorpdomain'),
+          'id' => 'contact_address',
+          'description' => __('Contact Address section in contact or frontpage', 'digicorpdomain'),
+          'before_widget' => '<div id="%1$s" class="%2$s"><div class="col-sm-6">',
+          'after_widget' => '</div></div><!--end widget-->',
+          'before_title' => '',
+          'after_title' => ''
+        ));
+
+        register_sidebar(array(
+          'name' => __('Contact - Phone', 'digicorpdomain'),
+          'id' => 'contact_phone',
+          'description' => __('Contact Phone section in contact or frontpage', 'digicorpdomain'),
+          'before_widget' => '<div id="%1$s" class="%2$s"><div class="col-sm-4 col-xs-12">',
+          'after_widget' => '</div></div><!--end widget-->',
+          'before_title' => '',
+          'after_title' => ''
+        ));
+
+        register_sidebar(array(
+          'name' => __('Contact - Social', 'digicorpdomain'),
+          'id' => 'contact_social',
+          'description' => __('Contact Social section in contact or frontpage', 'digicorpdomain'),
+          'before_widget' => '<div id="%1$s" class="%2$s"><div class="col-sm-6 col-xs-12">',
+          'after_widget' => '</div></div><!--end widget-->',
+          'before_title' => '',
+          'after_title' => ''
+        ));
+
+        register_sidebar(array(
+          'name' => __('Contact - Map', 'digicorpdomain'),
+          'id' => 'contact_map',
+          'description' => __('Contact Map section in contact or frontpage', 'digicorpdomain'),
+          'before_widget' => '<div id="%1$s" class="%2$s">',
+          'after_widget' => '</div><!--end widget-->',
+          'before_title' => '',
+          'after_title' => ''
+        ));
       }
     endif;
     add_action('widgets_init','ariana_widgets_init');

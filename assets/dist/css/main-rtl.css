@@ -7328,6 +7328,9 @@ fieldset[disabled] .btn-primary.focus,
 .text-light p {
   color: #eee; }
 
+.text-light a.btn-link {
+  color: #fff; }
+
 .text-white * {
   color: #fff !important; }
 

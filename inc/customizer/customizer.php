@@ -136,6 +136,36 @@ $service_section_mainservices = new Digicorp_Customizer_Frontpage_Section_V2(
 	__( "Add & Edit Widgets", "digicorpdomain" ),
 	'sidebar-widgets-services_mainservice'
 );
+
+$contact_section_address = new Digicorp_Customizer_Frontpage_Section_V2(
+	'_sections_contact_address',
+	'#section-contact-address',
+	__( 'Contact - Address', 'digicorpdomain' ),
+	__( "Manage our addresses in contactus or frontpage.", "digicorpdomain" ),
+	11,
+	__( "Add & Edit Widgets", "digicorpdomain" ),
+	'sidebar-widgets-contact_address'
+);
+
+$contact_section_phone = new Digicorp_Customizer_Frontpage_Section_V2(
+	'_sections_contact_phone',
+	'#section-contact-phone',
+	__( 'Contact - Phone', 'digicorpdomain' ),
+	__( "Manage our phone numbers in contactus or frontpage.", "digicorpdomain" ),
+	12,
+	__( "Add & Edit Widgets", "digicorpdomain" ),
+	'sidebar-widgets-contact_phone'
+);
+
+$contact_section_social = new Digicorp_Customizer_Frontpage_Section_V2(
+	'_sections_contact_social',
+	'#section-contact-social',
+	__( 'Contact - Social', 'digicorpdomain' ),
+	__( "Manage our social network links in contactus or frontpage.", "digicorpdomain" ),
+	13,
+	__( "Add & Edit Widgets", "digicorpdomain" ),
+	'sidebar-widgets-contact_social'
+);
 /**
  * Render the site title for the selective refresh partial.
  *
