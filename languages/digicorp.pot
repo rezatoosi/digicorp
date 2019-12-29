@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-12-25T13:19:22+00:00\n"
+"POT-Creation-Date: 2019-12-29T18:40:57+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.2.0\n"
 "X-Domain: digicorpdomain\n"
@@ -76,14 +76,14 @@ msgstr ""
 
 #: backup/_home.php:84
 #: backup/__home.php:89
-#: home.php:144
+#: home.php:60
 #: templates/template-home-sidebar.php:90
 msgid "Latest in"
 msgstr ""
 
 #: backup/_home.php:103
 #: backup/__home.php:108
-#: home.php:163
+#: home.php:79
 #: templates/template-home-sidebar.php:109
 msgid "More articles in this category"
 msgstr ""
@@ -257,15 +257,76 @@ msgstr ""
 msgid "Copyright bar in footer"
 msgstr ""
 
+#: functions.php:144
+#: inc/customizer/customizer.php:105
+msgid "About us - Brands"
+msgstr ""
+
+#: functions.php:146
+msgid "Brands section in aboutus or frontpage"
+msgstr ""
+
+#: functions.php:153
+msgid "About us - Our History"
+msgstr ""
+
+#: functions.php:155
+msgid "Our history section in aboutus or frontpage"
+msgstr ""
+
+#: functions.php:164
+msgid "Services - Main(General) Services"
+msgstr ""
+
+#: functions.php:166
+msgid "Main services section in services or frontpage"
+msgstr ""
+
+#: functions.php:175
+#: inc/customizer/customizer.php:143
+msgid "Contact - Address"
+msgstr ""
+
+#: functions.php:177
+msgid "Contact Address section in contact or frontpage"
+msgstr ""
+
+#: functions.php:185
+#: inc/customizer/customizer.php:153
+msgid "Contact - Phone"
+msgstr ""
+
+#: functions.php:187
+msgid "Contact Phone section in contact or frontpage"
+msgstr ""
+
+#: functions.php:195
+#: inc/customizer/customizer.php:163
+msgid "Contact - Social"
+msgstr ""
+
+#: functions.php:197
+msgid "Contact Social section in contact or frontpage"
+msgstr ""
+
+#: functions.php:205
+msgid "Contact - Map"
+msgstr ""
+
+#: functions.php:207
+msgid "Contact Map section in contact or frontpage"
+msgstr ""
+
 #. translators: screen reader text for nav icon in small screens
 #: header.php:46
 msgid "Toggle navigation"
 msgstr ""
 
-#: home.php:103
+#: home.php:19
 msgid "Featured Categories"
 msgstr ""
 
+#: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:116
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:112
 #: inc/customizer/sections/blog.php:24
 #: inc/customizer/sections/features.php:24
@@ -276,6 +337,7 @@ msgstr ""
 msgid "View this section?"
 msgstr ""
 
+#: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:127
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:123
 #: inc/customizer/sections/blog.php:35
 #: inc/customizer/sections/features.php:35
@@ -286,6 +348,7 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
+#: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:144
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:140
 #: inc/customizer/sections/blog.php:51
 #: inc/customizer/sections/features.php:51
@@ -295,19 +358,39 @@ msgstr ""
 msgid "Sub Title"
 msgstr ""
 
+#: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:161
+msgid "Description Text"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:203
+msgid "Section Icon Class"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:215
+msgid "Icon Image"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:216
+msgid "Max Height: 40px"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:227
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:182
 msgid "Container CSS Class"
 msgstr ""
 
+#: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:239
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:194
 msgid "Backgound Color"
 msgstr ""
 
+#: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:250
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:205
 #: inc/customizer/sections/slider-typed.php:81
 msgid "Backgound Image"
 msgstr ""
 
+#: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:251
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:206
 #: inc/customizer/sections/slider-typed.php:82
 msgid "Minimum width: 2kpx"
@@ -321,20 +404,81 @@ msgstr ""
 msgid "Manage front-page sections"
 msgstr ""
 
-#: inc/customizer/customizer.php:81
+#: inc/customizer/customizer.php:82
 msgid "Custom Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:82
+#: inc/customizer/customizer.php:83
 msgid "Manage custom section settings."
 msgstr ""
 
-#: inc/customizer/customizer.php:84
+#: inc/customizer/customizer.php:85
+#: inc/customizer/customizer.php:108
+#: inc/customizer/customizer.php:118
+#: inc/customizer/customizer.php:136
+#: inc/customizer/customizer.php:146
+#: inc/customizer/customizer.php:156
+#: inc/customizer/customizer.php:166
 msgid "Add & Edit Widgets"
 msgstr ""
 
-#. translators: Default Text for Slider CTA
+#: inc/customizer/customizer.php:95
+#: inc/customizer/sections/features.php:8
+msgid "Features Section"
+msgstr ""
+
+#: inc/customizer/customizer.php:96
+#: inc/customizer/sections/features.php:9
+msgid "Manage features section settings."
+msgstr ""
+
+#: inc/customizer/customizer.php:98
+#: inc/customizer/sections/features.php:72
+msgid "Add & Edit features"
+msgstr ""
+
+#: inc/customizer/customizer.php:106
+msgid "Manage brands section in about us page."
+msgstr ""
+
+#: inc/customizer/customizer.php:115
+msgid "About us - History"
+msgstr ""
+
 #: inc/customizer/customizer.php:116
+msgid "Manage history section in about us page."
+msgstr ""
+
+#: inc/customizer/customizer.php:125
+msgid "About us - Our Philosophy"
+msgstr ""
+
+#: inc/customizer/customizer.php:126
+msgid "Manage our philosophy section in about us page."
+msgstr ""
+
+#: inc/customizer/customizer.php:133
+msgid "Services - Our Main Services"
+msgstr ""
+
+#: inc/customizer/customizer.php:134
+msgid "Manage our main services section in services page."
+msgstr ""
+
+#: inc/customizer/customizer.php:144
+msgid "Manage our addresses in contactus or frontpage."
+msgstr ""
+
+#: inc/customizer/customizer.php:154
+msgid "Manage our phone numbers in contactus or frontpage."
+msgstr ""
+
+#: inc/customizer/customizer.php:164
+msgid "Manage our social network links in contactus or frontpage."
+msgstr ""
+
+#. translators: Default Text for Slider CTA
+#: inc/customizer/customizer.php:194
 #: inc/customizer/sections/slider-typed.php:90
 msgid "CTA Button Text"
 msgstr ""
@@ -345,18 +489,6 @@ msgstr ""
 
 #: inc/customizer/sections/blog.php:9
 msgid "Manage blog section settings."
-msgstr ""
-
-#: inc/customizer/sections/features.php:8
-msgid "Features Section"
-msgstr ""
-
-#: inc/customizer/sections/features.php:9
-msgid "Manage features section settings."
-msgstr ""
-
-#: inc/customizer/sections/features.php:72
-msgid "Add & Edit features"
 msgstr ""
 
 #: inc/customizer/sections/projects.php:8

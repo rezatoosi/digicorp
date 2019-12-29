@@ -1,10 +1,72 @@
 <?php
 get_header();
 
-digicorp_page_header_section( array(
-  'section_class' => 'visual bg-main2'
-));
+// digicorp_page_header_section( array(
+//   'section_class' => 'visual bg-main2'
+// ));
 ?>
+<?php
+if ( get_theme_mod( 'digicorp_typed_slider_enabled', 1 ) ):
+?>
+  <section class="visual visual-2" id="typed-slider">
+      <div class="container">
+          <div class="text-block">
+              <div class="heading-holder">
+                  <h1><?php echo get_theme_mod( 'digicorp_typed_slider_title' ); ?></h1>
+              </div>
+              <div id="typed-slider-typed-strings" hidden>
+                <?php
+                  $typed_elements = explode( "\n", get_theme_mod( 'digicorp_typed_slider_typed_elements' ) );
+                  foreach ( $typed_elements as $typed_element ) {
+                    echo "<p>$typed_element</p>\n";
+                  }
+                ?>
+                <p>از سال 1386، به عنوان یک آژانس طراحی و توسعه وب سایت</p>
+              </div>
+              <div class="tagline">&nbsp; <p id="typed-slider-typed-element"></p> &nbsp;</div>
+              <div class="infos">
+                <?php
+                  $info_tags = explode( "\n", get_theme_mod( 'digicorp_typed_slider_info_tags' ) );
+                  foreach ( $info_tags as $info_tag ) {
+                    echo "<span class=\"info\"><i class=\"fa fa-star\"></i> $info_tag</span>\n";
+                  }
+                ?>
+              </div>
+          </div>
+      </div>
+      <?php
+      if ( ! empty( get_theme_mod( 'digicorp_typed_slider_background' ) ) ) {
+        printf(
+          '<img src="%1$s" alt="%2$s" class="bg-stretch" id="typed-slider-bg">',
+          get_theme_mod( 'digicorp_typed_slider_background' ),
+          get_theme_mod( 'digicorp_typed_slider_title' )
+        );
+      }
+      // else {
+      //   printf(
+      //     '<img src="%1$s" alt="%2$s" class="bg-stretch" id="typed-slider-bg">',
+      //     get_template_directory_uri() . '/assets/dist/images/slider-bg.jpg',
+      //     get_theme_mod( 'digicorp_typed_slider_title' )
+      //   );
+      // }
+      ?>
+  </section>
+
+  <!-- call to action -->
+  <?php if ( ! empty( get_theme_mod( 'digicorp_typed_slider_cta_text' ) ) ): ?>
+  <section class="section nopad cta" id="slider-cta">
+      <div class="container nopad">
+          <div id="cta">
+              <a href="<?php echo esc_url( get_page_link( get_theme_mod( 'digicorp_typed_slider_cta_link' ) ) ); ?>" class="btn btn-primary rounded"><?php echo get_theme_mod( 'digicorp_typed_slider_cta_text' ); ?></a>
+          </div>
+      </div>
+  </section>
+  <?php endif; ?>
+
+<?php
+endif;
+?>
+
 
 
 <section class="section pt-90" id="section-about-brands">
@@ -1255,7 +1317,7 @@ digicorp_page_header_section( array(
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-xs-12">
-                            <a href="#" title="" class="btn-contact btn-whatsapp" target="_blank">
+                            <a href="https://wa.me/989354109161" title="" class="btn-contact btn-whatsapp" target="_blank">
                                 <i class="fa fa-whatsapp"></i>
                                 WHATSAPP
                                 <span>
@@ -1282,7 +1344,7 @@ digicorp_page_header_section( array(
                             </a>
                         </div>
                         <div class="col-sm-6 col-xs-12">
-                            <a href="#" title="" class="btn-contact btn-whatsapp" target="_blank">
+                            <a href="https://www.instagram.com/ariana.digital/" title="" class="btn-contact btn-whatsapp" target="_blank">
                                 <i class="fa fa-instagram"></i>
                                 instagram
                                 <span>

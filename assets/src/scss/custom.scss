@@ -177,6 +177,7 @@ ol {
     padding: 30px 0;
     margin-bottom: 0;
     border-radius: 0;
+    border: 0;
     background-color: #ffffff !important;
 }
 
@@ -3018,6 +3019,11 @@ hr.invis {
     background-color: #002340;
 }
 
+.visual.visual-2 {
+  min-height: 400px;
+  padding: 120px 0;
+}
+
 #page-header.visual {
     min-height: auto;
     max-height: auto;
@@ -3057,6 +3063,10 @@ hr.invis {
     color: #ffffff;
 }
 
+.visual.visual-2 h1 {
+    font-size: 4.5rem;
+}
+
 .infos {
     display: block;
     padding-top: 20px;
@@ -3072,18 +3082,25 @@ hr.invis {
     color: rgba(255, 255, 255, 1);
     /* font-size: 21px !important; */
     /* edited */
-    font-size: 3rem !important;
+    font-size: 3rem;
     padding-top: 1.5em;
     padding-bottom: .5em;
     /* edited */
-    line-height: 1.1;
+    line-height: 1.5;
     display: inline;
     margin: 0 0 15px;
 }
 
+.visual.visual-2 p {
+  font-size: 5rem;
+  font-weight: bold;
+  padding-top: .3em;
+  padding-bottom: .3em;
+}
+
 .visual p.tagline,
 .visual h3.tagline {
-    line-height: 1.1;
+    line-height: 1.7;
     font-size: 21px;
 }
 
@@ -3099,6 +3116,10 @@ hr.invis {
 
 .visual .text-block {
     padding: 90px 0;
+}
+
+.visual.visual-2 .text-block {
+    padding: 0;
 }
 
 .visual .text-block .heading-holder {
@@ -3520,6 +3541,10 @@ visibility: hidden;
         font-size: 34px;
         line-height: 1.148;
     }
+    .visual.visual-2 h1 {
+        font-size: 3rem;
+        line-height: 1.35;
+    }
     .visual .text-block {
         padding: 30px 0;
     }
@@ -3528,7 +3553,9 @@ visibility: hidden;
     }
     .element,
     .visual p {
-        font-size: 13px !important;
+        // font-size: 13px !important;
+        // edited:
+        font-size: 2.3rem !important;
     }
     #nav .nav-drop > ul li.active:before {
         top: 15px;

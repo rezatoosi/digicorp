@@ -1,4 +1,5 @@
 
+var bootstrap = require('bootstrap');
 var owlCarousel = require('owl.carousel');
 var typedjs = require('typed.js');
 // var smoothScroll = require('smooth-scroll');

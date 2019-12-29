@@ -3,7 +3,7 @@
       <?php
       if ( get_theme_mod( 'digicorp_typed_slider_enabled', 1 ) ):
       ?>
-        <section class="visual" id="typed-slider">
+        <section class="visual visual-2" id="typed-slider">
             <div class="container">
                 <div class="text-block">
                     <div class="heading-holder">
@@ -35,13 +35,14 @@
                 get_theme_mod( 'digicorp_typed_slider_background' ),
                 get_theme_mod( 'digicorp_typed_slider_title' )
               );
-            } else {
-              printf(
-                '<img src="%1$s" alt="%2$s" class="bg-stretch" id="typed-slider-bg">',
-                get_template_directory_uri() . '/assets/dist/images/slider-bg.jpg',
-                get_theme_mod( 'digicorp_typed_slider_title' )
-              );
             }
+            // else {
+            //   printf(
+            //     '<img src="%1$s" alt="%2$s" class="bg-stretch" id="typed-slider-bg">',
+            //     get_template_directory_uri() . '/assets/dist/images/slider-bg.jpg',
+            //     get_theme_mod( 'digicorp_typed_slider_title' )
+            //   );
+            // }
             ?>
         </section>
 
