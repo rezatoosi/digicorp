@@ -71,7 +71,7 @@
       if ( get_theme_mod( 'digicorp_sections_services_enabled' ) ):
       ?>
         <section class="section" id="section-services">
-            <div class="container-fluid">
+            <div class="container">
               <?php if ( ! empty( get_theme_mod( 'digicorp_sections_services_title' ) ) ): ?>
                 <div class="section-title text-center">
                     <h5><?php echo get_theme_mod( 'digicorp_sections_services_subtitle' ); ?></h5>
