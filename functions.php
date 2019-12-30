@@ -210,6 +210,16 @@
           'before_title' => '',
           'after_title' => ''
         ));
+
+        register_sidebar(array(
+          'name' => __('Contact - Form', 'digicorpdomain'),
+          'id' => 'contact_form',
+          'description' => __('Contact Form section in contactus', 'digicorpdomain'),
+          'before_widget' => '<div id="%1$s" class="%2$s">',
+          'after_widget' => '</div><!--end widget-->',
+          'before_title' => '',
+          'after_title' => ''
+        ));
       }
     endif;
     add_action('widgets_init','ariana_widgets_init');

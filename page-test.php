@@ -1142,94 +1142,35 @@ endif;
 
         <div class="row pt-30">
           <div class="col-sm-6">
-              <img alt="مشهد" src="http://localhost/wp1/wp-content/themes/digicorp/assets/dist/images/contact/mashad.png" title="" class="img-full img-responsive" />
-
-              <ul class="contact-list">
-                <li>
-                    <h3>مشهد</h3>
-                    <p>
-                      خیابان سلمان فارسی،
-                      <br/>
-                      تقاطع بخارایی
-                      <br/>
-                      <a href="https://goo.gl/maps/ckmuZoDSeKgKWZNi8" title="" class="btn btn-link text-left pl-0 btn-icon-right" target="_blank">نمایش آدرس روی نقشه <i class="fa fa-arrow-left"></i></a>
-                      <br/>
-                      <a href="https://goo.gl/maps/ckmuZoDSeKgKWZNi8" title="" class="btn btn-link text-left pl-0 btn-icon-right" target="_blank">نمایش بهترین مسیر روی نقشه <i class="fa fa-arrow-left"></i></a>
-
-                      <!-- <br/>
-                      <a href="#" title="" class="btn btn-link text-left pl-0 btn-icon-left" target="_blank"><i class="fa fa-map-marker"></i> نمایش آدرس روی نقشه</a>
-                      <br/>
-                      <a href="#" title="" class="btn btn-link text-left pl-0 btn-icon-left" target="_blank"><i class="fa fa-map-signs"></i> نمایش بهترین مسیر روی نقشه</a> -->
-                    </p>
-                </li>
-                <li>
-                    <h4>پشتیبانی:</h4>
-                    <p>
-                        <a href="tel:+985138468533" title="برای تماس کلیک کنید" class="ltr btn btn-link text-left pl-0 btn-lg" target="_blank">+9851 3846 85 32 - 33</a>
-                    </p>
-                </li>
-                <li>
-                    <h4>فروش:</h4>
-                    <p>
-                        <a href="tel:+985138465388" title="برای تماس کلیک کنید" class="ltr btn btn-link text-left pl-0 btn-lg" target="_blank">
-                          +9851 3846 53 88 - 89
-                        </a>
-                    </p>
-                </li>
-                <li>
-                    <h4>تماس ضروری:</h4>
-                    <p>
-                        <a href="tel:+989354109161" title="برای تماس کلیک کنید" class="ltr btn btn-link text-left pl-0 btn-lg" target="_blank">
-                          +98935 410 9161
-                        </a>
-                    </p>
-                </li>
-              </ul>
-
+            <img class="img-full img-responsive" title="" src="http://localhost/wp1/wp-content/themes/digicorp/assets/dist/images/contact/mashad.png" alt="مشهد" />
+            <ul class="contact-list">
+              <li>
+                <h3>مشهد</h3>
+                <p>
+                  خیابان سلمان فارسی، <br/>
+                  تقاطع بخارایی
+                </p>
+                <a class="btn btn-link text-left pl-0 btn-icon-right" title="" href="https://goo.gl/maps/ckmuZoDSeKgKWZNi8" target="_blank" rel="noopener">نمایش آدرس روی نقشه <i class="fa fa-arrow-left"></i></a>
+                <br/>
+                <a class="btn btn-link text-left pl-0 btn-icon-right" title="" href="https://goo.gl/maps/ckmuZoDSeKgKWZNi8" target="_blank" rel="noopener">نمایش بهترین مسیر روی نقشه <i class="fa fa-arrow-left"></i></a>
+              </li>
+            </ul>
           </div>
           <div class="col-sm-6">
-              <img alt="تهران" src="http://localhost/wp1/wp-content/themes/digicorp/assets/dist/images/contact/tehran2.png" title="" class="img-full img-responsive" />
-
-              <ul class="contact-list">
-                <li>
-                    <h3>تهران</h3>
-                    <p>
-                      خیابان ولیعصر،
-                      <br/>
-                      انتهای بن‌بست سروش
-                      <br/>
-                      <a href="https://goo.gl/maps/ckmuZoDSeKgKWZNi8" title="" class="btn btn-link text-left pl-0 btn-icon-right" target="_blank">نمایش آدرس روی نقشه <i class="fa fa-arrow-left"></i></a>
-                      <br/>
-                      <a href="https://goo.gl/maps/ckmuZoDSeKgKWZNi8" title="" class="btn btn-link text-left pl-0 btn-icon-right" target="_blank">نمایش بهترین مسیر روی نقشه <i class="fa fa-arrow-left"></i></a>
-
-                    </p>
-                </li>
-                <li>
-                    <h4>پشتیبانی:</h4>
-                    <p>
-                        <a href="tel:+985138468533" title="برای تماس کلیک کنید" class="ltr btn btn-link text-left pl-0 btn-lg" target="_blank">
-                          +9851 3846 85 32 - 33
-                        </a>
-                    </p>
-                </li>
-                <li>
-                    <h4>فروش:</h4>
-                    <p>
-                        <a href="tel:+985138465388" title="برای تماس کلیک کنید" class="ltr btn btn-link text-left pl-0 btn-lg" target="_blank">
-                          +9851 3846 53 88 - 89
-                        </a>
-                    </p>
-                </li>
-                <li>
-                    <h4>تماس ضروری:</h4>
-                    <p>
-                        <a href="tel:+989354109161" title="برای تماس کلیک کنید" class="ltr btn btn-link text-left pl-0 btn-lg" target="_blank">
-                          +98935 410 9161
-                        </a>
-                    </p>
-                </li>
-              </ul>
-
+            <img class="img-full img-responsive" title="" src="http://localhost/wp1/wp-content/themes/digicorp/assets/dist/images/contact/tehran2.png" alt="تهران" />
+            <ul class="contact-list">
+             	<li>
+            <h3>تهران</h3>
+            <p>
+              خیابان ولیعصر،
+              <br/>
+              انتهای بن‌بست سروش
+            </p>
+            <a class="btn btn-link text-left pl-0 btn-icon-right" title="" href="https://goo.gl/maps/ckmuZoDSeKgKWZNi8" target="_blank" rel="noopener">نمایش آدرس روی نقشه <i class="fa fa-arrow-left"></i></a>
+            <br/>
+            <a class="btn btn-link text-left pl-0 btn-icon-right" title="" href="https://goo.gl/maps/ckmuZoDSeKgKWZNi8" target="_blank" rel="noopener">نمایش بهترین مسیر روی نقشه <i class="fa fa-arrow-left"></i></a>
+            </li>
+            </ul>
           </div>
         </div>
 
@@ -1263,7 +1204,7 @@ endif;
           <div class="section-title text-center">
               <h3>پشتیبانی</h3>
               <p>
-                  <a href="tel:+985138468533" title="برای تماس کلیک کنید" class="ltr btn btn-link text-left pl-0 pt-30 btn-lg" target="_blank">
+                  <a href="tel:+985138465388" title="برای تماس کلیک کنید" class="ltr btn btn-link text-left pt-30 btn-lg" target="_blank">
                     +98 51 3846 53 88 - 89
                   </a>
               </p>
@@ -1273,7 +1214,7 @@ endif;
           <div class="section-title text-center">
               <h3>فروش</h3>
               <p>
-                  <a href="tel:+985138468533" title="برای تماس کلیک کنید" class="ltr btn btn-link text-left pl-0 pt-30 btn-lg" target="_blank">
+                  <a href="tel:+985138468533" title="برای تماس کلیک کنید" class="ltr btn btn-link text-left pt-30 btn-lg" target="_blank">
                     +98 51 3846 85 32 - 33
                   </a>
               </p>
@@ -1283,7 +1224,7 @@ endif;
           <div class="section-title text-center">
               <h3>تماس ضروری</h3>
               <p>
-                  <a href="tel:+985138468533" title="برای تماس کلیک کنید" class="ltr btn btn-link text-left pl-0 pt-30 btn-lg" target="_blank">
+                  <a href="tel:+989354109161" title="برای تماس کلیک کنید" class="ltr btn btn-link text-left pt-30 btn-lg" target="_blank">
                     +98 935 410 9161
                   </a>
               </p>

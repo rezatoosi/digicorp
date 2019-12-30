@@ -166,6 +166,16 @@ $contact_section_social = new Digicorp_Customizer_Frontpage_Section_V2(
 	__( "Add & Edit Widgets", "digicorpdomain" ),
 	'sidebar-widgets-contact_social'
 );
+
+$contact_section_social = new Digicorp_Customizer_Frontpage_Section_V2(
+	'_sections_contact_form',
+	'#section-contact-form',
+	__( 'Contact - Form', 'digicorpdomain' ),
+	__( "Manage Contact Form in contactus", "digicorpdomain" ),
+	13,
+	__( "Add & Edit Widgets", "digicorpdomain" ),
+	'sidebar-widgets-contact_form'
+);
 /**
  * Render the site title for the selective refresh partial.
  *

@@ -15,4 +15,6 @@ digicorp_page_header_section( array(
 
 <?php get_template_part( 'template-parts/sections/contact', 'social' ); ?>
 
+<?php get_template_part( 'template-parts/sections/contact', 'form' ); ?>
+
 <?php get_footer(); ?>
