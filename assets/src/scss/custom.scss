@@ -3521,6 +3521,10 @@ visibility: hidden;
     .service-list .col-md-4 {
         margin: 15px 0;
     }
+
+    .sm-text-center {
+      text-align: center !important;
+    }
 }
 
 @media only screen and (max-width: 479px) {
@@ -3593,6 +3597,9 @@ visibility: hidden;
     }
     .visual-container .visual-area > .container > p {
         margin: 0;
+    }
+    .xs-text-center {
+      text-align: center !important;
     }
 }
 

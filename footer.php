@@ -39,14 +39,14 @@
         <div class="copyrights">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 text-left">
+                    <div class="col-sm-4">
                       <?php
                         if ( is_active_sidebar('footer-copyright') ) :
                           dynamic_sidebar('footer-copyright');
                         endif;
                       ?>
                     </div>
-                    <div class="col-md-8 text-right">
+                    <div class="col-sm-8 text-right sm-text-center">
                       <?php
                           wp_nav_menu(array(
                               'theme_location' => 'footerMenu',
