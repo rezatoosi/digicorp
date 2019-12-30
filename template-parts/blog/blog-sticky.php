@@ -5,10 +5,10 @@ if ($sticky) {
 
   rsort($sticky);
   $banner_args = array(
-    'post__in' => $sticky,
+    // 'post__in' => $sticky,
     'posts_per_page' => '4',
     //'post_status' => 'publish',
-    'ignore_sticky_posts' => 'true'
+    'ignore_sticky_posts' => 'false'
   );
 
   $banner_query = new WP_Query( $banner_args );
