@@ -201,7 +201,7 @@ function php() {
 }
 
 function pot(cb) {
-  exec('wp i18n make-pot . languages/digicorp.pot --domain=digicorpdomain', function (err, stdout, stderr) {
+  exec('wp-cli.phar i18n make-pot . ./languages/digicorp.pot --domain=digicorpdomain', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
     cb(err);
@@ -236,7 +236,7 @@ const stylesDevelopment = gulp.series(Development.stylesLTR, Development.stylesR
 const stylesProduction = gulp.series(Production.stylesLTR, Production.stylesRTL);
 
 var tasks = {
-  production: gulp.series( clean, gulp.parallel(stylesProduction, Production.scripts, images, fonts, pot)),
+  production: gulp.series( clean, gulp.parallel(stylesProduction, Production.scripts, images, fonts)),
   development: gulp.parallel(stylesDevelopment, Development.scripts, images, fonts)
 }
 

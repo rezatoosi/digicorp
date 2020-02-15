@@ -1,4 +1,5 @@
 *.log
+*.pot
 wp-config.php
 
 /.htaccess

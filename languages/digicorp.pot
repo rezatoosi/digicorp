@@ -1,4 +1,4 @@
-# Copyright (C) 2019 Ariana Digital Agency
+# Copyright (C) 2020 Ariana Digital Agency
 # This file is distributed under the ?.
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-12-30T17:48:58+00:00\n"
+"POT-Creation-Date: 2020-02-15T21:09:32+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.2.0\n"
 "X-Domain: digicorpdomain\n"
@@ -327,7 +327,7 @@ msgid "Contact Form section in contactus"
 msgstr ""
 
 #. translators: screen reader text for nav icon in small screens
-#: header.php:46
+#: header.php:57
 msgid "Toggle navigation"
 msgstr ""
 
