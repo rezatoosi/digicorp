@@ -2474,7 +2474,9 @@ li .fa-warning {
     transition: color 0.3s;
 }
 
-.services-list .col-md-4 {
+.services-list .col-sm-6,
+.services-list .col-md-4,
+.services-list .col-md-3 {
     margin-bottom: 30px;
 }
 
@@ -2508,10 +2510,11 @@ li .fa-warning {
     font-weight: bold;
     text-transform: capitalize;
     padding: 10px 0 5px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .services-list .item-desc h5 {
+    font-weight: bold;
     color: #C3C4C6;
 }
 
