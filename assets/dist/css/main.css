@@ -9749,7 +9749,7 @@ div.mejs-speed-button {
   default color was: F1773D
   default hover color was: cb5720
 
-  -- next change from - c10d0d to c10d0d
+  -- next change from - ed1748 to c10d0d
 
 
 */
@@ -13655,6 +13655,9 @@ no-gutters {
 
 .bg-shape-4:before {
   background-image: url(../images/shapes/4.png); }
+
+.block-editor-writing-flow__click-redirect {
+  margin-bottom: 0 !important; }
 
 /* Banner - Blog Home */
 .blog-banner .post_title h2 {

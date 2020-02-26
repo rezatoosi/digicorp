@@ -4416,3 +4416,9 @@ no-gutters {
 .bg-shape-4:before {
     background-image: url(../images/shapes/4.png);
 }
+
+
+// fix gutengerg editor styles
+.block-editor-writing-flow__click-redirect {
+  margin-bottom: 0!important;
+}

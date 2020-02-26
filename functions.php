@@ -35,6 +35,60 @@
           add_theme_support( 'custom-background' );
 
           add_theme_support( 'post-formats', array ( 'aside', 'gallery', 'quote', 'image', 'video', 'audio', 'link', 'status', 'chat' ) );
+
+          // ---------------------------------------- Gutenberg ----------------------------------------
+          // Editor Styles
+          add_theme_support( 'editor-styles' );
+
+          if ( is_rtl() ) {
+            add_editor_style( '/assets/dist/css/main-rtl_editor.css' );
+          } else {
+            add_editor_style( '/assets/dist/css/main_editor.css' );
+          }
+
+          add_theme_support( 'align-wide' );
+
+          // // -- Disable custom font sizes
+          // add_theme_support( 'disable-custom-font-sizes' );
+          //
+          // // -- Editor Font Sizes
+          // add_theme_support( 'editor-font-sizes', array(
+          // 	array(
+          // 		'name'      => __( 'Small', 'ea_genesis_child' ),
+          // 		'shortName' => __( 'S', 'ea_genesis_child' ),
+          // 		'size'      => 12,
+          // 		'slug'      => 'small'
+          // 	),
+          // 	array(
+          // 		'name'      => __( 'Normal', 'ea_genesis_child' ),
+          // 		'shortName' => __( 'M', 'ea_genesis_child' ),
+          // 		'size'      => 16,
+          // 		'slug'      => 'normal'
+          // 	),
+          // 	array(
+          // 		'name'      => __( 'Large', 'ea_genesis_child' ),
+          // 		'shortName' => __( 'L', 'ea_genesis_child' ),
+          // 		'size'      => 20,
+          // 		'slug'      => 'large'
+          // 	),
+          // ) );
+
+          // -- Disable Custom Colors
+          // add_theme_support( 'disable-custom-colors' );
+
+          // -- Editor Color Palette
+          // add_theme_support( 'editor-color-palette', array(
+          // 	array(
+          // 		'name'  => __( 'Orginal', 'digicorpdomain' ),
+          // 		'slug'  => 'orginal',
+          // 		'color'	=> '#c10d0d',
+          // 	),
+          // 	// array(
+          // 	// 	'name'  => __( 'Green', 'ea_genesis_child' ),
+          // 	// 	'slug'  => 'green',
+          // 	// 	'color' => '#58AD69',
+          // 	// ),
+          // ) );
       }
     endif;
     add_action('after_setup_theme','aridiag_Setup');

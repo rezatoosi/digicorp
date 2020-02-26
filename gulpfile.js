@@ -56,6 +56,26 @@ var Development = {
     .pipe(notify({ message: 'LTR Styles task complete', onLast: true }))
     .pipe(browsersync.stream());
   },
+  stylesLTR_Editor: function() {
+    return gulp
+    .src(src.css + 'main_editor.scss', { sourcemaps: true })
+    // .pipe(sourcemaps.init())
+    .pipe(sass({
+  			// errLogToConsole: true,
+  			// outputStyle: 'compressed',
+  			// // outputStyle: 'compact',
+  			// // outputStyle: 'nested',
+  			// // outputStyle: 'expanded',
+  			// precision: 10
+  		}).on('error', sass.logError))
+    .pipe(autoprefixer('last 2 versions'))
+    // .pipe(cssnano())
+    // .pipe(sourcemaps.write('./'))
+    // .pipe(uglifycss({"maxLineLen": 80, "uglyComments": true}))
+    .pipe(gulp.dest(dist.css, { sourcemaps: '.' }))
+    .pipe(notify({ message: 'LTR Styles (Editor) task complete', onLast: true }))
+    .pipe(browsersync.stream());
+  },
   stylesRTL: function() {
     return gulp
     .src([
@@ -80,6 +100,32 @@ var Development = {
     // .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(dist.css, { sourcemaps: './' }))
     .pipe(notify({ message: 'RTL Styles task complete', onLast: true }))
+    .pipe(browsersync.stream());
+  },
+  stylesRTL_Editor: function() {
+    return gulp
+    .src([
+      src.css + 'bootstrap.scss',
+      // src.css + 'mediaelementplayer.scss',
+      src.css + 'colors.scss',
+      src.css + 'custom.scss',
+      // src.css + 'blogbanner.scss'
+    ], {sourcemaps: true})
+    // .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(rtlcss())
+    .pipe(gulp.src([
+      src.css + 'owlcarousel.scss',
+      src.css + 'fontawesome.scss',
+      src.css + 'rtl.scss'
+    ], {sourcemaps: true}))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer('last 2 versions'))
+    // .pipe(cssnano())
+    .pipe(concat('main-rtl_editor.css'))
+    // .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(dist.css, { sourcemaps: './' }))
+    .pipe(notify({ message: 'RTL Styles (Editor) task complete', onLast: true }))
     .pipe(browsersync.stream());
   },
   scripts: function() {
@@ -117,6 +163,26 @@ var Production = {
     .pipe(notify({ message: 'LTR Styles task completed in Production mode', onLast: true }))
     .pipe(browsersync.stream());
   },
+  stylesLTR_Editor: function() {
+    return gulp
+    .src(src.css + 'main_editor.scss')
+    // .pipe(sourcemaps.init())
+    .pipe(sass({
+  			// errLogToConsole: true,
+  			// outputStyle: 'compressed',
+  			// // outputStyle: 'compact',
+  			// // outputStyle: 'nested',
+  			// // outputStyle: 'expanded',
+  			// precision: 10
+  		}).on('error', sass.logError))
+    .pipe(autoprefixer('last 2 versions'))
+    .pipe(cssnano())
+    // .pipe(sourcemaps.write('./'))
+    // .pipe(uglifycss({"maxLineLen": 80, "uglyComments": true}))
+    .pipe(gulp.dest(dist.css))
+    .pipe(notify({ message: 'LTR Styles task (Editor) completed in Production mode', onLast: true }))
+    .pipe(browsersync.stream());
+  },
   stylesRTL: function() {
     return gulp
     .src([
@@ -141,6 +207,32 @@ var Production = {
     // .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(dist.css))
     .pipe(notify({ message: 'RTL Styles task completed in Production mode', onLast: true }))
+    .pipe(browsersync.stream());
+  },
+  stylesRTL_Editor: function() {
+    return gulp
+    .src([
+      // src.css + 'bootstrap.scss',
+      // src.css + 'mediaelementplayer.scss',
+      src.css + 'colors.scss',
+      src.css + 'custom.scss',
+      // src.css + 'blogbanner.scss'
+    ])
+    // .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(rtlcss())
+    .pipe(gulp.src([
+      // src.css + 'owlcarousel.scss',
+      // src.css + 'fontawesome.scss',
+      src.css + 'rtl.scss'
+    ]))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer('last 2 versions'))
+    .pipe(cssnano())
+    .pipe(concat('main-rtl_editor.css'))
+    // .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(dist.css))
+    .pipe(notify({ message: 'RTL Styles task (Editor) completed in Production mode', onLast: true }))
     .pipe(browsersync.stream());
   },
   scripts: function() {
@@ -232,8 +324,8 @@ function browserSyncReload(done) {
   done();
 }
 
-const stylesDevelopment = gulp.series(Development.stylesLTR, Development.stylesRTL);
-const stylesProduction = gulp.series(Production.stylesLTR, Production.stylesRTL);
+const stylesDevelopment = gulp.series(Development.stylesLTR, Development.stylesRTL, Development.stylesLTR_Editor, Development.stylesRTL_Editor);
+const stylesProduction = gulp.series(Production.stylesLTR, Production.stylesRTL, Production.stylesLTR_Editor, Production.stylesRTL_Editor);
 
 var tasks = {
   production: gulp.series( clean, gulp.parallel(stylesProduction, Production.scripts, images, fonts)),
