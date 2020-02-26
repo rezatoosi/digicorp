@@ -3,6 +3,9 @@
   default color was: F1773D
   default hover color was: cb5720
 
+  -- next change from - c10d0d to c10d0d
+
+
 */
 .nav .open > a:after,
 .nav .open > a:hover:after,
@@ -11,7 +14,7 @@
 .navbar-default .navbar-nav > .active > a:focus:after,
 .navbar-nav > li > a:focus:after,
 .navbar-nav > li > a:hover:after {
-    border-top-color: #ed1748;
+    border-top-color: #c10d0d;
 }
 
 .btn-border,
@@ -27,16 +30,16 @@ a.active,
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-    color: #ed1748 !important;
+    color: #c10d0d !important;
 }
 
 .navbar-right .lastlink a:hover i {
-    border-right-color: #ed1748;
+    border-right-color: #c10d0d;
 }
 
 .footer .form-control:focus,
 .quoteform .form-control:focus {
-    border-color: #ed1748 !important;
+    border-color: #c10d0d !important;
 }
 
 .btn-border,
@@ -45,19 +48,19 @@ a.active,
 .portfolio-filter .btn-default:hover,
 .service-content hr,
 .section-title hr {
-    border-color: #ed1748;
+    border-color: #c10d0d;
 }
 .service-content hr,
 .section-title hr {
-    background-color: #ed1748;
+    background-color: #c10d0d;
 }
 
 .pricing-box-05 {
-    border-top-color: #ed1748 !important;
+    border-top-color: #c10d0d !important;
 }
 
 .mejs-controls .mejs-time-rail .mejs-time-loaded {
-    background: #ed1748 !important;
+    background: #c10d0d !important;
 }
 
 .tags a,
@@ -68,8 +71,8 @@ a.active,
 .navbar-right .lastlink .btn,
 .blog-banner-carousel-1 .owl-nav .owl-prev,
 .blog-banner-carousel-1 .owl-nav .owl-next {
-    border-color: #ed1748;
-    background-color: #ed1748;
+    border-color: #c10d0d;
+    background-color: #c10d0d;
     color: #ffffff !important;
 }
 
@@ -158,17 +161,17 @@ fieldset[disabled] .btn-primary.focus,
 }
 
 .bg-main2 {
-    background-color: #ed1748!important;
+    background-color: #c10d0d!important;
 }
 
 .color-main2 {
-  color: #ed1748!important;
+  color: #c10d0d!important;
 }
 
 .bg-grd-1 {
-  background: linear-gradient(114deg,#ff003a,#ed1748);
+  background: linear-gradient(114deg,#ff003a,#c10d0d);
   background-size: 100% 100%;
-  // background: linear-gradient(114deg,#ed1748,#ed1748,#ffd600,#ffd600,#008abb,#008abb,#ed1748,#ffd600,#ffd600,#008abb);
+  // background: linear-gradient(114deg,#c10d0d,#c10d0d,#ffd600,#ffd600,#008abb,#008abb,#c10d0d,#ffd600,#ffd600,#008abb);
 }
 
 .bg-grd-2 {
