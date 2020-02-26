@@ -7823,6 +7823,10 @@ ol {
 .section-content p {
   text-align: justify; }
 
+.section-content ul {
+  padding-right: 1.3em;
+  margin-right: 1.3em; }
+
 .service-content hr,
 .section-title hr {
   border-width: 1px;
