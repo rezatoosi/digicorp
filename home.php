@@ -15,7 +15,7 @@ if ( $categories ) {
 ?>
   <section class="section lb pt-60">
       <div class="container">
-          <div class="section-title text-left">
+          <div class="section-title text-center">
               <h3><?php _e('Featured Categories', 'digicorpdomain') ?></h3>
               <hr>
           </div><!-- end title -->
@@ -27,7 +27,7 @@ if ( $categories ) {
                 // echo wp_get_attachment_image ( $image_id, 'thumb' );
                 $image_src = wp_get_attachment_image_src( $image_id, 'thumb' )[0];
                  ?>
-                 <div class="col-md-3">
+                 <div class="col-sm-6">
                      <div class="blog-category-item">
                          <div class="box-1" data-bg-img="<?php echo $image_src; ?>">
                              <img src="<?php echo $image_src; ?>" alt="" scale="0">
@@ -76,7 +76,46 @@ if ( $query->have_posts() ) {
 
         <div class="row margin-top-xl">
           <div class="col-md-12">
-            <a href="<?php echo esc_attr(get_category_link($cat->cat_ID)); ?>" title="<?php echo esc_attr($cat->name); ?>"><?php _e('More articles in this category', 'digicorpdomain') ?></a>
+            <a class="btn btn-border btn-icon-right" href="<?php echo esc_attr(get_category_link($cat->cat_ID)); ?>" title="<?php echo esc_attr($cat->name); ?>"><?php _e('More articles in this category', 'digicorpdomain') ?> <i class="fa fa-chevron-left"></i></a>
+          </div>
+        </div>
+    </div><!-- end container -->
+</section>
+<?php } ?>
+
+
+<?php
+$cat = get_category_by_slug('web-design');
+$query = new WP_Query(array(
+  'category_name' => 'web-design',
+  'posts_per_page' => '4',
+  'post_status' => 'publish'
+));
+if ( $query->have_posts() ) {
+?>
+<section class="section">
+    <div class="container">
+        <div class="section-title text-left">
+            <h5><?php _e('Latest in', 'digicorpdomain') ?></h5>
+            <h3><?php echo $cat->name ?></h3>
+            <hr>
+        </div><!-- end title -->
+
+        <div class="row services-wrapper blog-wrapper text-left">
+
+          <?php
+            while ( $query->have_posts() ) {
+              $query->the_post();
+              get_template_part('template-parts/post/blog','recent');
+            }
+            wp_reset_postdata();
+          ?>
+
+        </div>
+
+        <div class="row margin-top-xl">
+          <div class="col-md-12">
+            <a class="btn btn-border btn-icon-right" href="<?php echo esc_attr(get_category_link($cat->cat_ID)); ?>" title="<?php echo esc_attr($cat->name); ?>"><?php _e('More articles in this category', 'digicorpdomain') ?> <i class="fa fa-chevron-left"></i></a>
           </div>
         </div>
     </div><!-- end container -->

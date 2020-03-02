@@ -5,9 +5,9 @@ if ($sticky) {
 
   rsort($sticky);
   $banner_args = array(
-    // 'post__in' => $sticky,
-    'posts_per_page' => '4',
-    //'post_status' => 'publish',
+    'post__in' => $sticky,
+    'posts_per_page' => '8',
+    'post_status' => 'publish',
     'ignore_sticky_posts' => 'false'
   );
 
@@ -15,6 +15,9 @@ if ($sticky) {
   $item_no = 8;
 
   if( $banner_query->have_posts() ) {
+
+    // var_dump($banner_query->posts);
+    // die;
   ?>
   <section class="section ph-60">
       <div class="container">
@@ -28,7 +31,7 @@ if ($sticky) {
                                   $count = 0;
                                   while( $banner_query->have_posts() ) {
                                       $banner_query->the_post();
-                                      if( $count < $item_no ) {
+                                      if( $count < 4 && $count < $item_no ) {
                                           ?>
                                           <div class="item">
                                               <div class="post_thumb imghover" style="background-image: url(<?php esc_url( the_post_thumbnail_url( 'thumb' ) ); ?>)">
@@ -56,7 +59,7 @@ if ($sticky) {
                                   $count = 0;
                                   while( $banner_query->have_posts() ) {
                                       $banner_query->the_post();
-                                      if( $count < $item_no ) {
+                                      if( $count >= 4 && $count < $item_no ) {
                                           ?>
                                           <div class="col col-md-6 small_posts">
                                               <article class="card">
