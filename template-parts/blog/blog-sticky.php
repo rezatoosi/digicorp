@@ -1,24 +1,6 @@
 <?php
 $sticky = get_option('sticky_posts');
-
-if ($sticky) {
-
-  rsort($sticky);
-  $banner_args = array(
-    'post__in' => $sticky,
-    'posts_per_page' => '8',
-    'post_status' => 'publish',
-    'ignore_sticky_posts' => 'false'
-  );
-
-  $banner_query = new WP_Query( $banner_args );
-  $item_no = 8;
-
-  if( $banner_query->have_posts() ) {
-
-    // var_dump($banner_query->posts);
-    // die;
-  ?>
+?>
   <section class="section ph-60">
       <div class="container">
           <div class="blog-banner blog-banner-1">
@@ -28,26 +10,39 @@ if ($sticky) {
                         <article class="card">
                               <div class="owl-carousel blog-banner-carousel-1">
                                   <?php
-                                  $count = 0;
-                                  while( $banner_query->have_posts() ) {
-                                      $banner_query->the_post();
-                                      if( $count < 4 && $count < $item_no ) {
-                                          ?>
-                                          <div class="item">
-                                              <div class="post_thumb imghover" style="background-image: url(<?php esc_url( the_post_thumbnail_url( 'thumb' ) ); ?>)">
-                                                  <div class="post-holder">
-                                                      <div class="post_title">
-                                                         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                                                      </div><!-- .post_title -->
-                                                  </div><!-- .post-holder -->
-                                              </div>
-                                              <!-- // post_thumb -->
-                                          </div><!-- .item -->
-                                          <?php
+                                  if ($sticky) {
+
+                                    rsort($sticky);
+                                    $banner_args = array(
+                                      'post__in' => $sticky,
+                                      'posts_per_page' => '4',
+                                      'post_status' => 'publish',
+                                      'ignore_sticky_posts' => 'true'
+                                    );
+
+                                    $banner_query = new WP_Query( $banner_args );
+
+                                    if( $banner_query->have_posts() ) {
+                                      while( $banner_query->have_posts() ) {
+                                          $banner_query->the_post();
+                                          // if( $count < 4 && $count < $item_no ) {
+                                              ?>
+                                              <div class="item">
+                                                  <div class="post_thumb imghover" style="background-image: url(<?php esc_url( the_post_thumbnail_url( 'thumb' ) ); ?>)">
+                                                      <div class="post-holder">
+                                                          <div class="post_title">
+                                                             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                                          </div><!-- .post_title -->
+                                                      </div><!-- .post-holder -->
+                                                  </div>
+                                                  <!-- // post_thumb -->
+                                              </div><!-- .item -->
+                                              <?php
+                                          // }
                                       }
-                                      $count++;
+                                      wp_reset_postdata();
+                                    }
                                   }
-                                  wp_reset_postdata();
                                   ?>
                               </div><!-- .owl-carousel -->
                           </article><!-- .card -->
@@ -56,10 +51,19 @@ if ($sticky) {
                         <div class="right-content-holder">
                               <div class="row custom_row clearfix">
                                   <?php
+                                  $banner_args = array(
+                                    'post__not_in' => $sticky,
+                                    'posts_per_page' => '4',
+                                    'post_status' => 'publish',
+                                    'ignore_sticky_posts' => 'true'
+                                  );
                                   $count = 0;
-                                  while( $banner_query->have_posts() ) {
+                                  $banner_query = new WP_Query( $banner_args );
+
+                                  if ( $banner_query->have_posts() ) {
+                                    while( $banner_query->have_posts() ) {
                                       $banner_query->the_post();
-                                      if( $count >= 4 && $count < $item_no ) {
+                                      if( $count < 4 ) {
                                           ?>
                                           <div class="col col-md-6 small_posts">
                                               <article class="card">
@@ -75,6 +79,7 @@ if ($sticky) {
                                           <?php
                                       }
                                       $count++;
+                                    }
                                   }
                                   wp_reset_postdata();
                                   ?>
@@ -86,4 +91,3 @@ if ($sticky) {
           </div>
       </div>
   </section>
-<?php } } ?>
