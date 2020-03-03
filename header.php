@@ -76,7 +76,6 @@
                                     'walker' => new walker_nav_menu_header()
                                 ));
                             ?>
-                            <a href="#">En</a>
                         </div>
                     </div><!-- end container-fluid -->
                 </nav><!-- end navbar -->
