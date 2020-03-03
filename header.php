@@ -10,8 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- SITE META -->
     <?php
+      // <!-- SITE META -->
       /* description meta tag will generate by yoast plugin */
       // $page_desc = get_post_meta(get_queried_object_id(), "post_desc", true);
       // if (!is_front_page() && !('' == $page_desc)){
@@ -76,6 +76,7 @@
                                     'walker' => new walker_nav_menu_header()
                                 ));
                             ?>
+                            <a href="#">En</a>
                         </div>
                     </div><!-- end container-fluid -->
                 </nav><!-- end navbar -->
