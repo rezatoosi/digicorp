@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DIGICORP 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/digicorp\n"
-"POT-Creation-Date: 2020-02-15T21:09:32+00:00\n"
-"PO-Revision-Date: 2020-02-16 03:14+0330\n"
+"POT-Creation-Date: 2020-03-04T13:47:57+00:00\n"
+"PO-Revision-Date: 2020-03-04 17:21+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -76,12 +76,12 @@ msgstr "آخرین"
 msgid "Suggested Articles"
 msgstr "مطالب پیشنهادی"
 
-#: backup/_home.php:84 backup/__home.php:89 home.php:60
+#: backup/_home.php:84 backup/__home.php:89 home.php:60 home.php:99
 #: templates/template-home-sidebar.php:90
 msgid "Latest in"
 msgstr "آخرین‌ها در"
 
-#: backup/_home.php:103 backup/__home.php:108 home.php:79
+#: backup/_home.php:103 backup/__home.php:108 home.php:79 home.php:118
 #: templates/template-home-sidebar.php:109
 msgid "More articles in this category"
 msgstr "مطالب بیشتر در این دسته‌بندی"
@@ -179,147 +179,147 @@ msgstr "منوی افقی در هدر"
 msgid "Footer Vertical Menu"
 msgstr "منوی زیرنویس"
 
-#: functions.php:45
+#: functions.php:99
 msgid "Small"
 msgstr "کوچک"
 
-#: functions.php:46
+#: functions.php:100
 msgid "Page Header"
 msgstr "هدر صفحه"
 
-#: functions.php:57
+#: functions.php:111
 msgid "Footer Widget 1"
 msgstr "ویجت 1 فوتر"
 
-#: functions.php:59
+#: functions.php:113
 msgid "The 1st widget in the footer"
 msgstr "ویجت اولین ستون فوتر"
 
-#: functions.php:66
+#: functions.php:120
 msgid "Footer Widget 2"
 msgstr "ویجت 2 فوتر"
 
-#: functions.php:68
+#: functions.php:122
 msgid "The 2nd widget in the footer"
 msgstr "ویجت دومین ستون فوتر"
 
-#: functions.php:75
+#: functions.php:129
 msgid "Footer Widget 3"
 msgstr "ویجت 3 فوتر"
 
-#: functions.php:77
+#: functions.php:131
 msgid "The 3rd widget in the footer"
 msgstr "ویجت سومین ستون فوتر"
 
-#: functions.php:84
+#: functions.php:138
 msgid "Footer Widget 4"
 msgstr "ویجت 4 فوتر"
 
-#: functions.php:86
+#: functions.php:140
 msgid "The 4th widget in the footer"
 msgstr "ویجت چهارمین ستون فوتر"
 
-#: functions.php:95
+#: functions.php:149
 msgid "Right Sidebar"
 msgstr "ساید بار سمت چپ"
 
-#: functions.php:97
+#: functions.php:151
 msgid "Sidebar in the right column of pages"
 msgstr "ساید بار ستون چپ صفحات"
 
-#: functions.php:104
+#: functions.php:158
 msgid "Right Sidebar Bottom"
 msgstr "ساید بار چپ پایین"
 
-#: functions.php:106
+#: functions.php:160
 msgid "To add in the bottom of right column"
 msgstr "برای اضافه کردن به پایین ستون چپ"
 
-#: functions.php:115
+#: functions.php:169
 msgid "Front Page - Features"
 msgstr "صفحه اصلی - ویژگی‌ها"
 
-#: functions.php:117
+#: functions.php:171
 msgid "Features section in frontpage"
 msgstr "قسمت ویژگی‌ها در صفحه اصلی"
 
-#: functions.php:124
+#: functions.php:178
 msgid "Front Page - Custom"
 msgstr "صفحه اصلی - سفارشی"
 
-#: functions.php:126
+#: functions.php:180
 msgid "Custom section in frontpage"
 msgstr "بخش سفارشی در صفحه اول"
 
-#: functions.php:133
+#: functions.php:187
 msgid "Footer - Copyright"
 msgstr "زیر نویس - حقوق"
 
-#: functions.php:135
+#: functions.php:189
 msgid "Copyright bar in footer"
 msgstr "نوار حقوق در زیرنویس"
 
-#: functions.php:144 inc/customizer/customizer.php:105
+#: functions.php:198 inc/customizer/customizer.php:105
 msgid "About us - Brands"
 msgstr "درباره ما - برندها"
 
-#: functions.php:146
+#: functions.php:200
 msgid "Brands section in aboutus or frontpage"
 msgstr "قسمت برندها در صفحه درباره ما"
 
-#: functions.php:153
+#: functions.php:207
 msgid "About us - Our History"
 msgstr "درباره ما - تاریخچه ما"
 
-#: functions.php:155
+#: functions.php:209
 msgid "Our history section in aboutus or frontpage"
 msgstr "قسمت تاریخچه ما در صفحه درباره ما"
 
-#: functions.php:164
+#: functions.php:218
 msgid "Services - Main(General) Services"
 msgstr "خدمات - خدمات اصلی (کلی)"
 
-#: functions.php:166
+#: functions.php:220
 msgid "Main services section in services or frontpage"
 msgstr "قسمت خدمات اصلی در صفحه خدمات"
 
-#: functions.php:175 inc/customizer/customizer.php:143
+#: functions.php:229 inc/customizer/customizer.php:143
 msgid "Contact - Address"
 msgstr "تماس - آدرس"
 
-#: functions.php:177
+#: functions.php:231
 msgid "Contact Address section in contact or frontpage"
 msgstr "قسمت آدرس تماس در صفحه تماس"
 
-#: functions.php:185 inc/customizer/customizer.php:153
+#: functions.php:239 inc/customizer/customizer.php:153
 msgid "Contact - Phone"
 msgstr "تماس - تلفن"
 
-#: functions.php:187
+#: functions.php:241
 msgid "Contact Phone section in contact or frontpage"
 msgstr "قسمت تلفن در صفحه تماس"
 
-#: functions.php:195 inc/customizer/customizer.php:163
+#: functions.php:249 inc/customizer/customizer.php:163
 msgid "Contact - Social"
 msgstr "تماس - اجتماعی"
 
-#: functions.php:197
+#: functions.php:251
 msgid "Contact Social section in contact or frontpage"
 msgstr "قسمت شبکه های اجتماعی در صفحه تماس"
 
-#: functions.php:205
+#: functions.php:259
 msgid "Contact - Map"
 msgstr "تماس - نقشه"
 
-#: functions.php:207
+#: functions.php:261
 msgid "Contact Map section in contact or frontpage"
 msgstr "قسمت نقشه در صفحه تماس"
 
-#: functions.php:215 inc/customizer/customizer.php:173
+#: functions.php:269 inc/customizer/customizer.php:173
 msgid "Contact - Form"
 msgstr "تماس - فرم"
 
-#: functions.php:217
+#: functions.php:271
 msgid "Contact Form section in contactus"
 msgstr "قسمت فرم تماس در صفحه تماس"
 
@@ -327,6 +327,10 @@ msgstr "قسمت فرم تماس در صفحه تماس"
 #: header.php:57
 msgid "Toggle navigation"
 msgstr "تغییر منو"
+
+#: header.php:81
+msgid "Search"
+msgstr "جستجو"
 
 #: home.php:19
 msgid "Featured Categories"
@@ -367,15 +371,15 @@ msgstr "متن تشریح"
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:203
 msgid "Section Icon Class"
-msgstr ""
+msgstr "کلاس آیکون المنت اصلی (Section)"
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:215
 msgid "Icon Image"
-msgstr ""
+msgstr "تصویر آیکون"
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:216
 msgid "Max Height: 40px"
-msgstr ""
+msgstr "حداکثر ارتفاع: 40px"
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:227
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:182
@@ -618,6 +622,15 @@ msgstr "»"
 msgid "Page %"
 msgstr "صفحه %"
 
+#: searchform.php:3 searchform.php:4 template-parts/header/search.php:3
+#: template-parts/header/search.php:4
+msgid "Search for"
+msgstr "جستجو برای"
+
+#: searchform.php:4 template-parts/header/search.php:4
+msgid "Search the site…"
+msgstr "جستجو در سایت..."
+
 #: single-ariana-projects.php:41
 msgid "ABOUT THE PROJECT"
 msgstr "درباره این پروژه"
@@ -685,9 +698,13 @@ msgstr "ادامه مطلب<span class=\"screen-reader-text sr-only\"> \"%s\"</s
 msgid "Pages:"
 msgstr "صفحات:"
 
+#: template-parts/header/search.php:11
+msgid "Submit"
+msgstr "ارسال"
+
 #. Template Name of the theme
 msgid "Default Sidebar for Blog Home - 1"
-msgstr ""
+msgstr "پیش‌فرش با سایدبار برای صفحه اصلی وبلاگ"
 
 #. Template Name of the theme
 msgid "Default Sidebar for Pages"

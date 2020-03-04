@@ -7,6 +7,11 @@
 
 
 */
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: none;
+    border-color: transparent;
+}
+
 .nav .open > a:after,
 .nav .open > a:hover:after,
 .nav .open > a:focus:after,
@@ -29,7 +34,10 @@ a.active,
 .navbar-default .navbar-nav li:hover a,
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > .active > a:focus,
+.search-toggle.active,.search-toggle:hover,
+.mobile-search-toggle.active,
+.navbar-toggle i.close {
     color: #c10d0d !important;
 }
 
@@ -191,6 +199,10 @@ fieldset[disabled] .btn-primary.focus,
   background-color: rgba(0,0,0,0.5) !important;
 }
 
+.search-toggle:hover,
+.search-toggle.active,.mobile-search-toggle.active,
+.header-search .search-form,
+.navbar-toggle,.navbar-toggle:hover,.navbar-toggle:active,.navbar-toggle:focus,
 .bg-light-gray{
   background-color: #f5f6fa!important;
 }
@@ -236,4 +248,10 @@ fieldset[disabled] .btn-primary.focus,
 
 .bg-highlight.bg-highlight-white:before {
   background-color: rgba(255,255,255,0.6);
+}
+
+@media (max-width: 768px) {
+    .header-search {
+        background-color: #f5f6fa!important;
+    }
 }

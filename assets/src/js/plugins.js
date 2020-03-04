@@ -4,8 +4,32 @@ var owlCarousel = require('owl.carousel');
 var typedjs = require('typed.js');
 // var smoothScroll = require('smooth-scroll');
 
+
 (function($) {
   $(document).ready(function(){
+
+    /* Search button toggle */
+    $(".search-toggle, .mobile-search-toggle").click((function() {
+        $(".search-toggle, .mobile-search-toggle, .header-search").toggleClass("active"),
+        $(this).hasClass("active") && $('.navbar-collapse').collapse('hide'),
+        $(".header-search .search-field").focus()
+    }
+    ));
+    $(".navbar-toggle").click(function(){
+        $(".search-toggle, .mobile-search-toggle, .header-search").removeClass("active");
+    });
+    // $(".mobile-search-toggle").click((function() {
+    //     $(".mobile-search-toggle, .header-search").toggleClass("active"),
+    //     $(this).hasClass("active") && $(".mobile-menu-toggle, .nav-primary").removeClass("active"),
+    //     $(".header-search .search-field").focus()
+    // }
+    // ));
+    // $(".mobile-menu-toggle").click((function() {
+    //     $(".mobile-menu-toggle, .nav-primary").toggleClass("active"),
+    //     $(this).hasClass("active") && $(".search-toggle, .header-search").removeClass("active")
+    // }
+    // ));
+
     /* Run Owl-Carousel ------------------------------------- */
     var dir = $("html").attr("dir");
     var isRtl = false;
