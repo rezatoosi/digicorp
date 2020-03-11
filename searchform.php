@@ -40,7 +40,7 @@
 
             }
           ?>
-          <span>جستجو در: </span>
+          <span><?php _e( 'Search in: ', 'digicorpdomain' ); ?></span>
           <label class="checkbox-inline"><input id="blog" name="post_type[]" type="checkbox" value="post"<?php echo $post_checked; ?>><?php _e( 'Blog', 'digicorpdomain' ); ?></label>
           <label class="checkbox-inline"><input id="services" name="post_type[]" type="checkbox" value="ariana-services"<?php echo $services_checked; ?>><?php _e( 'Services', 'digicorpdomain' ); ?></label>
           <label class="checkbox-inline"><input id="projects" name="post_type[]" type="checkbox" value="ariana-projects"<?php echo $projects_checked; ?>><?php _e( 'Projects', 'digicorpdomain' ); ?></label>
