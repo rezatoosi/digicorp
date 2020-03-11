@@ -29,11 +29,13 @@
       $args['section_class'] .= ' imagebg';
     }
 
+    $page_title = ( is_search() ) ? sprintf( /* Translators: %s: page title for search page */ __( 'Search results for "%s"', 'digicorpdomain' ), get_search_query() ) : esc_html( $args['page_title'] );
+
     echo '<section id="page-header" class="' . esc_attr( $args['section_class'] ) . '"' . $args['page_header_image_src'] . '>';
     echo     '<div class="container">';
     echo         '<div class="text-block">';
     echo             '<div class="heading-holder">';
-    echo                 '<h1>' . esc_html( $args['page_title'] ) . '</h1>';
+    echo                 '<h1>' . $page_title . '</h1>';
     echo             '</div>';
     echo             $args['page_desc'];
     echo         '</div>';
@@ -119,9 +121,14 @@ if ( ! function_exists( 'digicorp_entry_header_meta' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function digicorp_entry_header_meta() {
+	function digicorp_entry_header_meta( $add_container = false, $container_css_class = '' ) {
 		// Hide for pages.
 		if ( 'post' === get_post_type() ) {
+
+      if ( $add_container ) {
+          ( ! empty( $container_css_class ) ) ? $container_css_class = ' class="' . $container_css_class . '"' : '';
+          printf( '<div%s>', $container_css_class );
+      }
 
       printf( '<span class="avatar">%s</span>' , digicorp_get_user_avatar_and_name() );
 
@@ -168,6 +175,11 @@ if ( ! function_exists( 'digicorp_entry_header_meta' ) ) :
   			'<small>&#124;</small><span class="edit-link">',
   			'</span>'
   		);
+
+      if ( $add_container ) {
+          echo '</div>';
+      }
+
 		}
 
 	}
@@ -328,4 +340,115 @@ if ( ! function_exists( 'digicorp_link_pages' ) ) :
        'pagelink'     => __( 'Page %', 'digicorpdomain' )
      ) );
    }
- endif;
+endif;
+
+if ( ! function_exists( 'digicorp_get_post_type_link' ) ) :
+  /**
+  * get post type markup for excerpt2 - search page
+  */
+  function digicorp_get_post_type_link()
+  {
+      $posttype = get_post_type();
+      $markup = '<a href="%1$s" title="%2$s" class="posttype %3$s"><i class="fa fa-bookmark"></i> %4$s</a>';
+      $markup_class = '';
+      $markup_title = '';
+
+      switch ( $posttype ) {
+        case 'post':
+          $markup_class = 'posttype-post';
+          $markup_title = __( 'Blog', 'digicorpdomain' );
+          break;
+
+        case 'page':
+          // $markup_class = 'posttype-page';
+          // $markup_title = __( 'Site', 'digicorpdomain' );
+          return '';
+          break;
+
+        case 'ariana-services':
+          $markup_class = 'posttype-services';
+          $markup_title = __( 'Our Services', 'digicorpdomain' );
+          break;
+
+        case 'ariana-projects':
+          $markup_class = 'posttype-projects';
+          $markup_title = __( 'Our Projects', 'digicorpdomain' );
+          break;
+
+        default:
+          return '';
+          break;
+      }
+
+      return sprintf( $markup,
+                      get_post_type_archive_link( $posttype ),
+                      /* Translators: %s: Title of post type, in post excerpt view */
+                      sprintf( __( 'Found in %s' , 'digicorpdomain' ), $markup_title ),
+                      $markup_class,
+                      $markup_title );
+  }
+endif;
+
+if ( ! function_exists( 'digicorp_get_the_category' ) ):
+  /**
+  * return the category of current post (wp_term object)
+  **/
+  function digicorp_get_the_category() {
+    $categories = get_the_category();
+    return $categories[0];
+  }
+endif;
+
+if ( ! function_exists( 'digicorp_get_the_category_link' ) ):
+  /**
+  * return link of the first category of current post link
+  **/
+  function digicorp_get_the_category_link() {
+    if ( 'post' !== get_post_type() ) { return ''; }
+    $category = digicorp_get_the_category();
+    $markup = '<a href="%1$s" title="%2$s"><i class="fa fa-tag"></i> %3$s</a>';
+    return sprintf( $markup,
+                    esc_url( get_category_link( $category->term_id ) ),
+                    sprintf(
+                      /* Translators: %s: Name of category */
+                      esc_html__( 'Visit articles in category of %s', 'digicorpdomain' ), $category->name ),
+                    esc_html( $category->name )
+                  );
+  }
+endif;
+
+if ( ! function_exists( 'digicorp_get_reading_time' ) ):
+  /**
+  ** get estimated reading time
+  **/
+  function digicorp_get_reading_time() {
+    if ( 'post' !== get_post_type() ) { return ''; }
+    $time = 0;
+    $content = get_post_field( 'post_content' );
+    $word_count = str_word_count( strip_tags( $content ) );
+    $readingtime = ceil($word_count / 200);
+
+    // if ($readingtime == 1) {
+    //   $timer = " minute";
+    // } else {
+    //   $timer = " minutes";
+    // }
+
+    return sprintf( '<span><i class="fa fa-clock-o"></i> %1$s %2$s %3$s</span>',
+                    __( 'Read time:', 'digicorpdomain' ),
+                    $readingtime,
+                    __( 'min', 'digicorpdomain' )
+                  );
+  }
+endif;
+
+if ( ! function_exists( 'digicorp_get_search_found_posts' ) ):
+  /**
+  ** show count of found posts in search results
+  **/
+  function digicorp_get_search_found_posts() {
+    global $wp_query;
+    $found_posts = $wp_query->found_posts;
+    return $found_posts;
+  }
+endif;

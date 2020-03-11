@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DIGICORP 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/digicorp\n"
-"POT-Creation-Date: 2020-03-04T13:47:57+00:00\n"
-"PO-Revision-Date: 2020-03-04 17:21+0330\n"
+"POT-Creation-Date: 2020-03-11T15:34:47+00:00\n"
+"PO-Revision-Date: 2020-03-11 19:09+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -328,7 +328,7 @@ msgstr "قسمت فرم تماس در صفحه تماس"
 msgid "Toggle navigation"
 msgstr "تغییر منو"
 
-#: header.php:81
+#: header.php:82 header.php:100 searchform.php:11
 msgid "Search"
 msgstr "جستجو"
 
@@ -563,40 +563,46 @@ msgstr "بخش تصدیق نامه ها"
 msgid "Manage testimonials section settings."
 msgstr "مدیریت بخش تصدیق نامه ها"
 
+#. Translators: %s: page title for search page
+#: inc/template-tags.php:32
+#| msgid "Search for"
+msgid "Search results for \"%s\""
+msgstr "نتایج جستجو برای \"%s\""
+
 #. translators: %s: post date.
-#: inc/template-tags.php:81
+#: inc/template-tags.php:83
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr "ثبت شده در تاریخ  %s"
 
 #. translators: %s: post author.
-#: inc/template-tags.php:109
+#: inc/template-tags.php:111
 msgctxt "post author"
 msgid "by %s"
 msgstr "توسط %s"
 
 #. translators: %s: post publish date - Month and Year
-#: inc/template-tags.php:135
+#: inc/template-tags.php:142
 msgid "Click for all articles sent on %s"
 msgstr "برای مشاهده تمام مطالب ارسال شده در %s کلیک کنید"
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:159
+#: inc/template-tags.php:166
 msgid "Edit<span class=\"screen-reader-text sr-only\">%s</span>"
 msgstr "ویرایش<span class=\"screen-reader-text sr-only\">%s</span>"
 
 #. translators: 1: list of categories.
-#: inc/template-tags.php:186
+#: inc/template-tags.php:198
 msgid "In Categories: %1$s"
 msgstr "در دسته(های): %1$s"
 
 #. translators: 1: list of tags.
-#: inc/template-tags.php:192
+#: inc/template-tags.php:204
 msgid "Tags: %1$s"
 msgstr "برچسب(ها): %1$s"
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:201
+#: inc/template-tags.php:213
 msgid ""
 "<button class=\"btn\">Edit <span class=\"sr-hidden\">This Post</span><span "
 "class=\"screen-reader-text sr-only\"> %s</span></button>"
@@ -605,31 +611,81 @@ msgstr ""
 "class=\"screen-reader-text sr-only\"> %s</span></button>"
 
 #. translators: %s: Display name of the user
-#: inc/template-tags.php:281
+#: inc/template-tags.php:293
 msgid "Visit archive page of %s"
 msgstr "بازدید از صفحه بایگانی  %s"
 
-#: inc/template-tags.php:303
+#: inc/template-tags.php:315
 msgid "«"
 msgstr "«"
 
-#: inc/template-tags.php:304
+#: inc/template-tags.php:316
 msgid "»"
 msgstr "»"
 
 #. translators: % is page number
-#: inc/template-tags.php:328
+#: inc/template-tags.php:340
 msgid "Page %"
 msgstr "صفحه %"
 
-#: searchform.php:3 searchform.php:4 template-parts/header/search.php:3
-#: template-parts/header/search.php:4
+#: inc/template-tags.php:359 searchform.php:41
+msgid "Blog"
+msgstr "وبلاگ"
+
+#: inc/template-tags.php:370
+msgid "Our Services"
+msgstr "خدمات ما"
+
+#: inc/template-tags.php:375
+msgid "Our Projects"
+msgstr "پروژه‌های ما"
+
+#. Translators: %s: Title of post type, in post excerpt view
+#: inc/template-tags.php:386
+#| msgctxt "post date"
+#| msgid "Posted on %s"
+msgid "Found in %s"
+msgstr "یافت شده در قسمت %s"
+
+#. Translators: %s: Name of category
+#: inc/template-tags.php:414
+msgid "Visit articles in category of %s"
+msgstr "بازدید از مقالات در دسته %s"
+
+#: inc/template-tags.php:438
+msgid "Read time:"
+msgstr "زمان خواندن:"
+
+#: inc/template-tags.php:440
+msgid "min"
+msgstr "دقیقه"
+
+#. translators: in top of search form in search page
+#: search.php:14
+msgid "Enter search phrase:"
+msgstr "عبارت جستجو را وارد کنید:"
+
+#: searchform.php:5 searchform.php:6 template-parts/header/search.php:8
+#: template-parts/header/search.php:9
 msgid "Search for"
 msgstr "جستجو برای"
 
-#: searchform.php:4 template-parts/header/search.php:4
+#: searchform.php:6 template-parts/header/search.php:9
 msgid "Search the site…"
 msgstr "جستجو در سایت..."
+
+#: searchform.php:42
+msgid "Services"
+msgstr "خدمات"
+
+#: searchform.php:43
+msgid "Projects"
+msgstr "پروژه‌ها"
+
+#. Translators: %s count of posts found in search result
+#: searchform.php:48
+msgid "%s results found."
+msgstr "%s نتیجه یافت شد."
 
 #: single-ariana-projects.php:41
 msgid "ABOUT THE PROJECT"
@@ -662,6 +718,10 @@ msgstr "<i class=\"fa fa-angle-right\"></i> پروژه قبلی"
 #: single-ariana-projects.php:72
 msgid "Next Project <i class=\"fa fa-angle-right\"></i>"
 msgstr "پروژه بعدی <i class=\"fa fa-angle-left\"></i>"
+
+#: template-parts/content/content-excerpt2.php:32
+msgid "Read more"
+msgstr "خواندن ادامه"
 
 #: template-parts/content/content-none.php:15
 msgid "Nothing Found"
@@ -698,7 +758,7 @@ msgstr "ادامه مطلب<span class=\"screen-reader-text sr-only\"> \"%s\"</s
 msgid "Pages:"
 msgstr "صفحات:"
 
-#: template-parts/header/search.php:11
+#: template-parts/header/search.php:16
 msgid "Submit"
 msgstr "ارسال"
 

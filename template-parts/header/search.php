@@ -1,4 +1,9 @@
 <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+
+	<input type="hidden" name="post_type[]" value="post" />
+	<input type="hidden" name="post_type[]" value="ariana-services" />
+	<input type="hidden" name="post_type[]" value="ariana-projects" />
+
 	<label>
 		<span class="sr-only"><?php _e( "Search for", "digicorpdomain"); ?></span>
 		<input type="search" class="search-field" placeholder="<?php _e( "Search the site…", "digicorpdomain"); ?>" value="" name="s" title="<?php _e( "Search for", "digicorpdomain"); ?>">
