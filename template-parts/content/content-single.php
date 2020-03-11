@@ -60,7 +60,7 @@
                     </div>
                     <div class="mini-widget-title">
                         <a href="<?php echo esc_url(get_permalink($prev_post->ID)); ?>"><?php echo esc_attr($prev_post->post_title) ?><br/>
-                        <small><?php _e('<  Previous Post') ?></small></a>
+                        <small><?php _e('<  Previous Post', 'digicorpdomain' ); ?></small></a>
                     </div>
                 </div>
             <?php } ?>
@@ -80,7 +80,7 @@
                     </div>
                     <div class="mini-widget-title">
                         <a href="<?php echo esc_url(get_permalink($next_post->ID)); ?>"><?php echo esc_attr($next_post->post_title) ?><br/>
-                        <small><?php _e('Next Post  >') ?></small></a>
+                        <small><?php _e('Next Post  >', 'digicorpdomain' ); ?></small></a>
                     </div>
                 </div>
             <?php } ?>

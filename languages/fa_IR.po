@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DIGICORP 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/digicorp\n"
-"POT-Creation-Date: 2020-03-11T15:34:47+00:00\n"
-"PO-Revision-Date: 2020-03-11 19:09+0330\n"
+"POT-Creation-Date: 2020-03-11T17:15:48+00:00\n"
+"PO-Revision-Date: 2020-03-11 20:46+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -44,7 +44,7 @@ msgstr "هیچی پیدا نشد!"
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "وای! این صفحه وجود نداره."
 
-#: 404.php:20
+#: 404.php:22
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
@@ -565,7 +565,6 @@ msgstr "مدیریت بخش تصدیق نامه ها"
 
 #. Translators: %s: page title for search page
 #: inc/template-tags.php:32
-#| msgid "Search for"
 msgid "Search results for \"%s\""
 msgstr "نتایج جستجو برای \"%s\""
 
@@ -628,7 +627,7 @@ msgstr "»"
 msgid "Page %"
 msgstr "صفحه %"
 
-#: inc/template-tags.php:359 searchform.php:41
+#: inc/template-tags.php:359 searchform.php:44
 msgid "Blog"
 msgstr "وبلاگ"
 
@@ -642,8 +641,6 @@ msgstr "پروژه‌های ما"
 
 #. Translators: %s: Title of post type, in post excerpt view
 #: inc/template-tags.php:386
-#| msgctxt "post date"
-#| msgid "Posted on %s"
 msgid "Found in %s"
 msgstr "یافت شده در قسمت %s"
 
@@ -661,7 +658,7 @@ msgid "min"
 msgstr "دقیقه"
 
 #. translators: in top of search form in search page
-#: search.php:14
+#: search.php:20
 msgid "Enter search phrase:"
 msgstr "عبارت جستجو را وارد کنید:"
 
@@ -674,16 +671,20 @@ msgstr "جستجو برای"
 msgid "Search the site…"
 msgstr "جستجو در سایت..."
 
-#: searchform.php:42
+#: searchform.php:43
+msgid "Search in: "
+msgstr "جستجو در: "
+
+#: searchform.php:45
 msgid "Services"
 msgstr "خدمات"
 
-#: searchform.php:43
+#: searchform.php:46
 msgid "Projects"
 msgstr "پروژه‌ها"
 
 #. Translators: %s count of posts found in search result
-#: searchform.php:48
+#: searchform.php:51
 msgid "%s results found."
 msgstr "%s نتیجه یافت شد."
 
@@ -747,6 +748,14 @@ msgid ""
 "searching can help."
 msgstr ""
 "به نظر می‌رسد چیزی که شما به دنبالش هستید پیدا نشد. شاید فرم جستجو کمک کند."
+
+#: template-parts/content/content-single.php:63
+msgid "<  Previous Post"
+msgstr "< مطلب قبلی"
+
+#: template-parts/content/content-single.php:83
+msgid "Next Post  >"
+msgstr "مطلب بعدی >"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content/content.php:27
