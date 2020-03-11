@@ -1,8 +1,14 @@
+<?php
+if ( empty( get_search_query() ) ) {
+  wp_safe_redirect( home_url( '/' ), $status = 302 );
+}
+?>
 <?php get_header(); ?>
 
 <?php
 digicorp_page_header_section();
 ?>
+
 
 <section class="section ph-60">
     <div class="container">
