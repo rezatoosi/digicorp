@@ -26,7 +26,7 @@
     }
     if ( '' !== $args['page_header_image_src'] ) {
       $args['page_header_image_src'] = sprintf( ' data-bg-img="%s"', $args['page_header_image_src'] );
-      $args['section_class'] .= ' imagebg';
+      $args['section_class'] .= ' imagebg bg-highlight bg-highlight-lightblack';
     }
 
     $page_title = ( is_search() ) ? sprintf( /* Translators: %s: page title for search page */ __( 'Search results for "%s"', 'digicorpdomain' ), get_search_query() ) : esc_html( $args['page_title'] );

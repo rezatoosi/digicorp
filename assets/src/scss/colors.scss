@@ -255,6 +255,10 @@ fieldset[disabled] .btn-primary.focus,
   background-color: rgba(0,0,0,0.6);
 }
 
+.bg-highlight.bg-highlight-lightblack:before {
+  background-color: rgba(0,0,0,0.4);
+}
+
 .bg-highlight.bg-highlight-main:before {
   background-color: rgba(255,0,34,0.8);
 }
