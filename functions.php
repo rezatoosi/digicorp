@@ -308,6 +308,14 @@
     add_action( 'wp_enqueue_scripts', 'ariana_scripts' );
 
     /**
+      * Remove block editor styles
+      */
+    function remove_block_css(){
+      wp_dequeue_style( 'wp-block-library' );
+    }
+    // add_action( 'wp_enqueue_scripts', 'remove_block_css', 100 );
+
+    /**
      * Custom template tags for this theme.
      */
     require_once get_template_directory() . '/inc/template-tags.php';
