@@ -4,6 +4,7 @@
     require_once get_template_directory() . '/inc/edit-mce.php';
     require_once get_template_directory() . '/inc/ariana-widget-tag-cloud.php';
     require_once get_template_directory() . '/inc/ariana-widget-archive.php';
+    require_once get_template_directory() . '/inc/digicorp_mslsOutput.php';
 
     if( ! function_exists('aridiag_setup') ):
       function aridiag_setup() {

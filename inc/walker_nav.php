@@ -3,7 +3,7 @@
 /*
  * wlaker class for nav menu
  */
-class walker_nav_menu_header extends Walker_Nav_menu {
+class digicorp_walker_nav_menu_header extends Walker_Nav_menu {
 
 
 

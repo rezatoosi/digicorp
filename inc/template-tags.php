@@ -452,3 +452,26 @@ if ( ! function_exists( 'digicorp_get_search_found_posts' ) ):
     return $found_posts;
   }
 endif;
+
+if ( ! function_exists( 'digicorp_get_menu_lang_link' ) ) {
+  /**
+  ** get link of alternate language for header menu
+  **/
+  function digicorp_get_menu_lang_link() {
+    if ( ! function_exists( 'the_msls' ) || ! class_exists( 'Digicorp_MslsOutput' ) ) {
+      return '';
+    }
+
+    $alt_lang_url = Digicorp_MslsOutput::init()->get_url();
+
+    $menu_lang = '<a href="%1$s" class="header-lang-btn" title="%3$s">%2$s <span class="sr-only">%3$s</span></a>';
+    if ( 'fa_IR' == get_locale() ) {
+      $menu_lang = sprintf( $menu_lang, $alt_lang_url, 'EN', 'Enter to english site' );
+    }
+    else {
+      $menu_lang = sprintf( $menu_lang, esc_url( $alt_lang_url ) , 'فا', 'ورود به سایت فارسی' );
+    }
+
+    return $menu_lang;
+  }
+}
