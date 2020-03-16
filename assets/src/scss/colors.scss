@@ -39,7 +39,8 @@ a.active,
 .mobile-search-toggle.active,
 .navbar-toggle i.close,
 .header-lang-btn:hover,
-.post-micro .posttype {
+.post-micro .posttype,
+.back-to-top-btn:hover {
     color: #c10d0d !important;
 }
 
@@ -208,6 +209,7 @@ fieldset[disabled] .btn-primary.focus,
 .header-search .search-form,
 .navbar-toggle,.navbar-toggle:hover,.navbar-toggle:active,.navbar-toggle:focus,
 .bg-light-gray,
+.back-to-top-btn,
 .customsearchform .form-control{
   background-color: #f5f6fa!important;
 }

@@ -68,6 +68,7 @@
     */
     ?>
     <?php // TODO: enqueue these scripts ?>
+    <div class="back-to-top"><button id="btn-backtop" class="back-to-top-btn"><i class="fa fa-chevron-up"></i></button></div>
     <?php wp_footer(); ?>
 </body>
 </html>

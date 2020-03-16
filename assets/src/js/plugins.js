@@ -18,6 +18,20 @@ var typedjs = require('typed.js');
     $(".navbar-toggle").click(function(){
         $(".search-toggle, .mobile-search-toggle, .header-search").removeClass("active");
     });
+
+    // Scroll to top
+    $(window).scroll(function(){
+      if($(window).scrollTop() > 400){
+        $('#btn-backtop').addClass('show');
+      } else {
+        $('#btn-backtop').removeClass('show');
+      }
+    });
+    $('#btn-backtop').click(function(e){
+      e.preventDefault();
+      $('html, body').animate({scrollTop:0}, '300');
+    });
+
     // $(".mobile-search-toggle").click((function() {
     //     $(".mobile-search-toggle, .header-search").toggleClass("active"),
     //     $(this).hasClass("active") && $(".mobile-menu-toggle, .nav-primary").removeClass("active"),
