@@ -2,7 +2,15 @@
       <?php
       if ( get_theme_mod( 'digicorp_typed_slider_enabled', 1 ) ):
       ?>
-        <section class="visual visual-2" id="typed-slider">
+
+      <?php
+      $section_bg = get_theme_mod( 'digicorp_typed_slider_background' );
+      $section_class = 'visual visual-2';
+      $section_class .= ( ! empty( $section_bg ) ? ' bg-highlight bg-highlight-lightblack' : '' );
+      $section_bg = ( ! empty( $section_bg ) ? ' data-bg-img="' . esc_url( $section_bg ) . '"' : '' );
+
+      ?>
+        <section class="<?php echo $section_class; ?>" id="typed-slider"<?php echo $section_bg; ?>>
             <div class="container">
                 <div class="text-block">
                     <div class="heading-holder">
@@ -24,13 +32,13 @@
                 </div>
             </div>
             <?php
-            if ( ! empty( get_theme_mod( 'digicorp_typed_slider_background' ) ) ) {
-              printf(
-                '<img src="%1$s" alt="%2$s" class="bg-stretch" id="typed-slider-bg">',
-                get_theme_mod( 'digicorp_typed_slider_background' ),
-                get_theme_mod( 'digicorp_typed_slider_title' )
-              );
-            }
+            // if ( ! empty( get_theme_mod( 'digicorp_typed_slider_background' ) ) ) {
+            //   printf(
+            //     '<img src="%1$s" alt="%2$s" class="bg-stretch" id="typed-slider-bg">',
+            //     get_theme_mod( 'digicorp_typed_slider_background' ),
+            //     get_theme_mod( 'digicorp_typed_slider_title' )
+            //   );
+            // }
             // else {
             //   printf(
             //     '<img src="%1$s" alt="%2$s" class="bg-stretch" id="typed-slider-bg">',
