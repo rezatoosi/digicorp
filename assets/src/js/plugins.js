@@ -32,6 +32,20 @@ var typedjs = require('typed.js');
       $('html, body').animate({scrollTop:0}, '300');
     });
 
+    // affix
+    $('.fixed-header').affix({
+      offset: {
+        top: function () {
+          return (this.top = $('.visual').offset().top + 200);
+          // return 10;
+        },
+        bottom: function () {
+          return (this.bottom = $('.copyrights').outerHeight(true))
+          // return (this.bottom = $('.footer').outerHeight(true))
+        }
+      }
+    });
+
     // $(".mobile-search-toggle").click((function() {
     //     $(".mobile-search-toggle, .header-search").toggleClass("active"),
     //     $(this).hasClass("active") && $(".mobile-menu-toggle, .nav-primary").removeClass("active"),

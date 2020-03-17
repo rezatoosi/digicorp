@@ -45,7 +45,7 @@
 </head>
 <body <?php body_class(); ?>>
     <div id="wrapper">
-        <header class="header">
+        <header class="header fixed-header">
             <div class="container">
                 <nav class="navbar navbar-default navbar-static-top">
                     <div class="container-fluid">
