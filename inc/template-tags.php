@@ -24,7 +24,7 @@
     if ( '' !== $args['page_desc'] ) {
       $args['page_desc'] = sprintf( '<p class="tagline">%s</p>', wp_strip_all_tags( $args['page_desc'] ) );
     }
-    if ( '' !== $args['page_header_image_src'] ) {
+    if ( '' !== $args['page_header_image_src'] && false !== $args['page_header_image_src'] ) {
       $args['page_header_image_src'] = sprintf( ' data-bg-img="%s"', $args['page_header_image_src'] );
       $args['section_class'] .= ' imagebg bg-highlight bg-highlight-lightblack';
     }

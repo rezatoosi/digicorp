@@ -31,7 +31,10 @@ dist  = {
 }
 const jsfiles = [
   // src.js + 'bootstrap.js',
-  // src.js + 'vendor/owlcarousel.js',
+  src.js + 'vendor/owlcarousel.js',
+  src.js + 'bootstrap-affix.js',
+  src.js + 'isotope.js',
+  // src.js + 'imagesloaded.pkgd.js',
   src.js + 'plugins.js'
 ];
 

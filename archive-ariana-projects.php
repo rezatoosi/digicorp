@@ -4,8 +4,8 @@
 // enqueue styles and scripts
 function ariana_projects_archive_scripts() {
   // wp_enqueue_script( 'isotope-js', get_template_directory_uri() . '/js/isotope.js' );
-  wp_enqueue_script( 'isotope-js', get_template_directory_uri() . '/js/isotope.js', array( 'jquery' ), '1.0', true);
-  wp_enqueue_script( 'imagesloaded-js', get_template_directory_uri() . '/js/imagesloaded.pkgd.js', array( 'jquery' ), '1.0', true);
+  // wp_enqueue_script( 'isotope-js', get_template_directory_uri() . '/js/isotope.js', array( 'jquery' ), '1.0', true);
+  // wp_enqueue_script( 'imagesloaded-js', get_template_directory_uri() . '/js/imagesloaded.pkgd.js', array( 'jquery' ), '1.0', true);
   // wp_enqueue_script( 'portfolio-js', get_template_directory_uri() . '/js/portfolio.js', array( 'isotope-js' , 'imagesloaded-js' ), '1.0', true);
 
   ob_start();
@@ -97,8 +97,8 @@ function ariana_projects_archive_scripts() {
 
   <?php
   $script = ob_get_clean();
-  wp_add_inline_script( 'imagesloaded-js', $script, 'after' );
-
+  wp_add_inline_script( 'digicorp-scripts', $script, 'after' );
+  // echo '<script type="text/javascript">' . $script . '</script>';
 }
 add_action( 'wp_footer', 'ariana_projects_archive_scripts' );
 

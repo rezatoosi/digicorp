@@ -1,7 +1,9 @@
 
-var bootstrap = require('bootstrap');
-var owlCarousel = require('owl.carousel');
-var typedjs = require('typed.js');
+// var bootstrap = require('bootstrap');
+// var bootstrap = require('bootstrap-affix');
+// var owlCarousel = require('owl.carousel');
+// var typedjs = require('typed.js');
+// var isotope = require('isotope-layout');
 // var smoothScroll = require('smooth-scroll');
 
 
