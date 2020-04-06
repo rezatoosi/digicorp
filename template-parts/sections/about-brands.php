@@ -51,6 +51,18 @@ if ( get_theme_mod( 'digicorp_sections_about_brands' . '_enabled' ) ):
             endif;
           ?>
         </div>
+
+      <?php
+        $cta_button_text = get_theme_mod( 'digicorp_sections_about_brands' . '_cta_button_text' );
+        if ( ! empty( trim( $cta_button_text ) ) ):
+          $cta_button_link = get_theme_mod( 'digicorp_sections_about_brands' . '_cta_button_link' );
+          $cta_button_page = ( '' !== trim( $cta_button_link ) ) ? $cta_button_link : get_page_link( get_theme_mod( 'digicorp_sections_about_brands' . '_cta_button_page' ) );
+      ?>
+        <div class="section_cta_container row gutter-10 mt-40 text-center">
+            <a href="<?php echo esc_url( $cta_button_page ); ?>" title="<?php echo $cta_button_text; ?>" class="section-cta-button btn btn-border btn-round btn-icon-left"><i class="fa fa-bookmark"></i> <span class="section_cta_text"><?php echo $cta_button_text; ?></span></a>
+        </div>
+      <?php endif; ?>
+
     </div>
 </section>
 <?php
