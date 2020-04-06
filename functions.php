@@ -176,6 +176,15 @@
           'after_title' => ''
         ));
         register_sidebar(array(
+          'name' => __('Front Page - CTA 02', 'digicorpdomain'),
+          'id' => 'frontpage_cta_02',
+          'description' => __('Call to action section after brands section', 'digicorpdomain'),
+          'before_widget' => '<div id="%1$s" class="%2$s">',
+          'after_widget' => '</div><!--end widget-->',
+          'before_title' => '',
+          'after_title' => ''
+        ));
+        register_sidebar(array(
           'name' => __('Front Page - Features', 'digicorpdomain'),
           'id' => 'frontpage_features',
           'description' => __('Features section in frontpage', 'digicorpdomain'),

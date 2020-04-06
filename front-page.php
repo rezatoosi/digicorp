@@ -4,6 +4,12 @@
 
       <?php get_template_part( 'template-parts/sections/about', 'brands' ); ?>
 
+      <?php
+        if ( is_active_sidebar('frontpage_cta_02') ) :
+          dynamic_sidebar('frontpage_cta_02');
+        endif;
+      ?>
+
       <?php get_template_part( 'template-parts/sections/services', 'mainservices' ); ?>
 
       <?php
