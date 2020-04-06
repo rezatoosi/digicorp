@@ -928,6 +928,35 @@ endif;
 <br/>
 <br/>
 
+<section class="section pt-0">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="bg-img bg-img-04 bg-highlight text-light pv-60 ph-80">
+
+            <div class="section-title text-center">
+                <h4>تغییر شرط بقاست، برای تغییر برنامه داشته باشید</h4>
+            </div><!-- end title -->
+            <div class="text-center">
+              <p class="font-header font-medium padding-x-md">
+                از سال 1386، به عنوان یک آژانس طراحی و توسعه وب سایت، این افتخار را داشته ایم که به ده‌ها شرکت، سازمان و کسب‌و‌کار در اندازه‌های مختلف خدمت‌رسانی کنیم.
+                برخی از برندهای شناخته شده که از آریانا خدمات گرفته‌اند:
+              </p>
+              <a href="#" title="" class="btn btn-lg btn-border border-light btn-icon-right mt-20">از اینجا شروع کنید <i class="fa fa-chevron-left"></i></a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+</section>
+
+<br/>
+<br/>
+
 <section class="section ph-0">
     <div class="container-fluid">
 

@@ -11164,6 +11164,10 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
 .font-25px {
   font-size: 25px !important; }
 
+.font-medium {
+  font-size: 20px !important;
+  line-height: 40px; }
+
 .font-large {
   font-size: 26px !important;
   line-height: 45px; }
@@ -11171,6 +11175,9 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
 .font-xl {
   font-size: 35px;
   line-height: 55px; }
+
+.font-bold {
+  font-weight: bold !important; }
 
 /* blog category box */
 /* End blog category box */

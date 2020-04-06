@@ -167,6 +167,15 @@
 
         //front page widgets
         register_sidebar(array(
+          'name' => __('Front Page - CTA 01', 'digicorpdomain'),
+          'id' => 'frontpage_cta_01',
+          'description' => __('Call to action section after services section', 'digicorpdomain'),
+          'before_widget' => '<div id="%1$s">',
+          'after_widget' => '</div><!--end widget-->',
+          'before_title' => '',
+          'after_title' => ''
+        ));
+        register_sidebar(array(
           'name' => __('Front Page - Features', 'digicorpdomain'),
           'id' => 'frontpage_features',
           'description' => __('Features section in frontpage', 'digicorpdomain'),

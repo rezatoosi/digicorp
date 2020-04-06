@@ -6,6 +6,12 @@
 
       <?php get_template_part( 'template-parts/sections/services', 'mainservices' ); ?>
 
+      <?php
+        if ( is_active_sidebar('frontpage_cta_01') ) :
+          dynamic_sidebar('frontpage_cta_01');
+        endif;
+      ?>
+
       <?php get_template_part( 'template-parts/sections/frontpage', 'features' ); ?>
 
       <?php
