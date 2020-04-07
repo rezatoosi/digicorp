@@ -203,6 +203,15 @@
           'after_title' => ''
         ));
         register_sidebar(array(
+          'name' => __('Front Page - FAQ', 'digicorpdomain'),
+          'id' => 'frontpage_faq',
+          'description' => __('FAQ section in frontpage', 'digicorpdomain'),
+          'before_widget' => '<div id="%1$s" class="%2$s">',
+          'after_widget' => '</div><!--end widget-->',
+          'before_title' => '',
+          'after_title' => ''
+        ));
+        register_sidebar(array(
           'name' => __('Footer - Copyright', 'digicorpdomain'),
           'id' => 'footer-copyright',
           'description' => __('Copyright bar in footer', 'digicorpdomain'),

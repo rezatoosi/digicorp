@@ -46,7 +46,7 @@
       <?php
       if ( get_theme_mod( 'digicorp_sections_projects_enabled' ) ):
       ?>
-        <section class="section db casebg" id="section-projects">
+        <section class="section lb" id="section-projects">
             <div class="container-fluid">
               <?php if ( ! empty( get_theme_mod( 'digicorp_sections_projects_title' ) ) ): ?>
                 <div class="section-title text-center">
@@ -157,6 +157,12 @@
         </section>
       <?php
       endif;
+      ?>
+
+      <?php
+        if ( is_active_sidebar('frontpage_faq') ) :
+          dynamic_sidebar('frontpage_faq');
+        endif;
       ?>
 
 <?php get_footer(); ?>
