@@ -54,7 +54,7 @@ if ( get_theme_mod( 'digicorp_sections_about_brands' . '_enabled' ) ):
 
       <?php
         $cta_button_text = get_theme_mod( 'digicorp_sections_about_brands' . '_cta_button_text' );
-        if ( ! empty( trim( $cta_button_text ) ) ):
+        if ( ! empty( trim( $cta_button_text ) ) && is_front_page() ):
           $cta_button_link = get_theme_mod( 'digicorp_sections_about_brands' . '_cta_button_link' );
           $cta_button_page = ( '' !== trim( $cta_button_link ) ) ? $cta_button_link : get_page_link( get_theme_mod( 'digicorp_sections_about_brands' . '_cta_button_page' ) );
       ?>
