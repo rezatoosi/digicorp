@@ -30,9 +30,10 @@ dist  = {
   fonts:  './assets/dist/fonts/'
 }
 const jsfiles = [
-  // src.js + 'bootstrap.js',
+  src.js + 'bootstrap.js',
   src.js + 'vendor/owlcarousel.js',
-  src.js + 'bootstrap-affix.js',
+  // src.js + 'bootstrap-affix.js',
+  // src.js + 'bootstrap-collapse.js',
   src.js + 'isotope.js',
   // src.js + 'imagesloaded.pkgd.js',
   src.js + 'plugins.js'
@@ -86,6 +87,7 @@ var Development = {
       src.css + 'mediaelementplayer.scss',
       src.css + 'colors.scss',
       src.css + 'custom.scss',
+      src.css + 'toggle-accordion.scss',
       src.css + 'blogbanner.scss'
     ], {sourcemaps: true})
     // .pipe(sourcemaps.init())
@@ -112,6 +114,7 @@ var Development = {
       // src.css + 'mediaelementplayer.scss',
       src.css + 'colors.scss',
       src.css + 'custom.scss',
+      // src.css + 'toggle-accordion.scss',
       // src.css + 'blogbanner.scss'
     ], {sourcemaps: true})
     // .pipe(sourcemaps.init())
@@ -193,6 +196,7 @@ var Production = {
       src.css + 'mediaelementplayer.scss',
       src.css + 'colors.scss',
       src.css + 'custom.scss',
+      src.css + 'toggle-accordion.scss',
       src.css + 'blogbanner.scss'
     ])
     // .pipe(sourcemaps.init())
@@ -219,6 +223,7 @@ var Production = {
       // src.css + 'mediaelementplayer.scss',
       src.css + 'colors.scss',
       src.css + 'custom.scss',
+      // src.css + 'toggle-accordion.scss',
       // src.css + 'blogbanner.scss'
     ])
     // .pipe(sourcemaps.init())

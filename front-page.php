@@ -18,7 +18,8 @@
         endif;
       ?>
 
-      <?php get_template_part( 'template-parts/sections/frontpage', 'features' ); ?>
+      <?php
+      // get_template_part( 'template-parts/sections/frontpage', 'features' ); ?>
 
       <?php
       if ( get_theme_mod( 'digicorp_sections_services_enabled' ) ):

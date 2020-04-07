@@ -1334,4 +1334,174 @@ endif;
     </div>
 </section>
 
+<br/>
+
+
+<section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="section-title text-center">
+            <h5>سوالات متداول</h5>
+            <h3>آیا ما انتخاب مناسبی برای شما هستیم؟</h3>
+        </div><!-- end title -->
+
+        <div class="row mh-20">
+            <div class="col-md-8 col-md-offset-2">
+                <p class="font-header text-center padding-x-md">
+                  از سال 1386، به عنوان یک آژانس طراحی و توسعه وب سایت، این افتخار را داشته ایم که به ده‌ها شرکت، سازمان و کسب‌و‌کار در اندازه‌های مختلف خدمت‌رسانی کنیم.
+                  برخی از برندهای شناخته شده که از آریانا خدمات گرفته‌اند:
+                </p>
+            </div>
+        </div>
+
+        <div class="row mh-20">
+            <div class="col-md-8 col-md-offset-2">
+
+
+              <div class="accordion" id="accordionExample">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Collapsible Group Item #1
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Collapsible Group Item #2
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Collapsible Group Item #3
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="row mh-20">
+            <div class="col-md-8 col-md-offset-2">
+
+
+              <div id="accordion1" class="panel-group accordion">
+                <div class="panel">
+                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="#accordion11" class="collapsed" aria-expanded="false"> <span class="open-sub"></span> Q. What do you mean by item and end product?</a> </div>
+                  <div id="accordion11" class="panel-collapse collapse" role="tablist" aria-expanded="false" style="height: 0px;">
+                    <div class="panel-content">
+                      <p>Ut cursus massa at urnaaculis estie. Sed aliquamellus vitae ultrs condmentum leo massa mollis estiegittis miristum nulla.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="panel-title"> <a class="collapsed" data-parent="#accordion1" data-toggle="collapse" href="#accordion12" aria-expanded="false"> <span class="open-sub"></span> Q. What are some examples of permitted end products?</a> </div>
+                  <div id="accordion12" class="panel-collapse collapse" role="tablist" aria-expanded="false" style="height: 0px;">
+                    <div class="panel-content">
+                      <p>Ut cursus massa at urnaaculis estie. Sed aliquamellus vitae ultrs condmentum leo massa mollis estiegittis miristum nulla.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="#accordion13" class="collapsed" aria-expanded="false"> <span class="open-sub"></span> Q. Am I allowed to modify the item that I purchased?</a> </div>
+                  <div id="accordion13" class="panel-collapse collapse" role="tablist" aria-expanded="false" style="height: 0px;">
+                    <div class="panel-content">
+                      <p>Ut cursus massa at urnaaculis estie. Sed aliquamellus vitae ultrs condmentum leo massa mollis estiegittis miristum nulla.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="#accordion14" class="collapsed" aria-expanded="false"> <span class="open-sub"></span> Q. What does non-exclusive mean?</a> </div>
+                  <div id="accordion14" class="panel-collapse collapse" role="tablist" aria-expanded="false">
+                    <div class="panel-content">
+                      <p>Ut cursus massa at urnaaculis estie. Sed aliquamellus vitae ultrs condmentum leo massa mollis estiegittis miristum nulla.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="#accordion15" class="collapsed" aria-expanded="false"> <span class="open-sub"></span> Q. What is a single application?</a> </div>
+                  <div id="accordion15" class="panel-collapse collapse" role="tablist" aria-expanded="false">
+                    <div class="panel-content">
+                      <p>Ut cursus massa at urnaaculis estie. Sed aliquamellus vitae ultrs condmentum leo massa mollis estiegittis miristum nulla.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+        </div>
+
+        <div class="row mh-20">
+            <div class="col-md-8 col-md-offset-2">
+
+
+              <div class="panel-group toggle">
+                <div class="panel">
+                  <div class="panel-heading">
+                    <div class="panel-title">
+                      <a data-toggle="collapse" href="#toggle11" class="">
+                        <span class="open-sub"></span>
+                        چطور می‌توانم به مجموعه شما اعتماد کنم؟
+                      </a>
+                    </div>
+                  </div>
+                  <div id="toggle11" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p>
+                          ما بیش از 10 سال سابقه کار داریم، نمونه کارها و مجموعه مشتریان ما نشان دهنده کیفیت و روال کار ماست. ما رضایت شما از خروجی کارمان را تضمین می‌کنیم.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="panel-heading">
+                    <div class="panel-title"> <a data-toggle="collapse" href="#toggle12"><span class="open-sub"></span>Why I need that element </a> </div>
+                  </div>
+                  <div id="toggle12" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, quae, fuga!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+        </div>
+
+
+      </div>
+    </div>
+</section>
+
 <?php get_footer(); ?>

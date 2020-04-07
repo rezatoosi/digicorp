@@ -116,18 +116,18 @@
     });
 
     /* Run typed.js ------------------------------------- */
-    if ( $('#typed-slider-typed-element').length ) {
-      var typed = new typedjs('#typed-slider-typed-element', {
-        stringsElement: "#typed-slider-typed-strings",
-        typeSpeed: 80,
-        backSpeed: 20,
-        backDelay: 2500,
-        loop: true,
-        smartBackspace: true,
-        showCursor: true,
-        cursorChar: '|'
-      });
-    }
+    // if ( $('#typed-slider-typed-element').length ) {
+    //   var typed = new typedjs('#typed-slider-typed-element', {
+    //     stringsElement: "#typed-slider-typed-strings",
+    //     typeSpeed: 80,
+    //     backSpeed: 20,
+    //     backDelay: 2500,
+    //     loop: true,
+    //     smartBackspace: true,
+    //     showCursor: true,
+    //     cursorChar: '|'
+    //   });
+    // }
 
     /* Run data- elements ------------------------------------- */
     $('[data-bg-color]').each(function() {

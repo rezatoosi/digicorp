@@ -2757,8 +2757,9 @@ span.service-main-bg {
       margin-bottom: 0; }
     .srv-box-home .box-content p {
       padding-top: 30px;
-      text-align: justify;
-      margin: 0; }
+      text-align: center;
+      margin: 0;
+      font-size: 18px; }
     .srv-box-home .box-content a.btn {
       margin-top: 30px; }
 
