@@ -6467,9 +6467,10 @@ a.active,
 .owl-theme .owl-nav [class*='owl-']:hover,
 .navbar-right .lastlink .btn,
 .blog-banner-carousel-1 .owl-nav .owl-prev,
-.blog-banner-carousel-1 .owl-nav .owl-next {
-  border-color: #c10d0d;
-  background-color: #c10d0d;
+.blog-banner-carousel-1 .owl-nav .owl-next,
+.seo-studio.owl-theme .owl-nav [class*="owl-"] {
+  border-color: #c10d0d !important;
+  background-color: #c10d0d !important;
   color: #ffffff !important; }
 
 .magnibutton i,
