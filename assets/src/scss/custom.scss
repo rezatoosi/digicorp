@@ -1687,6 +1687,21 @@ ul.contact-list {
   font-size: 15px;
 }
 
+.btn-svg-icon {
+  position: relative;
+  padding-left: 55px;
+
+  svg {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    transition: all .3s ease-in-out;
+  }
+
+}
+
 .btn-icon-left,
 .btn-icon-right {
   i {
@@ -3175,6 +3190,14 @@ span.service-main-bg {
 
 }
 
+/* cta-box-contact --- used in frontpage */
+.cta-box-contact {
+  @extend .border-round-5;
+  @extend .pv-60;
+  @extend .ph-80;
+
+}
+
 
 /******************************************
     CASE STUDIO
@@ -4297,23 +4320,23 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
 }
 
 .pt-0{
-  padding-top: 0;
+  padding-top: 0!important;
 }
 
 .pl-0 {
-  padding-left: 0;
+  padding-left: 0!important;
 }
 
 .m20 {
-    margin-top: 20px;
+    margin-top: 20px!important;
 }
 
 .mb-10 {
-  margin-bottom: 10px;
+  margin-bottom: 10px!important;
 }
 
 .mb-30 {
-  margin-bottom: 30px;
+  margin-bottom: 30px!important;
 }
 
 .pv-30 {
