@@ -1982,11 +1982,15 @@ ul.contact-list {
 .tags a {
     display: inline-block;
     margin: 0 4px 4px 0;
-    padding: 5px 10px;
+    padding: 2px 6px;
     border-radius: 3px;
     font-size: 13px;
-}
+    border: 1px solid #a0a0a0;
+  }
 
+.post-desc .tags a {
+    padding: 5px 10px;
+  }
 
 /******************************************
     ANALYSIS
