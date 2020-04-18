@@ -46,7 +46,7 @@
       <?php
       if ( get_theme_mod( 'digicorp_sections_projects_enabled' ) ):
       ?>
-        <section class="section lb" id="section-projects">
+        <section class="section bg-light-gray" id="section-projects">
             <div class="container-fluid">
               <?php if ( ! empty( get_theme_mod( 'digicorp_sections_projects_title' ) ) ): ?>
                 <div class="section-title text-center">
