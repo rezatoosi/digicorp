@@ -1566,6 +1566,27 @@ ul.contact-list {
     color: #212121;
 }
 
+.blog-related-posts {
+  // margin-right: -30px;
+  // margin-left: -30px;
+  padding: 30px;
+  background: #ececec;
+
+  .section-title hr {
+    border-width: 0;
+    border-top-width: 1px;
+    margin: 10px 0;
+  }
+
+  .blog-item {
+    p {
+      margin: 0;
+      font-size: 100%;
+    }
+  }
+
+}
+
 .post-micro {
     .entry-title {
         font-size: 23px !important;
@@ -1942,6 +1963,7 @@ ul.contact-list {
     margin-top: 5px;
     text-transform: capitalize;
     letter-spacing: 0;
+    line-height: 150%;
 }
 
 .shop-list li img {

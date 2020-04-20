@@ -475,3 +475,156 @@ if ( ! function_exists( 'digicorp_get_menu_lang_link' ) ) {
     return $menu_lang;
   }
 }
+
+if ( ! function_exists( 'digicorp_prev_next_links' ) ) {
+  /**
+  ** get previous & next post links - blog post single page
+  **/
+  function digicorp_prev_next_links() {
+    if ( 'post' === get_post_type() ) : ?>
+    <div class="blog-micro-wrapper">
+        <div class="postpager">
+            <ul class="pager row">
+              <li class="previous col-md-6 col-sm-12 text-right">
+                <?php
+                $prev_post = get_previous_post(true);
+                if (!empty($prev_post)) {
+                  $prev_thumb_url = get_the_post_thumbnail_url($prev_post,'thumbnail');
+                  if ( empty($prev_thumb_url) ) { $prev_thumb_url = get_template_directory_uri() . '/assets/dist/images/post-default.png'; }
+                  ?>
+                    <div class="post">
+                        <div class="mini-widget-thumb">
+                            <a href="<?php echo esc_url(get_permalink($prev_post->ID)); ?>">
+                                <img alt="<?php echo esc_attr($prev_post->post_title) ?>" src="<?php echo esc_url($prev_thumb_url) ?>" class="img-responsive alignright img-circle">
+                            </a>
+                        </div>
+                        <div class="mini-widget-title">
+                            <a href="<?php echo esc_url(get_permalink($prev_post->ID)); ?>"><?php echo esc_attr($prev_post->post_title) ?><br/>
+                            <small><?php _e('<  Previous Post', 'digicorpdomain' ); ?></small></a>
+                        </div>
+                    </div>
+                <?php } ?>
+              </li>
+              <li class="next col-md-6 col-sm-12 text-left">
+                <?php
+                $next_post = get_next_post(true);
+                if (!empty($next_post)) {
+                  $next_thumb_url = get_the_post_thumbnail_url($next_post,'thumbnail');
+                  if ( empty($next_thumb_url) ) { $next_thumb_url = get_template_directory_uri() . '/assets/dist/images/post-default.png'; }
+                  ?>
+                    <div class="post">
+                        <div class="mini-widget-thumb">
+                            <a href="<?php echo esc_url(get_permalink($next_post->ID)); ?>">
+                                <img alt="<?php echo esc_attr($next_post->post_title) ?>" src="<?php echo esc_url($next_thumb_url) ?>" class="img-responsive alignleft img-circle">
+                            </a>
+                        </div>
+                        <div class="mini-widget-title">
+                            <a href="<?php echo esc_url(get_permalink($next_post->ID)); ?>"><?php echo esc_attr($next_post->post_title) ?><br/>
+                            <small><?php _e('Next Post  >', 'digicorpdomain' ); ?></small></a>
+                        </div>
+                    </div>
+                <?php } ?>
+              </li>
+            </ul>
+        </div><!-- end postpager -->
+    </div><!-- end post-micro -->
+    <?php endif;
+  }
+}
+
+if ( ! function_exists( 'digicorp_related_posts' ) ) {
+  /**
+   ** get list of relatet posts - use in blog single
+   **/
+  function digicorp_related_posts() {
+    global $post;
+    $orig_post = $post;
+    $tags = wp_get_post_tags( $post->ID );
+    if ( $tags ) {
+      $tag_ids = array();
+      foreach( $tags as $individual_tag ) $tag_ids[] = $individual_tag->term_id;
+      $args = array(
+        'tag__in'             =>  $tag_ids,
+        'post__not_in'        =>  array($post->ID),
+        'posts_per_page'      =>  4, // Number of related posts that will be shown.
+        'ignore_sticky_posts' =>  1
+      );
+      $my_query = new wp_query( $args );
+      if( $my_query->have_posts() ) {
+        ?>
+        <div class="blog-micro-wrapper">
+          <div class="blog-related-posts">
+            <div class="section-title text-left">
+                <h4><?php _e( 'Related Articles', 'digicorpdomain' ); ?></h4>
+                <hr>
+            </div>
+            <div class="row">
+              <?php
+                while( $my_query->have_posts() ) {
+                  $my_query->the_post();
+                  get_template_part('template-parts/post/blog','related');
+                }
+              ?>
+            </div>
+          </div>
+        </div><!-- end post-micro -->
+    <?php
+      }
+    }
+    $post = $orig_post;
+    wp_reset_query();
+  }
+}
+
+if ( ! function_exists( 'digicorp_related_posts_sidebar' ) ) {
+  /**
+  ** get list of relatet posts - use in sidebar
+  **/
+  function digicorp_related_posts_sidebar() {
+    global $post;
+    $orig_post = $post;
+    $tags = wp_get_post_tags( $post->ID );
+    if ( $tags ) {
+      $tag_ids = array();
+      foreach( $tags as $individual_tag ) $tag_ids[] = $individual_tag->term_id;
+      $args = array(
+        'tag__in'             =>  $tag_ids,
+        'post__not_in'        =>  array($post->ID),
+        'posts_per_page'      =>  4, // Number of related posts that will be shown.
+        'ignore_sticky_posts' =>  1
+      );
+      $my_query = new wp_query( $args );
+      if( $my_query->have_posts() ) {
+        ?>
+        <div id="ariana-recent-posts-2" class="widget clearfix">
+          <div class="section-title text-left">
+            <h5><?php _e( 'Related Articles', 'digicorpdomain' ); ?></h5>
+            <hr>
+          </div>
+          <div class="shopwidget">
+          		<ul class="shop-list">
+              <?php
+                while( $my_query->have_posts() ) {
+                  $my_query->the_post();
+                  // get_template_part('template-parts/post/blog','recent');
+                  ?>
+                  <li>
+                    <a href="<?php esc_url(the_permalink()); ?>">
+                      <img src="<?php esc_url(the_post_thumbnail_url('small')); ?>" alt="<?php the_title(); ?>" class="img-responsive">
+                      <h3><?php the_title(); ?></h3>
+                      <small><span class="post-date"><?php echo the_time('j M Y'); ?></span></small>
+                    </a>
+                  </li>
+                <?php
+                }
+              ?>
+            </ul>
+          </div>
+        </div>
+    <?php
+      }
+    }
+    $post = $orig_post;
+    wp_reset_query();
+  }
+}

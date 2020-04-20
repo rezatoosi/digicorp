@@ -41,54 +41,9 @@
     </div><!--end post-desc -->
 </div><!-- end wrapper -->
 
-<?php if ( 'post' === get_post_type() ) : ?>
-<div class="blog-micro-wrapper">
-    <div class="postpager">
-        <ul class="pager row">
-          <li class="previous col-md-6 col-sm-12 text-right">
-            <?php
-            $prev_post = get_previous_post(true);
-            if (!empty($prev_post)) {
-              $prev_thumb_url = get_the_post_thumbnail_url($prev_post,'thumbnail');
-              if ( empty($prev_thumb_url) ) { $prev_thumb_url = get_template_directory_uri() . '/assets/dist/images/post-default.png'; }
-              ?>
-                <div class="post">
-                    <div class="mini-widget-thumb">
-                        <a href="<?php echo esc_url(get_permalink($prev_post->ID)); ?>">
-                            <img alt="<?php echo esc_attr($prev_post->post_title) ?>" src="<?php echo esc_url($prev_thumb_url) ?>" class="img-responsive alignright img-circle">
-                        </a>
-                    </div>
-                    <div class="mini-widget-title">
-                        <a href="<?php echo esc_url(get_permalink($prev_post->ID)); ?>"><?php echo esc_attr($prev_post->post_title) ?><br/>
-                        <small><?php _e('<  Previous Post', 'digicorpdomain' ); ?></small></a>
-                    </div>
-                </div>
-            <?php } ?>
-          </li>
-          <li class="next col-md-6 col-sm-12 text-left">
-            <?php
-            $next_post = get_next_post(true);
-            if (!empty($next_post)) {
-              $next_thumb_url = get_the_post_thumbnail_url($next_post,'thumbnail');
-              if ( empty($next_thumb_url) ) { $next_thumb_url = get_template_directory_uri() . '/assets/dist/images/post-default.png'; }
-              ?>
-                <div class="post">
-                    <div class="mini-widget-thumb">
-                        <a href="<?php echo esc_url(get_permalink($next_post->ID)); ?>">
-                            <img alt="<?php echo esc_attr($next_post->post_title) ?>" src="<?php echo esc_url($next_thumb_url) ?>" class="img-responsive alignleft img-circle">
-                        </a>
-                    </div>
-                    <div class="mini-widget-title">
-                        <a href="<?php echo esc_url(get_permalink($next_post->ID)); ?>"><?php echo esc_attr($next_post->post_title) ?><br/>
-                        <small><?php _e('Next Post  >', 'digicorpdomain' ); ?></small></a>
-                    </div>
-                </div>
-            <?php } ?>
-          </li>
-        </ul>
-    </div><!-- end postpager -->
-</div><!-- end post-micro -->
-<?php endif; ?>
+<?php //digicorp_prev_next_links() ?>
+
+<?php digicorp_related_posts(); ?>
 
 <div class="blog-micro-wrapper">
     <div class="authorbox">

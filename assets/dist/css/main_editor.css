@@ -1481,6 +1481,17 @@ ul.contact-list {
 .blog-micro-wrapper .section-title h5 {
   color: #212121; }
 
+.blog-related-posts {
+  padding: 30px;
+  background: #ececec; }
+  .blog-related-posts .section-title hr {
+    border-width: 0;
+    border-top-width: 1px;
+    margin: 10px 0; }
+  .blog-related-posts .blog-item p {
+    margin: 0;
+    font-size: 100%; }
+
 .post-micro .entry-title {
   font-size: 23px !important;
   font-weight: 700;
