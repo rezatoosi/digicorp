@@ -873,7 +873,7 @@ if ( ! function_exists( 'digicorp_related_posts_in_services' ) ) {
     $my_query = new wp_query( $args );
     if( $my_query->have_posts() ) {
       ?>
-      <section class="section lb">
+      <section class="section lb blog-related-posts-in-services">
         <div class="container">
           <div class="section-title text-center">
               <h5><?php
