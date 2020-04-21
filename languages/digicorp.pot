@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-04-20T12:50:37+00:00\n"
+"POT-Creation-Date: 2020-04-21T13:20:16+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.2.0\n"
 "X-Domain: digicorpdomain\n"
@@ -92,7 +92,7 @@ msgstr ""
 
 #. translators: title of other services section in single page of services
 #: backup/_single-ariana-services.php:51
-#: single-ariana-services.php:43
+#: inc/template-tags.php:645
 msgid "OTHER SERVICES"
 msgstr ""
 
@@ -721,6 +721,30 @@ msgstr ""
 #: inc/template-tags.php:558
 #: inc/template-tags.php:601
 msgid "Related Articles"
+msgstr ""
+
+#. translators: %s: title of service. this text will add to title of sub services section in single page of services
+#: inc/template-tags.php:681
+msgid "%s includes the following services"
+msgstr ""
+
+#. translators: %s: title of service. this text will add to title of related services section in single page of services
+#: inc/template-tags.php:782
+msgid "%s related services"
+msgstr ""
+
+#. translators: this text will add to pre title of related posts of a service section in single page of services
+#: inc/template-tags.php:881
+msgid "Knowledge base"
+msgstr ""
+
+#. translators: %s: title of service. this text will add to title of related posts of a service section in single page of services
+#: inc/template-tags.php:885
+msgid "%s related articles"
+msgstr ""
+
+#: inc/template-tags.php:937
+msgid "Related services"
 msgstr ""
 
 #. translators: in top of search form in search page

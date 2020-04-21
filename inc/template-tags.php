@@ -553,7 +553,7 @@ if ( ! function_exists( 'digicorp_related_posts' ) ) {
       if( $my_query->have_posts() ) {
         ?>
         <div class="blog-micro-wrapper">
-          <div class="blog-related-posts">
+          <!-- <div class="blog-related-posts"> -->
             <div class="section-title text-left">
                 <h4><?php _e( 'Related Articles', 'digicorpdomain' ); ?></h4>
                 <hr>
@@ -566,7 +566,7 @@ if ( ! function_exists( 'digicorp_related_posts' ) ) {
                 }
               ?>
             </div>
-          </div>
+          <!-- </div> -->
         </div><!-- end post-micro -->
     <?php
       }
@@ -626,5 +626,358 @@ if ( ! function_exists( 'digicorp_related_posts_sidebar' ) ) {
     }
     $post = $orig_post;
     wp_reset_query();
+  }
+}
+
+if ( ! function_exists( 'digicorp_all_services_list' ) ) {
+  /**
+  ** show sub services (related services) in single service page
+  **/
+  function digicorp_all_services_list() {
+    ?>
+    <section class="section lb">
+        <div class="container">
+            <div class="section-title text-center">
+                <?php //<h5>ALL IN ONE SEARCH ENGINE TOOLS</h5> ?>
+                <h3>
+                  <?php
+                    /* translators: title of other services section in single page of services */
+                    _e( 'OTHER SERVICES', 'digicorpdomain' ); ?></h3>
+                <hr>
+            </div><!-- end title -->
+            <div class="row services-list">
+                <?php echo do_shortcode('[ariana_services]'); ?>
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section>
+    <?php
+  }
+}
+
+if ( ! function_exists( 'digicorp_sub_services_list' ) ) {
+  /**
+  ** show sub services in single service page
+  **/
+  function digicorp_sub_services_list() {
+    global $post;
+    $service_title = $post->post_title;
+    $args = array(
+        'post_parent' => $post->ID,
+        'posts_per_page' => -1,
+        'post_type' => 'ariana-services', //you can use also 'any'
+        'orderby' => 'menu_order',
+        );
+
+    $the_query = new WP_Query( $args );
+    if ( $the_query->have_posts() ) :
+    ?>
+    <section class="section bg-light-gray services-list">
+        <div class="container">
+          <div class="section-title text-center">
+              <!--<h5><?php// _e( 'What services does it consist of?', 'digicorpdomain' ); ?></h5>-->
+              <h3>
+                <?php
+                  /* translators: %s: title of service. this text will add to title of sub services section in single page of services */
+                  printf( __( '%s includes the following services', 'digicorpdomain' ), $service_title )?>
+              </h3>
+              <hr>
+          </div><!-- end title -->
+          <?php
+
+
+          while ( $the_query->have_posts() ) :
+            $the_query->the_post();
+
+            $url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+            $img_markup = '';
+            if ( ! empty( $url_thumb ) ) {
+              $img_markup = sprintf( '<img src="%s" alt="%s" class="img-responsive" />',
+                                    $url_thumb[0],
+                                    $post->post_title );
+            }
+            $post_home_subtitle = get_post_meta( $post->ID, 'post_home_subtitle', true );
+            ?>
+              <div class="col-md-3 col-sm-6">
+                <div class="item">
+                  <div class="item-image">
+                    <a href="<?php echo get_the_permalink( $post->ID ) ?>"><?php echo $img_markup; ?>
+                    <span class="item-icon">
+                      <i class="fa fa-link"></i></span></a>
+                  </div><!-- end item-image -->
+                  <div class="item-desc text-center">
+                    <h4><a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>"><?php echo $post->post_title ?></a></h4>
+                    <?php if ( $post_home_subtitle != '' ) { ?>
+                      <h5><a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>"><?php echo $post_home_subtitle ?></a></h5>
+                    <?php } ?>
+                  </div><!-- end service-desc -->
+                </div><!-- end seo-item -->
+              </div><!-- end col -->
+            <?php
+          endwhile;
+          ?>
+        </div>
+    </section>
+    <?php
+    endif;
+
+    wp_reset_postdata();
+  }
+}
+
+if ( ! function_exists( 'digicorp_related_services_query' ) ) {
+  /**
+  **  return the wp_query of related services
+  **/
+  function digicorp_related_services_query() {
+    global $post;
+    $service_slug = $post->post_name;
+    $service_slug = urldecode($service_slug);
+    $terms = get_the_terms( $post->ID, 'ariana-services-tags', 'string' );
+    $term_names[] = $service_slug;
+
+    if ( is_array( $terms ) ) {
+      // $term_ids = wp_list_pluck( $terms, 'term_id' );
+      $term_names = array_merge( $term_names, wp_list_pluck( $terms, 'name' ) );
+    }
+
+    $args = array(
+        'post_type' => 'ariana-services',
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'ariana-services-tags',
+            'field' => 'name',
+            'terms' => $term_names,
+            'operator' => 'IN'
+          )
+        ),
+        'posts_per_page' => -1,
+        'ignore_stiky_posts' => 1,
+        'post__not_in' => array( $post->ID ),
+        'orderby' => 'menu_order'
+        );
+
+    $the_query = new WP_Query( $args );
+    return $the_query;
+  }
+}
+
+if ( ! function_exists( 'digicorp_related_services_list' ) ) {
+  /**
+  ** show related services in single service page - by tags
+  **/
+  function digicorp_related_services_list() {
+    global $post;
+    $service_title = $post->post_title;
+
+    $the_query = digicorp_related_services_query();
+    if ( $the_query->have_posts() ) :
+    ?>
+    <section class="section services-list">
+        <div class="container">
+          <div class="section-title text-center">
+              <!--<h5><?php// _e( 'What services does it consist of?', 'digicorpdomain' ); ?></h5>-->
+              <h3>
+                <?php
+                  /* translators: %s: title of service. this text will add to title of related services section in single page of services */
+                  printf( __( '%s related services', 'digicorpdomain' ), $service_title )?>
+              </h3>
+              <hr>
+          </div><!-- end title -->
+          <?php
+
+
+          while ( $the_query->have_posts() ) :
+            $the_query->the_post();
+
+            $url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+            $img_markup = '';
+            if ( ! empty( $url_thumb ) ) {
+              $img_markup = sprintf( '<img src="%s" alt="%s" class="img-responsive" />',
+                                    $url_thumb[0],
+                                    $post->post_title );
+            }
+            $post_home_subtitle = get_post_meta( $post->ID, 'post_home_subtitle', true );
+            ?>
+              <div class="col-md-3 col-sm-6">
+                <div class="item">
+                  <div class="item-image">
+                    <a href="<?php echo get_the_permalink( $post->ID ) ?>"><?php echo $img_markup; ?>
+                    <span class="item-icon">
+                      <i class="fa fa-link"></i></span></a>
+                  </div><!-- end item-image -->
+                  <div class="item-desc text-center">
+                    <h4><a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>"><?php echo $post->post_title ?></a></h4>
+                    <?php if ( $post_home_subtitle != '' ) { ?>
+                      <h5><a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>"><?php echo $post_home_subtitle ?></a></h5>
+                    <?php } ?>
+                  </div><!-- end service-desc -->
+                </div><!-- end seo-item -->
+              </div><!-- end col -->
+            <?php
+          endwhile;
+          ?>
+        </div>
+    </section>
+    <?php
+    endif;
+
+    wp_reset_postdata();
+  }
+}
+
+function digicorp_urlencode( &$item, $key ) {
+  $item = urlencode( $item );
+}
+
+if ( ! function_exists( 'digicorp_related_posts_in_services' ) ) {
+  /**
+   ** get list of relatet posts - use in services single
+   **/
+  function digicorp_related_posts_in_services() {
+    global $post;
+    $service_title = $post->post_title;
+    $service_slug = $post->post_name;
+    $service_slug = urldecode($service_slug);
+    $terms = get_the_terms( $post->ID, 'ariana-services-tags', 'string' );
+    $term_names[] = $service_slug;
+
+    if ( is_array( $terms ) ) {
+      // $term_ids = wp_list_pluck( $terms, 'term_id' );
+      $term_names = array_merge( $term_names, wp_list_pluck( $terms, 'name' ) );
+    }
+
+    $term_names_encoded = $term_names;
+    array_walk( $term_names_encoded, 'digicorp_urlencode');
+
+    $args = array(
+        // 'post_type' => 'ariana-services',
+        'tax_query' => array(
+          'relation' => 'OR',
+          array(
+            'taxonomy' => 'post_tag',
+            'field' => 'name',
+            'terms' => $term_names,
+            'operator' => 'IN'
+          ),
+          array(
+            'taxonomy' => 'post_tag',
+            'field' => 'slug',
+            'terms' => $term_names_encoded,
+            'operator' => 'IN'
+          )
+        ),
+        'posts_per_page' => -1,
+        'ignore_stiky_posts' => 1,
+        'orderby' => 'menu_order'
+        );
+    $my_query = new wp_query( $args );
+    if( $my_query->have_posts() ) {
+      ?>
+      <section class="section lb">
+        <div class="container">
+          <div class="section-title text-center">
+              <h5><?php
+                /* translators: this text will add to pre title of related posts of a service section in single page of services */
+                _e( 'Knowledge base', 'digicorpdomain' ); ?></h5>
+              <h3>
+                <?php
+                  /* translators: %s: title of service. this text will add to title of related posts of a service section in single page of services */
+                  printf( __( '%s related articles', 'digicorpdomain' ), $service_title )?>
+              </h3>
+              <hr>
+          </div><!-- end title -->
+          <div class="row">
+            <?php
+              while( $my_query->have_posts() ) {
+                $my_query->the_post();
+                get_template_part('template-parts/post/blog','related');
+              }
+            ?>
+          </div>
+        </div>
+      </section><!-- end section -->
+      <?php
+    }
+    wp_reset_query();
+  }
+}
+
+if ( ! function_exists( 'digicorp_related_services_in_posts' ) ) {
+  /**
+  ** get list of relatet services - use in blog single
+  **/
+  function digicorp_related_services_in_posts() {
+    global $post;
+    $tags = wp_get_post_tags( $post->ID );
+
+    if ( $tags ) {
+          $tag_names = wp_list_pluck( $tags, 'name' );
+          $args = array(
+              'post_type' => 'ariana-services',
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'ariana-services-tags',
+                  'field' => 'name',
+                  'terms' => $tag_names,
+                  'operator' => 'IN'
+                )
+              ),
+              'posts_per_page' => -1,
+              'ignore_stiky_posts' => 1,
+              'orderby' => 'menu_order'
+              );
+
+          $the_query = new WP_Query( $args );
+          if ( $the_query->have_posts() ) :
+          ?>
+          <div class="blog-micro-wrapper services-list">
+              <!-- <div class="blog-related-posts"> -->
+                <div class="section-title text-left">
+                    <h4>
+                      <?php _e( 'Related services', 'digicorpdomain' ) ?>
+                    </h4>
+                    <hr>
+                </div><!-- end title -->
+                <div class="row">
+                  <?php
+
+                  while ( $the_query->have_posts() ) :
+                    $the_query->the_post();
+
+                    $url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+                    $img_markup = '';
+                    if ( ! empty( $url_thumb ) ) {
+                      $img_markup = sprintf( '<img src="%s" alt="%s" class="img-responsive" />',
+                                            $url_thumb[0],
+                                            $post->post_title );
+                    }
+                    $post_home_subtitle = get_post_meta( $post->ID, 'post_home_subtitle', true );
+                    ?>
+                      <div class="col-md-3 col-sm-6">
+                        <div class="item">
+                          <div class="item-image">
+                            <a href="<?php echo get_the_permalink( $post->ID ) ?>"><?php echo $img_markup; ?>
+                            <span class="item-icon">
+                              <i class="fa fa-link"></i></span></a>
+                          </div><!-- end item-image -->
+                          <div class="item-desc text-center">
+                            <h4><a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>"><?php echo $post->post_title ?></a></h4>
+                            <?php if ( $post_home_subtitle != '' ) { ?>
+                              <h5><a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>"><?php echo $post_home_subtitle ?></a></h5>
+                            <?php } ?>
+                          </div><!-- end service-desc -->
+                        </div><!-- end seo-item -->
+                      </div><!-- end col -->
+                    <?php
+                  endwhile;
+                  ?>
+                </div>
+              <!-- </div> -->
+          </div><!-- end post-micro -->
+          <?php
+          endif;
+
+          wp_reset_postdata();
+    }
   }
 }

@@ -45,6 +45,8 @@
 
 <?php digicorp_related_posts(); ?>
 
+<?php digicorp_related_services_in_posts() ?>
+
 <div class="blog-micro-wrapper">
     <div class="authorbox">
         <div class="row">

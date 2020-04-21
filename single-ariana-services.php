@@ -33,20 +33,15 @@ digicorp_page_header_section( array(
 </section>
 <?php } ?>
 
-<section class="section lb">
-    <div class="container">
-        <div class="section-title text-center">
-            <?php //<h5>ALL IN ONE SEARCH ENGINE TOOLS</h5> ?>
-            <h3>
-              <?php
-                /* translators: title of other services section in single page of services */
-                _e( 'OTHER SERVICES', 'digicorpdomain' ); ?></h3>
-            <hr>
-        </div><!-- end title -->
-        <div class="row services-list">
-            <?php echo do_shortcode('[ariana_services]'); ?>
-        </div><!-- end row -->
-    </div><!-- end container -->
-</section>
+
+
+<?php digicorp_sub_services_list(); ?>
+
+<?php digicorp_related_services_list() ?>
+
+<?php digicorp_related_posts_in_services() ?>
+
+
+<?php //digicorp_all_services_list(); ?>
 
 <?php get_footer(); ?>

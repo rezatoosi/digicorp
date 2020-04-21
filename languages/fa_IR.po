@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DIGICORP 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/digicorp\n"
-"POT-Creation-Date: 2020-04-20T12:50:37+00:00\n"
-"PO-Revision-Date: 2020-04-20 17:23+0430\n"
+"POT-Creation-Date: 2020-04-21T13:20:16+00:00\n"
+"PO-Revision-Date: 2020-04-21 17:54+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -87,7 +87,7 @@ msgid "More articles in this category"
 msgstr "مطالب بیشتر در این دسته‌بندی"
 
 #. translators: title of other services section in single page of services
-#: backup/_single-ariana-services.php:51 single-ariana-services.php:43
+#: backup/_single-ariana-services.php:51 inc/template-tags.php:645
 msgid "OTHER SERVICES"
 msgstr "سایر خدمات"
 
@@ -709,6 +709,30 @@ msgstr "مطلب بعدی >"
 #: inc/template-tags.php:558 inc/template-tags.php:601
 msgid "Related Articles"
 msgstr "مطالب مرتبط"
+
+#. translators: %s: title of service. this text will add to title of sub services section in single page of services
+#: inc/template-tags.php:681
+msgid "%s includes the following services"
+msgstr "%s از خدمات زیر تشکیل شده است"
+
+#. translators: %s: title of service. this text will add to title of related services section in single page of services
+#: inc/template-tags.php:782
+msgid "%s related services"
+msgstr "خدمات مرتبط با %s"
+
+#. translators: this text will add to pre title of related posts of a service section in single page of services
+#: inc/template-tags.php:881
+msgid "Knowledge base"
+msgstr "پایگاه دانش"
+
+#. translators: %s: title of service. this text will add to title of related posts of a service section in single page of services
+#: inc/template-tags.php:885
+msgid "%s related articles"
+msgstr "مقالات مرتبط با %s"
+
+#: inc/template-tags.php:937
+msgid "Related services"
+msgstr "خدمات مرتبط"
 
 #. translators: in top of search form in search page
 #: search.php:20
