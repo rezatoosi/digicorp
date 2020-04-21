@@ -1571,6 +1571,14 @@ ul.contact-list {
   // margin-left: -30px;
   // padding: 30px;
   // background: #ececec;
+  &.section {
+    padding-bottom: 60px;
+  }
+  .col-sm-6,
+  .col-md-4,
+  .col-md-3 {
+      margin-bottom: 30px;
+  }
 
   .section-title hr {
     border-width: 0;
@@ -1590,6 +1598,17 @@ ul.contact-list {
 }
 
 .blog-related-posts-in-services {
+
+  &.section {
+    padding-bottom: 60px;
+  }
+
+  .col-sm-6,
+  .col-md-4,
+  .col-md-3 {
+      margin-bottom: 30px;
+  }
+
   .blog-item {
     p {
       margin: 0;
@@ -3005,6 +3024,10 @@ li .fa-warning {
     -webkit-transition: color 0.3s;
     -moz-transition: color 0.3s;
     transition: color 0.3s;
+}
+
+.section.services-list {
+    padding-bottom: 60px;
 }
 
 .services-list .col-sm-6,
