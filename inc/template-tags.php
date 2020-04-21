@@ -553,7 +553,7 @@ if ( ! function_exists( 'digicorp_related_posts' ) ) {
       if( $my_query->have_posts() ) {
         ?>
         <div class="blog-micro-wrapper">
-          <!-- <div class="blog-related-posts"> -->
+          <div class="blog-related-posts">
             <div class="section-title text-left">
                 <h4><?php _e( 'Related Articles', 'digicorpdomain' ); ?></h4>
                 <hr>
@@ -566,7 +566,7 @@ if ( ! function_exists( 'digicorp_related_posts' ) ) {
                 }
               ?>
             </div>
-          <!-- </div> -->
+          </div>
         </div><!-- end post-micro -->
     <?php
       }
@@ -931,7 +931,7 @@ if ( ! function_exists( 'digicorp_related_services_in_posts' ) ) {
           if ( $the_query->have_posts() ) :
           ?>
           <div class="blog-micro-wrapper services-list">
-              <!-- <div class="blog-related-posts"> -->
+              <div class="blog-related-posts">
                 <div class="section-title text-left">
                     <h4>
                       <?php _e( 'Related services', 'digicorpdomain' ) ?>
@@ -972,7 +972,7 @@ if ( ! function_exists( 'digicorp_related_services_in_posts' ) ) {
                   endwhile;
                   ?>
                 </div>
-              <!-- </div> -->
+              </div>
           </div><!-- end post-micro -->
           <?php
           endif;
