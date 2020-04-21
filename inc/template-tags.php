@@ -734,6 +734,7 @@ if ( ! function_exists( 'digicorp_related_services_query' ) ) {
     $service_slug = urldecode($service_slug);
     $terms = get_the_terms( $post->ID, 'ariana-services-tags', 'string' );
     $term_names[] = $service_slug;
+    $term_names[] = $post->post_title;
 
     if ( is_array( $terms ) ) {
       // $term_ids = wp_list_pluck( $terms, 'term_id' );
