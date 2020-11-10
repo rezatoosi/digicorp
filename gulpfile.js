@@ -24,7 +24,8 @@ src   = {
   fonts:  './assets/src/fonts/'
 },
 dist  = {
-  css:    './assets/dist/css/',
+  // css:    './assets/dist/css/',
+  css:    '.',
   js:     './assets/dist/js/',
   img:    './assets/dist/images/',
   fonts:  './assets/dist/fonts/'
@@ -42,7 +43,7 @@ const jsfiles = [
 var Development = {
   stylesLTR: function() {
     return gulp
-    .src(src.css + 'main.scss', { sourcemaps: true })
+    .src(src.css + 'style.scss', { sourcemaps: true })
     // .pipe(sourcemaps.init())
     .pipe(sass({
   			// errLogToConsole: true,
@@ -52,7 +53,7 @@ var Development = {
   			// // outputStyle: 'expanded',
   			// precision: 10
   		}).on('error', sass.logError))
-    .pipe(autoprefixer('last 2 versions'))
+    .pipe(autoprefixer('last 12 versions'))
     // .pipe(cssnano())
     // .pipe(sourcemaps.write('./'))
     // .pipe(uglifycss({"maxLineLen": 80, "uglyComments": true}))
@@ -62,7 +63,7 @@ var Development = {
   },
   stylesLTR_Editor: function() {
     return gulp
-    .src(src.css + 'main_editor.scss', { sourcemaps: true })
+    .src(src.css + 'style_editor.scss', { sourcemaps: true })
     // .pipe(sourcemaps.init())
     .pipe(sass({
   			// errLogToConsole: true,
@@ -72,7 +73,7 @@ var Development = {
   			// // outputStyle: 'expanded',
   			// precision: 10
   		}).on('error', sass.logError))
-    .pipe(autoprefixer('last 2 versions'))
+    .pipe(autoprefixer('last 12 versions'))
     // .pipe(cssnano())
     // .pipe(sourcemaps.write('./'))
     // .pipe(uglifycss({"maxLineLen": 80, "uglyComments": true}))
@@ -82,26 +83,19 @@ var Development = {
   },
   stylesRTL: function() {
     return gulp
-    .src([
-      src.css + 'bootstrap.scss',
-      src.css + 'mediaelementplayer.scss',
-      src.css + 'colors.scss',
-      src.css + 'custom.scss',
-      src.css + 'toggle-accordion.scss',
-      src.css + 'blogbanner.scss'
-    ], {sourcemaps: true})
+    .src([src.css + 'style-rtl.scss'], {sourcemaps: true})
     // .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(rtlcss())
     .pipe(gulp.src([
-      src.css + 'owlcarousel.scss',
-      src.css + 'fontawesome.scss',
-      src.css + 'rtl.scss'
+      src.css + 'plugins/owlcarousel.scss',
+      src.css + 'plugins/fontawesome.scss',
+      src.css + 'theme/rtl.scss'
     ], {sourcemaps: true}))
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer('last 2 versions'))
+    .pipe(autoprefixer('last 12 versions'))
     // .pipe(cssnano())
-    .pipe(concat('main-rtl.css'))
+    .pipe(concat('style-rtl.css'))
     // .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(dist.css, { sourcemaps: './' }))
     .pipe(notify({ message: 'RTL Styles task complete', onLast: true }))
@@ -109,26 +103,15 @@ var Development = {
   },
   stylesRTL_Editor: function() {
     return gulp
-    .src([
-      src.css + 'bootstrap.scss',
-      // src.css + 'mediaelementplayer.scss',
-      src.css + 'colors.scss',
-      src.css + 'custom.scss',
-      // src.css + 'toggle-accordion.scss',
-      // src.css + 'blogbanner.scss'
-    ], {sourcemaps: true})
+    .src([src.css + 'style-rtl_editor.scss'], {sourcemaps: true})
     // .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(rtlcss())
-    .pipe(gulp.src([
-      src.css + 'owlcarousel.scss',
-      src.css + 'fontawesome.scss',
-      src.css + 'rtl.scss'
-    ], {sourcemaps: true}))
+    .pipe(gulp.src([src.css + 'theme/rtl.scss'], {sourcemaps: true}))
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer('last 2 versions'))
+    .pipe(autoprefixer('last 12 versions'))
     // .pipe(cssnano())
-    .pipe(concat('main-rtl_editor.css'))
+    .pipe(concat('style-rtl_editor.css'))
     // .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(dist.css, { sourcemaps: './' }))
     .pipe(notify({ message: 'RTL Styles (Editor) task complete', onLast: true }))
@@ -151,7 +134,7 @@ var Development = {
 var Production = {
   stylesLTR: function() {
     return gulp
-    .src(src.css + 'main.scss')
+    .src(src.css + 'style.scss')
     // .pipe(sourcemaps.init())
     .pipe(sass({
   			// errLogToConsole: true,
@@ -161,7 +144,7 @@ var Production = {
   			// // outputStyle: 'expanded',
   			// precision: 10
   		}).on('error', sass.logError))
-    .pipe(autoprefixer('last 2 versions'))
+    .pipe(autoprefixer('last 12 versions'))
     .pipe(cssnano())
     // .pipe(sourcemaps.write('./'))
     // .pipe(uglifycss({"maxLineLen": 80, "uglyComments": true}))
@@ -171,7 +154,7 @@ var Production = {
   },
   stylesLTR_Editor: function() {
     return gulp
-    .src(src.css + 'main_editor.scss')
+    .src(src.css + 'style_editor.scss')
     // .pipe(sourcemaps.init())
     .pipe(sass({
   			// errLogToConsole: true,
@@ -181,7 +164,7 @@ var Production = {
   			// // outputStyle: 'expanded',
   			// precision: 10
   		}).on('error', sass.logError))
-    .pipe(autoprefixer('last 2 versions'))
+    .pipe(autoprefixer('last 12 versions'))
     .pipe(cssnano())
     // .pipe(sourcemaps.write('./'))
     // .pipe(uglifycss({"maxLineLen": 80, "uglyComments": true}))
@@ -191,26 +174,19 @@ var Production = {
   },
   stylesRTL: function() {
     return gulp
-    .src([
-      src.css + 'bootstrap.scss',
-      src.css + 'mediaelementplayer.scss',
-      src.css + 'colors.scss',
-      src.css + 'custom.scss',
-      src.css + 'toggle-accordion.scss',
-      src.css + 'blogbanner.scss'
-    ])
+    .src([src.css + 'style-rtl.scss'])
     // .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(rtlcss())
     .pipe(gulp.src([
-      src.css + 'owlcarousel.scss',
-      src.css + 'fontawesome.scss',
-      src.css + 'rtl.scss'
+      src.css + 'plugins/owlcarousel.scss',
+      src.css + 'plugins/fontawesome.scss',
+      src.css + 'theme/rtl.scss'
     ]))
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer('last 2 versions'))
+    .pipe(autoprefixer('last 12 versions'))
     .pipe(cssnano())
-    .pipe(concat('main-rtl.css'))
+    .pipe(concat('style-rtl.css'))
     // .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(dist.css))
     .pipe(notify({ message: 'RTL Styles task completed in Production mode', onLast: true }))
@@ -218,26 +194,19 @@ var Production = {
   },
   stylesRTL_Editor: function() {
     return gulp
-    .src([
-      // src.css + 'bootstrap.scss',
-      // src.css + 'mediaelementplayer.scss',
-      src.css + 'colors.scss',
-      src.css + 'custom.scss',
-      // src.css + 'toggle-accordion.scss',
-      // src.css + 'blogbanner.scss'
-    ])
+    .src([src.css + 'style-rtl_editor.scss'])
     // .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(rtlcss())
     .pipe(gulp.src([
       // src.css + 'owlcarousel.scss',
       // src.css + 'fontawesome.scss',
-      src.css + 'rtl.scss'
+      src.css + 'theme/rtl.scss'
     ]))
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer('last 2 versions'))
+    .pipe(autoprefixer('last 12 versions'))
     .pipe(cssnano())
-    .pipe(concat('main-rtl_editor.css'))
+    .pipe(concat('style-rtl_editor.css'))
     // .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(dist.css))
     .pipe(notify({ message: 'RTL Styles task (Editor) completed in Production mode', onLast: true }))
@@ -258,7 +227,18 @@ var Production = {
 }
 
 function clean() {
-  return del(['assets/dist/**', '!assets/dist']);
+  return del([
+      'assets/dist/**',
+      '!assets/dist',
+      'style.css',
+      'style.css.map',
+      'style_editor.css',
+      'style_editor.css.map',
+      'style-rtl.css',
+      'style-rtl.css.map',
+      'style-rtl_editor.css',
+      'style-rtl_editor.css.map'
+  ]);
 }
 
 function images() {
@@ -342,11 +322,12 @@ var tasks = {
 
 exports.clean = clean;
 exports.styles = stylesDevelopment;
+exports.styles_prd = stylesProduction;
 exports.scripts = Development.scripts;
 exports.images = images;
 exports.fonts = fonts;
 exports.watch = gulp.parallel(watch, browserSync);
 exports.pot = pot;
-exports.production = tasks['production'];
-exports.development = tasks['development'];
+exports.prd = tasks['production'];
+exports.dev = tasks['development'];
 exports.default = tasks['development'];

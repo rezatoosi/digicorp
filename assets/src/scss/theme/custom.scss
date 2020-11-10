@@ -705,7 +705,7 @@ button.navbar-toggle {
     background-size: 90% !important;
     background-attachment: scroll;
     background-repeat: no-repeat;
-    background-image: url(../images/bg/bg-13.png);
+    background-image: url(assets/dist/images/bg/bg-13.png);
 
     .container, .container-fluid {
       margin-top: -180px;
@@ -724,15 +724,15 @@ button.navbar-toggle {
 }
 
 .section.c1 {
-    background: url(../images/section_bg_04.png) no-repeat center bottom #59B3C5;
+    background: url(assets/dist/images/section_bg_04.png) no-repeat center bottom #59B3C5;
 }
 
 .section.c2 {
-    background: url(../images/section_bg_02.png) repeat-x center top #6C8784;
+    background: url(assets/dist/images/section_bg_02.png) repeat-x center top #6C8784;
 }
 
 .section.c3 {
-    background: url(../images/section_bg_03.png) repeat-x center center #002340;
+    background: url(assets/dist/images/section_bg_03.png) repeat-x center center #002340;
 }
 
 .section.db .service-box-inner .content-box > h3,
@@ -2374,19 +2374,19 @@ li .fa-warning {
 }
 
 .casebg {
-    background-image: url(../images/casebg.png);
+    background-image: url(assets/dist/images/casebg.png);
 }
 
 .testibg {
-    background-image: url(../images/testibg.jpg) !important;
+    background-image: url(assets/dist/images/testibg.jpg) !important;
 }
 
 .seobg {
-    background-image: url(../images/bg_01.png) !important;
+    background-image: url(assets/dist/images/bg_01.png) !important;
 }
 
 .portfoliobg {
-    background-image: url(../images/bg_02.png) !important;
+    background-image: url(assets/dist/images/bg_02.png) !important;
 }
 
 .block {
@@ -3189,7 +3189,7 @@ li .fa-warning {
 }
 
 span.service-main-bg {
-    background: url("../images/seobg.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+    background: url("assets/dist/images/seobg.png") no-repeat scroll right center rgba(0, 0, 0, 0);
     display: block;
     height: 543px;
     margin: 0 auto;
@@ -4895,47 +4895,47 @@ no-gutters {
 }
 
 .bg-img-01 {
-  background-image: url('../images/bg/bg-01.jpg');
+  background-image: url('assets/dist/images/bg/bg-01.jpg');
 }
 
 .bg-img-02 {
-  background-image: url('../images/bg/bg-02.jpg');
+  background-image: url('assets/dist/images/bg/bg-02.jpg');
 }
 
 .bg-img-03 {
-  background-image: url('../images/bg/bg-03.jpg');
+  background-image: url('assets/dist/images/bg/bg-03.jpg');
 }
 
 .bg-img-04 {
-  background-image: url('../images/bg/bg-04.jpg');
+  background-image: url('assets/dist/images/bg/bg-04.jpg');
 }
 
 .bg-img-05 {
-  background-image: url('../images/bg/bg-05.jpg');
+  background-image: url('assets/dist/images/bg/bg-05.jpg');
 }
 
 .bg-img-06 {
-  background-image: url('../images/bg/bg-06.jpg');
+  background-image: url('assets/dist/images/bg/bg-06.jpg');
 }
 
 .bg-img-07 {
-  background-image: url('../images/bg/bg-07.jpg');
+  background-image: url('assets/dist/images/bg/bg-07.jpg');
 }
 
 .bg-img-08 {
-  background-image: url('../images/bg/bg-08.png');
+  background-image: url('assets/dist/images/bg/bg-08.png');
 }
 
 .bg-img-13 {
   background-position: top center !important;
   background-size: 90% !important;
-  background-image: url('../images/bg/bg-13.png');
+  background-image: url('assets/dist/images/bg/bg-13.png');
 }
 
 .bg-img-15 {
   background-position: center -5px !important;
   background-size: 80% !important;
-  background-image: url('../images/bg/bg-15.png');
+  background-image: url('assets/dist/images/bg/bg-15.png');
 }
 
 .bg-floral-1 {
@@ -4943,7 +4943,7 @@ no-gutters {
   background-position: top center !important;
   background-repeat: no-repeat;
   background-size: 30% !important;
-  background-image: url('../images/floral/floral-1.png');
+  background-image: url('assets/dist/images/floral/floral-1.png');
   display: block;
   overflow: hidden;
   position: relative;
@@ -4956,7 +4956,7 @@ no-gutters {
   background-position: top center !important;
   background-repeat: no-repeat;
   background-size: 40% !important;
-  background-image: url('../images/floral/floral-2.png');
+  background-image: url('assets/dist/images/floral/floral-2.png');
   display: block;
   overflow: hidden;
   position: relative;
@@ -4970,7 +4970,7 @@ no-gutters {
   background-position: top center !important;
   background-repeat: no-repeat;
   background-size: 80% !important;
-  background-image: url('../images/floral/floral-3.png');
+  background-image: url('assets/dist/images/floral/floral-3.png');
   display: block;
   overflow: hidden;
   position: relative;
@@ -4995,7 +4995,7 @@ no-gutters {
   background-position: center center !important;
   background-repeat: no-repeat;
   background-size: contain !important;
-  background-image: url('../images/info/inf-19.png');
+  background-image: url('assets/dist/images/info/inf-19.png');
 
 }
 
@@ -5021,23 +5021,23 @@ no-gutters {
 
 
 .bg-shape-1:before {
-    background-image: url(../images/shapes/2.png);
+    background-image: url(assets/dist/images/shapes/2.png);
 }
 
 .bg-shape-2:before {
     left: 0;
     background-position: top left !important;
-    background-image: url(../images/shapes/1.png);
+    background-image: url(assets/dist/images/shapes/1.png);
 }
 
 .bg-shape-3:before {
     left: 0;
     background-position: top left !important;
-    background-image: url(../images/shapes/3.png);
+    background-image: url(assets/dist/images/shapes/3.png);
 }
 
 .bg-shape-4:before {
-    background-image: url(../images/shapes/4.png);
+    background-image: url(assets/dist/images/shapes/4.png);
 }
 
 

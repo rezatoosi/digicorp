@@ -1,4 +1,4 @@
-/*
+/*!
 Theme Name: DIGICORP
 Theme URI: ?
 Author: Ariana Digital Agency
@@ -14,3 +14,16 @@ Domain Path: /languages
 This theme is a simple corporate theme. This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+@import 'plugins/bootstrap';
+
+@import 'theme/colors';
+@import 'theme/custom';
+@import 'theme/skeleton';
+@import 'theme/header';
+@import 'theme/blogbanner';
+
+// @import 'plugins/mediaelementplayer';
+@import 'plugins/owlcarousel';
+@import 'plugins/fontawesome';
+@import 'plugins/toggle-accordion';
