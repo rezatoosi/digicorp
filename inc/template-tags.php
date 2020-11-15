@@ -300,6 +300,7 @@ if ( ! function_exists( 'digicorp_get_post_default_image_uri' ) ) :
     */
     function digicorp_get_post_default_image_uri() {
       return esc_url( get_template_directory_uri() . '/assets/dist/images/post-default.png' );
+      // TODO: get default image in admin panel and use here
     }
 endif;
 
