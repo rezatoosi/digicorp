@@ -231,7 +231,7 @@ if ( ! function_exists( 'digicorp_post_thumbnail' ) ) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function digicorp_post_thumbnail() {
+	function digicorp_post_thumbnail( $container_class = "post-media clearfix" ) {
   if ( post_password_required() || is_attachment() /* || ! has_post_thumbnail() */ ) {
 			return;
 		}
@@ -242,15 +242,15 @@ if ( ! function_exists( 'digicorp_post_thumbnail' ) ) :
       }
 			?>
 
-      <div class="post-media clearfix">
+      <div class="<?php echo $container_class; ?>">
         <a href="<?php esc_url( the_post_thumbnail_url( 'full' ) ); ?>" aria-hidden="true" tabindex="-1">
           <img src="<?php esc_url( the_post_thumbnail_url( 'page_header' ) ); ?>" alt="<?php esc_attr( the_post_thumbnail_caption() ); ?>" class="img-responsive">
         </a>
-      </div><!-- end post-media -->
+      </div>
 
     <?php else : ?>
 
-      <div class="post-media clearfix">
+      <div class="<?php echo $container_class; ?>">
         <a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
           <?php if ( has_post_thumbnail() ) { ?>
             <img src="<?php esc_url( the_post_thumbnail_url( 'small' ) ); ?>" alt="<?php esc_attr( the_post_thumbnail_caption() ); ?>" class="img-responsive">
@@ -258,7 +258,7 @@ if ( ! function_exists( 'digicorp_post_thumbnail' ) ) :
             <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/post-default.png' ); ?>" alt="<?php esc_attr( the_title() ); ?>" class="img-responsive">
           <?php } ?>
         </a>
-      </div><!-- end post-media -->
+      </div>
 
 		<?php
 		endif; // End is_singular().
@@ -417,6 +417,22 @@ if ( ! function_exists( 'digicorp_get_the_category_link' ) ):
   }
 endif;
 
+if ( ! function_exists( 'digicorp_count_unicode_words' ) ) :
+
+  function digicorp_count_unicode_words( $unicode_string ){
+    // First remove all the punctuation marks & digits
+    $unicode_string = preg_replace('/[[:punct:][:digit:]]/', '', $unicode_string);
+    // Now replace all the whitespaces (tabs, new lines, multiple spaces) by single space
+    $unicode_string = preg_replace('/[[:space:]]/', ' ', $unicode_string);
+    // The words are now separated by single spaces and can be splitted to an array
+    // I have included \n\r\t here as well, but only space will also suffice
+    $words_array = preg_split( "/[\n\r\t ]+/", $unicode_string, 0, PREG_SPLIT_NO_EMPTY );
+    // Now we can get the word count by counting array elments
+    return count($words_array);
+  }
+
+endif;
+
 if ( ! function_exists( 'digicorp_get_reading_time' ) ):
   /**
   ** get estimated reading time
@@ -424,9 +440,10 @@ if ( ! function_exists( 'digicorp_get_reading_time' ) ):
   function digicorp_get_reading_time() {
     if ( 'post' !== get_post_type() ) { return ''; }
     $time = 0;
-    $content = get_post_field( 'post_content' );
-    $word_count = str_word_count( strip_tags( $content ) );
-    $readingtime = ceil($word_count / 200);
+    $content = strip_tags( get_post_field( 'post_content' ) );
+    // $word_count = str_word_count( $content , 2 ); Not work for persian words
+    $word_count = digicorp_count_unicode_words( $content );
+    $readingtime = ceil($word_count / 150);
 
     // if ($readingtime == 1) {
     //   $timer = " minute";
@@ -442,11 +459,11 @@ if ( ! function_exists( 'digicorp_get_reading_time' ) ):
   }
 endif;
 
-if ( ! function_exists( 'digicorp_get_search_found_posts' ) ):
+if ( ! function_exists( 'digicorp_get_search_found_posts_count' ) ):
   /**
   ** show count of found posts in search results
   **/
-  function digicorp_get_search_found_posts() {
+  function digicorp_get_search_found_posts_count() {
     global $wp_query;
     $found_posts = $wp_query->found_posts;
     return $found_posts;

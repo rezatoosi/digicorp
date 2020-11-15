@@ -49,7 +49,7 @@
                 printf(
                   /* Translators: %s count of posts found in search result */
                   __( '%s results found.', 'digicorpdomain' ),
-                  digicorp_get_search_found_posts()
+                  digicorp_get_search_found_posts_count()
                 );
               ?>
           </p>

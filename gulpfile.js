@@ -288,12 +288,13 @@ function pot(cb) {
   });
 }
 
-function watch() {
-  gulp.watch(src.css + '**/*', stylesDevelopment);
+function watch(cb) {
+  gulp.watch(src.css + '**/*', stylesDev_1);
   // gulp.watch(src.js + '**/*', scripts);
-  gulp.watch(jsfiles, Development.scripts);
-  gulp.watch(src.img + '**/*', images);
+  // gulp.watch(jsfiles, Development.scripts);
+  // gulp.watch(src.img + '**/*', images);
   // gulp.watch('./**/*.php', php);
+  cb();
 }
 
 function browserSync(done) {
@@ -301,7 +302,7 @@ function browserSync(done) {
     // server: {
     //   baseDir: "./"
     // },
-    port: 80,
+    port: 8080,
     proxy: "http://localhost/wp1"
   });
   done();
@@ -313,6 +314,7 @@ function browserSyncReload(done) {
 }
 
 const stylesDevelopment = gulp.series(Development.stylesLTR, Development.stylesRTL, Development.stylesLTR_Editor, Development.stylesRTL_Editor);
+const stylesDev_1 = gulp.series(Development.stylesLTR, Development.stylesRTL);
 const stylesProduction = gulp.series(Production.stylesLTR, Production.stylesRTL, Production.stylesLTR_Editor, Production.stylesRTL_Editor);
 
 var tasks = {
@@ -322,6 +324,7 @@ var tasks = {
 
 exports.clean = clean;
 exports.styles = stylesDevelopment;
+exports.styles_dev_1 = stylesDev_1;
 exports.styles_prd = stylesProduction;
 exports.scripts = Development.scripts;
 exports.images = images;
