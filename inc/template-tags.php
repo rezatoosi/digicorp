@@ -231,38 +231,76 @@ if ( ! function_exists( 'digicorp_post_thumbnail' ) ) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function digicorp_post_thumbnail( $container_class = "post-media clearfix" ) {
-  if ( post_password_required() || is_attachment() /* || ! has_post_thumbnail() */ ) {
-			return;
-		}
+	function digicorp_post_thumbnail( $container_class ) {
+
+    if ( post_password_required() || is_attachment() /* || ! has_post_thumbnail() */ ) {
+        return;
+    }
+
+    global $post;
+
+    $container = '%s';
+    if ( $container_class ) {
+      $container = '<div class="' . $container_class . '">%s</div>';
+    }
+    $link = '<a href="%1$s" aria-hidden="true" tabindex="-1">%2$s</a>';
+    $image = '<img src="%1$s" alt="%2$s" class="img-responsive"/>';
+    $image_alt = ( get_the_post_thumbnail_caption( $post ) ) ? esc_attr( get_the_post_thumbnail_caption( $post ) ) : esc_attr( get_the_title() );
 
 		if ( is_singular() ) :
       if ( ! has_post_thumbnail() ) {
         return;
       }
-			?>
 
-      <div class="<?php echo $container_class; ?>">
-        <a href="<?php esc_url( the_post_thumbnail_url( 'full' ) ); ?>" aria-hidden="true" tabindex="-1">
-          <img src="<?php esc_url( the_post_thumbnail_url( 'page_header' ) ); ?>" alt="<?php esc_attr( the_post_thumbnail_caption() ); ?>" class="img-responsive">
-        </a>
-      </div>
+      printf(
+        $container,
+        sprintf(
+            $link,
+            esc_url( get_the_post_thumbnail_url( $post, 'full' ) ),
+            sprintf(
+                $image,
+                esc_url( get_the_post_thumbnail_url( $post, 'page_header' ) ),
+                $image_alt
+              )
+          )
+      );
+		else :
 
-    <?php else : ?>
+      if ( has_post_thumbnail() ) {
+        $image = sprintf(
+          $image,
+          esc_url( get_the_post_thumbnail_url( $post, 'small' ) ),
+          $image_alt
+        );
+      }
+      else {
+        $image = sprintf(
+          $image,
+          digicorp_get_post_default_image_uri(),
+          $image_alt
+        );
+      }
 
-      <div class="<?php echo $container_class; ?>">
-        <a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-          <?php if ( has_post_thumbnail() ) { ?>
-            <img src="<?php esc_url( the_post_thumbnail_url( 'small' ) ); ?>" alt="<?php esc_attr( the_post_thumbnail_caption() ); ?>" class="img-responsive">
-          <?php } else { ?>
-            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/post-default.png' ); ?>" alt="<?php esc_attr( the_title() ); ?>" class="img-responsive">
-          <?php } ?>
-        </a>
-      </div>
+      printf(
+        $container,
+        sprintf(
+            $link,
+            get_the_permalink(),
+            $image
+          )
+      );
 
-		<?php
 		endif; // End is_singular().
 	}
+endif;
+
+if ( ! function_exists( 'digicorp_get_post_default_image_uri' ) ) :
+  /**
+    * Return default image used in posts if post has no image
+    */
+    function digicorp_get_post_default_image_uri() {
+      return esc_url( get_template_directory_uri() . '/assets/dist/images/post-default.png' );
+    }
 endif;
 
 if ( ! function_exists( 'digicorp_get_user_avatar_markup' ) ) :

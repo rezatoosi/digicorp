@@ -12,7 +12,7 @@
 <div class="blog-micro-wrapper">
     <div class="row post-micro clearfix">
         <div class="col-md-3">
-            <?php digicorp_post_thumbnail(); ?>
+            <?php digicorp_post_thumbnail( "post-media clearfix" ); ?>
         </div><!-- end col -->
 
         <div class="col-md-6">
