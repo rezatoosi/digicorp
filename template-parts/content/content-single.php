@@ -10,7 +10,7 @@
 ?>
 <div class="blog-micro-wrapper">
     <div class="post-micro clearfix text-center">
-        <?php digicorp_post_thumbnail( "post-media clearfix" ); ?>
+        <?php digicorp_post_header_image( "post-media clearfix" ); ?>
 
         <div class="large-post-meta">
             <?php digicorp_entry_header_meta(); ?>

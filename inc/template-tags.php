@@ -247,10 +247,52 @@ if ( ! function_exists( 'digicorp_post_thumbnail' ) ) :
     $image = '<img src="%1$s" alt="%2$s" class="img-responsive"/>';
     $image_alt = ( get_the_post_thumbnail_caption( $post ) ) ? esc_attr( get_the_post_thumbnail_caption( $post ) ) : esc_attr( get_the_title() );
 
-		if ( is_singular() ) :
-      if ( ! has_post_thumbnail() ) {
-        return;
+    if ( has_post_thumbnail() ) {
+      $image = sprintf(
+        $image,
+        esc_url( get_the_post_thumbnail_url( $post, 'small' ) ),
+        $image_alt
+      );
+    }
+    else {
+      $image = sprintf(
+        $image,
+        digicorp_get_post_default_image_uri(),
+        $image_alt
+      );
+    }
+
+    printf(
+      $container,
+      sprintf(
+          $link,
+          get_the_permalink(),
+          $image
+        )
+    );
+	}
+endif;
+
+if ( ! function_exists( 'digicorp_post_header_image' ) ) {
+  /*
+  ** Display post header image for single post
+  */
+  function digicorp_post_header_image( $container_class ) {
+    {
+
+      if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+          return;
       }
+
+      global $post;
+
+      $container = '%s';
+      if ( $container_class ) {
+        $container = '<div class="' . $container_class . '">%s</div>';
+      }
+      $link = '<a href="%1$s" aria-hidden="true" tabindex="-1">%2$s</a>';
+      $image = '<img src="%1$s" alt="%2$s" class="img-responsive"/>';
+      $image_alt = ( get_the_post_thumbnail_caption( $post ) ) ? esc_attr( get_the_post_thumbnail_caption( $post ) ) : esc_attr( get_the_title() );
 
       printf(
         $container,
@@ -264,35 +306,9 @@ if ( ! function_exists( 'digicorp_post_thumbnail' ) ) :
               )
           )
       );
-		else :
-
-      if ( has_post_thumbnail() ) {
-        $image = sprintf(
-          $image,
-          esc_url( get_the_post_thumbnail_url( $post, 'small' ) ),
-          $image_alt
-        );
-      }
-      else {
-        $image = sprintf(
-          $image,
-          digicorp_get_post_default_image_uri(),
-          $image_alt
-        );
-      }
-
-      printf(
-        $container,
-        sprintf(
-            $link,
-            get_the_permalink(),
-            $image
-          )
-      );
-
-		endif; // End is_singular().
-	}
-endif;
+  	}
+  }
+}
 
 if ( ! function_exists( 'digicorp_get_post_default_image_uri' ) ) :
   /**
@@ -303,6 +319,14 @@ if ( ! function_exists( 'digicorp_get_post_default_image_uri' ) ) :
       // TODO: get default image in admin panel and use here
     }
 endif;
+
+if ( ! function_exists( 'digicorp_get_post_excerpt_meta' ) ) {
+  function digicorp_get_post_excerpt_meta() {
+    $reading_time = digicorp_get_reading_time();
+    $reading_time = ( $reading_time ) ? ' | ' . $reading_time : '';
+    echo digicorp_get_the_category_link() . $reading_time;
+  }
+}
 
 if ( ! function_exists( 'digicorp_get_user_avatar_markup' ) ) :
 	/**
@@ -381,14 +405,13 @@ if ( ! function_exists( 'digicorp_link_pages' ) ) :
    }
 endif;
 
-if ( ! function_exists( 'digicorp_get_post_type_link' ) ) :
+if ( ! function_exists( 'digicorp_get_post_type_link' ) ) {
   /**
   * get post type markup for excerpt2 - search page
   */
-  function digicorp_get_post_type_link()
-  {
+  function digicorp_get_post_type_link() {
       $posttype = get_post_type();
-      $markup = '<a href="%1$s" title="%2$s" class="posttype %3$s"><i class="fa fa-bookmark"></i> %4$s</a>';
+      $markup = '<a href="%1$s" title="%2$s" class="%3$s">%4$s</a>';
       $markup_class = '';
       $markup_title = '';
 
@@ -426,9 +449,9 @@ if ( ! function_exists( 'digicorp_get_post_type_link' ) ) :
                       $markup_class,
                       $markup_title );
   }
-endif;
+}
 
-if ( ! function_exists( 'digicorp_get_the_category' ) ):
+if ( ! function_exists( 'digicorp_get_the_category' ) ) {
   /**
   * return the category of current post (wp_term object)
   **/
@@ -436,16 +459,17 @@ if ( ! function_exists( 'digicorp_get_the_category' ) ):
     $categories = get_the_category();
     return $categories[0];
   }
-endif;
+}
 
-if ( ! function_exists( 'digicorp_get_the_category_link' ) ):
+if ( ! function_exists( 'digicorp_get_the_category_link' ) ) {
   /**
   * return link of the first category of current post link
   **/
   function digicorp_get_the_category_link() {
-    if ( 'post' !== get_post_type() ) { return ''; }
+    if ( 'post' !== get_post_type() ) { return digicorp_get_post_type_link(); }
     $category = digicorp_get_the_category();
-    $markup = '<a href="%1$s" title="%2$s"><i class="fa fa-tag"></i> %3$s</a>';
+    // $markup = '<a href="%1$s" title="%2$s"><i class="fa fa-tag"></i> %3$s</a>';
+    $markup = '<a href="%1$s" title="%2$s">%3$s</a>';
     return sprintf( $markup,
                     esc_url( get_category_link( $category->term_id ) ),
                     sprintf(
@@ -454,9 +478,9 @@ if ( ! function_exists( 'digicorp_get_the_category_link' ) ):
                     esc_html( $category->name )
                   );
   }
-endif;
+}
 
-if ( ! function_exists( 'digicorp_count_unicode_words' ) ) :
+if ( ! function_exists( 'digicorp_count_unicode_words' ) ) {
 
   function digicorp_count_unicode_words( $unicode_string ){
     // First remove all the punctuation marks & digits
@@ -470,35 +494,42 @@ if ( ! function_exists( 'digicorp_count_unicode_words' ) ) :
     return count($words_array);
   }
 
-endif;
+}
 
-if ( ! function_exists( 'digicorp_get_reading_time' ) ):
+if ( ! function_exists( 'digicorp_get_reading_time' ) ) {
   /**
   ** get estimated reading time
   **/
   function digicorp_get_reading_time() {
-    if ( 'post' !== get_post_type() ) { return ''; }
+    if ( 'post' !== get_post_type() ) { return false; }
     $time = 0;
     $content = strip_tags( get_post_field( 'post_content' ) );
     // $word_count = str_word_count( $content , 2 ); Not work for persian words
     $word_count = digicorp_count_unicode_words( $content );
     $readingtime = ceil($word_count / 150);
+    $readingtime = digicorp_num_i18n( $readingtime );
 
     // if ($readingtime == 1) {
     //   $timer = " minute";
     // } else {
     //   $timer = " minutes";
     // }
-
-    return sprintf( '<span><i class="fa fa-clock-o"></i> %1$s %2$s %3$s</span>',
-                    __( 'Read time:', 'digicorpdomain' ),
+    $markup = '<span><i class="fa fa-clock-o"></i> %1$s %2$s %3$s</span>';
+    // $markup = '<span>%1$s %2$s %3$s</span>';
+    // return sprintf( $markup,
+    //                 __( 'Read time:', 'digicorpdomain' ),
+    //                 $readingtime,
+    //                 __( 'min', 'digicorpdomain' )
+    //               );
+    return sprintf( $markup,
+                    '',
                     $readingtime,
                     __( 'min', 'digicorpdomain' )
                   );
   }
-endif;
+}
 
-if ( ! function_exists( 'digicorp_get_search_found_posts_count' ) ):
+if ( ! function_exists( 'digicorp_get_search_found_posts_count' ) ) {
   /**
   ** show count of found posts in search results
   **/
@@ -507,7 +538,7 @@ if ( ! function_exists( 'digicorp_get_search_found_posts_count' ) ):
     $found_posts = $wp_query->found_posts;
     return $found_posts;
   }
-endif;
+}
 
 if ( ! function_exists( 'digicorp_get_menu_lang_link' ) ) {
   /**
@@ -595,6 +626,14 @@ if ( ! function_exists( 'digicorp_related_posts' ) ) {
   function digicorp_related_posts() {
     global $post;
     $orig_post = $post;
+
+    // if using sidebar template, then use col-md-6 else use col-md-4
+    $container = '<div class="col-md-4 col-sm-6">';
+    $template_name = get_page_template_slug( $post );
+    if ( strpos( $template_name, 'sidebar' ) !== false ) {
+        $container = '<div class="col-md-6 col-sm-6">';
+    }
+
     $tags = wp_get_post_tags( $post->ID );
     if ( $tags ) {
       $tag_ids = array();
@@ -602,7 +641,7 @@ if ( ! function_exists( 'digicorp_related_posts' ) ) {
       $args = array(
         'tag__in'             =>  $tag_ids,
         'post__not_in'        =>  array($post->ID),
-        'posts_per_page'      =>  4, // Number of related posts that will be shown.
+        'posts_per_page'      =>  3, // Number of related posts that will be shown.
         'ignore_sticky_posts' =>  1
       );
       $my_query = new wp_query( $args );
@@ -618,7 +657,10 @@ if ( ! function_exists( 'digicorp_related_posts' ) ) {
               <?php
                 while( $my_query->have_posts() ) {
                   $my_query->the_post();
-                  get_template_part('template-parts/post/blog','related');
+                  // get_template_part('template-parts/post/blog','related');
+                  echo $container;
+                  get_template_part('template-parts/content/content','excerptv3');
+                  echo '</div>';
                 }
               ?>
             </div>
@@ -882,8 +924,10 @@ if ( ! function_exists( 'digicorp_related_services_list' ) ) {
   }
 }
 
-function digicorp_urlencode( &$item, $key ) {
-  $item = urlencode( $item );
+if ( ! function_exists( 'digicorp_urlencode' ) ) {
+  function digicorp_urlencode( &$item, $key ) {
+    $item = urlencode( $item );
+  }
 }
 
 if ( ! function_exists( 'digicorp_related_posts_in_services' ) ) {
@@ -947,7 +991,10 @@ if ( ! function_exists( 'digicorp_related_posts_in_services' ) ) {
             <?php
               while( $my_query->have_posts() ) {
                 $my_query->the_post();
-                get_template_part('template-parts/post/blog','related');
+                // get_template_part('template-parts/post/blog','related');
+                echo '<div class="col-md-4 col-sm-6">';
+                get_template_part('template-parts/content/content','excerptv3');
+                echo '</div>';
               }
             ?>
           </div>

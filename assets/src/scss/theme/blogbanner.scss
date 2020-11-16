@@ -1,151 +1,138 @@
 /* Banner - Blog Home */
 
 .blog-banner {
-  .post_title h2 {
+  a, span, .post-meta {
+      color: $color-light;
+  }
+  a:hover,
+  a:active,
+  a:focus,
+  .card:hover a {
+    color: $color-withe !important;
+  }
+
+  .card {
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 0;
+    @include trans-box-scale;
+  }
+
+  .post-link-full {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      color: transparent;
+      text-indent: -10000px;
+      z-index: 2;
+  }
+
+  .post-title h2 {
     font-size: 24px;
-    margin: 15px 0px 0px;
-    line-height: 1.2;
+    line-height: 1.5;
+    margin: 0;
 
     a {
-      color: #fff;
-
-      &:hover {
-        color: #FF3D00;
-      }
+      display: block;
+      padding: 15px;
     }
   }
 
-  .post_meta li {
-    a, span {
-      color: #fff;
-    }
+  .post-thumb {
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-color: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.5));
+  }
 
-    a:hover {
-      color: #FF3D00;
+  .post-meta {
+    a {
+      padding: 5px 5px 15px 15px;
+      display: inline-block;
+      position: relative;
+      z-index: 4;
+
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
+    span {
+      padding: 5px 15px 15px 5px;
+      display: inline-block;
+      i,span {
+        margin-right: 5px;
+      }
     }
   }
 
   .lazy-thumb {
     padding-bottom: 0;
   }
+
+  .post-holder {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.5)), to(#000));
+    background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.5) 100%);
+  }
 }
 
-.blog-banner-1 .post_thumb {
+.blog-banner .gutter-left {
+  padding-right: 5px;
   position: relative;
 
-  &:hover .mask {
-    background: rgba(0, 0, 0, 0.6);
+  .post-thumb {
+    height: 420px;
   }
 }
 
-.blog-banner.blog-banner-1 .card {
-  margin-bottom: 0;
-}
+.blog-banner .gutter-right {
+  padding-left: 5px;
 
-.blog-banner-1 {
-  .gutter-left {
-    padding-right: 5px;
-    position: relative;
-
-    .post_thumb {
-      height: 420px;
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    .post-holder {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: 20px;
-      background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.5)), to(#000));
-      background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.5) 100%);
-    }
+  .post-title h2 {
+    font-size: 16px;
   }
 
-  .gutter-right {
-    padding-left: 5px;
+  .post-thumb {
+    height: 205px;
+  }
 
-    .post_title h2 {
-      font-size: 16px;
-    }
+  .right-content-holder {
+    .custom-row .col {
 
-    .right-content-holder {
-      .custom_row .col {
-        .post-holder {
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          padding: 20px;
-          background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.5)), to(#000));
-          background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.5) 100%);
-        }
-
-        &:nth-child(2) .post-holder .post_title h2, &:nth-child(3) .post-holder .post_title h2 {
-          margin-bottom: 5px;
-        }
-
-        &:nth-child(2) .post-holder .meta ul, &:nth-child(3) .post-holder .meta ul {
-          margin-top: 0;
-        }
-
-        &:nth-child(2) {
-          padding-right: 5px;
-        }
-
-        &:nth-child(3) {
-          padding-left: 5px;
-        }
-
-        &:first-child .post_thumb, &:nth-child(2) .post_thumb, &:nth-child(3) .post_thumb, &:nth-child(4) .post_thumb {
-          height: 205px;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center center;
-        }
-
-        &:first-child, &:nth-child(2) {
-          margin-bottom: 10px;
-        }
-
-        &:first-child, &:nth-child(3) {
-          width: 50%;
-          padding-right: 5px;
-        }
-
-        &:nth-child(2), &:nth-child(4) {
-          padding-right: 15px;
-          padding-left: 5px;
-        }
-
-        &:nth-child(3), &:nth-child(4) {
-          margin-bottom: 0px;
-        }
-
-        &:nth-child(3) {
-          padding-left: 15px;
-        }
-
-        &:nth-child(4) .post-holder .post_title h2, &:first-child .post-holder .post_title h2 {
-          margin-bottom: 5px;
-        }
-
-        &:nth-child(4) .post-holder .meta ul, &:first-child .post-holder .meta ul {
-          margin-top: 0;
-        }
-
-        &:nth-child(2) .post-holder .entry_cats, &:nth-child(3) .post-holder .entry_cats {
-          display: block;
-        }
+      &:nth-child(2) {
+        padding-right: 5px;
       }
 
-      ul.post-categories li a {
-        font-size: 11px;
-        line-height: 1;
-        padding: 3px 8px;
+      &:nth-child(3) {
+        padding-left: 5px;
+      }
+
+      &:first-child, &:nth-child(2) {
+        margin-bottom: 10px;
+      }
+
+      &:first-child, &:nth-child(3) {
+        // width: 50%;
+        padding-right: 5px;
+      }
+
+      &:nth-child(2), &:nth-child(4) {
+        padding-right: 15px;
+        padding-left: 5px;
+      }
+
+      &:nth-child(3), &:nth-child(4) {
+        margin-bottom: 0px;
+      }
+
+      &:nth-child(3) {
+        padding-left: 15px;
       }
     }
   }
@@ -205,41 +192,39 @@
 @media (max-width: 992px) {
   .blog-banner-1 {
     .gutter-left {
-      .post_thumb {
+      .post-thumb {
         margin-right: 10px;
         margin-bottom: 10px;
         height: 450px;
       }
 
       .post-holder {
-        padding: 20px;
 
-        .post_title h2 {
+        .post-title h2 {
           font-size: 18px;
         }
       }
     }
 
     .gutter-right {
-      .post_thumb {
+      .post-thumb {
         margin-left: 10px;
       }
 
       .post-holder {
-        padding: 20px;
 
-        .post_title h2 {
+        .post-title h2 {
           font-size: 16px;
         }
       }
 
-      .right-content-holder .custom_row .col {
-        &:nth-child(2) .post_thumb {
+      .right-content-holder .custom-row .col {
+        &:nth-child(2) .post-thumb {
           margin-right: -5px;
           margin-bottom: 10px;
         }
 
-        &:nth-child(3) .post_thumb {
+        &:nth-child(3) .post-thumb {
           margin-left: 5px;
           margin-bottom: 0px;
         }
@@ -251,49 +236,49 @@
         margin-right: 10px;
       }
 
-      .post_thumb {
+      .post-thumb {
         margin-bottom: 15px;
         margin-right: 0px;
 
-        .post-holder .post_title h2 {
+        .post-holder .post-title h2 {
           font-size: 16px;
         }
       }
     }
 
-    .gutter-right .right-content-holder .custom_row .col {
-      &:first-child .post_thumb {
+    .gutter-right .right-content-holder .custom-row .col {
+      &:first-child .post-thumb {
         margin-right: -5px;
         margin-bottom: 5px;
 
-        .post_holder .post_title h2 {
+        .post-holder .post-title h2 {
           font-size: 16px;
         }
       }
 
-      &:nth-child(2) .post_thumb {
+      &:nth-child(2) .post-thumb {
         margin-left: 5px;
         margin-right: 0px;
         margin-bottom: 5px;
 
-        .post_holder .post_title h2 {
+        .post-holder .post-title h2 {
           font-size: 16px;
         }
       }
 
-      &:nth-child(3) .post_thumb {
+      &:nth-child(3) .post-thumb {
         margin-right: -5px;
         margin-left: 10px;
 
-        .post_holder .post_title h2 {
+        .post-holder .post-title h2 {
           font-size: 16px;
         }
       }
 
-      &:nth-child(4) .post_thumb {
+      &:nth-child(4) .post-thumb {
         margin-left: 5px;
 
-        .post_holder .post_title h2 {
+        .post-holder .post-title h2 {
           font-size: 16px;
         }
       }
@@ -304,41 +289,39 @@
 @media (max-width: 768px) {
   .blog-banner-1 {
     .gutter-left {
-      .post_thumb {
+      .post-thumb {
         margin-right: 10px;
         margin-bottom: 10px;
         height: 300px;
       }
 
       .post-holder {
-        padding: 20px;
 
-        .post_title h2 {
+        .post-title h2 {
           font-size: 16px;
         }
       }
     }
 
     .gutter-right {
-      .post_thumb {
+      .post-thumb {
         margin-left: 10px;
       }
 
       .post-holder {
-        padding: 20px;
 
-        .post_title h2 {
+        .post-title h2 {
           font-size: 16px;
         }
       }
 
-      .right-content-holder .custom_row .col {
-        &:nth-child(2) .post_thumb {
+      .right-content-holder .custom-row .col {
+        &:nth-child(2) .post-thumb {
           margin-right: -5px;
           margin-bottom: 10px;
         }
 
-        &:nth-child(3) .post_thumb {
+        &:nth-child(3) .post-thumb {
           margin-left: 5px;
           margin-bottom: 0px;
         }
@@ -350,51 +333,39 @@
         margin-right: 10px;
       }
 
-      .post_thumb {
+      .post-thumb {
         margin-bottom: 15px;
         margin-right: 0px;
 
-        .post-holder .post_title h2 {
+        .post-holder .post-title h2 {
           font-size: 18px;
         }
       }
     }
 
-    .gutter-right .right-content-holder .custom_row .col {
-      &:first-child .post_thumb {
-        margin-right: -5px;
-        margin-bottom: 5px;
-
-        .post_holder .post_title h2 {
-          font-size: 16px;
-        }
+    .gutter-right .right-content-holder .custom-row .col {
+      .post-holder .post-title h2 {
+        font-size: 16px;
       }
 
-      &:nth-child(2) .post_thumb {
-        margin-left: 5px;
+      &:first-child .post-thumb {
+        margin-right: 10px;
+        margin-bottom: 5px;
+      }
+
+      &:nth-child(2) .post-thumb {
+        margin-left: 20px;
         margin-right: 0px;
         margin-bottom: 5px;
-
-        .post_holder .post_title h2 {
-          font-size: 16px;
-        }
       }
 
-      &:nth-child(3) .post_thumb {
-        margin-right: -5px;
+      &:nth-child(3) .post-thumb {
+        margin-right: 10px;
         margin-left: 10px;
-
-        .post_holder .post_title h2 {
-          font-size: 16px;
-        }
       }
 
-      &:nth-child(4) .post_thumb {
-        margin-left: 5px;
-
-        .post_holder .post_title h2 {
-          font-size: 16px;
-        }
+      &:nth-child(4) .post-thumb {
+        margin-left: 20px;
       }
     }
   }
@@ -407,79 +378,69 @@
         margin-right: 10px;
       }
 
-      .post_thumb {
+      .post-thumb {
         margin-bottom: 15px;
         margin-right: 0px;
 
-        .post_holder .post_title h2 {
+        .post-holder .post-title h2 {
           font-size: 16px;
         }
       }
     }
 
     .gutter-right {
-      .right-content-holder .custom_row .col {
+      .right-content-holder .custom-row .col {
         &:first-child {
-          width: 100%;
-          padding-right: 20px;
+          padding-right: 15px;
 
-          .post_thumb {
+          .post-thumb {
             margin-right: -5px;
             margin-bottom: 5px;
 
-            .post_holder .post_title h2 {
+            .post-holder .post-title h2 {
               font-size: 16px;
             }
           }
         }
 
         &:nth-child(2) {
-          width: 100%;
           padding-left: 20px;
 
-          .post_thumb {
+          .post-thumb {
             margin-left: 5px;
             margin-right: 0px;
             margin-bottom: 5px;
 
-            .post_holder .post_title h2 {
+            .post-holder .post-title h2 {
               font-size: 16px;
             }
           }
         }
 
         &:nth-child(3) {
-          width: 100%;
-          padding-right: 20px;
+          padding-right: 15px;
 
-          .post_thumb {
+          .post-thumb {
             margin-right: -5px;
             margin-left: 10px;
             margin-bottom: 15px;
 
-            .post_holder .post_title h2 {
+            .post-holder .post-title h2 {
               font-size: 16px;
             }
           }
         }
 
         &:nth-child(4) {
-          width: 100%;
           padding-left: 20px;
 
-          .post_thumb {
+          .post-thumb {
             margin-left: 5px;
 
-            .post_holder .post_title h2 {
+            .post-holder .post-title h2 {
               font-size: 16px;
             }
           }
-        }
-      }
-
-      .meta ul li {
-        &.comments, &.post_author {
-          display: inline-block;
         }
       }
     }

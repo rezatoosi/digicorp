@@ -37,6 +37,7 @@ const jsfiles = [
   // src.js + 'bootstrap-collapse.js',
   src.js + 'isotope.js',
   // src.js + 'imagesloaded.pkgd.js',
+  // src.js + 'jquery.matchHeight.js',
   src.js + 'plugins.js'
 ];
 

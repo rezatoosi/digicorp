@@ -49,7 +49,7 @@ if ( $categories ) {
 $cat = get_category_by_slug('digital-marketing');
 $query = new WP_Query(array(
   'category_name' => 'digital-marketing',
-  'posts_per_page' => '4',
+  'posts_per_page' => '3',
   'post_status' => 'publish'
 ));
 if ( $query->have_posts() ) {
@@ -62,12 +62,15 @@ if ( $query->have_posts() ) {
             <hr>
         </div><!-- end title -->
 
-        <div class="row services-wrapper blog-wrapper text-left">
+        <div class="row services-wrapper text-left">
 
           <?php
             while ( $query->have_posts() ) {
               $query->the_post();
-              get_template_part('template-parts/post/blog','recent');
+              // get_template_part('template-parts/post/blog','recent');
+              echo '<div class="col-md-4 col-sm-6">';
+              get_template_part( 'template-parts/content/content', 'excerptv3' );
+              echo '</div>';
             }
             wp_reset_postdata();
           ?>
@@ -88,7 +91,7 @@ if ( $query->have_posts() ) {
 $cat = get_category_by_slug('web-design');
 $query = new WP_Query(array(
   'category_name' => 'web-design',
-  'posts_per_page' => '4',
+  'posts_per_page' => '3',
   'post_status' => 'publish'
 ));
 if ( $query->have_posts() ) {
@@ -101,12 +104,15 @@ if ( $query->have_posts() ) {
             <hr>
         </div><!-- end title -->
 
-        <div class="row services-wrapper blog-wrapper text-left">
+        <div class="row services-wrapper text-left">
 
           <?php
             while ( $query->have_posts() ) {
               $query->the_post();
-              get_template_part('template-parts/post/blog','recent');
+              // get_template_part('template-parts/post/blog','recent');
+              echo '<div class="col-md-4 col-sm-6">';
+              get_template_part( 'template-parts/content/content', 'excerptv3' );
+              echo '</div>';
             }
             wp_reset_postdata();
           ?>

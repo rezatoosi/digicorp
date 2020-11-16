@@ -36,6 +36,49 @@ function digicorp_pingback_header() {
 }
 add_action( 'wp_head', 'digicorp_pingback_header' );
 
+/**
+	* Convert number characters to persian
+	*
+**/
+function digicorp_num_i18n( $string ) {
+	$lang = explode( '_', get_locale() )[0];
+
+	$num_eng = range(0, 9);
+
+	switch ( $lang ) {
+		case 'fa':
+
+			// // Persian HTML decimal
+			// $decimal_fa = array('&#1776;', '&#1777;', '&#1778;', '&#1779;', '&#1780;', '&#1781;', '&#1782;', '&#1783;', '&#1784;', '&#1785;');
+
+			// Persian Numeric
+			$num_fa = array('۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹');
+
+			// $string =  str_replace($num_eng, $decimal_fa, $string);
+		  $string = str_replace($num_eng, $num_fa, $string);
+
+			break;
+
+		case 'ar':
+
+			// Arabic HTML decimal
+			$decimal_ar = array('&#1632;', '&#1633;', '&#1634;', '&#1635;', '&#1636;', '&#1637;', '&#1638;', '&#1639;', '&#1640;', '&#1641;');
+			// Arabic Numeric
+			$num_ar = array('٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩');
+
+			// $string =  str_replace($num_eng, $decimal_ar, $string);
+		  $string = str_replace($num_eng, $num_ar, $string);
+
+			break;
+
+		default:
+			$string = $string;
+			break;
+	}
+	return $string;
+}
+
+
 function siteBrand($html) {
   // grab the site name as set in customizer options
   $site = get_bloginfo('name');

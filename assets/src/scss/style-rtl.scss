@@ -17,6 +17,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 @import 'plugins/bootstrap';
 
+@import 'theme/variables';
+@import 'theme/mixins';
 @import 'theme/colors';
 @import 'theme/custom';
 @import 'theme/blogbanner';

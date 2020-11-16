@@ -136,6 +136,9 @@
     $('[data-bg-img]').each(function() {
         $(this).css('background-image', 'url(' + $(this).data("bg-img") + ')');
     });
+    $('[data-bg]').each(function() {
+        $(this).css('background', $(this).data("bg"));
+    });
 
     /* Run smooth scroll ------------------------------------- */
     //https://www.npmjs.com/package/smooth-scroll

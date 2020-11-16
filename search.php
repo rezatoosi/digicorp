@@ -34,7 +34,9 @@ digicorp_page_header_section();
               // Load posts loop.
               while ( have_posts() ) {
                 the_post();
+                echo '<div class="col-md-4 col-sm-6">';
                 get_template_part( 'template-parts/content/content', 'excerptv3' );
+                echo '</div>';
               }
 
               // Previous/next page navigation.
