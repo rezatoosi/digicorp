@@ -143,6 +143,12 @@ if ( ! function_exists( 'digicorp_entry_header_meta' ) ) :
         digicorp_get_publish_time()
       );
 
+      // Show reading time
+      echo '<small>&#124;</small>'; // seprator
+      echo digicorp_get_reading_time( false , true );
+
+
+      // show comments count
       if ( /*! is_single() &&*/ ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
         echo '<small class="hidden-xs">&#124;</small>'; // seprator
   			echo '<span class="comments-link hidden-xs">';
@@ -158,7 +164,7 @@ if ( ! function_exists( 'digicorp_entry_header_meta' ) ) :
       // <small class="hidden-xs">&#124;</small>
       // <span class="hidden-xs"><a href="single.html"><i class="fa fa-eye"></i> 444</a></span>
 
-
+      // show edit link if user logged in
   		edit_post_link(
   			sprintf(
   				wp_kses(
@@ -500,7 +506,7 @@ if ( ! function_exists( 'digicorp_get_reading_time' ) ) {
   /**
   ** get estimated reading time
   **/
-  function digicorp_get_reading_time() {
+  function digicorp_get_reading_time( $insert_icon = true, $insert_pretext = false ) {
     if ( 'post' !== get_post_type() ) { return false; }
     $time = 0;
     $content = strip_tags( get_post_field( 'post_content' ) );
@@ -514,7 +520,7 @@ if ( ! function_exists( 'digicorp_get_reading_time' ) ) {
     // } else {
     //   $timer = " minutes";
     // }
-    $markup = '<span><i class="fa fa-clock-o"></i> %1$s %2$s %3$s</span>';
+    $markup = '<span>%s %s %s %s</span>';
     // $markup = '<span>%1$s %2$s %3$s</span>';
     // return sprintf( $markup,
     //                 __( 'Read time:', 'digicorpdomain' ),
@@ -522,7 +528,8 @@ if ( ! function_exists( 'digicorp_get_reading_time' ) ) {
     //                 __( 'min', 'digicorpdomain' )
     //               );
     return sprintf( $markup,
-                    '',
+                    ( $insert_icon ) ? '<i class="fa fa-clock-o"></i> ' : '',
+                    ( $insert_pretext ) ? __( 'Read time:', 'digicorpdomain' ) : '',
                     $readingtime,
                     __( 'min', 'digicorpdomain' )
                   );
