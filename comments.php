@@ -98,6 +98,20 @@ if ( have_comments() ) : ?>
 // TODO: Add "login using google" or "sign up using google" or "Login using Facebook"
 
 // Add comment form
+$post_id = get_the_ID();
+$commenter     = wp_get_current_commenter();
+$user          = wp_get_current_user();
+$user_identity = $user->exists() ? $user->display_name : '';
+//
+// $args = wp_parse_args( $args );
+// if ( ! isset( $args['format'] ) ) {
+//     $args['format'] = current_theme_supports( 'html5', 'comment-form' ) ? 'html5' : 'xhtml';
+// }
+
+$req      = get_option( 'require_name_email' );
+$html_req = ( $req ? " required='required'" : '' );
+$html5    = current_theme_supports( 'html5', 'comment-form' );
+
 $fields   =  array(
   'author'  => '<div class="col-md-4 col-sm-12">' . '<p class="comment-form-author">' . '<label for="author">' . __( 'Name', 'digicorpdomain' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
          '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245" class="form-control"' . $html_req . ' /></p></div>',
