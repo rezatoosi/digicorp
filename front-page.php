@@ -62,6 +62,7 @@
             </div>
         </section>
         <?php
+        // TODO: Move this script to .js files
         add_action( "wp_footer", function() {
           $locale = get_locale();
         ?>
