@@ -236,7 +236,7 @@ if ( ! function_exists( 'digicorp_footer_share_buttons' ) ) {
    **/
    function digicorp_footer_share_buttons() {
      $page_link = urlencode(get_the_permalink());
-     $page_link = 'https://arianada.com/';
+     // $page_link = 'https://arianada.com/';
      $title = urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8'));
      $media = urlencode(get_the_post_thumbnail_url(get_the_ID(), 'full'));
      $summary = get_the_excerpt();
