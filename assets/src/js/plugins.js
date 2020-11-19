@@ -165,9 +165,6 @@
         "toolbar=0,personalbar=0,resizable,scrollbars,status,width=${w / systemZoom},height=${h / systemZoom},top=${top},left=${left}");
 
       if (window.focus) newWindow.focus();
-
-
-
     });
 
 
