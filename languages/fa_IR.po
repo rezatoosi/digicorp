@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DIGICORP 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/digicorp\n"
-"POT-Creation-Date: 2020-04-21T13:20:16+00:00\n"
-"PO-Revision-Date: 2020-04-21 17:54+0430\n"
+"POT-Creation-Date: 2020-11-19T12:10:45+00:00\n"
+"PO-Revision-Date: 2020-11-19 15:42+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -76,18 +76,18 @@ msgstr "آخرین"
 msgid "Suggested Articles"
 msgstr "مطالب پیشنهادی"
 
-#: backup/_home.php:84 backup/__home.php:89 home.php:60 home.php:99
+#: backup/_home.php:84 backup/__home.php:89 home.php:60 home.php:102
 #: templates/template-home-sidebar.php:90
 msgid "Latest in"
 msgstr "آخرین‌ها در"
 
-#: backup/_home.php:103 backup/__home.php:108 home.php:79 home.php:118
+#: backup/_home.php:103 backup/__home.php:108 home.php:82 home.php:124
 #: templates/template-home-sidebar.php:109
 msgid "More articles in this category"
 msgstr "مطالب بیشتر در این دسته‌بندی"
 
 #. translators: title of other services section in single page of services
-#: backup/_single-ariana-services.php:51 inc/template-tags.php:645
+#: backup/_single-ariana-services.php:51 inc/template-tags.php:877
 msgid "OTHER SERVICES"
 msgstr "سایر خدمات"
 
@@ -116,32 +116,32 @@ msgstr "قبلی"
 msgid "Next"
 msgstr "بعدی"
 
-#: comments.php:102
+#: comments.php:116
 msgid "Name"
 msgstr "نام"
 
-#: comments.php:104
+#: comments.php:118
 msgid "Email"
 msgstr "ایمیل"
 
-#: comments.php:106
+#: comments.php:120
 msgid "Website"
 msgstr "وب‌سایت"
 
-#: comments.php:111
+#: comments.php:125
 msgctxt "noun"
 msgid "Comment"
 msgstr "یادداشت"
 
 #. translators: %s: login URL
-#: comments.php:115
+#: comments.php:129
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 "برای درج پاسخ، شما باید وارد حساب کاربری خود شوید. <a href=\"%s\">لینک ورود</"
 "a>"
 
 #. translators: 1: edit user link, 2: accessibility text, 3: user name, 4: logout URL
-#: comments.php:121
+#: comments.php:135
 msgid ""
 "<a href=\"%1$s\" aria-label=\"%2$s\">Logged in as %3$s</a>. <a href=\"%4$s"
 "\">Log out?</a>"
@@ -150,202 +150,42 @@ msgstr ""
 "href=\"%4$s\">خارج می‌شوید?</a>"
 
 #. translators: %s: user name
-#: comments.php:124
+#: comments.php:138
 msgid "Logged in as %s. Edit your profile."
 msgstr "شما با حساب %s وارد شده اید. پروفایل‌تان را ویرایش کنید."
 
-#: comments.php:136
+#: comments.php:150
 msgid "Leave a Comment"
 msgstr "یادداشتی بنویسید"
 
 #. translators: %s: name of the user reply to
-#: comments.php:138
+#: comments.php:152
 msgid "Leave a Comment to %s"
 msgstr "برای %s یادداشتی بنویسید"
 
-#: comments.php:143
+#: comments.php:157
 msgid "Cancel reply"
 msgstr "انصراف از پاسخ دادن"
 
-#: comments.php:144
+#: comments.php:158
 msgid "Post Comment"
 msgstr "ارسال یادداشت"
 
-#: functions.php:25
+#: functions.php:26
 msgid "Header Vertical Menu"
 msgstr "منوی افقی در هدر"
 
-#: functions.php:29
+#: functions.php:30
 msgid "Footer Vertical Menu"
 msgstr "منوی زیرنویس"
 
-#: functions.php:100
+#: functions.php:93
 msgid "Small"
 msgstr "کوچک"
 
-#: functions.php:101
+#: functions.php:94
 msgid "Page Header"
 msgstr "هدر صفحه"
-
-#: functions.php:112
-msgid "Footer Widget 1"
-msgstr "ویجت 1 فوتر"
-
-#: functions.php:114
-msgid "The 1st widget in the footer"
-msgstr "ویجت اولین ستون فوتر"
-
-#: functions.php:121
-msgid "Footer Widget 2"
-msgstr "ویجت 2 فوتر"
-
-#: functions.php:123
-msgid "The 2nd widget in the footer"
-msgstr "ویجت دومین ستون فوتر"
-
-#: functions.php:130
-msgid "Footer Widget 3"
-msgstr "ویجت 3 فوتر"
-
-#: functions.php:132
-msgid "The 3rd widget in the footer"
-msgstr "ویجت سومین ستون فوتر"
-
-#: functions.php:139
-msgid "Footer Widget 4"
-msgstr "ویجت 4 فوتر"
-
-#: functions.php:141
-msgid "The 4th widget in the footer"
-msgstr "ویجت چهارمین ستون فوتر"
-
-#: functions.php:150
-msgid "Right Sidebar"
-msgstr "ساید بار سمت چپ"
-
-#: functions.php:152
-msgid "Sidebar in the right column of pages"
-msgstr "ساید بار ستون چپ صفحات"
-
-#: functions.php:159
-msgid "Right Sidebar Bottom"
-msgstr "ساید بار چپ پایین"
-
-#: functions.php:161
-msgid "To add in the bottom of right column"
-msgstr "برای اضافه کردن به پایین ستون چپ"
-
-#: functions.php:170
-msgid "Front Page - CTA 01"
-msgstr "صفحه اصلی - CTA1"
-
-#: functions.php:172
-msgid "Call to action section after services section"
-msgstr "دعوت به عمل بعد از قسمت خدمات"
-
-#: functions.php:181
-msgid "Front Page - CTA 02"
-msgstr "صفحه اصلی - CTA2"
-
-#: functions.php:183
-msgid "Call to action section after brands section"
-msgstr "دعوت به عمل بعد از برندها"
-
-#: functions.php:190
-msgid "Front Page - Features"
-msgstr "صفحه اصلی - ویژگی‌ها"
-
-#: functions.php:192
-msgid "Features section in frontpage"
-msgstr "قسمت ویژگی‌ها در صفحه اصلی"
-
-#: functions.php:199
-msgid "Front Page - Custom"
-msgstr "صفحه اصلی - سفارشی"
-
-#: functions.php:201
-msgid "Custom section in frontpage"
-msgstr "بخش سفارشی در صفحه اول"
-
-#: functions.php:208
-msgid "Front Page - FAQ"
-msgstr "صفحه اصلی - FAQ"
-
-#: functions.php:210
-msgid "FAQ section in frontpage"
-msgstr "سوالات متداول در صفحه اصلی"
-
-#: functions.php:217
-msgid "Footer - Copyright"
-msgstr "زیر نویس - حقوق"
-
-#: functions.php:219
-msgid "Copyright bar in footer"
-msgstr "نوار حقوق در زیرنویس"
-
-#: functions.php:228 inc/customizer/customizer.php:108
-msgid "About us - Brands"
-msgstr "درباره ما - برندها"
-
-#: functions.php:230
-msgid "Brands section in aboutus or frontpage"
-msgstr "قسمت برندها در صفحه درباره ما"
-
-#: functions.php:237
-msgid "About us - Our History"
-msgstr "درباره ما - تاریخچه ما"
-
-#: functions.php:239
-msgid "Our history section in aboutus or frontpage"
-msgstr "قسمت تاریخچه ما در صفحه درباره ما"
-
-#: functions.php:248
-msgid "Services - Main(General) Services"
-msgstr "خدمات - خدمات اصلی (کلی)"
-
-#: functions.php:250
-msgid "Main services section in services or frontpage"
-msgstr "قسمت خدمات اصلی در صفحه خدمات"
-
-#: functions.php:259 inc/customizer/customizer.php:146
-msgid "Contact - Address"
-msgstr "تماس - آدرس"
-
-#: functions.php:261
-msgid "Contact Address section in contact or frontpage"
-msgstr "قسمت آدرس تماس در صفحه تماس"
-
-#: functions.php:269 inc/customizer/customizer.php:156
-msgid "Contact - Phone"
-msgstr "تماس - تلفن"
-
-#: functions.php:271
-msgid "Contact Phone section in contact or frontpage"
-msgstr "قسمت تلفن در صفحه تماس"
-
-#: functions.php:279 inc/customizer/customizer.php:166
-msgid "Contact - Social"
-msgstr "تماس - اجتماعی"
-
-#: functions.php:281
-msgid "Contact Social section in contact or frontpage"
-msgstr "قسمت شبکه های اجتماعی در صفحه تماس"
-
-#: functions.php:289
-msgid "Contact - Map"
-msgstr "تماس - نقشه"
-
-#: functions.php:291
-msgid "Contact Map section in contact or frontpage"
-msgstr "قسمت نقشه در صفحه تماس"
-
-#: functions.php:299 inc/customizer/customizer.php:176
-msgid "Contact - Form"
-msgstr "تماس - فرم"
-
-#: functions.php:301
-msgid "Contact Form section in contactus"
-msgstr "قسمت فرم تماس در صفحه تماس"
 
 #. translators: screen reader text for nav icon in small screens
 #: header.php:57
@@ -487,6 +327,10 @@ msgstr "مدیریت تنظیمات بخش ویژگی‌ها"
 msgid "Add & Edit features"
 msgstr "افزودن و ویرایش ویژگی‌ها"
 
+#: inc/customizer/customizer.php:108 inc/register-sidebars.php:123
+msgid "About us - Brands"
+msgstr "درباره ما - برندها"
+
 #: inc/customizer/customizer.php:109
 msgid "Manage brands section in about us page."
 msgstr "مدیریت قسمت برندها در صفحه درباره"
@@ -515,17 +359,33 @@ msgstr "خدمات - خدمات اصلی ما"
 msgid "Manage our main services section in services page."
 msgstr "مدیریت قسمت خدمات اصلی در صفحه خدمات"
 
+#: inc/customizer/customizer.php:146 inc/register-sidebars.php:154
+msgid "Contact - Address"
+msgstr "تماس - آدرس"
+
 #: inc/customizer/customizer.php:147
 msgid "Manage our addresses in contactus or frontpage."
 msgstr "مدیریت آدرس ها در صفحه تماس"
+
+#: inc/customizer/customizer.php:156 inc/register-sidebars.php:164
+msgid "Contact - Phone"
+msgstr "تماس - تلفن"
 
 #: inc/customizer/customizer.php:157
 msgid "Manage our phone numbers in contactus or frontpage."
 msgstr "مدیریت شماره تلفن ها در صفحه تماس"
 
+#: inc/customizer/customizer.php:166 inc/register-sidebars.php:174
+msgid "Contact - Social"
+msgstr "تماس - اجتماعی"
+
 #: inc/customizer/customizer.php:167
 msgid "Manage our social network links in contactus or frontpage."
 msgstr "مدیریت شبکه های اجتماعی در صفحه تماس"
+
+#: inc/customizer/customizer.php:176 inc/register-sidebars.php:194
+msgid "Contact - Form"
+msgstr "تماس - فرم"
 
 #: inc/customizer/customizer.php:177
 msgid "Manage Contact Form in contactus"
@@ -604,6 +464,146 @@ msgstr "بخش تصدیق نامه ها"
 msgid "Manage testimonials section settings."
 msgstr "مدیریت بخش تصدیق نامه ها"
 
+#: inc/register-sidebars.php:7
+msgid "Footer Widget 1"
+msgstr "ویجت 1 فوتر"
+
+#: inc/register-sidebars.php:9
+msgid "The 1st widget in the footer"
+msgstr "ویجت اولین ستون فوتر"
+
+#: inc/register-sidebars.php:16
+msgid "Footer Widget 2"
+msgstr "ویجت 2 فوتر"
+
+#: inc/register-sidebars.php:18
+msgid "The 2nd widget in the footer"
+msgstr "ویجت دومین ستون فوتر"
+
+#: inc/register-sidebars.php:25
+msgid "Footer Widget 3"
+msgstr "ویجت 3 فوتر"
+
+#: inc/register-sidebars.php:27
+msgid "The 3rd widget in the footer"
+msgstr "ویجت سومین ستون فوتر"
+
+#: inc/register-sidebars.php:34
+msgid "Footer Widget 4"
+msgstr "ویجت 4 فوتر"
+
+#: inc/register-sidebars.php:36
+msgid "The 4th widget in the footer"
+msgstr "ویجت چهارمین ستون فوتر"
+
+#: inc/register-sidebars.php:45
+msgid "Right Sidebar"
+msgstr "ساید بار سمت چپ"
+
+#: inc/register-sidebars.php:47
+msgid "Sidebar in the right column of pages"
+msgstr "ساید بار ستون چپ صفحات"
+
+#: inc/register-sidebars.php:54
+msgid "Right Sidebar Bottom"
+msgstr "ساید بار چپ پایین"
+
+#: inc/register-sidebars.php:56
+msgid "To add in the bottom of right column"
+msgstr "برای اضافه کردن به پایین ستون چپ"
+
+#: inc/register-sidebars.php:65
+msgid "Front Page - CTA 01"
+msgstr "صفحه اصلی - CTA1"
+
+#: inc/register-sidebars.php:67
+msgid "Call to action section after services section"
+msgstr "دعوت به عمل بعد از قسمت خدمات"
+
+#: inc/register-sidebars.php:76
+msgid "Front Page - CTA 02"
+msgstr "صفحه اصلی - CTA2"
+
+#: inc/register-sidebars.php:78
+msgid "Call to action section after brands section"
+msgstr "دعوت به عمل بعد از برندها"
+
+#: inc/register-sidebars.php:85
+msgid "Front Page - Features"
+msgstr "صفحه اصلی - ویژگی‌ها"
+
+#: inc/register-sidebars.php:87
+msgid "Features section in frontpage"
+msgstr "قسمت ویژگی‌ها در صفحه اصلی"
+
+#: inc/register-sidebars.php:94
+msgid "Front Page - Custom"
+msgstr "صفحه اصلی - سفارشی"
+
+#: inc/register-sidebars.php:96
+msgid "Custom section in frontpage"
+msgstr "بخش سفارشی در صفحه اول"
+
+#: inc/register-sidebars.php:103
+msgid "Front Page - FAQ"
+msgstr "صفحه اصلی - FAQ"
+
+#: inc/register-sidebars.php:105
+msgid "FAQ section in frontpage"
+msgstr "سوالات متداول در صفحه اصلی"
+
+#: inc/register-sidebars.php:112
+msgid "Footer - Copyright"
+msgstr "زیر نویس - حقوق"
+
+#: inc/register-sidebars.php:114
+msgid "Copyright bar in footer"
+msgstr "نوار حقوق در زیرنویس"
+
+#: inc/register-sidebars.php:125
+msgid "Brands section in aboutus or frontpage"
+msgstr "قسمت برندها در صفحه درباره ما"
+
+#: inc/register-sidebars.php:132
+msgid "About us - Our History"
+msgstr "درباره ما - تاریخچه ما"
+
+#: inc/register-sidebars.php:134
+msgid "Our history section in aboutus or frontpage"
+msgstr "قسمت تاریخچه ما در صفحه درباره ما"
+
+#: inc/register-sidebars.php:143
+msgid "Services - Main(General) Services"
+msgstr "خدمات - خدمات اصلی (کلی)"
+
+#: inc/register-sidebars.php:145
+msgid "Main services section in services or frontpage"
+msgstr "قسمت خدمات اصلی در صفحه خدمات"
+
+#: inc/register-sidebars.php:156
+msgid "Contact Address section in contact or frontpage"
+msgstr "قسمت آدرس تماس در صفحه تماس"
+
+#: inc/register-sidebars.php:166
+msgid "Contact Phone section in contact or frontpage"
+msgstr "قسمت تلفن در صفحه تماس"
+
+#: inc/register-sidebars.php:176
+msgid "Contact Social section in contact or frontpage"
+msgstr "قسمت شبکه های اجتماعی در صفحه تماس"
+
+#: inc/register-sidebars.php:184
+msgid "Contact - Map"
+msgstr "تماس - نقشه"
+
+#: inc/register-sidebars.php:186
+msgid "Contact Map section in contact or frontpage"
+msgstr "قسمت نقشه در صفحه تماس"
+
+#: inc/register-sidebars.php:196
+msgid "Contact Form section in contactus"
+msgstr "قسمت فرم تماس در صفحه تماس"
+
 #. Translators: %s: page title for search page
 #: inc/template-tags.php:32
 msgid "Search results for \"%s\""
@@ -627,22 +627,22 @@ msgid "Click for all articles sent on %s"
 msgstr "برای مشاهده تمام مطالب ارسال شده در %s کلیک کنید"
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:166
+#: inc/template-tags.php:172
 msgid "Edit<span class=\"screen-reader-text sr-only\">%s</span>"
 msgstr "ویرایش<span class=\"screen-reader-text sr-only\">%s</span>"
 
 #. translators: 1: list of categories.
-#: inc/template-tags.php:198
+#: inc/template-tags.php:204
 msgid "In Categories: %1$s"
 msgstr "در دسته(های): %1$s"
 
 #. translators: 1: list of tags.
-#: inc/template-tags.php:204
+#: inc/template-tags.php:210
 msgid "Tags: %1$s"
 msgstr "برچسب(ها): %1$s"
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:213
+#: inc/template-tags.php:219
 msgid ""
 "<button class=\"btn\">Edit <span class=\"sr-hidden\">This Post</span><span "
 "class=\"screen-reader-text sr-only\"> %s</span></button>"
@@ -650,87 +650,95 @@ msgstr ""
 "<button class=\"btn\">ویرایش <span class=\"sr-hidden\">این پست</span><span "
 "class=\"screen-reader-text sr-only\"> %s</span></button>"
 
+#: inc/template-tags.php:328
+msgid "Check this out please"
+msgstr "لطفا این را بررسی کن"
+
+#: inc/template-tags.php:354
+msgid "Share This:"
+msgstr "به اشتراک بگذارید:"
+
 #. translators: %s: Display name of the user
-#: inc/template-tags.php:293
+#: inc/template-tags.php:489
 msgid "Visit archive page of %s"
 msgstr "بازدید از صفحه بایگانی  %s"
 
-#: inc/template-tags.php:315
+#: inc/template-tags.php:511
 msgid "«"
 msgstr "«"
 
-#: inc/template-tags.php:316
+#: inc/template-tags.php:512
 msgid "»"
 msgstr "»"
 
 #. translators: % is page number
-#: inc/template-tags.php:340
+#: inc/template-tags.php:536
 msgid "Page %"
 msgstr "صفحه %"
 
-#: inc/template-tags.php:359 searchform.php:44
+#: inc/template-tags.php:554 searchform.php:44
 msgid "Blog"
 msgstr "وبلاگ"
 
-#: inc/template-tags.php:370
+#: inc/template-tags.php:565
 msgid "Our Services"
 msgstr "خدمات ما"
 
-#: inc/template-tags.php:375
+#: inc/template-tags.php:570
 msgid "Our Projects"
 msgstr "پروژه‌های ما"
 
 #. Translators: %s: Title of post type, in post excerpt view
-#: inc/template-tags.php:386
+#: inc/template-tags.php:581
 msgid "Found in %s"
 msgstr "یافت شده در قسمت %s"
 
 #. Translators: %s: Name of category
-#: inc/template-tags.php:414
+#: inc/template-tags.php:610
 msgid "Visit articles in category of %s"
 msgstr "بازدید از مقالات در دسته %s"
 
-#: inc/template-tags.php:438
+#: inc/template-tags.php:659
 msgid "Read time:"
 msgstr "زمان خواندن:"
 
-#: inc/template-tags.php:440
+#: inc/template-tags.php:661
 msgid "min"
 msgstr "دقیقه"
 
-#: inc/template-tags.php:503
+#: inc/template-tags.php:724
 msgid "<  Previous Post"
 msgstr "< مطلب قبلی"
 
-#: inc/template-tags.php:523
+#: inc/template-tags.php:744
 msgid "Next Post  >"
 msgstr "مطلب بعدی >"
 
-#: inc/template-tags.php:558 inc/template-tags.php:601
+#: inc/template-tags.php:787 inc/template-tags.php:833
 msgid "Related Articles"
 msgstr "مطالب مرتبط"
 
 #. translators: %s: title of service. this text will add to title of sub services section in single page of services
-#: inc/template-tags.php:681
+#: inc/template-tags.php:913
 msgid "%s includes the following services"
 msgstr "%s از خدمات زیر تشکیل شده است"
 
 #. translators: %s: title of service. this text will add to title of related services section in single page of services
-#: inc/template-tags.php:782
+#: inc/template-tags.php:1015
 msgid "%s related services"
 msgstr "خدمات مرتبط با %s"
 
 #. translators: this text will add to pre title of related posts of a service section in single page of services
-#: inc/template-tags.php:881
+#: inc/template-tags.php:1116
 msgid "Knowledge base"
 msgstr "پایگاه دانش"
 
 #. translators: %s: title of service. this text will add to title of related posts of a service section in single page of services
-#: inc/template-tags.php:885
+#: inc/template-tags.php:1120
 msgid "%s related articles"
 msgstr "مقالات مرتبط با %s"
 
-#: inc/template-tags.php:937
+#: inc/template-tags.php:1175
 msgid "Related services"
 msgstr "خدمات مرتبط"
 
