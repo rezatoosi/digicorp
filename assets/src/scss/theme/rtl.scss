@@ -90,9 +90,20 @@ body {
   direction: rtl;
   unicode-bidi: embed;
 }
+
 .check li:before{
     content: "\f104";
 }
+
 span.service-main-bg{
     background: url("assets/dist/images/seobg.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+}
+
+.post-share-buttons a {
+  direction: ltr;
+}
+
+.post-share-buttons a svg {
+  margin-left: 0;
+  margin-right: 5px;
 }

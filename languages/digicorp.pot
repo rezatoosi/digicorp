@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-04-21T13:20:16+00:00\n"
+"POT-Creation-Date: 2020-11-18T16:55:41+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.2.0\n"
 "X-Domain: digicorpdomain\n"
@@ -77,22 +77,22 @@ msgstr ""
 #: backup/_home.php:84
 #: backup/__home.php:89
 #: home.php:60
-#: home.php:99
+#: home.php:102
 #: templates/template-home-sidebar.php:90
 msgid "Latest in"
 msgstr ""
 
 #: backup/_home.php:103
 #: backup/__home.php:108
-#: home.php:79
-#: home.php:118
+#: home.php:82
+#: home.php:124
 #: templates/template-home-sidebar.php:109
 msgid "More articles in this category"
 msgstr ""
 
 #. translators: title of other services section in single page of services
 #: backup/_single-ariana-services.php:51
-#: inc/template-tags.php:645
+#: inc/template-tags.php:794
 msgid "OTHER SERVICES"
 msgstr ""
 
@@ -122,234 +122,69 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: comments.php:102
+#: comments.php:116
 msgid "Name"
 msgstr ""
 
-#: comments.php:104
+#: comments.php:118
 msgid "Email"
 msgstr ""
 
-#: comments.php:106
+#: comments.php:120
 msgid "Website"
 msgstr ""
 
-#: comments.php:111
+#: comments.php:125
 msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
 #. translators: %s: login URL
-#: comments.php:115
+#: comments.php:129
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
 #. translators: 1: edit user link, 2: accessibility text, 3: user name, 4: logout URL
-#: comments.php:121
+#: comments.php:135
 msgid "<a href=\"%1$s\" aria-label=\"%2$s\">Logged in as %3$s</a>. <a href=\"%4$s\">Log out?</a>"
 msgstr ""
 
 #. translators: %s: user name
-#: comments.php:124
+#: comments.php:138
 msgid "Logged in as %s. Edit your profile."
 msgstr ""
 
-#: comments.php:136
+#: comments.php:150
 msgid "Leave a Comment"
 msgstr ""
 
 #. translators: %s: name of the user reply to
-#: comments.php:138
+#: comments.php:152
 msgid "Leave a Comment to %s"
 msgstr ""
 
-#: comments.php:143
+#: comments.php:157
 msgid "Cancel reply"
 msgstr ""
 
-#: comments.php:144
+#: comments.php:158
 msgid "Post Comment"
 msgstr ""
 
-#: functions.php:25
+#: functions.php:26
 msgid "Header Vertical Menu"
 msgstr ""
 
-#: functions.php:29
+#: functions.php:30
 msgid "Footer Vertical Menu"
 msgstr ""
 
-#: functions.php:100
+#: functions.php:93
 msgid "Small"
 msgstr ""
 
-#: functions.php:101
+#: functions.php:94
 msgid "Page Header"
-msgstr ""
-
-#: functions.php:112
-msgid "Footer Widget 1"
-msgstr ""
-
-#: functions.php:114
-msgid "The 1st widget in the footer"
-msgstr ""
-
-#: functions.php:121
-msgid "Footer Widget 2"
-msgstr ""
-
-#: functions.php:123
-msgid "The 2nd widget in the footer"
-msgstr ""
-
-#: functions.php:130
-msgid "Footer Widget 3"
-msgstr ""
-
-#: functions.php:132
-msgid "The 3rd widget in the footer"
-msgstr ""
-
-#: functions.php:139
-msgid "Footer Widget 4"
-msgstr ""
-
-#: functions.php:141
-msgid "The 4th widget in the footer"
-msgstr ""
-
-#: functions.php:150
-msgid "Right Sidebar"
-msgstr ""
-
-#: functions.php:152
-msgid "Sidebar in the right column of pages"
-msgstr ""
-
-#: functions.php:159
-msgid "Right Sidebar Bottom"
-msgstr ""
-
-#: functions.php:161
-msgid "To add in the bottom of right column"
-msgstr ""
-
-#: functions.php:170
-msgid "Front Page - CTA 01"
-msgstr ""
-
-#: functions.php:172
-msgid "Call to action section after services section"
-msgstr ""
-
-#: functions.php:181
-msgid "Front Page - CTA 02"
-msgstr ""
-
-#: functions.php:183
-msgid "Call to action section after brands section"
-msgstr ""
-
-#: functions.php:190
-msgid "Front Page - Features"
-msgstr ""
-
-#: functions.php:192
-msgid "Features section in frontpage"
-msgstr ""
-
-#: functions.php:199
-msgid "Front Page - Custom"
-msgstr ""
-
-#: functions.php:201
-msgid "Custom section in frontpage"
-msgstr ""
-
-#: functions.php:208
-msgid "Front Page - FAQ"
-msgstr ""
-
-#: functions.php:210
-msgid "FAQ section in frontpage"
-msgstr ""
-
-#: functions.php:217
-msgid "Footer - Copyright"
-msgstr ""
-
-#: functions.php:219
-msgid "Copyright bar in footer"
-msgstr ""
-
-#: functions.php:228
-#: inc/customizer/customizer.php:108
-msgid "About us - Brands"
-msgstr ""
-
-#: functions.php:230
-msgid "Brands section in aboutus or frontpage"
-msgstr ""
-
-#: functions.php:237
-msgid "About us - Our History"
-msgstr ""
-
-#: functions.php:239
-msgid "Our history section in aboutus or frontpage"
-msgstr ""
-
-#: functions.php:248
-msgid "Services - Main(General) Services"
-msgstr ""
-
-#: functions.php:250
-msgid "Main services section in services or frontpage"
-msgstr ""
-
-#: functions.php:259
-#: inc/customizer/customizer.php:146
-msgid "Contact - Address"
-msgstr ""
-
-#: functions.php:261
-msgid "Contact Address section in contact or frontpage"
-msgstr ""
-
-#: functions.php:269
-#: inc/customizer/customizer.php:156
-msgid "Contact - Phone"
-msgstr ""
-
-#: functions.php:271
-msgid "Contact Phone section in contact or frontpage"
-msgstr ""
-
-#: functions.php:279
-#: inc/customizer/customizer.php:166
-msgid "Contact - Social"
-msgstr ""
-
-#: functions.php:281
-msgid "Contact Social section in contact or frontpage"
-msgstr ""
-
-#: functions.php:289
-msgid "Contact - Map"
-msgstr ""
-
-#: functions.php:291
-msgid "Contact Map section in contact or frontpage"
-msgstr ""
-
-#: functions.php:299
-#: inc/customizer/customizer.php:176
-msgid "Contact - Form"
-msgstr ""
-
-#: functions.php:301
-msgid "Contact Form section in contactus"
 msgstr ""
 
 #. translators: screen reader text for nav icon in small screens
@@ -504,6 +339,11 @@ msgstr ""
 msgid "Add & Edit features"
 msgstr ""
 
+#: inc/customizer/customizer.php:108
+#: inc/register-sidebars.php:123
+msgid "About us - Brands"
+msgstr ""
+
 #: inc/customizer/customizer.php:109
 msgid "Manage brands section in about us page."
 msgstr ""
@@ -532,16 +372,36 @@ msgstr ""
 msgid "Manage our main services section in services page."
 msgstr ""
 
+#: inc/customizer/customizer.php:146
+#: inc/register-sidebars.php:154
+msgid "Contact - Address"
+msgstr ""
+
 #: inc/customizer/customizer.php:147
 msgid "Manage our addresses in contactus or frontpage."
+msgstr ""
+
+#: inc/customizer/customizer.php:156
+#: inc/register-sidebars.php:164
+msgid "Contact - Phone"
 msgstr ""
 
 #: inc/customizer/customizer.php:157
 msgid "Manage our phone numbers in contactus or frontpage."
 msgstr ""
 
+#: inc/customizer/customizer.php:166
+#: inc/register-sidebars.php:174
+msgid "Contact - Social"
+msgstr ""
+
 #: inc/customizer/customizer.php:167
 msgid "Manage our social network links in contactus or frontpage."
+msgstr ""
+
+#: inc/customizer/customizer.php:176
+#: inc/register-sidebars.php:194
+msgid "Contact - Form"
 msgstr ""
 
 #: inc/customizer/customizer.php:177
@@ -619,6 +479,146 @@ msgstr ""
 msgid "Manage testimonials section settings."
 msgstr ""
 
+#: inc/register-sidebars.php:7
+msgid "Footer Widget 1"
+msgstr ""
+
+#: inc/register-sidebars.php:9
+msgid "The 1st widget in the footer"
+msgstr ""
+
+#: inc/register-sidebars.php:16
+msgid "Footer Widget 2"
+msgstr ""
+
+#: inc/register-sidebars.php:18
+msgid "The 2nd widget in the footer"
+msgstr ""
+
+#: inc/register-sidebars.php:25
+msgid "Footer Widget 3"
+msgstr ""
+
+#: inc/register-sidebars.php:27
+msgid "The 3rd widget in the footer"
+msgstr ""
+
+#: inc/register-sidebars.php:34
+msgid "Footer Widget 4"
+msgstr ""
+
+#: inc/register-sidebars.php:36
+msgid "The 4th widget in the footer"
+msgstr ""
+
+#: inc/register-sidebars.php:45
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/register-sidebars.php:47
+msgid "Sidebar in the right column of pages"
+msgstr ""
+
+#: inc/register-sidebars.php:54
+msgid "Right Sidebar Bottom"
+msgstr ""
+
+#: inc/register-sidebars.php:56
+msgid "To add in the bottom of right column"
+msgstr ""
+
+#: inc/register-sidebars.php:65
+msgid "Front Page - CTA 01"
+msgstr ""
+
+#: inc/register-sidebars.php:67
+msgid "Call to action section after services section"
+msgstr ""
+
+#: inc/register-sidebars.php:76
+msgid "Front Page - CTA 02"
+msgstr ""
+
+#: inc/register-sidebars.php:78
+msgid "Call to action section after brands section"
+msgstr ""
+
+#: inc/register-sidebars.php:85
+msgid "Front Page - Features"
+msgstr ""
+
+#: inc/register-sidebars.php:87
+msgid "Features section in frontpage"
+msgstr ""
+
+#: inc/register-sidebars.php:94
+msgid "Front Page - Custom"
+msgstr ""
+
+#: inc/register-sidebars.php:96
+msgid "Custom section in frontpage"
+msgstr ""
+
+#: inc/register-sidebars.php:103
+msgid "Front Page - FAQ"
+msgstr ""
+
+#: inc/register-sidebars.php:105
+msgid "FAQ section in frontpage"
+msgstr ""
+
+#: inc/register-sidebars.php:112
+msgid "Footer - Copyright"
+msgstr ""
+
+#: inc/register-sidebars.php:114
+msgid "Copyright bar in footer"
+msgstr ""
+
+#: inc/register-sidebars.php:125
+msgid "Brands section in aboutus or frontpage"
+msgstr ""
+
+#: inc/register-sidebars.php:132
+msgid "About us - Our History"
+msgstr ""
+
+#: inc/register-sidebars.php:134
+msgid "Our history section in aboutus or frontpage"
+msgstr ""
+
+#: inc/register-sidebars.php:143
+msgid "Services - Main(General) Services"
+msgstr ""
+
+#: inc/register-sidebars.php:145
+msgid "Main services section in services or frontpage"
+msgstr ""
+
+#: inc/register-sidebars.php:156
+msgid "Contact Address section in contact or frontpage"
+msgstr ""
+
+#: inc/register-sidebars.php:166
+msgid "Contact Phone section in contact or frontpage"
+msgstr ""
+
+#: inc/register-sidebars.php:176
+msgid "Contact Social section in contact or frontpage"
+msgstr ""
+
+#: inc/register-sidebars.php:184
+msgid "Contact - Map"
+msgstr ""
+
+#: inc/register-sidebars.php:186
+msgid "Contact Map section in contact or frontpage"
+msgstr ""
+
+#: inc/register-sidebars.php:196
+msgid "Contact Form section in contactus"
+msgstr ""
+
 #. Translators: %s: page title for search page
 #: inc/template-tags.php:32
 msgid "Search results for \"%s\""
@@ -642,108 +642,112 @@ msgid "Click for all articles sent on %s"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:166
+#: inc/template-tags.php:172
 msgid "Edit<span class=\"screen-reader-text sr-only\">%s</span>"
 msgstr ""
 
 #. translators: 1: list of categories.
-#: inc/template-tags.php:198
+#: inc/template-tags.php:204
 msgid "In Categories: %1$s"
 msgstr ""
 
 #. translators: 1: list of tags.
-#: inc/template-tags.php:204
+#: inc/template-tags.php:210
 msgid "Tags: %1$s"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:213
+#: inc/template-tags.php:219
 msgid "<button class=\"btn\">Edit <span class=\"sr-hidden\">This Post</span><span class=\"screen-reader-text sr-only\"> %s</span></button>"
 msgstr ""
 
+#: inc/template-tags.php:271
+msgid "Share This:"
+msgstr ""
+
 #. translators: %s: Display name of the user
-#: inc/template-tags.php:293
+#: inc/template-tags.php:406
 msgid "Visit archive page of %s"
 msgstr ""
 
-#: inc/template-tags.php:315
+#: inc/template-tags.php:428
 msgid "«"
 msgstr ""
 
-#: inc/template-tags.php:316
+#: inc/template-tags.php:429
 msgid "»"
 msgstr ""
 
 #. translators: % is page number
-#: inc/template-tags.php:340
+#: inc/template-tags.php:453
 msgid "Page %"
 msgstr ""
 
-#: inc/template-tags.php:359
+#: inc/template-tags.php:471
 #: searchform.php:44
 msgid "Blog"
 msgstr ""
 
-#: inc/template-tags.php:370
+#: inc/template-tags.php:482
 msgid "Our Services"
 msgstr ""
 
-#: inc/template-tags.php:375
+#: inc/template-tags.php:487
 msgid "Our Projects"
 msgstr ""
 
 #. Translators: %s: Title of post type, in post excerpt view
-#: inc/template-tags.php:386
+#: inc/template-tags.php:498
 msgid "Found in %s"
 msgstr ""
 
 #. Translators: %s: Name of category
-#: inc/template-tags.php:414
+#: inc/template-tags.php:527
 msgid "Visit articles in category of %s"
 msgstr ""
 
-#: inc/template-tags.php:438
+#: inc/template-tags.php:576
 msgid "Read time:"
 msgstr ""
 
-#: inc/template-tags.php:440
+#: inc/template-tags.php:578
 msgid "min"
 msgstr ""
 
-#: inc/template-tags.php:503
+#: inc/template-tags.php:641
 msgid "<  Previous Post"
 msgstr ""
 
-#: inc/template-tags.php:523
+#: inc/template-tags.php:661
 msgid "Next Post  >"
 msgstr ""
 
-#: inc/template-tags.php:558
-#: inc/template-tags.php:601
+#: inc/template-tags.php:704
+#: inc/template-tags.php:750
 msgid "Related Articles"
 msgstr ""
 
 #. translators: %s: title of service. this text will add to title of sub services section in single page of services
-#: inc/template-tags.php:681
+#: inc/template-tags.php:830
 msgid "%s includes the following services"
 msgstr ""
 
 #. translators: %s: title of service. this text will add to title of related services section in single page of services
-#: inc/template-tags.php:782
+#: inc/template-tags.php:932
 msgid "%s related services"
 msgstr ""
 
 #. translators: this text will add to pre title of related posts of a service section in single page of services
-#: inc/template-tags.php:881
+#: inc/template-tags.php:1033
 msgid "Knowledge base"
 msgstr ""
 
 #. translators: %s: title of service. this text will add to title of related posts of a service section in single page of services
-#: inc/template-tags.php:885
+#: inc/template-tags.php:1037
 msgid "%s related articles"
 msgstr ""
 
-#: inc/template-tags.php:937
+#: inc/template-tags.php:1092
 msgid "Related services"
 msgstr ""
 

@@ -5,6 +5,7 @@
     require_once get_template_directory() . '/inc/ariana-widget-tag-cloud.php';
     require_once get_template_directory() . '/inc/ariana-widget-archive.php';
     require_once get_template_directory() . '/inc/digicorp_mslsOutput.php';
+    require_once get_template_directory() . '/inc/svg-icons.php';
 
     if( ! function_exists('ariana_theme_setup') ):
       function ariana_theme_setup() {

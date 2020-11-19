@@ -78,7 +78,6 @@ function digicorp_num_i18n( $string ) {
 	return $string;
 }
 
-
 function siteBrand($html) {
   // grab the site name as set in customizer options
   $site = get_bloginfo('name');

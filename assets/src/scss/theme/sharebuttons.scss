@@ -1,0 +1,179 @@
+.post-share-buttons {
+  margin-top: 30px;
+
+  a {
+    text-decoration: none !important;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+    transition: fill .3s ease-in-out;
+  }
+}
+
+.share-buttons {
+  font-size: 0.7rem;
+  line-height: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 60px;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
+.share-buttons li {
+  height: auto;
+  flex: 0 1 auto;
+  width: calc(25% - 1px);
+  margin-right: 1px;
+}
+
+.share-buttons li:last-child {
+  width: 25%;
+  margin-right: 0;
+}
+
+.share-buttons svg {
+  fill: #fff;
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+}
+
+.share-buttons a {
+  display: block;
+  padding: 12px 12px 9px;
+  text-align: center;
+}
+
+.share-buttons li:first-child a {
+  border-radius: 3px 0 0 3px;
+}
+
+.share-buttons li:last-child a {
+  border-radius: 0 3px 3px 0;
+}
+
+// colors
+.post-share-buttons {
+  a.share-linkedin {
+    color: $color-linkedin;
+    border-color: $color-linkedin;
+    svg {
+      fill: $color-linkedin;
+    }
+
+    &:hover {
+        color: $color-white !important;
+        background-color: $color-linkedin;
+        border-color: $color-linkedin;
+        svg {
+          fill: $color-white !important;
+        }
+    }
+  }
+
+  a.share-twitter {
+    color: $color-twitter;
+    border-color: $color-twitter;
+    svg {
+      fill: $color-twitter;
+    }
+
+    &:hover {
+        color: $color-white !important;
+        background-color: $color-twitter;
+        border-color: $color-twitter;
+        svg {
+          fill: $color-white !important;
+        }
+    }
+  }
+
+  a.share-facebook	{
+    color: $color-facebook;
+    border-color: $color-facebook;
+    svg {
+      fill: $color-facebook;
+    }
+
+    &:hover {
+        color: $color-white !important;
+        background-color: $color-facebook;
+        border-color: $color-facebook;
+        svg {
+          fill: $color-white !important;
+        }
+    }
+  }
+
+  a.share-whatsapp {
+    color: $color-whatsapp;
+    border-color: $color-whatsapp;
+    svg {
+      fill: $color-whatsapp;
+    }
+
+    &:hover {
+        color: $color-white !important;
+        background-color: $color-whatsapp !important;
+        border-color: $color-whatsapp !important;
+        svg {
+          fill: $color-white !important;
+        }
+    }
+  }
+
+  a.share-telegram {
+    color: $color-telegram;
+    border-color: $color-telegram;
+    svg {
+      fill: $color-telegram;
+    }
+
+    &:hover {
+        color: $color-white !important;
+        background-color: $color-telegram;
+        border-color: $color-telegram;
+        svg {
+          fill: $color-white !important;
+        }
+    }
+  }
+
+  a.share-email {
+    color: $color-gmail;
+    border-color: $color-gmail;
+    svg {
+      fill: $color-gmail;
+    }
+
+    &:hover {
+        color: $color-white !important;
+        background-color: $color-gmail;
+        border-color: $color-gmail;
+        svg {
+          fill: $color-white !important;
+        }
+    }
+  }
+
+  a.share-copylink {
+    &:hover {
+        svg {
+          fill: $color-white !important;
+        }
+    }
+  }
+}

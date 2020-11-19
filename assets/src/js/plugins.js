@@ -143,5 +143,33 @@
     /* Run smooth scroll ------------------------------------- */
     //https://www.npmjs.com/package/smooth-scroll
 
+    $('.post-share-buttons a').on('click',function(e){
+      e.preventDefault();
+      var w = '550';
+      var h = '450';
+
+      // Fixes dual-screen position                             Most browsers      Firefox
+      var dualScreenLeft = window.screenLeft !==  undefined ? window.screenLeft : window.screenX;
+      var dualScreenTop = window.screenTop !==  undefined   ? window.screenTop  : window.screenY;
+
+      var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+      var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+      var systemZoom = width / window.screen.availWidth;
+      var left = ((width - w) / 2 / systemZoom + dualScreenLeft);
+      var top = ((height - h) / 2 / systemZoom + dualScreenTop);
+
+      var newWindow = window.open(
+        this.href,
+        "_blank",
+        "toolbar=0,personalbar=0,resizable,scrollbars,status,width=${w / systemZoom},height=${h / systemZoom},top=${top},left=${left}");
+
+      if (window.focus) newWindow.focus();
+
+
+
+    });
+
+
   }); // end $(document).ready();
 })(jQuery);

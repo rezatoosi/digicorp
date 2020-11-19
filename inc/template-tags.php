@@ -230,6 +230,133 @@ if ( ! function_exists( 'digicorp_entry_footer' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'digicorp_footer_share_buttons' ) ) {
+  /**
+   * Display share buttons in post footer
+   **/
+   function digicorp_footer_share_buttons() {
+     $page_link = urlencode(get_the_permalink());
+     $page_link = 'https://arianada.com/';
+     $title = urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8'));
+     $media = urlencode(get_the_post_thumbnail_url(get_the_ID(), 'full'));
+     $summary = get_the_excerpt();
+     $source = get_site_url();
+
+     $container = '<div class="post-share-buttons">%s<ul class="share-buttons">%s</ul></div>';
+     $container = '<div class="post-share-buttons tags">%s %s</div>';
+     $item_markup = '<li><a class="%1$s" href="%2$s">%3$s<span>%4$s</span></a></li>';
+     $item_markup = '<a class="%1$s" href="%2$s">%3$s<span>%4$s</span></a>';
+
+     // linkedin
+     $url = sprintf(
+       // 'https://www.linkedin.com/shareArticle?mini=false&url=%s&title=%s&summary=%s&source=%s',
+       'https://www.linkedin.com/shareArticle?mini=true&url=%s&title=%s',
+       $page_link,
+       $title
+       // $summary,
+       // $source
+     );
+     $items = sprintf(
+       $item_markup,
+       'share-linkedin',
+       $url,
+       digicorp_svg( 'social-linkedin2', '', '0 0 24 24' ),
+       'LinkedIn'
+     );
+
+     //twitter
+     $url = sprintf(
+       'https://twitter.com/intent/tweet?text=%2$s&url=%1$s',
+       $page_link,
+       $title
+     );
+     $items .= sprintf(
+       $item_markup,
+       'share-twitter',
+       $url,
+       digicorp_svg( 'social-twitter', '', '0 0 24 24' ),
+       'Twitter'
+     );
+
+     // facebook
+     $url = sprintf(
+       'http://www.facebook.com/sharer.php?u=%s&p[title]=%s',
+       $page_link,
+       $title
+     );
+     $items .= sprintf(
+       $item_markup,
+       'share-facebook',
+       $url,
+       digicorp_svg( 'social-facebook2', '', '0 0 24 24' ),
+       'Facebook'
+     );
+
+     //whatsapp
+     $url = sprintf(
+       'https://wa.me/?text=%2$s %1$s',
+       $page_link,
+       $title
+     );
+     $items .= sprintf(
+       $item_markup,
+       'share-whatsapp',
+       $url,
+       digicorp_svg( 'social-whatsapp', '', '0 0 24 24' ),
+       'WhatsApp'
+     );
+
+     //telegram
+     $url = sprintf(
+       'https://telegram.me/share/url?url=%s&text=%s',
+       $page_link,
+       $title
+     );
+     $items .= sprintf(
+       $item_markup,
+       'share-telegram',
+       $url,
+       digicorp_svg( 'social-telegram2', '', '0 0 24 24' ),
+       'Telegram'
+     );
+
+     //email
+     $url = sprintf(
+       'mailto:?subject=%3$s&body=%2$s: %1$s',
+       $page_link,
+       $title,
+       esc_html__( 'Check this out please', 'digicorpdomain' )
+     );
+     $items .= sprintf(
+       $item_markup,
+       'share-email',
+       $url,
+       digicorp_svg( 'svg-icon-message-closed-envelope-1', '', '0 0 512 512' ),
+       'Mail'
+     );
+
+     //copylink
+     // $url = sprintf(
+     //   '',
+     //   $page_link,
+     //   $title
+     // );
+     // $items .= sprintf(
+     //   $item_markup,
+     //   'share-copylink',
+     //   'mailto: ',
+     //   digicorp_svg( 'svg-icon-link-chain', '', '0 0 512 512' ),
+     //   'Copy Link'
+     // );
+
+     printf(
+       $container,
+       esc_html__( 'Share This:', 'digicorpdomain' ),
+       $items
+     );
+   }
+}
+
 if ( ! function_exists( 'digicorp_post_thumbnail' ) ) :
 	/**
 	 * Displays an optional post thumbnail.
