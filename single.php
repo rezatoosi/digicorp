@@ -5,29 +5,19 @@ digicorp_page_header_section( array(
   'section_class' => 'visual color9'
 ));
 ?>
-
 <section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
+    <div class="container">
         <?php
-    		while ( have_posts() ) :
-    			the_post();
+          while ( have_posts() ) :
 
-    			get_template_part( 'template-parts/content/content', 'single' );
+            the_post();
 
-    			// If comments are open or we have at least one comment, load up the comment template.
-    			if ( comments_open() || get_comments_number() ) :
-    				comments_template();
-    			endif;
+            get_template_part( 'template-parts/content/content', 'single' );
 
-    		endwhile; // End of the loop.
-    		?>
-      </div><!-- end content -->
-    </div><!-- end row -->
-  </div><!-- end container -->
+          endwhile; // End of the loop.
+        ?>
+    </div>
 </section>
-
 
 <?php digicorp_related_posts(); ?>
 

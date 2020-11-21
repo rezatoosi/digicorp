@@ -14,29 +14,25 @@ digicorp_page_header_section( array(
 ?>
 
 <section class="section lb">
-  <div class="container">
-    <div class="row">
-      <div class="content col-md-9 col-sm-12">
-        <?php
-    		while ( have_posts() ) :
-    			the_post();
+    <div class="container">
+        <div class="row">
+            <div class="content col-md-9 col-sm-12">
+              <?php
+                while ( have_posts() ) :
 
-    			get_template_part( 'template-parts/content/content', 'single' );
+                  the_post();
 
-    			// If comments are open or we have at least one comment, load up the comment template.
-    			if ( comments_open() || get_comments_number() ) :
-    				comments_template();
-    			endif;
+                  get_template_part( 'template-parts/content/content', 'single' );
 
-    		endwhile; // End of the loop.
-    		?>
-      </div><!-- end content -->
+                endwhile; // End of the loop.
+              ?>
+            </div><!-- end content -->
 
-      <div class="sidebar col-md-3 col-sm-12">
-        <?php get_sidebar(); ?>
-      </div><!-- end sidebar -->
-    </div><!-- end row -->
-  </div><!-- end container -->
+            <div class="sidebar col-md-3 col-sm-12">
+              <?php get_sidebar(); ?>
+            </div><!-- end sidebar -->
+        </div><!-- end row -->
+    </div><!-- end container -->
 </section>
 
 <?php digicorp_related_posts(); ?>
