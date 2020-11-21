@@ -761,13 +761,6 @@ if ( ! function_exists( 'digicorp_related_posts' ) ) {
     global $post;
     $orig_post = $post;
 
-    // if using sidebar template, then use col-md-6 else use col-md-4
-    $container = '<div class="col-md-4 col-sm-6">';
-    $template_name = get_page_template_slug( $post );
-    if ( strpos( $template_name, 'sidebar' ) !== false ) {
-        $container = '<div class="col-md-6 col-sm-6">';
-    }
-
     $tags = wp_get_post_tags( $post->ID );
     if ( $tags ) {
       $tag_ids = array();
@@ -781,25 +774,29 @@ if ( ! function_exists( 'digicorp_related_posts' ) ) {
       $my_query = new wp_query( $args );
       if( $my_query->have_posts() ) {
         ?>
-        <div class="blog-micro-wrapper">
-          <div class="blog-related-posts">
-            <div class="section-title text-left">
-                <h4><?php _e( 'Related Articles', 'digicorpdomain' ); ?></h4>
-                <hr>
+        <section class="section bg-light-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-left">
+                          <h4><?php _e( 'Related Articles', 'digicorpdomain' ); ?></h4>
+                          <hr>
+                        </div>
+                        <div class="row">
+                        <?php
+                          while( $my_query->have_posts() ) {
+                            $my_query->the_post();
+                            // get_template_part('template-parts/post/blog','related');
+                            echo '<div class="col-md-4 col-sm-6">';
+                            get_template_part('template-parts/content/content','excerptv3');
+                            echo '</div>';
+                          }
+                        ?>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-              <?php
-                while( $my_query->have_posts() ) {
-                  $my_query->the_post();
-                  // get_template_part('template-parts/post/blog','related');
-                  echo $container;
-                  get_template_part('template-parts/content/content','excerptv3');
-                  echo '</div>';
-                }
-              ?>
-            </div>
-          </div>
-        </div><!-- end post-micro -->
+        </section>
     <?php
       }
     }
@@ -1168,50 +1165,56 @@ if ( ! function_exists( 'digicorp_related_services_in_posts' ) ) {
           $the_query = new WP_Query( $args );
           if ( $the_query->have_posts() ) :
           ?>
-          <div class="blog-micro-wrapper services-list">
-              <div class="blog-related-posts">
-                <div class="section-title text-left">
-                    <h4>
-                      <?php _e( 'Related services', 'digicorpdomain' ) ?>
-                    </h4>
-                    <hr>
-                </div><!-- end title -->
-                <div class="row">
-                  <?php
+          <section class="section">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div class="services-list">
+                                <div class="section-title text-left">
+                                    <h4>
+                                      <?php _e( 'Related services', 'digicorpdomain' ) ?>
+                                    </h4>
+                                    <hr>
+                                </div><!-- end title -->
+                                <div class="row">
+                                  <?php
 
-                  while ( $the_query->have_posts() ) :
-                    $the_query->the_post();
+                                  while ( $the_query->have_posts() ) :
+                                    $the_query->the_post();
 
-                    $url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
-                    $img_markup = '';
-                    if ( ! empty( $url_thumb ) ) {
-                      $img_markup = sprintf( '<img src="%s" alt="%s" class="img-responsive" />',
-                                            $url_thumb[0],
-                                            $post->post_title );
-                    }
-                    $post_home_subtitle = get_post_meta( $post->ID, 'post_home_subtitle', true );
-                    ?>
-                      <div class="col-md-3 col-sm-6">
-                        <div class="item">
-                          <div class="item-image">
-                            <a href="<?php echo get_the_permalink( $post->ID ) ?>"><?php echo $img_markup; ?>
-                            <span class="item-icon">
-                              <i class="fa fa-link"></i></span></a>
-                          </div><!-- end item-image -->
-                          <div class="item-desc text-center">
-                            <h4><a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>"><?php echo $post->post_title ?></a></h4>
-                            <?php if ( $post_home_subtitle != '' ) { ?>
-                              <h5><a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>"><?php echo $post_home_subtitle ?></a></h5>
-                            <?php } ?>
-                          </div><!-- end service-desc -->
-                        </div><!-- end seo-item -->
-                      </div><!-- end col -->
-                    <?php
-                  endwhile;
-                  ?>
-                </div>
+                                    $url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+                                    $img_markup = '';
+                                    if ( ! empty( $url_thumb ) ) {
+                                      $img_markup = sprintf( '<img src="%s" alt="%s" class="img-responsive" />',
+                                                            $url_thumb[0],
+                                                            $post->post_title );
+                                    }
+                                    $post_home_subtitle = get_post_meta( $post->ID, 'post_home_subtitle', true );
+                                    ?>
+                                      <div class="col-md-3 col-sm-6">
+                                        <div class="item">
+                                          <div class="item-image">
+                                            <a href="<?php echo get_the_permalink( $post->ID ) ?>"><?php echo $img_markup; ?>
+                                            <span class="item-icon">
+                                              <i class="fa fa-link"></i></span></a>
+                                          </div><!-- end item-image -->
+                                          <div class="item-desc text-center">
+                                            <h4><a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>"><?php echo $post->post_title ?></a></h4>
+                                            <?php if ( $post_home_subtitle != '' ) { ?>
+                                              <h5><a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>"><?php echo $post_home_subtitle ?></a></h5>
+                                            <?php } ?>
+                                          </div><!-- end service-desc -->
+                                        </div><!-- end seo-item -->
+                                      </div><!-- end col -->
+                                    <?php
+                                  endwhile;
+                                  ?>
+                                </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
-          </div><!-- end post-micro -->
+          </section>
           <?php
           endif;
 

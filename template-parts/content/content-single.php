@@ -43,12 +43,6 @@
     </div><!--end post-desc -->
 </div><!-- end wrapper -->
 
-<?php //digicorp_prev_next_links() ?>
-
-<?php digicorp_related_posts(); ?>
-
-<?php digicorp_related_services_in_posts() ?>
-
 <div class="blog-micro-wrapper">
     <div class="authorbox">
         <div class="row">
@@ -80,3 +74,5 @@
         </div><!-- end row -->
     </div><!-- end authorbox -->
 </div><!-- end post-micro -->
+
+<?php //digicorp_prev_next_links() ?>
