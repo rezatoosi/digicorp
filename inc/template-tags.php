@@ -96,7 +96,7 @@ if ( ! function_exists( 'digicorp_get_publish_time' ) ) :
 	function digicorp_get_publish_time() {
 		return sprintf( '<time class="entry-date published updated" datetime="%1$s">%2$s</time>',
 			esc_attr( get_the_date( DATE_W3C ) ),
-			esc_html( get_the_date() )
+			esc_html( get_the_date( 'j M Y' ) )
 		);
 	}
 endif;
