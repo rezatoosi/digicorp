@@ -3,9 +3,9 @@
 <?php
 if (have_posts()){ the_post();
 
-$object_id = get_queried_object_id();
-$object_sec_title = esc_html( get_post_meta( $object_id, "post_sec_title", true) );
-$object_home_subtitle = esc_html( get_post_meta( $object_id, "post_home_subtitle", true) );
+// $object_id = get_queried_object_id();
+// $object_sec_title = esc_html( get_post_meta( $object_id, "post_sec_title", true) );
+// $object_home_subtitle = esc_html( get_post_meta( $object_id, "post_home_subtitle", true) );
 
 digicorp_page_header_section( array(
   'section_class' => 'visual color13'
@@ -17,11 +17,11 @@ digicorp_page_header_section( array(
         <div class="row">
           <div class="col-sm-12">
 
-              <div class="section-title text-left">
-                <h5><?php echo $object_home_subtitle; ?></h5>
-                <h2><?php echo $object_sec_title; ?></h2>
+              <!-- <div class="section-title text-left">
+                <h5><?php //echo $object_home_subtitle; ?></h5>
+                <h2><?php //echo $object_sec_title; ?></h2>
                 <hr>
-              </div><!-- end section-title -->
+              </div><!-- end section-title -- -->
 
               <div class="section-content">
                 <?php the_content(); ?>
