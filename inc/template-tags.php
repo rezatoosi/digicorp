@@ -198,16 +198,17 @@ if ( ! function_exists( 'digicorp_entry_footer' ) ) :
 	function digicorp_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			$categories_list = get_the_category_list( ' ' );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<div class="tags clearfix">' . esc_html__( 'In Categories: %1$s', 'digicorpdomain' ) . '</div><!-- end categories -->', $categories_list ); // WPCS: XSS OK.
-			}
+			// $categories_list = get_the_category_list( ' ' );
+			// if ( $categories_list ) {
+			// 	/* translators: 1: list of categories. */
+			// 	printf( '<div class="tags clearfix">' . esc_html__( 'In Categories: %1$s', 'digicorpdomain' ) . '</div><!-- end categories -->', $categories_list ); // WPCS: XSS OK.
+			// }
 
 			$tags_list = get_the_tag_list( '', ' ' );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<div class="tags clearfix">' . esc_html__( 'Tags: %1$s', 'digicorpdomain' ) . '</div><!-- end tags -->', $tags_list ); // WPCS: XSS OK.
+        // printf( '<div class="tags clearfix">' . esc_html__( 'Tags: %1$s', 'digicorpdomain' ) . '</div><!-- end tags -->', $tags_list ); // WPCS: XSS OK.
+				printf( '<div class="tags clearfix">%s</div><!-- end tags -->', $tags_list ); // WPCS: XSS OK.
 			}
 
 		}
