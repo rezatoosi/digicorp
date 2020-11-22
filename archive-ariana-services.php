@@ -8,17 +8,13 @@ digicorp_page_header_section( array(
 ));
 if ( have_posts() ) {
 ?>
-<section class="section">
+<section class="section services-list">
     <div class="container">
-        <div class="row services-list">
+        <div class="row">
             <?php
               while( have_posts() ) {
                 the_post();
                 get_template_part('template-parts/services/services','excerpt');
-
-                // echo '<div class="col-md-4 col-sm-6">';
-                // get_template_part('template-parts/content/content','excerptv3');
-                // echo '</div>';
               }
             ?>
         </div><!-- end row -->

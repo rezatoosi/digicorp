@@ -3032,6 +3032,9 @@ li .fa-warning {
 .services-list .col-md-3 {
     margin-bottom: 30px;
 }
+.services-list .item-image img {
+    width: 100%;
+}
 
 .services-list p {
     color: #979797 !important;
@@ -3066,18 +3069,12 @@ li .fa-warning {
     border-right-color: #ddd;
 }
 
-.services-list .item-desc h4,
-.services-list .item-desc h4 a {
+.services-list .item-desc .item-desc__title a,
+.services-list .item-desc .item-desc__subtitle a {
     color: #212121;
     font-weight: bold;
     text-transform: capitalize;
-    padding: 10px 0 5px;
-    font-size: 16px;
-}
-
-.services-list .item-desc h5 {
-    font-weight: bold;
-    color: #C3C4C6;
+    line-height: 1.7;
 }
 
 .service-section {

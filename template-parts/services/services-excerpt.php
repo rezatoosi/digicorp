@@ -27,9 +27,17 @@ $post_home_subtitle = get_post_meta( $post->ID, 'post_home_subtitle', true );
         <i class="fa fa-link"></i></span></a>
     </div><!-- end item-image -->
     <div class="item-desc text-center">
-      <h2 class="h3"><a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>"><?php echo $post->post_title ?></a></h2>
+      <h2 class="item-desc__title h3">
+        <a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>">
+          <?php echo $post->post_title ?>
+        </a>
+      </h2>
       <?php if ( $post_home_subtitle != '' ) { ?>
-        <h3 class="h4"><a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>"><?php echo $post_home_subtitle ?></a></h3>
+        <h2 class="item-desc__subtitle h4">
+          <a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>">
+            <?php echo $post_home_subtitle ?>
+          </a>
+        </h2>
       <?php } ?>
     </div><!-- end service-desc -->
   </div><!-- end seo-item -->
