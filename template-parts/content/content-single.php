@@ -26,7 +26,7 @@
                 <div class="large-post-meta">
                     <?php digicorp_entry_header_meta(); ?>
                 </div><!-- end meta -->
-                <h3 class="entry-title"><a href="<?php esc_url(the_permalink()); ?>" title="<?php esc_attr(the_title()); ?>"><?php the_title(); ?></a></h3>
+                <h2 class="entry-title h3"><a href="<?php esc_url(the_permalink()); ?>" title="<?php esc_attr(the_title()); ?>"><?php the_title(); ?></a></h2>
                 <?php
                 // TODO: Implement post sharing icons
                 // <div class="post-sharing clearfix">
