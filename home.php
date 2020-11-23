@@ -10,40 +10,40 @@ digicorp_page_header_section();
 
 <!-- Categories -->
 <?php
-$categories = get_categories();
-if ( $categories ) {
-?>
-  <section class="section lb pt-60">
-      <div class="container">
-          <div class="section-title text-center">
-              <h3><?php _e('Featured Categories', 'digicorpdomain') ?></h3>
-              <hr>
-          </div><!-- end title -->
-          <div class="row">
-              <?php
-              foreach($categories as $category) {
-                $cat_id = $category->cat_ID;
-                $image_id = get_term_meta ( $cat_id, 'category-image-id', true );
-                // echo wp_get_attachment_image ( $image_id, 'thumb' );
-                $image_src = wp_get_attachment_image_src( $image_id, 'thumb' )[0];
-                 ?>
-                 <div class="col-sm-6">
-                     <div class="blog-category-item">
-                         <div class="box-1" data-bg-img="<?php echo $image_src; ?>">
-                             <img src="<?php echo $image_src; ?>" alt="" scale="0">
-                             <a href="<?php echo get_category_link($category->term_id); ?>" title="<?php echo $category->name; ?>">
-                                 <span><?php echo $category->name; ?></span>
-                             </a>
-                         </div><!-- box-1 -->
-                     </div><!-- blog-category-item -->
-                 </div>
-                 <?php
-              }
-              ?>
-          </div>
-      </div>
-  </section>
-<?php } ?>
+// $categories = get_categories();
+// if ( $categories ) {
+// ? >
+//   <section class="section lb pt-60">
+//       <div class="container">
+//           <div class="section-title text-center">
+//               <h3><?php _e('Featured Categories', 'digicorpdomain') ? ></h3>
+//               <hr>
+//           </div><!-- end title -->
+//           <div class="row">
+//               <?php
+//               foreach($categories as $category) {
+//                 $cat_id = $category->cat_ID;
+//                 $image_id = get_term_meta ( $cat_id, 'category-image-id', true );
+//                 // echo wp_get_attachment_image ( $image_id, 'thumb' );
+//                 $image_src = wp_get_attachment_image_src( $image_id, 'thumb' )[0];
+//                  ? >
+//                  <div class="col-sm-6">
+//                      <div class="blog-category-item">
+//                          <div class="box-1" data-bg-img="<?php echo $image_src; ? >">
+//                              <img src="<?php echo $image_src; ? >" alt="" scale="0">
+//                              <a href="<?php echo get_category_link($category->term_id); ? >" title="<?php echo $category->name; ? >">
+//                                  <span><?php echo $category->name; ? ></span>
+//                              </a>
+//                          </div><!-- box-1 -->
+//                      </div><!-- blog-category-item -->
+//                  </div>
+//                  <?php
+//               }
+//               ? >
+//           </div>
+//       </div>
+//   </section>
+// <? php } ?>
 
 <?php
 $cat = get_category_by_slug('digital-marketing');
@@ -54,7 +54,7 @@ $query = new WP_Query(array(
 ));
 if ( $query->have_posts() ) {
 ?>
-<section class="section">
+<section class="section bg-light-gray">
     <div class="container">
         <div class="section-title text-left">
             <h5><?php _e('Latest in', 'digicorpdomain') ?></h5>
