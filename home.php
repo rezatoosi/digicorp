@@ -49,7 +49,7 @@ digicorp_page_header_section();
 $cat = get_category_by_slug('digital-marketing');
 $query = new WP_Query(array(
   'category_name' => 'digital-marketing',
-  'posts_per_page' => '3',
+  'posts_per_page' => '6',
   'post_status' => 'publish'
 ));
 if ( $query->have_posts() ) {
@@ -91,7 +91,7 @@ if ( $query->have_posts() ) {
 $cat = get_category_by_slug('web-design');
 $query = new WP_Query(array(
   'category_name' => 'web-design',
-  'posts_per_page' => '3',
+  'posts_per_page' => '6',
   'post_status' => 'publish'
 ));
 if ( $query->have_posts() ) {
