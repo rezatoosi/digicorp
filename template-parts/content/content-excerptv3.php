@@ -13,7 +13,7 @@
     <?php digicorp_post_thumbnail( "blog-box__image" ); ?>
   </figure>
   <div class="blog-box__content">
-    <h3 class="blog-box__content-title"><a href="<?php esc_url(the_permalink()); ?>" title="<?php esc_attr(the_title()); ?>"><?php the_title(); ?></a></h3>
+    <h2 class="blog-box__content-title h3"><a href="<?php esc_url(the_permalink()); ?>" title="<?php esc_attr(the_title()); ?>"><?php the_title(); ?></a></h3>
     <div class="blog-box__content-meta">
       <?php digicorp_get_post_excerpt_meta(); ?>
     </div>
