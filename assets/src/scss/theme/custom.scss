@@ -3262,8 +3262,29 @@ span.service-main-bg {
   @extend .pv-60;
   @extend .ph-80;
 
+  .btn {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
 }
 
+/* cta-box__main-services --- used in frontpage under main services box */
+.cta-box__main-services {
+  @extend .border-round-5;
+  @extend .pv-60;
+  @extend .ph-80;
+  @extend .shadow-light-1;
+
+  background-image: url(assets/dist/images/shapes/1.png);
+  background-position: center right;
+  background-size: 50%;
+  background-repeat: no-repeat;
+
+  .btn {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
 
 /******************************************
     CASE STUDIO
