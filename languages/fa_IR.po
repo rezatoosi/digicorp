@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DIGICORP 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/digicorp\n"
-"POT-Creation-Date: 2020-11-19T12:10:45+00:00\n"
-"PO-Revision-Date: 2020-11-19 15:42+0330\n"
+"POT-Creation-Date: 2020-11-28T09:21:36+00:00\n"
+"PO-Revision-Date: 2020-11-28 12:55+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -66,6 +66,10 @@ msgstr "نمایش همه"
 msgid "Web Services"
 msgstr "خدمات وب"
 
+#: archive-ariana-services.php:27
+msgid "OUR SERVICES"
+msgstr "خدمات ما"
+
 #: backup/_home.php:51 backup/__home.php:56
 #: templates/template-home-sidebar.php:57
 msgid "Latest"
@@ -87,7 +91,7 @@ msgid "More articles in this category"
 msgstr "مطالب بیشتر در این دسته‌بندی"
 
 #. translators: title of other services section in single page of services
-#: backup/_single-ariana-services.php:51 inc/template-tags.php:877
+#: backup/_single-ariana-services.php:51 inc/template-tags.php:1011
 msgid "OTHER SERVICES"
 msgstr "سایر خدمات"
 
@@ -195,10 +199,6 @@ msgstr "تغییر منو"
 #: header.php:82 header.php:96 searchform.php:11
 msgid "Search"
 msgstr "جستجو"
-
-#: home.php:19
-msgid "Featured Categories"
-msgstr "دسته‌های ویژه"
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:116
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:126
@@ -359,7 +359,7 @@ msgstr "خدمات - خدمات اصلی ما"
 msgid "Manage our main services section in services page."
 msgstr "مدیریت قسمت خدمات اصلی در صفحه خدمات"
 
-#: inc/customizer/customizer.php:146 inc/register-sidebars.php:154
+#: inc/customizer/customizer.php:146 inc/register-sidebars.php:163
 msgid "Contact - Address"
 msgstr "تماس - آدرس"
 
@@ -367,7 +367,7 @@ msgstr "تماس - آدرس"
 msgid "Manage our addresses in contactus or frontpage."
 msgstr "مدیریت آدرس ها در صفحه تماس"
 
-#: inc/customizer/customizer.php:156 inc/register-sidebars.php:164
+#: inc/customizer/customizer.php:156 inc/register-sidebars.php:173
 msgid "Contact - Phone"
 msgstr "تماس - تلفن"
 
@@ -375,7 +375,7 @@ msgstr "تماس - تلفن"
 msgid "Manage our phone numbers in contactus or frontpage."
 msgstr "مدیریت شماره تلفن ها در صفحه تماس"
 
-#: inc/customizer/customizer.php:166 inc/register-sidebars.php:174
+#: inc/customizer/customizer.php:166 inc/register-sidebars.php:183
 msgid "Contact - Social"
 msgstr "تماس - اجتماعی"
 
@@ -383,7 +383,7 @@ msgstr "تماس - اجتماعی"
 msgid "Manage our social network links in contactus or frontpage."
 msgstr "مدیریت شبکه های اجتماعی در صفحه تماس"
 
-#: inc/customizer/customizer.php:176 inc/register-sidebars.php:194
+#: inc/customizer/customizer.php:176 inc/register-sidebars.php:203
 msgid "Contact - Form"
 msgstr "تماس - فرم"
 
@@ -580,69 +580,75 @@ msgstr "خدمات - خدمات اصلی (کلی)"
 msgid "Main services section in services or frontpage"
 msgstr "قسمت خدمات اصلی در صفحه خدمات"
 
-#: inc/register-sidebars.php:156
+#: inc/register-sidebars.php:152
+msgid "Services CTA - Under Main Services"
+msgstr "فراخوان خدمات - زیر بخش خدمات اصلی"
+
+#: inc/register-sidebars.php:154
+msgid "CTA under main services section in services or frontpage"
+msgstr "دعوت به عمل زیر بخش خدمات اصلی (صفحه اصلی یا خدمات)"
+
+#: inc/register-sidebars.php:165
 msgid "Contact Address section in contact or frontpage"
 msgstr "قسمت آدرس تماس در صفحه تماس"
 
-#: inc/register-sidebars.php:166
+#: inc/register-sidebars.php:175
 msgid "Contact Phone section in contact or frontpage"
 msgstr "قسمت تلفن در صفحه تماس"
 
-#: inc/register-sidebars.php:176
+#: inc/register-sidebars.php:185
 msgid "Contact Social section in contact or frontpage"
 msgstr "قسمت شبکه های اجتماعی در صفحه تماس"
 
-#: inc/register-sidebars.php:184
+#: inc/register-sidebars.php:193
 msgid "Contact - Map"
 msgstr "تماس - نقشه"
 
-#: inc/register-sidebars.php:186
+#: inc/register-sidebars.php:195
 msgid "Contact Map section in contact or frontpage"
 msgstr "قسمت نقشه در صفحه تماس"
 
-#: inc/register-sidebars.php:196
+#: inc/register-sidebars.php:205
 msgid "Contact Form section in contactus"
 msgstr "قسمت فرم تماس در صفحه تماس"
 
+#: inc/template-tags.php:95 inc/template-tags.php:102
+msgid "Back"
+msgstr "بازگشت"
+
+#: inc/template-tags.php:112
+msgid "Get a free proposal"
+msgstr "دریافت پروپزال رایگان"
+
 #. Translators: %s: page title for search page
-#: inc/template-tags.php:32
+#: inc/template-tags.php:164
 msgid "Search results for \"%s\""
 msgstr "نتایج جستجو برای \"%s\""
 
 #. translators: %s: post date.
-#: inc/template-tags.php:83
+#: inc/template-tags.php:219
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr "ثبت شده در تاریخ  %s"
 
 #. translators: %s: post author.
-#: inc/template-tags.php:111
+#: inc/template-tags.php:247
 msgctxt "post author"
 msgid "by %s"
 msgstr "توسط %s"
 
 #. translators: %s: post publish date - Month and Year
-#: inc/template-tags.php:142
+#: inc/template-tags.php:278
 msgid "Click for all articles sent on %s"
 msgstr "برای مشاهده تمام مطالب ارسال شده در %s کلیک کنید"
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:172
+#: inc/template-tags.php:308
 msgid "Edit<span class=\"screen-reader-text sr-only\">%s</span>"
 msgstr "ویرایش<span class=\"screen-reader-text sr-only\">%s</span>"
 
-#. translators: 1: list of categories.
-#: inc/template-tags.php:204
-msgid "In Categories: %1$s"
-msgstr "در دسته(های): %1$s"
-
-#. translators: 1: list of tags.
-#: inc/template-tags.php:210
-msgid "Tags: %1$s"
-msgstr "برچسب(ها): %1$s"
-
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:219
+#: inc/template-tags.php:356
 msgid ""
 "<button class=\"btn\">Edit <span class=\"sr-hidden\">This Post</span><span "
 "class=\"screen-reader-text sr-only\"> %s</span></button>"
@@ -650,95 +656,95 @@ msgstr ""
 "<button class=\"btn\">ویرایش <span class=\"sr-hidden\">این پست</span><span "
 "class=\"screen-reader-text sr-only\"> %s</span></button>"
 
-#: inc/template-tags.php:328
+#: inc/template-tags.php:465
 msgid "Check this out please"
 msgstr "لطفا این را بررسی کن"
 
-#: inc/template-tags.php:354
+#: inc/template-tags.php:491
 msgid "Share This:"
 msgstr "به اشتراک بگذارید:"
 
 #. translators: %s: Display name of the user
-#: inc/template-tags.php:489
+#: inc/template-tags.php:626
 msgid "Visit archive page of %s"
 msgstr "بازدید از صفحه بایگانی  %s"
 
-#: inc/template-tags.php:511
+#: inc/template-tags.php:648
 msgid "«"
 msgstr "«"
 
-#: inc/template-tags.php:512
+#: inc/template-tags.php:649
 msgid "»"
 msgstr "»"
 
 #. translators: % is page number
-#: inc/template-tags.php:536
+#: inc/template-tags.php:673
 msgid "Page %"
 msgstr "صفحه %"
 
-#: inc/template-tags.php:554 searchform.php:44
+#: inc/template-tags.php:691 searchform.php:44
 msgid "Blog"
 msgstr "وبلاگ"
 
-#: inc/template-tags.php:565
+#: inc/template-tags.php:702
 msgid "Our Services"
 msgstr "خدمات ما"
 
-#: inc/template-tags.php:570
+#: inc/template-tags.php:707
 msgid "Our Projects"
 msgstr "پروژه‌های ما"
 
 #. Translators: %s: Title of post type, in post excerpt view
-#: inc/template-tags.php:581
+#: inc/template-tags.php:718
 msgid "Found in %s"
 msgstr "یافت شده در قسمت %s"
 
 #. Translators: %s: Name of category
-#: inc/template-tags.php:610
+#: inc/template-tags.php:747
 msgid "Visit articles in category of %s"
 msgstr "بازدید از مقالات در دسته %s"
 
-#: inc/template-tags.php:659
+#: inc/template-tags.php:796
 msgid "Read time:"
 msgstr "زمان خواندن:"
 
-#: inc/template-tags.php:661
+#: inc/template-tags.php:798
 msgid "min"
 msgstr "دقیقه"
 
-#: inc/template-tags.php:724
+#: inc/template-tags.php:861
 msgid "<  Previous Post"
 msgstr "< مطلب قبلی"
 
-#: inc/template-tags.php:744
+#: inc/template-tags.php:881
 msgid "Next Post  >"
 msgstr "مطلب بعدی >"
 
-#: inc/template-tags.php:787 inc/template-tags.php:833
+#: inc/template-tags.php:919 inc/template-tags.php:967
 msgid "Related Articles"
 msgstr "مطالب مرتبط"
 
 #. translators: %s: title of service. this text will add to title of sub services section in single page of services
-#: inc/template-tags.php:913
+#: inc/template-tags.php:1047
 msgid "%s includes the following services"
 msgstr "%s از خدمات زیر تشکیل شده است"
 
 #. translators: %s: title of service. this text will add to title of related services section in single page of services
-#: inc/template-tags.php:1015
+#: inc/template-tags.php:1156
 msgid "%s related services"
 msgstr "خدمات مرتبط با %s"
 
 #. translators: this text will add to pre title of related posts of a service section in single page of services
-#: inc/template-tags.php:1116
+#: inc/template-tags.php:1232
 msgid "Knowledge base"
 msgstr "پایگاه دانش"
 
 #. translators: %s: title of service. this text will add to title of related posts of a service section in single page of services
-#: inc/template-tags.php:1120
+#: inc/template-tags.php:1236
 msgid "%s related articles"
 msgstr "مقالات مرتبط با %s"
 
-#: inc/template-tags.php:1175
+#: inc/template-tags.php:1293
 msgid "Related services"
 msgstr "خدمات مرتبط"
 
@@ -863,6 +869,15 @@ msgstr "صفحات - بدون هدر و سایدبار"
 #. Template Name of the theme
 msgid "Default Sidebar for singular posts"
 msgstr "پیشفرض با سایدبار، برای پست های تکی"
+
+#~ msgid "Featured Categories"
+#~ msgstr "دسته‌های ویژه"
+
+#~ msgid "In Categories: %1$s"
+#~ msgstr "در دسته(های): %1$s"
+
+#~ msgid "Tags: %1$s"
+#~ msgstr "برچسب(ها): %1$s"
 
 #~ msgid "http://elecombest.com/"
 #~ msgstr "http://elecombest.com"

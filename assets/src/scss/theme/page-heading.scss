@@ -1,0 +1,72 @@
+.page-heading {
+  background-color: $color-dark-blue;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-white;
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-heading__row {
+  @extend .row;
+  @extend .text-left;
+}
+
+.page-heading__image {
+  @extend .col-md-5;
+
+  img {
+    @extend .img-responsive;
+    @extend .img-full;
+  }
+}
+
+.page-heading__content {
+  @extend .col-md-7;
+
+}
+
+.page-heading__content-subtitle {
+  color: $color-light;
+}
+
+.page-heading__content-breadcrumb {
+  @extend .h5;
+  color: $color-light;
+  a {
+    color: $color-light;
+    &:hover {
+      color: $color-white !important;
+    }
+  }
+  a, .breadcrumb_last {
+    padding: 0 5px;
+  }
+}
+
+.page-heading__content-title {
+  color: inherit;
+  font-weight: bold;
+  margin-top: 30px;
+  line-height: 1.4;
+}
+
+.page-heading__content-desc {
+  @extend .h3;
+  color: inherit;
+  margin-top: 30px;
+  line-height: 1.9;
+}
+
+.page-heading__buttons {
+  margin-top: 60px;
+
+  .btn {
+    margin-left: 15px;
+  }
+  .btn:first-child {
+    margin-left: 0;
+  }
+}

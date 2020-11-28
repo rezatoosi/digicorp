@@ -38,7 +38,13 @@
     $('.fixed-header').affix({
       offset: {
         top: function () {
-          return (this.top = $('.visual').offset().top + 200);
+          if($('.visual').length) {
+            return (this.top = $('.visual').offset().top + 200);
+          } else if ($('page-header').length) {
+            return (this.top = $('.page-header').offset().top + 200);
+          } else {
+            return (this.top = $('section').first().offset().top + 200);
+          }
           // return 10;
         },
         bottom: function () {

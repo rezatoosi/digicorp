@@ -12,36 +12,174 @@
  	 * Prints HTML with meta information for the current post-date/time.
  	 */
  	function digicorp_page_header_section( $args = array() ) {
+    global $post;
+
     $object_id = get_queried_object_id();
-    $defaults = array(
-      'section_class' => 'visual',
-      'page_title' => get_the_title( $object_id ),
-      'page_desc' => get_post_meta( $object_id, "post_desc", true),
-      'page_header_image_src' => get_post_meta( $object_id, "post_header_image", true)
-    );
-    $args = wp_parse_args( $args, $defaults );
+    $post_meta = get_post_meta( $object_id );
+    $bottom_breadcrumb = true;
 
-    if ( '' !== $args['page_desc'] ) {
-      $args['page_desc'] = sprintf( '<p class="tagline">%s</p>', wp_strip_all_tags( $args['page_desc'] ) );
+    $db_perfix = 'post_header_section_';
+    $header_section_is_active = ( isset( $post_meta[$db_perfix . 'is_active'] ) && ( 'on' == $post_meta[$db_perfix . 'is_active'][0] ) ) ? 1 : 0;
+    if ( $header_section_is_active ) {
+      $title = isset( $post_meta[ $db_perfix . 'title' ] ) ? esc_attr( $post_meta[ $db_perfix . 'title' ][0] ) : '';
+      $breadcrumb = ( isset( $post_meta[$db_perfix . 'breadcrumb'] ) && ( 'on' == $post_meta[$db_perfix . 'breadcrumb'][0] ) ) ? 1 : 0;
+      $subtitle = isset( $post_meta[ $db_perfix . 'subtitle' ] ) ? esc_attr( $post_meta[ $db_perfix . 'subtitle' ][0] ) : '';
+      $desc = isset( $post_meta[ $db_perfix . 'desc' ] ) ? nl2br( $post_meta[ $db_perfix . 'desc' ][0] ) : '';
+      $image_src = isset( $post_meta[ $db_perfix . 'image_src' ] ) ? esc_attr( $post_meta[ $db_perfix . 'image_src' ][0] ) : '';
+      $bg_image_src = isset( $post_meta[ $db_perfix . 'bg_image_src' ] ) ? esc_attr( $post_meta[ $db_perfix . 'bg_image_src' ][0] ) : '';
+      $container_class = isset( $post_meta[ $db_perfix . 'container_class' ] ) ? esc_attr( $post_meta[ $db_perfix . 'container_class' ][0] ) : '';
+      $container_class = explode( ' ', $container_class );
+
+      $defaults = array(
+        'section_class' => '',
+        'page_title' => $title,
+        'page_subtitle' => $subtitle,
+        'page_desc' => $desc,
+        'page_header_image_src' => $image_src,
+        'page_bg_image_src'   => $bg_image_src,
+        'top_breadcrumb'      => $breadcrumb
+      );
+      $args = wp_parse_args( $args, $defaults );
+
+      array_unshift( $container_class, $args['section_class'] );
+      array_unshift( $container_class, 'page-heading' );
+      $args['section_class'] = implode( ' ', $container_class );
+
+      if ( '' !== $args['page_header_image_src'] ) {
+        $args['page_header_image_src'] = sprintf(
+          '<div class="page-heading__image"><img class="img-responsive img-full" alt="%s" src="%s" /></div>',
+          $args['page_title'],
+          $args['page_header_image_src']
+        );
+      }
+
+      if ( '' !== $args['page_title'] ) {
+        $args['page_title'] = sprintf( '<h1 class="page-heading__content-title">%s</h1>', wp_strip_all_tags( $args['page_title'] ) );
+      }
+
+      if ( $args['top_breadcrumb'] ) {
+        $args['top_breadcrumb'] = yoast_breadcrumb( '<div class="page-heading__content-breadcrumb"><nav aria-label="breadcrumb">','</nav></div>', 0 );
+        $bottom_breadcrumb = false;
+      } else {
+        $args['top_breadcrumb'] = '';
+      }
+
+      if ( '' !== $args['page_subtitle'] ) {
+        $args['page_subtitle'] = sprintf( '<h4 class="page-heading__content-subtitle">%s</h4>', wp_strip_all_tags( $args['page_subtitle'] ) );
+      }
+
+      if ( '' !== $args['page_desc'] ) {
+        $args['page_desc'] = sprintf( '<p class="page-heading__content-desc">%s</p>', ( $args['page_desc'] ) );
+      }
+
+      if ( '' !== $args['page_bg_image_src'] && false !== $args['page_bg_image_src'] ) {
+        $args['page_bg_image_src'] = sprintf( ' data-bg-img="%s"', $args['page_bg_image_src'] );
+        $args['section_class'] .= ' bg-highlight bg-highlight-lightblack';
+      }
+
+      /* --- Render buttons */
+      $button_container = '<div class="page-heading__buttons">%s%s</div>';
+      $btn_back = '<a class="btn btn-border border-white btn-lg btn-svg-icon btn-svg-icon-small" href="%s">%s%s</a>';
+      $btn_cta = '<a class="btn btn-border border-white btn-lg" href="%s">%s</a>';
+      // if post type = services then view buttons
+      $post_type = get_post_type( $post );
+      if ( $post_type == 'ariana-services' ) {
+
+        if ( ! is_archive() ) {
+          $parent_id = wp_get_post_parent_id( $post );
+          if ( $parent_id ) { //post has parent
+            $btn_back = sprintf(
+              $btn_back,
+              get_post_permalink( $parent_id ),
+              digicorp_svg( 'svg-icon-arrow-left-4', 'rtl-rotate', '0 0 24 24' ),
+              __( 'Back', 'digicorpdomain' )
+            );
+          } else { //post is in root
+            $btn_back = sprintf(
+              $btn_back,
+              get_post_type_archive_link( $post_type ),
+              digicorp_svg( 'svg-icon-arrow-left-4', 'rtl-rotate', '0 0 24 24' ),
+              __( 'Back', 'digicorpdomain' )
+            );
+          }
+        } else {
+          $btn_back = '';
+        }
+
+        $btn_cta = sprintf(
+          $btn_cta,
+          '#',
+          __( 'Get a free proposal', 'digicorpdomain' )
+        );
+
+        $button_container = sprintf(
+          $button_container,
+          $btn_back,
+          $btn_cta
+        );
+
+      } else {
+        $button_container = '';
+      }
+      /* --- End Render buttons */
+
+      ?>
+      <section class="<?php echo $args['section_class'] ?>"<?php echo $args['page_bg_image_src']; ?>>
+          <div class="container">
+              <div class="page-heading__row">
+                  <div class="page-heading__content">
+                      <?php echo $args['top_breadcrumb']; ?>
+                      <?php echo $args['page_subtitle']; ?>
+                      <?php echo $args['page_title']; ?>
+                      <?php echo $args['page_desc']; ?>
+                      <?php echo $button_container; ?>
+                  </div>
+                  <?php echo $args['page_header_image_src']; ?>
+              </div>
+          </div>
+      </section>
+      <?php
     }
-    if ( '' !== $args['page_header_image_src'] && false !== $args['page_header_image_src'] ) {
-      $args['page_header_image_src'] = sprintf( ' data-bg-img="%s"', $args['page_header_image_src'] );
-      $args['section_class'] .= ' imagebg bg-highlight bg-highlight-lightblack';
+    else {
+      $post_desc = isset( $post_meta['post_desc'] ) ? esc_attr( $post_meta['post_desc'][0] ) : '';
+      $post_header_image = isset( $post_meta['post_header_image'] ) ? esc_attr( $post_meta['post_header_image'][0] ) : '';
+      $defaults = array(
+        'section_class' => 'visual',
+        'page_title' => get_the_title( $object_id ),
+        'page_desc' => $post_desc,
+        'page_header_image_src' => $post_header_image
+      );
+      $args = wp_parse_args( $args, $defaults );
+
+      if ( false === strpos( 'visual', $args['section_class'] ) ) {
+        $args['section_class'] = 'visual ' . $args['section_class'];
+      }
+
+      if ( '' !== $args['page_desc'] ) {
+        $args['page_desc'] = sprintf( '<p class="tagline">%s</p>', wp_strip_all_tags( $args['page_desc'] ) );
+      }
+      if ( '' !== $args['page_header_image_src'] && false !== $args['page_header_image_src'] ) {
+        $args['page_header_image_src'] = sprintf( ' data-bg-img="%s"', $args['page_header_image_src'] );
+        $args['section_class'] .= ' imagebg bg-highlight bg-highlight-lightblack';
+      }
+
+      $page_title = ( is_search() ) ? sprintf( /* Translators: %s: page title for search page */ __( 'Search results for "%s"', 'digicorpdomain' ), get_search_query() ) : esc_html( $args['page_title'] );
+
+      echo '<section id="page-header" class="' . esc_attr( $args['section_class'] ) . '"' . $args['page_header_image_src'] . '>';
+      echo     '<div class="container">';
+      echo         '<div class="text-block">';
+      echo             '<div class="heading-holder">';
+      echo                 '<h1>' . $page_title . '</h1>';
+      echo             '</div>';
+      echo             $args['page_desc'];
+      echo         '</div>';
+      echo     '</div>';
+      echo '</section>';
     }
 
-    $page_title = ( is_search() ) ? sprintf( /* Translators: %s: page title for search page */ __( 'Search results for "%s"', 'digicorpdomain' ), get_search_query() ) : esc_html( $args['page_title'] );
-
-    echo '<section id="page-header" class="' . esc_attr( $args['section_class'] ) . '"' . $args['page_header_image_src'] . '>';
-    echo     '<div class="container">';
-    echo         '<div class="text-block">';
-    echo             '<div class="heading-holder">';
-    echo                 '<h1>' . $page_title . '</h1>';
-    echo             '</div>';
-    echo             $args['page_desc'];
-    echo         '</div>';
-    echo     '</div>';
-    echo '</section>';
-    echo digicorp_breadcrumb();
+    if ( $bottom_breadcrumb ) {
+      echo digicorp_breadcrumb();
+    }
 
  	}
  endif;
@@ -932,6 +1070,7 @@ if ( ! function_exists( 'digicorp_sub_services_list' ) ) {
 if ( ! function_exists( 'digicorp_related_services_query' ) ) {
   /**
   **  return the wp_query of related services
+  **  search service-slug, service-title & all service-tags in other services tags
   **/
   function digicorp_related_services_query() {
     global $post;
@@ -967,6 +1106,37 @@ if ( ! function_exists( 'digicorp_related_services_query' ) ) {
   }
 }
 
+if ( ! function_exists( 'digicorp_related_services_query_2' ) ) {
+  /**
+  **  return the wp_query of related services
+  **  search only service-slug in other services tags
+  **/
+  function digicorp_related_services_query_2() {
+    global $post;
+    $service_slug = $post->post_name;
+    $service_slug = urldecode($service_slug);
+
+    $args = array(
+        'post_type' => 'ariana-services',
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'ariana-services-tags',
+            'field' => 'name',
+            'terms' => $service_slug,
+            'operator' => 'IN'
+          )
+        ),
+        'posts_per_page' => -1,
+        'ignore_stiky_posts' => 1,
+        'post__not_in' => array( $post->ID ),
+        'orderby' => 'menu_order'
+        );
+
+    $the_query = new WP_Query( $args );
+    return $the_query;
+  }
+}
+
 if ( ! function_exists( 'digicorp_related_services_list' ) ) {
   /**
   ** show related services in single service page - by tags
@@ -975,7 +1145,7 @@ if ( ! function_exists( 'digicorp_related_services_list' ) ) {
     global $post;
     $service_title = $post->post_title;
 
-    $the_query = digicorp_related_services_query();
+    $the_query = digicorp_related_services_query_2();
     if ( $the_query->have_posts() ) :
     ?>
     <section class="section services-list">

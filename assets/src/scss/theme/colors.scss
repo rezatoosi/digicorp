@@ -140,6 +140,27 @@ fieldset[disabled] .btn-primary.focus,
 .btn.btn-border.border-white {
   color: #fff !important;
   border-color: #fff !important;
+
+  svg {
+      fill: #fff !important;
+  }
+
+  &:hover {
+    color: #000 !important;
+    background-color: #fff !important;
+    border-color: #fff !important;
+
+    svg {
+      fill: #000 !important;
+    }
+
+  }
+}
+.color13 .btn-border.border-white:hover {
+  color: #1FB0C7 !important;
+  svg {
+    fill: #1FB0C7 !important;
+  }
 }
 
 .btn.btn-border.border-light {

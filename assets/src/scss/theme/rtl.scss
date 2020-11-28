@@ -111,3 +111,7 @@ span.service-main-bg{
 .cta-box__main-services {
   background-position: center right;
 }
+
+.rtl-rotate {
+  transform: rotate(180deg);
+}

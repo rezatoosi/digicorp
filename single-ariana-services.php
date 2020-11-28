@@ -8,7 +8,7 @@ if (have_posts()){ the_post();
 // $object_home_subtitle = esc_html( get_post_meta( $object_id, "post_home_subtitle", true) );
 
 digicorp_page_header_section( array(
-  'section_class' => 'visual color13'
+  'section_class' => 'color13'
 ));
 ?>
 
