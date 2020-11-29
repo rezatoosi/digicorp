@@ -38,11 +38,13 @@
     $('.fixed-header').affix({
       offset: {
         top: function () {
-          return (this.top = $('section').first().offset().top + 200);
+          // return (this.top = $('section').first().offset().top + 200);
+          return (this.top = $('section').first().outerHeight(true)+80);
         },
         bottom: function () {
-          return (this.bottom = $('.copyrights').outerHeight(true))
-          // return (this.bottom = $('.footer').outerHeight(true))
+          if($('.copyrights').length) {
+            return (this.bottom = $('.copyrights').outerHeight(true));
+          }
         }
       }
     });
