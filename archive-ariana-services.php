@@ -4,7 +4,8 @@
 digicorp_page_header_section( array(
   // 'page_title'      =>  post_type_archive_title( '', false ),
   'page_title'      =>  __( 'OUR SERVICES', 'digicorpdomain' ),
-  'section_class'   =>  'visual color13'
+  'section_class'   =>  'color13',
+  'alt_slug'        => 'services'
 ));
 if ( have_posts() ) {
 ?>

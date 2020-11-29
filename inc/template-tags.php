@@ -16,11 +16,16 @@
 
     $object_id = get_queried_object_id();
     $post_meta = get_post_meta( $object_id );
+    $post_type = get_post_type( $post );
     $bottom_breadcrumb = true;
 
     $db_perfix = 'post_header_section_';
     $header_section_is_active = ( isset( $post_meta[$db_perfix . 'is_active'] ) && ( 'on' == $post_meta[$db_perfix . 'is_active'][0] ) ) ? 1 : 0;
-    if ( $header_section_is_active ) {
+    if ( $header_section_is_active || isset( $args['alt_slug'] ) ) {
+      if ( isset( $args['alt_slug'] ) ) {
+        $page = get_page_by_path( $args['alt_slug'] );
+        $post_meta = get_post_meta( $page->ID );
+      }
       $title = isset( $post_meta[ $db_perfix . 'title' ] ) ? esc_attr( $post_meta[ $db_perfix . 'title' ][0] ) : '';
       $breadcrumb = ( isset( $post_meta[$db_perfix . 'breadcrumb'] ) && ( 'on' == $post_meta[$db_perfix . 'breadcrumb'][0] ) ) ? 1 : 0;
       $subtitle = isset( $post_meta[ $db_perfix . 'subtitle' ] ) ? esc_attr( $post_meta[ $db_perfix . 'subtitle' ][0] ) : '';
@@ -81,8 +86,8 @@
       $button_container = '<div class="page-heading__buttons">%s%s</div>';
       $btn_back = '<a class="btn btn-border border-white btn-lg btn-svg-icon btn-svg-icon-small" href="%s">%s%s</a>';
       $btn_cta = '<a class="btn btn-border border-white btn-lg" href="%s">%s</a>';
+
       // if post type = services then view buttons
-      $post_type = get_post_type( $post );
       if ( $post_type == 'ariana-services' ) {
 
         if ( ! is_archive() ) {
@@ -105,6 +110,8 @@
         } else {
           $btn_back = '';
         }
+
+        // TODO: Get buttons text from user
 
         $btn_cta = sprintf(
           $btn_cta,
@@ -133,6 +140,73 @@
                       <?php echo $args['page_title']; ?>
                       <?php echo $args['page_desc']; ?>
                       <?php echo $button_container; ?>
+                  </div>
+                  <?php echo $args['page_header_image_src']; ?>
+              </div>
+          </div>
+      </section>
+      <?php
+    }
+    elseif ( $post_type == 'post' && is_single() ) {
+      $title = get_the_title();
+      $breadcrumb = 1;
+      $subtitle = '';
+      // $desc = isset( $post_meta['post_desc'] ) ? esc_attr( $post_meta['post_desc'][0] ) : '';
+      $desc = get_the_excerpt();
+      $image_src = '';
+      $bg_image_src = isset( $post_meta['post_header_image'] ) ? esc_attr( $post_meta['post_header_image'][0] ) : '';
+      $container_class = array();
+
+      $defaults = array(
+        'section_class' => '',
+        'page_title' => $title,
+        'page_subtitle' => $subtitle,
+        'page_desc' => $desc,
+        'page_header_image_src' => $image_src,
+        'page_bg_image_src'   => $bg_image_src,
+        'top_breadcrumb'      => $breadcrumb
+      );
+      $args = wp_parse_args( $args, $defaults );
+
+      array_unshift( $container_class, $args['section_class'] );
+      array_unshift( $container_class, 'post-heading' );
+      $args['section_class'] = implode( ' ', $container_class );
+
+      $args['page_header_image_src'] = sprintf(
+        '<div class="post-heading__image">%s</div>',
+        digicorp_get_header_image()
+      );
+
+      $args['page_title'] = sprintf( '<h1 class="post-heading__content-title">%s</h1>', wp_strip_all_tags( $args['page_title'] ) );
+
+      if ( $args['top_breadcrumb'] ) {
+        $args['top_breadcrumb'] = yoast_breadcrumb( '<div class="post-heading__content-breadcrumb"><nav aria-label="breadcrumb">','</nav></div>', 0 );
+        $bottom_breadcrumb = false;
+      } else {
+        $args['top_breadcrumb'] = '';
+      }
+
+      if ( '' !== $args['page_subtitle'] ) {
+        $args['page_subtitle'] = sprintf( '<h4 class="post-heading__content-subtitle">%s</h4>', wp_strip_all_tags( $args['page_subtitle'] ) );
+      }
+
+      if ( '' !== $args['page_desc'] ) {
+        $args['page_desc'] = sprintf( '<p class="post-heading__content-desc">%s</p>', ( $args['page_desc'] ) );
+      }
+
+      if ( '' !== $args['page_bg_image_src'] && false !== $args['page_bg_image_src'] ) {
+        $args['page_bg_image_src'] = sprintf( ' data-bg-img="%s"', $args['page_bg_image_src'] );
+        $args['section_class'] .= ' bg-highlight bg-highlight-lightblack';
+      }
+
+      ?>
+      <section class="<?php echo $args['section_class'] ?>"<?php echo $args['page_bg_image_src']; ?>>
+          <div class="container">
+              <div class="post-heading__row">
+                  <div class="post-heading__content">
+                      <?php echo $args['top_breadcrumb']; ?>
+                      <?php echo $args['page_title']; ?>
+                      <?php echo $args['page_desc']; ?>
                   </div>
                   <?php echo $args['page_header_image_src']; ?>
               </div>
@@ -563,7 +637,7 @@ if ( ! function_exists( 'digicorp_post_header_image' ) ) {
         $container = '<div class="' . $container_class . '">%s</div>';
       }
       $link = '<a href="%1$s" aria-hidden="true" tabindex="-1">%2$s</a>';
-      $image = '<img src="%1$s" alt="%2$s" class="img-responsive"/>';
+      $image = '<img src="%1$s" alt="%2$s" class="img-responsive img-full"/>';
       $image_alt = ( get_the_post_thumbnail_caption( $post ) ) ? esc_attr( get_the_post_thumbnail_caption( $post ) ) : esc_attr( get_the_title() );
 
       printf(
@@ -576,6 +650,36 @@ if ( ! function_exists( 'digicorp_post_header_image' ) ) {
                 esc_url( get_the_post_thumbnail_url( $post, 'page_header' ) ),
                 $image_alt
               )
+          )
+      );
+  	}
+  }
+}
+
+if ( ! function_exists( 'digicorp_get_header_image' ) ) {
+  /*
+  ** Display post header image for single post
+  */
+  function digicorp_get_header_image() {
+    {
+
+      if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+          return;
+      }
+
+      global $post;
+
+      $link = '<a href="%1$s" aria-hidden="true" tabindex="-1">%2$s</a>';
+      $image = '<img src="%1$s" alt="%2$s" class="img-responsive img-full"/>';
+      $image_alt = ( get_the_post_thumbnail_caption( $post ) ) ? esc_attr( get_the_post_thumbnail_caption( $post ) ) : esc_attr( get_the_title() );
+
+      return sprintf(
+        $link,
+        esc_url( get_the_post_thumbnail_url( $post, 'full' ) ),
+        sprintf(
+          $image,
+          esc_url( get_the_post_thumbnail_url( $post, 'medium' ) ),
+          $image_alt
           )
       );
   	}

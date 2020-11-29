@@ -18,16 +18,17 @@
 ?>
 
 <div class="blog-micro-wrapper">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="post-micro clearfix text-center">
-                <?php digicorp_post_header_image( "post-media clearfix" ); ?>
+    <?php
+    // <div class="row">
+        // <div class="col-md-12">
+            // <div class="post-micro clearfix text-center">
+                // <?php digicorp_post_header_image( "post-media clearfix" ); ? >
 
-                <div class="large-post-meta">
-                    <?php digicorp_entry_header_meta(); ?>
-                </div><!-- end meta -->
-                <h2 class="entry-title h3"><a href="<?php esc_url(the_permalink()); ?>" title="<?php esc_attr(the_title()); ?>"><?php the_title(); ?></a></h2>
-                <?php
+                // <div class="large-post-meta">
+                    // <?php digicorp_entry_header_meta(); ? >
+                // </div><!-- end meta -->
+                // <h2 class="entry-title h3"><a href="<?php esc_url(the_permalink()); ? >" title="<?php esc_attr(the_title()); ? >"><?php the_title(); ? ></a></h2>
+                // <?php
                 // TODO: Implement post sharing icons
                 // <div class="post-sharing clearfix">
                 //     <ul class="list-inline social-small">
@@ -36,10 +37,11 @@
                 //         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                 //     </ul>
                 // </div><!-- end post-sharing -->
-                ?>
-            </div><!-- end post-micro -->
-        </div>
-    </div>
+                // ? >
+            // </div><!-- end post-micro -->
+        // </div>
+    // </div>
+    ?>
     <div class="row">
         <div class="<?php echo $col_class; ?>">
             <div class="post-desc clearfix">
