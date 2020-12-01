@@ -85,7 +85,7 @@
       /* --- Render buttons */
       $button_container = '<div class="page-heading__buttons">%s%s</div>';
       $btn_back = '<a class="btn btn-border border-white btn-lg btn-svg-icon btn-svg-icon-small" href="%s">%s%s</a>';
-      $btn_cta = '<a class="btn btn-border border-white btn-lg" href="%s">%s</a>';
+      $btn_cta = '<a class="btn btn-border border-white btn-lg scrollto" href="%s">%s</a>';
 
       // if post type = services then view buttons
       if ( $post_type == 'ariana-services' ) {
@@ -115,7 +115,7 @@
 
         $btn_cta = sprintf(
           $btn_cta,
-          '#',
+          '#section-services-cta',
           __( 'Get a free proposal', 'digicorpdomain' )
         );
 

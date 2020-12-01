@@ -171,3 +171,36 @@
 
   }); // end $(document).ready();
 })(jQuery);
+
+var ARIANA = {};
+
+(function($){
+  "use strict";
+
+  ARIANA.scrollTo = {
+
+    init: function() {
+      $('.scrollto').each(function(){
+        $(this).on('click',function(e){
+          e.preventDefault();
+          var elem = $(this).attr('href');
+          var topOffset = $(elem).offset().top - 180;
+          // $('html,body').animate({scrollTo:topOffset},'300');
+          $('html, body').animate({scrollTop:topOffset}, '500');
+        });
+      });
+    }
+
+  };
+
+  ARIANA.documentOnReady = {
+    init: function() {
+      ARIANA.scrollTo.init();
+    }
+  }
+
+  $(document).ready(
+    ARIANA.documentOnReady.init
+  );
+
+})(jQuery);

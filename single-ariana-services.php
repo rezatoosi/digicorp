@@ -33,7 +33,7 @@ digicorp_page_header_section( array(
 </section>
 <?php } ?>
 
-
+<?php get_template_part( 'template-parts/sections/services', 'cta' ); ?>
 
 <?php digicorp_sub_services_list(); ?>
 

@@ -89,9 +89,6 @@ $frontpage_section_custom = new Digicorp_Customizer_Frontpage_Section(
 // add frontpage section creator class - Version 2
 require_once get_template_directory() . '/inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php';
 
-// add frontpage section creator class - Version 3
-require_once get_template_directory() . '/inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php';
-
 $about_section_brands = new Digicorp_Customizer_Frontpage_Section_V2(
 	'_sections_features',
 	'#section-features',
@@ -100,16 +97,6 @@ $about_section_brands = new Digicorp_Customizer_Frontpage_Section_V2(
 	2,
 	__( "Add & Edit features", "digicorpdomain" ),
 	'sidebar-widgets-frontpage_features'
-);
-
-$about_section_brands = new Digicorp_Customizer_Frontpage_Section_V3(
-	'_sections_about_brands',
-	'#section-about-brands',
-	__( 'About us - Brands', 'digicorpdomain' ),
-	__( "Manage brands section in about us page.", "digicorpdomain" ),
-	8,
-	__( "Add & Edit Widgets", "digicorpdomain" ),
-	'sidebar-widgets-aboutus_brands'
 );
 
 $about_section_history = new Digicorp_Customizer_Frontpage_Section_V2(
@@ -179,6 +166,31 @@ $contact_section_social = new Digicorp_Customizer_Frontpage_Section_V2(
 	__( "Add & Edit Widgets", "digicorpdomain" ),
 	'sidebar-widgets-contact_form'
 );
+
+$frontpage_section_services_cta = new Digicorp_Customizer_Frontpage_Section_V2(
+	'_sections_services_cta',
+	'#section-services-cta',
+	__( 'Services - CTA', 'digicorpdomain' ),
+	__( "Manage CTA section in services.", "digicorpdomain" ),
+	14,
+	__( "Add & Edit Widgets", "digicorpdomain" ),
+	'sidebar-widgets-services_cta'
+);
+
+// add frontpage section creator class - Version 3
+require_once get_template_directory() . '/inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php';
+
+$about_section_brands = new Digicorp_Customizer_Frontpage_Section_V3(
+	'_sections_about_brands',
+	'#section-about-brands',
+	__( 'About us - Brands', 'digicorpdomain' ),
+	__( "Manage brands section in about us page.", "digicorpdomain" ),
+	8,
+	__( "Add & Edit Widgets", "digicorpdomain" ),
+	'sidebar-widgets-aboutus_brands'
+);
+
+
 /**
  * Render the site title for the selective refresh partial.
  *

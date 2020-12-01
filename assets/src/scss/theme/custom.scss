@@ -3296,6 +3296,26 @@ span.service-main-bg {
   }
 }
 
+/* cta-box__services --- used in services posttype */
+.cta-box__services {
+  @extend .border-round-5;
+  @extend .pv-60;
+  @extend .ph-80;
+  @extend .bg-light-blue;
+  @extend .clearfix;
+}
+.cta-box__services-content {
+  @extend .col-md-9;
+  p {
+    @extend .text-left;
+    @extend .font-bold;
+    @extend .font-medium;
+  }
+}
+.cta-box__services-form {
+  @extend .col-md-3;
+}
+
 /******************************************
     CASE STUDIO
 /******************************************/

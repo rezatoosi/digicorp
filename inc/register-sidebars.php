@@ -157,6 +157,15 @@ if( ! function_exists('ariana_widgets_init') ):
       'before_title' => '',
       'after_title' => ''
     ));
+    register_sidebar(array(
+      'name' => __('Services CTA - Service Pages', 'digicorpdomain'),
+      'id' => 'services_cta',
+      'description' => __('CTA under services archive and all other services', 'digicorpdomain'),
+      'before_widget' => '<div id="%1$s" class="%2$s">',
+      'after_widget' => '</div><!--end widget-->',
+      'before_title' => '',
+      'after_title' => ''
+    ));
 
     // contactus widgets
     register_sidebar(array(
