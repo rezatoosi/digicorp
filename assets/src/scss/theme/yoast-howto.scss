@@ -1,0 +1,12 @@
+.schema-how-to {
+  p {
+    margin-top: 0;
+  }
+}
+.schema-how-to-total-time {
+  font-size: 14px;
+}
+.schema-how-to-description {
+  @extend .font-bold;
+  @extend .font-medium;
+}

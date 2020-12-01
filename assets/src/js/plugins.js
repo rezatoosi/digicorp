@@ -193,9 +193,44 @@ var ARIANA = {};
 
   };
 
+  ARIANA.yoastFaq = {
+    init: function() {
+      // $('.schema-faq').wrap('<div class="row"></div>');
+      $('.schema-faq-answer').wrap('<div class="schema-faq-answer"></div>');
+      $('p.schema-faq-answer').removeClass('schema-faq-answer');
+
+      $('.wp-block-yoast-faq-block').find('.schema-faq-question').click(function(){
+				//Expand or collapse this panel
+        // $(this).nextAll('.schema-faq-answer').eq(0).collapse('toggle');
+				$(this).nextAll('.schema-faq-answer').eq(0).slideToggle('fast', function(){
+					if( $(this).hasClass('collapse') ){
+						$(this).removeClass('collapse');
+					}
+					else{
+						$(this).addClass('collapse');
+					}
+				});
+
+				//Hide the other panels
+				$(".schema-faq-answer").not( $(this).nextAll('.schema-faq-answer').eq(0) ).slideUp('fast');
+			});
+
+			$('.wp-block-yoast-faq-block .schema-faq-question').click(function(){
+				$('.wp-block-yoast-faq-block .schema-faq-question').not( $(this) ).removeClass('collapse');
+				if( $(this).hasClass('collapse') ){
+					$(this).removeClass('collapse');
+				}
+				else{
+					$(this).addClass('collapse');
+				}
+			});
+    }
+  };
+
   ARIANA.documentOnReady = {
     init: function() {
       ARIANA.scrollTo.init();
+      ARIANA.yoastFaq.init();
     }
   }
 

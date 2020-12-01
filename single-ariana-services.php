@@ -41,7 +41,20 @@ digicorp_page_header_section( array(
 
 <?php digicorp_related_posts_in_services() ?>
 
-
 <?php //digicorp_all_services_list(); ?>
+
+<script type="text/javascript">
+(function($){
+
+	var yoast = {
+		accordion: function(){
+
+		}
+	};
+
+	yoast.accordion();
+
+})(jQuery)
+</script>
 
 <?php get_footer(); ?>

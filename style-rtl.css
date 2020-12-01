@@ -7414,7 +7414,8 @@ button.navbar-toggle {
 .section-content p {
   text-align: justify; }
 
-.section-content ul {
+.section-content ul,
+.section-content ol {
   padding-right: 1.3em;
   margin-right: 1.3em; }
 
@@ -9933,7 +9934,7 @@ hr.invis {
 .border-round-2 {
   border-radius: 2px; }
 
-.border-round-5, .serviceBox-v2, .srv-box-home, .cta-box-contact, .cta-box__main-services, .cta-box__services {
+.border-round-5, .serviceBox-v2, .srv-box-home, .cta-box-contact, .cta-box__main-services, .cta-box__services, .schema-faq-section {
   border-radius: 5px; }
 
 .border-round-10 {
@@ -10619,7 +10620,7 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
 .font-25px {
   font-size: 25px !important; }
 
-.font-medium, .cta-box__services-content p {
+.font-medium, .cta-box__services-content p, .schema-how-to-description {
   font-size: 20px !important;
   line-height: 40px; }
 
@@ -10631,7 +10632,7 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
   font-size: 35px;
   line-height: 55px; }
 
-.font-bold, .cta-box__services-content p {
+.font-bold, .cta-box__services-content p, .schema-how-to-description {
   font-weight: bold !important; }
 
 /* blog category box */
@@ -11678,6 +11679,56 @@ no-gutters {
 
 .post-share-buttons a.share-copylink:hover svg {
   fill: #fff !important; }
+
+.schema-faq {
+  max-width: 800px;
+  margin: 20px auto 0; }
+
+.schema-faq-section {
+  overflow: hidden;
+  margin-top: 20px; }
+
+.schema-faq-section:first-child {
+  margin-top: 0; }
+
+.schema-faq-question {
+  background: #eee;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  padding: 10px 15px;
+  white-space: normal; }
+
+.schema-faq-question:before {
+  width: 16px;
+  height: 20px;
+  display: inline-block;
+  content: "+";
+  margin-left: 5px;
+  vertical-align: top; }
+
+.schema-faq-question.collapse:before {
+  content: "-"; }
+
+.schema-faq-question:hover {
+  opacity: 0.8; }
+
+.schema-faq-answer {
+  display: none;
+  background: #f1f1f1;
+  padding: 10px 20px 20px; }
+
+.schema-faq-answer p {
+  margin: 0; }
+
+.schema-faq-answer.default {
+  display: block; }
+
+.schema-how-to p {
+  margin-top: 0; }
+
+.schema-how-to-total-time {
+  font-size: 14px; }
 
 .panel-group .panel {
   -webkit-box-shadow: none;
