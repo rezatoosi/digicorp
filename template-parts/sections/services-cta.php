@@ -22,7 +22,7 @@ if ( get_theme_mod( 'digicorp_sections_services_cta' . '_enabled' ) ):
       <div class="cta-box__services">
         <div class="row">
           <div class="cta-box__services-content">
-            <p>
+            <p class="section-desctext">
               <?php
                 echo $services_cta_section_text;
               ?>
