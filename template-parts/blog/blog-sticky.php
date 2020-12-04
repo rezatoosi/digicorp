@@ -27,7 +27,7 @@ $sticky = get_option('sticky_posts');
                                       // if( $count < 4 && $count < $item_no ) {
                                           ?>
                                           <div class="item">
-                                              <div class="post-thumb imghover" data-bg-img="<?php esc_url( the_post_thumbnail_url( 'thumb' ) ); ?>">
+                                              <div class="post-thumb imghover" data-bg-img="<?php esc_url( the_post_thumbnail_url( 'medium' ) ); ?>">
                                                   <a class="post-link-full" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                                   <div class="post-holder">
                                                       <div class="post-title">
@@ -70,7 +70,7 @@ $sticky = get_option('sticky_posts');
                                       ?>
                                       <div class="col col-md-6 col-sm-6 small_posts">
                                           <article class="card">
-                                              <div class="post-thumb imghover" data-bg-img="<?php esc_url( the_post_thumbnail_url( 'thumb' ) ); ?>">
+                                              <div class="post-thumb imghover" data-bg-img="<?php esc_url( the_post_thumbnail_url( 'small' ) ); ?>">
                                                   <a class="post-link-full" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                                   <div class="post-holder">
                                                       <div class="post-title">

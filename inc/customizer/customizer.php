@@ -40,9 +40,15 @@ function digicorp_customize_register( $wp_customize ) {
 	    'description'	 => esc_html__( 'Manage front-page sections', 'digicorpdomain' ),
 	) );
 
+	$wp_customize->add_panel( 'digicorp_settings_panel', array(
+	    'priority'       => 2,
+	    'title'          => esc_html__( 'Theme Settings', 'digicorpdomain' ),
+	    'description'	 => esc_html__( 'Manage theme settings', 'digicorpdomain' ),
+	) );
+
 
 	/*
-	 * include required files ----------------------------------------------------
+	 * include create section files ----------------------------------------------------
 	 */
 
 	 // frontpage - typed slider
@@ -66,6 +72,14 @@ function digicorp_customize_register( $wp_customize ) {
 
 	 // frontpage - section Blog
 	 require_once get_template_directory() . '/inc/customizer/sections/testimonials.php';
+
+
+	 /*
+ 	 * include create settings files ----------------------------------------------------
+ 	 */
+
+	 // settings - default image
+	 require_once get_template_directory() . '/inc/customizer/settings/settings-default-post-image.php';
 
 }
 add_action( 'customize_register', 'digicorp_customize_register' );

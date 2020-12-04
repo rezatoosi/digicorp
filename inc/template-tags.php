@@ -691,8 +691,14 @@ if ( ! function_exists( 'digicorp_get_post_default_image_uri' ) ) :
     * Return default image used in posts if post has no image
     */
     function digicorp_get_post_default_image_uri() {
-      return esc_url( get_template_directory_uri() . '/assets/dist/images/post-default.png' );
-      // TODO: get default image in admin panel and use here
+      $default_image_id = get_theme_mod( 'digicorp_settings_default_image' );
+      if ( ! empty( $default_image_id ) ) {
+        // var_dump(wp_get_attachment_image_src( $default_image_id, 'small' ));die();
+        return wp_get_attachment_image_src( $default_image_id, 'small' )[0];
+      }
+      else {
+        return esc_url( get_template_directory_uri() . '/assets/dist/images/post-default.png' );
+      }
     }
 endif;
 
