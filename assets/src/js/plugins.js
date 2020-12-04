@@ -41,11 +41,11 @@
           // return (this.top = $('section').first().offset().top + 200);
           return (this.top = $('section').first().outerHeight(true)+80);
         },
-        bottom: function () {
-          if($('.copyrights').length) {
-            return (this.bottom = $('.copyrights').outerHeight(true));
-          }
-        }
+        // bottom: function () {
+        //   if($('.copyrights').length) {
+        //     return (this.bottom = $('.copyrights').outerHeight(true));
+        //   }
+        // }
       }
     });
 
