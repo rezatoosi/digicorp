@@ -10,7 +10,7 @@ $section = $prefix . 'default_image';
 $wp_customize->add_section( $section, array(
 	'title'       => __( 'Default post images', 'digicorpdomain' ),
 	'description' => __( 'Set default image of all post types', 'digicorpdomain' ),
-	'priority'    => 1,
+	'priority'    => 10,
 	'panel' 			=> $panel,
 ) );
 

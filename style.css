@@ -7618,13 +7618,21 @@ ul.contact-list {
 .copyrights a {
   text-transform: uppercase;
   color: #b6b6b6; }
+  .contact li a svg,
+  .copyrights a svg {
+    width: 24px;
+    height: 24px;
+    fill: #b6b6b6; }
+  .contact li a:hover svg,
+  .copyrights a:hover svg {
+    fill: #e8e8e8; }
 
 .copyrights ul {
   padding: 0;
   margin: 20px 0 0 0; }
 
 .copyrights ul li {
-  margin: 0 0 0 10px;
+  margin: 0 0 0 15px;
   padding: 0;
   display: inline-block; }
 

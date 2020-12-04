@@ -1102,6 +1102,16 @@ ul.contact-list {
     text-transform: uppercase;
     // color: rgba(255, 255, 255, 0.5);
     color: #b6b6b6;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: #b6b6b6;
+    }
+
+    &:hover svg {
+      fill: $color-light;
+    }
 }
 
 .copyrights ul {
@@ -1110,7 +1120,7 @@ ul.contact-list {
 }
 
 .copyrights ul li {
-    margin: 0 0 0 10px;
+    margin: 0 0 0 15px;
     padding: 0;
     display: inline-block;
 }

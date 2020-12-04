@@ -48,12 +48,13 @@
                     </div>
                     <div class="col-sm-8 text-right sm-text-center">
                       <?php
-                          wp_nav_menu(array(
-                              'theme_location' => 'footerMenu',
-                              'depth' => '1',
-                              'items_wrap' => '<ul id="%1$s" class="list-inline %2$s">%3$s</ul>', /*<li class="lastlink"><a class="btn btn-success" href="seo-analysis.html"><i class="glyphicon glyphicon-search"></i> ' . __('free seo analysis', 'digicorpdomain') . '</a></li>*/
-                          ));
+                          // wp_nav_menu(array(
+                          //     'theme_location' => 'footerMenu',
+                          //     'depth' => '1',
+                          //     'items_wrap' => '<ul id="%1$s" class="list-inline %2$s">%3$s</ul>', /*<li class="lastlink"><a class="btn btn-success" href="seo-analysis.html"><i class="glyphicon glyphicon-search"></i> ' . __('free seo analysis', 'digicorpdomain') . '</a></li>*/
+                          // ));
                       ?>
+                      <?php digicorp_footer_social_ul(); ?>
                     </div>
                 </div><!-- end row -->
             </div><!-- end container -->

@@ -7652,12 +7652,22 @@ ul.contact-list li a.ltr {
   text-transform: uppercase;
   color: #b6b6b6; }
 
+.contact li a svg,
+.copyrights a svg {
+  width: 24px;
+  height: 24px;
+  fill: #b6b6b6; }
+
+.contact li a:hover svg,
+.copyrights a:hover svg {
+  fill: #e8e8e8; }
+
 .copyrights ul {
   padding: 0;
   margin: 20px 0 0 0; }
 
 .copyrights ul li {
-  margin: 0 10px 0 0;
+  margin: 0 15px 0 0;
   padding: 0;
   display: inline-block; }
 

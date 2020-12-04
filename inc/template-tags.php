@@ -273,6 +273,52 @@
  	}
  endif;
 
+if ( ! function_exists( 'digicorp_footer_social_ul' ) ) {
+  /*
+  ** prints social media links in a ul for site footer
+  */
+  function digicorp_footer_social_ul() {
+    $ul = '<ul class="list-inline">%s</ul>';
+    $li = '<li><a href="%s">%s</a></li>';
+
+    $instagram = get_theme_mod( 'digicorp_settings_instagram' );
+    $linkedin = get_theme_mod( 'digicorp_settings_linkedin' );
+    $facebook = get_theme_mod( 'digicorp_settings_facebook' );
+
+    $output = '';
+
+    if ( ! empty( $instagram ) ) {
+      $output = sprintf(
+        $li,
+        $instagram,
+        digicorp_svg( 'social-instagram2', '', '0 0 24 24' )
+      );
+    }
+    if ( ! empty( $linkedin ) ) {
+      $output .= sprintf(
+        $li,
+        $linkedin,
+        digicorp_svg( 'social-linkedin2', '', '0 0 24 24' )
+      );
+    }
+    if ( ! empty( $facebook ) ) {
+      $output .= sprintf(
+        $li,
+        $facebook,
+        digicorp_svg( 'social-facebook2', '', '0 0 24 24' )
+      );
+    }
+
+    if ( '' !== $output ) {
+      printf(
+        $ul,
+        $output
+      );
+    }
+  }
+}
+
+
 if ( ! function_exists( 'digicorp_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
@@ -474,7 +520,7 @@ if ( ! function_exists( 'digicorp_footer_share_buttons' ) ) {
        'share-linkedin',
        $url,
        digicorp_svg( 'social-linkedin2', '', '0 0 24 24' ),
-       'LinkedIn'
+       __( 'LinkedIn', 'digicorpdomain' )
      );
 
      //twitter
@@ -488,7 +534,7 @@ if ( ! function_exists( 'digicorp_footer_share_buttons' ) ) {
        'share-twitter',
        $url,
        digicorp_svg( 'social-twitter', '', '0 0 24 24' ),
-       'Twitter'
+       __( 'Twitter', 'digicorpdomain' )
      );
 
      // facebook
@@ -502,7 +548,7 @@ if ( ! function_exists( 'digicorp_footer_share_buttons' ) ) {
        'share-facebook',
        $url,
        digicorp_svg( 'social-facebook2', '', '0 0 24 24' ),
-       'Facebook'
+       __( 'Facebook', 'digicorpdomain' )
      );
 
      //whatsapp
@@ -516,7 +562,7 @@ if ( ! function_exists( 'digicorp_footer_share_buttons' ) ) {
        'share-whatsapp',
        $url,
        digicorp_svg( 'social-whatsapp', '', '0 0 24 24' ),
-       'WhatsApp'
+       __( 'WhatsApp', 'digicorpdomain' )
      );
 
      //telegram
@@ -530,7 +576,7 @@ if ( ! function_exists( 'digicorp_footer_share_buttons' ) ) {
        'share-telegram',
        $url,
        digicorp_svg( 'social-telegram2', '', '0 0 24 24' ),
-       'Telegram'
+       __( 'Telegram', 'digicorpdomain' )
      );
 
      //email
@@ -545,7 +591,7 @@ if ( ! function_exists( 'digicorp_footer_share_buttons' ) ) {
        'share-email',
        $url,
        digicorp_svg( 'svg-icon-message-closed-envelope-1', '', '0 0 512 512' ),
-       'Mail'
+       __( 'eMail', 'digicorpdomain' )
      );
 
      //copylink

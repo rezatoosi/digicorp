@@ -81,6 +81,9 @@ function digicorp_customize_register( $wp_customize ) {
 	 // settings - default image
 	 require_once get_template_directory() . '/inc/customizer/settings/settings-default-post-image.php';
 
+	 // settings - Social media links
+	 require_once get_template_directory() . '/inc/customizer/settings/settings-social.php';
+
 }
 add_action( 'customize_register', 'digicorp_customize_register' );
 
