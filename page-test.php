@@ -1504,4 +1504,45 @@ endif;
     </div>
 </section>
 
+
+<section class="section p-0" style="margin-top: 30px; margin-bottom: 30px">
+  <div class="container">
+    <div class="bg-light-gray border-round-5  ph-80 pv-60">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="section-title text-left">
+            <h5>مشاوره و پروپزال</h5>
+            <h2 class="h3">دریافت مشاوره رایگان</h2>
+            <hr>
+          </div>
+          <div class="section-content">متن</div>
+        </div>
+        <div class="col-md-5">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/dist/images/info/inf-22.png" class="img-responsive img-full">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light-gray" style="margin-top: 100px; margin-bottom: 30px">
+  <div class="container">
+    <div class="bg-white border-round-5 ph-80 pv-60 shadow-light-1">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="section-title text-left">
+            <h5>مشاوره و پروپزال</h5>
+            <h2 class="h3">دریافت مشاوره رایگان</h2>
+            <hr>
+          </div>
+          <div class="section-content">متن</div>
+        </div>
+        <div class="col-md-5">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/dist/images/info/inf-22.png" class="img-responsive img-full">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <?php get_footer(); ?>

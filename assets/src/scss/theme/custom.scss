@@ -3300,22 +3300,63 @@ span.service-main-bg {
 /* cta-box__services --- used in services posttype */
 .cta-box__services {
   @extend .border-round-5;
-  @extend .pv-60;
-  @extend .ph-80;
-  @extend .bg-light-blue;
   @extend .clearfix;
+  background-color: #0ec8fb;
+  padding: 40px 15px;
 }
+
 .cta-box__services-content {
-  @extend .col-md-9;
+  @extend .col-sm-12;
+  @extend .col-md-8;
+  @extend .col-lg-9;
   p {
-    @extend .text-left;
     @extend .font-bold;
     @extend .font-medium;
+    text-align: center;
+    color: $color-white;
   }
 }
+
 .cta-box__services-form {
-  @extend .col-md-3;
+  @extend .col-xs-12;
+  @extend .col-sm-8;
+  @extend .col-sm-offset-2;
+  @extend .col-md-4;
+  @extend .col-md-offset-0;
+  @extend .col-lg-3;
+  margin-top: 30px;
 }
+
+@media (min-width: 768px) {
+  .cta-box__services {
+
+  }
+}
+
+@media (min-width: 992px) {
+  .cta-box__services {
+    background-image: url('assets/dist/images/bg/bg-20.png');
+    background-size: contain !important;
+    background-position: right bottom !important;
+    background-repeat: no-repeat;
+    padding: 80px 110px 80px 60px;
+  }
+  .cta-box__services-content {
+    p {
+      text-align: left;
+    }
+  }
+  .cta-box__services-form {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cta-box__services {
+  }
+}
+
+
 
 /******************************************
     CASE STUDIO

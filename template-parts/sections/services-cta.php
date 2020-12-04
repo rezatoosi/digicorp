@@ -19,8 +19,8 @@ if ( get_theme_mod( 'digicorp_sections_services_cta' . '_enabled' ) ):
 ?>
 <section class="<?php echo $services_cta_section_css_class; ?>" id="section-services-cta">
     <div class="container">
-      <div class="row">
-        <div class="cta-box__services">
+      <div class="cta-box__services">
+        <div class="row">
           <div class="cta-box__services-content">
             <p>
               <?php

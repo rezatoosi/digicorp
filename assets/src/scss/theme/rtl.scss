@@ -112,6 +112,13 @@ span.service-main-bg{
   background-position: center right;
 }
 
+@media (min-width: 992px) {
+  .cta-box__services {
+    background-image: url('assets/dist/images/bg/bg-19.png');
+    background-position: left bottom !important;
+  }
+}
+
 .rtl-rotate {
   transform: rotate(180deg);
 }
