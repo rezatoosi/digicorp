@@ -1627,7 +1627,7 @@ pre code {
   margin-left: -15px;
   margin-right: -15px; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .cta-box__services-form, .col-xs-4, .col-sm-4, .col-md-4, .cta-box__services-form, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .page-heading__image, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .post-heading__image, .post-heading__content, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .page-heading__content, .col-lg-7, .col-xs-8, .col-sm-8, .cta-box__services-form, .col-md-8, .cta-box__services-content, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .cta-box__services-content, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .cta-box__services-form, .col-sm-12, .cta-box__services-content, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .cta-box__services-form, .col-xs-4, .col-sm-4, .col-md-4, .cta-box__services-form, .col-lg-4, .col-xs-5, .col-sm-5, .page-heading__image, .post-heading__image, .col-md-5, .page-heading__image, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .post-heading__image, .post-heading__content, .col-lg-6, .col-xs-7, .col-sm-7, .page-heading__content, .post-heading__content, .col-md-7, .page-heading__content, .col-lg-7, .col-xs-8, .col-sm-8, .cta-box__services-form, .col-md-8, .cta-box__services-content, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .cta-box__services-content, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .cta-box__services-form, .col-sm-12, .cta-box__services-content, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1790,7 +1790,7 @@ pre code {
   margin-right: 0; }
 
 @media (min-width: 768px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .cta-box__services-form, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .cta-box__services-content {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .page-heading__image, .post-heading__image, .col-sm-6, .col-sm-7, .page-heading__content, .post-heading__content, .col-sm-8, .cta-box__services-form, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .cta-box__services-content {
     float: right; }
   .col-sm-12, .cta-box__services-content {
     width: 100%; }
@@ -1802,11 +1802,11 @@ pre code {
     width: 75%; }
   .col-sm-8, .cta-box__services-form {
     width: 66.66666667%; }
-  .col-sm-7 {
+  .col-sm-7, .page-heading__content, .post-heading__content {
     width: 58.33333333%; }
   .col-sm-6 {
     width: 50%; }
-  .col-sm-5 {
+  .col-sm-5, .page-heading__image, .post-heading__image {
     width: 41.66666667%; }
   .col-sm-4 {
     width: 33.33333333%; }
@@ -6885,6 +6885,11 @@ ol {
 .text-right {
   text-align: left !important; }
 
+@media (max-width: 500px) {
+  #wpadminbar {
+    display: none;
+    visibility: hidden; } }
+
 /******************************************
     HEADER
 /******************************************/
@@ -10081,7 +10086,11 @@ hr.invis {
   .service-section .col-md-8,
   .service-section .cta-box__services-content,
   .service-section .col-sm-7,
+  .service-section .page-heading__content,
+  .service-section .post-heading__content,
   .service-section .col-sm-5,
+  .service-section .page-heading__image,
+  .service-section .post-heading__image,
   .service-section .col-md-6:nth-child(1n),
   .service-section .post-heading__image:nth-child(1n),
   .service-section .post-heading__content:nth-child(1n),
@@ -10157,7 +10166,11 @@ hr.invis {
   .service-section .col-md-8,
   .service-section .cta-box__services-content,
   .service-section .col-sm-7,
+  .service-section .page-heading__content,
+  .service-section .post-heading__content,
   .service-section .col-sm-5,
+  .service-section .page-heading__image,
+  .service-section .post-heading__image,
   .service-section .col-md-6:nth-child(1n),
   .service-section .post-heading__image:nth-child(1n),
   .service-section .post-heading__content:nth-child(1n),
@@ -10804,7 +10817,7 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
     height: 100%; } }
 
 /* Custom Gutters */
-no-gutters {
+.no-gutters {
   margin-left: 0;
   margin-right: 0; }
 
@@ -10812,6 +10825,10 @@ no-gutters {
 .no-gutters > [class*="col-"] {
   padding-left: 0;
   padding-right: 0; }
+
+.gutter-10 {
+  margin-right: -5px;
+  margin-left: -5px; }
 
 .gutter-10 div[class^="col"] {
   padding-right: 5px;
@@ -11139,6 +11156,13 @@ no-gutters {
   position: relative;
   overflow: hidden; }
 
+.page-heading__image {
+  margin-top: 30px; }
+
+@media (min-width: 768px) {
+  .page-heading__image {
+    margin-top: 0; } }
+
 .page-heading__content-subtitle {
   color: #e8e8e8; }
 
@@ -11178,6 +11202,7 @@ no-gutters {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: #111;
   position: relative;
   overflow: hidden; }
 
@@ -11188,7 +11213,13 @@ no-gutters {
   border-radius: 0 0 3px 3px; }
 
 .post-heading__content {
-  padding: 90px 0; }
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+@media (min-width: 992px) {
+  .post-heading__content {
+    padding-top: 60px;
+    padding-bottom: 60px; } }
 
 .bg-highlight .post-heading__content-subtitle {
   color: #e8e8e8; }
