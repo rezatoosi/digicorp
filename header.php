@@ -44,7 +44,6 @@
 
 </head>
 <body <?php body_class(); ?>>
-  <?php // TODO: check the markup, we have 2 container, we have no row ?>
     <div id="wrapper">
         <header class="header fixed-header">
             <div class="container">
