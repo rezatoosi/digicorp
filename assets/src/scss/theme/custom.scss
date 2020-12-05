@@ -1102,16 +1102,6 @@ ul.contact-list {
     text-transform: uppercase;
     // color: rgba(255, 255, 255, 0.5);
     color: #b6b6b6;
-
-    svg {
-      width: 24px;
-      height: 24px;
-      fill: #b6b6b6;
-    }
-
-    &:hover svg {
-      fill: $color-light;
-    }
 }
 
 .copyrights ul {
@@ -1123,6 +1113,30 @@ ul.contact-list {
     margin: 0 0 0 15px;
     padding: 0;
     display: inline-block;
+}
+
+.footer-social-icons {
+  @extend .list-inline;
+
+  li:first-child {
+    margin-left: 0;
+  }
+
+  a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: #b6b6b6;
+  }
+
+  a:hover svg {
+    fill: $color-light;
+  }
 }
 
 .contact li {
@@ -1179,10 +1193,11 @@ ul.contact-list {
     text-decoration: none;
     -webkit-appearance: none;
 
-    background: rgba(0,0,0,0.15);
+    background: rgba(0,0,0,0.5);
+    border: 3px solid rgba(240,240,240,0.2);
     display: inline-block;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     text-align: center;
     border-radius: 4px;
     position: fixed;
@@ -1195,7 +1210,7 @@ ul.contact-list {
 
     font-size: 16px;
     // line-height: 35px;
-    color: #999;
+    color: #ddd;
 
     &.show {
       visibility: visible;
@@ -1207,7 +1222,7 @@ ul.contact-list {
 @media screen and (min-width: 992px) {
   .back-to-top {
     .back-to-top-btn {
-      bottom: 100px;
+      bottom: 30px;
       right: 30px;
     }
   }

@@ -1446,12 +1446,12 @@ ol ol {
   padding-right: 0;
   list-style: none; }
 
-.list-inline {
+.list-inline, .footer-social-icons {
   padding-right: 0;
   margin-right: -5px;
   list-style: none; }
 
-.list-inline > li {
+.list-inline > li, .footer-social-icons > li {
   display: inline-block;
   padding-left: 5px;
   padding-right: 5px; }
@@ -6515,9 +6515,11 @@ a.active,
 .navbar-toggle i.close,
 .header-lang-btn:hover,
 .post-micro .posttype,
-.back-to-top-btn:hover,
 .services-list .item .item-image:hover .item-icon i {
   color: #c10d0d !important; }
+
+.back-to-top-btn:hover {
+  color: #fff !important; }
 
 .btn-svg-icon svg {
   fill: #c10d0d !important; }
@@ -7652,16 +7654,6 @@ ul.contact-list li a.ltr {
   text-transform: uppercase;
   color: #b6b6b6; }
 
-.contact li a svg,
-.copyrights a svg {
-  width: 24px;
-  height: 24px;
-  fill: #b6b6b6; }
-
-.contact li a:hover svg,
-.copyrights a:hover svg {
-  fill: #e8e8e8; }
-
 .copyrights ul {
   padding: 0;
   margin: 20px 0 0 0; }
@@ -7670,6 +7662,22 @@ ul.contact-list li a.ltr {
   margin: 0 15px 0 0;
   padding: 0;
   display: inline-block; }
+
+.footer-social-icons li:first-child {
+  margin-right: 0; }
+
+.footer-social-icons a {
+  display: inline-block;
+  width: 24px;
+  height: 24px; }
+
+.footer-social-icons svg {
+  width: 100%;
+  height: 100%;
+  fill: #b6b6b6; }
+
+.footer-social-icons a:hover svg {
+  fill: #e8e8e8; }
 
 .contact li {
   list-style: none;
@@ -7715,10 +7723,11 @@ ul.contact-list li a.ltr {
   cursor: pointer;
   text-decoration: none;
   -webkit-appearance: none;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.5);
+  border: 3px solid rgba(240, 240, 240, 0.2);
   display: inline-block;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   text-align: center;
   border-radius: 4px;
   position: fixed;
@@ -7731,7 +7740,7 @@ ul.contact-list li a.ltr {
   visibility: hidden;
   opacity: 0;
   font-size: 16px;
-  color: #999; }
+  color: #ddd; }
 
 .back-to-top .back-to-top-btn.show {
   visibility: visible;
@@ -7739,7 +7748,7 @@ ul.contact-list li a.ltr {
 
 @media screen and (min-width: 992px) {
   .back-to-top .back-to-top-btn {
-    bottom: 100px;
+    bottom: 30px;
     left: 30px; } }
 
 /******************************************

@@ -278,12 +278,14 @@ if ( ! function_exists( 'digicorp_footer_social_ul' ) ) {
   ** prints social media links in a ul for site footer
   */
   function digicorp_footer_social_ul() {
-    $ul = '<ul class="list-inline">%s</ul>';
-    $li = '<li><a href="%s">%s</a></li>';
+    $ul = '<ul class="footer-social-icons">%s</ul>';
+    $li = '<li><a href="%s" target="_blank">%s</a></li>';
 
     $instagram = get_theme_mod( 'digicorp_settings_instagram' );
     $linkedin = get_theme_mod( 'digicorp_settings_linkedin' );
     $facebook = get_theme_mod( 'digicorp_settings_facebook' );
+    $whatsapp = get_theme_mod( 'digicorp_settings_whatsapp' );
+    $telegram = get_theme_mod( 'digicorp_settings_telegram' );
 
     $output = '';
 
@@ -291,21 +293,36 @@ if ( ! function_exists( 'digicorp_footer_social_ul' ) ) {
       $output = sprintf(
         $li,
         $instagram,
-        digicorp_svg( 'social-instagram2', '', '0 0 24 24' )
+        digicorp_svg( 'social-51-instagram-line', '', '0 0 512 512' )
       );
     }
     if ( ! empty( $linkedin ) ) {
       $output .= sprintf(
         $li,
         $linkedin,
-        digicorp_svg( 'social-linkedin2', '', '0 0 24 24' )
+        digicorp_svg( 'social-51-linkedin-line', '', '0 0 512 512' )
       );
     }
     if ( ! empty( $facebook ) ) {
       $output .= sprintf(
         $li,
         $facebook,
-        digicorp_svg( 'social-facebook2', '', '0 0 24 24' )
+        digicorp_svg( 'social-51-facebook-line', '', '0 0 512 512' )
+      );
+    }
+    if ( ! empty( $whatsapp ) ) {
+      $output .= sprintf(
+        $li,
+        $whatsapp,
+        digicorp_svg( 'social-51-whatsapp-line', '', '0 0 512 512' )
+
+      );
+    }
+    if ( ! empty( $telegram ) ) {
+      $output .= sprintf(
+        $li,
+        $telegram,
+        digicorp_svg( 'social-51-telegram-line', '', '0 -31 512 512' )
       );
     }
 

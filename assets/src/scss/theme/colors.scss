@@ -42,9 +42,12 @@ a.active,
 .navbar-toggle i.close,
 .header-lang-btn:hover,
 .post-micro .posttype,
-.back-to-top-btn:hover,
 .services-list .item .item-image:hover .item-icon i {
     color: #c10d0d !important;
+}
+
+.back-to-top-btn:hover {
+  color: $color-white !important;
 }
 
 .btn-svg-icon svg {
