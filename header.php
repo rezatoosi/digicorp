@@ -50,6 +50,7 @@
                 <nav class="navbar navbar-default navbar-static-top">
 
                         <div class="navbar-header">
+                            <?php the_custom_logo(); ?>
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                 <span class="sr-only">
                                   <?php
@@ -81,7 +82,7 @@
                               <i class="fa fa-search"></i>
                               <span class="sr-only"><?php _e( "Search", "digicorpdomain" ) ?></span>
                             </button>
-                            <?php the_custom_logo(); ?>
+
 
                         </div>
 
