@@ -1093,7 +1093,9 @@ ul.contact-list {
   color: $color-footer-text;
 }
 
-.footer a:hover {
+.footer a:hover,
+.footer a:active,
+.footer a:focus {
   color: $color-light !important;
 }
 
@@ -1118,7 +1120,7 @@ ul.contact-list {
 
 .contact li a,
 .copyrights a {
-    text-transform: uppercase;
+    // text-transform: uppercase;
     // color: rgba(255, 255, 255, 0.5);
     color: $color-footer-text;
 }
