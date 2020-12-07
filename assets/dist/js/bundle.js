@@ -3912,15 +3912,31 @@ function(t,e,i,s){var n=function(e){this._core=e,this._timeout=null,this._paused
     // }
 
     /* Run data- elements ------------------------------------- */
-    $('[data-bg-color]').each(function() {
-        $(this).css("cssText", "background: " + $(this).data("bg-color") + " !important;");
+    $('[data-bg]').each(function() {
+        $(this).css('background', $(this).data("bg"));
     });
     $('[data-bg-img]').each(function() {
         $(this).css('background-image', 'url(' + $(this).data("bg-img") + ')');
     });
-    $('[data-bg]').each(function() {
-        $(this).css('background', $(this).data("bg"));
+    $('[data-bg-color]').each(function() {
+        $(this).css("background-color", $(this).data("bg-color"));
     });
+    $('[data-bg-pos-x]').each(function() {
+        $(this).css('background-position-x', $(this).data("bg-pos-x"));
+    });
+    $('[data-bg-pos-y]').each(function() {
+        $(this).css('background-position-y', $(this).data("bg-pos-y"));
+    });
+    $('[data-bg-size]').each(function() {
+        $(this).css('background-size', $(this).data("bg-size"));
+    });
+    $('[data-bg-repeat]').each(function() {
+        $(this).css('background-repeat', $(this).data("bg-repeat"));
+    });
+    $('[data-bg-attachment]').each(function() {
+        $(this).css('background-attachment', $(this).data("bg-attachment"));
+    });
+
 
     /* Run smooth scroll ------------------------------------- */
     //https://www.npmjs.com/package/smooth-scroll

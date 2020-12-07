@@ -13,7 +13,6 @@
 
 .post-heading__row {
   @extend .row;
-  @extend .text-left;
 }
 
 .post-heading__image {
@@ -30,6 +29,7 @@
 .post-heading__content {
   @extend .col-sm-7;
   @extend .col-md-6;
+  @extend .text-left;
   padding-top: 30px;
   padding-bottom: 30px;
 

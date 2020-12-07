@@ -200,3 +200,10 @@ a.epsilon-button {
 .ariana-media-control .img-preview img {
 	min-width: 50px;
 }
+
+
+/* background position control */
+body.rtl .background-position-control {
+	display: inline-block;
+	transform: scaleX(-1);
+}

@@ -207,6 +207,29 @@ $about_section_brands = new Digicorp_Customizer_Frontpage_Section_V3(
 	'sidebar-widgets-aboutus_brands'
 );
 
+// add section creator class - Version 4
+require_once get_template_directory() . '/inc/customizer/class-digicorp-customizer-section-v4.php';
+$section_frontpage_slider_args = array(
+	// 'description' => __( ''),
+	// 'fields' => array( 'title' ),
+	// 'remove_fields' => array( 'title' ),
+	'selectors'	=>	array(
+		'title' 			=> '.slider__content-title h1',
+		'subtitle' 		=> '.slider__content-subtitle span',
+		'display_hr' 	=> '.slider__content-subtitle hr',
+		'text' 				=> '.slider__content-text p',
+		'image' 			=> '.slider__image img',
+		'icon' 				=> '.slider__content-icon img',
+		'buttons' 		=> '.slider__content-buttons'
+	),
+);
+$section_frontpage_slider = new Digicorp_Customizer_Section_V4(
+	'digicorp_frontpage_panel',
+	'section_frontpage_slider',
+	'#slider',
+	__( 'Frontpage - Slider', 'digicorpdomain' ),
+	$section_frontpage_slider_args
+);
 
 /**
  * Render the site title for the selective refresh partial.
@@ -332,5 +355,21 @@ if ( ! function_exists( 'digicorp_sanitize_checkbox' ) ) {
 		} else {
 			return 0;
 		}
+	}
+}
+
+if ( ! function_exists( 'digicorp_sanitize_select' ) ) {
+	/**
+	 * Function to sanitize selects
+	 */
+	function digicorp_sanitize_select( $value, $setting ) {
+		// Ensure input is a slug.
+  	$value = sanitize_key( $value );
+
+		// Get list of choices from the control associated with the setting.
+	  $choices = $setting->manager->get_control( $setting->id )->choices;
+
+	  // If the input is a valid key, return it; otherwise, return the default.
+	  return ( array_key_exists( $value, $choices ) ? $value : $setting->default );
 	}
 }

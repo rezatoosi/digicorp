@@ -76,3 +76,17 @@ if ( ! class_exists( 'Epsilon_Control_Button' ) ):
         <?php }
     }
 endif;
+
+if ( ! class_exists( 'Digicorp_Control_Seprator' ) ):
+    class Digicorp_Control_Seprator extends WP_Customize_Control {
+        public $type = 'digicorp_seprator';
+
+        public function render_content() { ?>
+            <label>
+              <br>
+              <hr>
+              <br>
+            </label>
+        <?php }
+    }
+endif;

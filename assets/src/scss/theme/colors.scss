@@ -215,6 +215,14 @@ fieldset[disabled] .btn-primary.focus,
   color: #c10d0d!important;
 }
 
+.bg-dark-blue {
+  background-color: $color-dark-blue;
+}
+
+.color-dark-blue {
+  color: $color-dark-blue;
+}
+
 .bg-grd-1 {
   background: linear-gradient(114deg,#ff003a,#c10d0d);
   background-size: 100% 100%;
@@ -227,7 +235,11 @@ fieldset[disabled] .btn-primary.focus,
 }
 
 .bg-white {
-  background-color: #fff !important;
+  background-color: $color-white !important;
+}
+
+.color-white {
+  color: $color-white !important;
 }
 
 .bg-white-transparent {

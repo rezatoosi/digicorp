@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-11-28T09:21:36+00:00\n"
+"POT-Creation-Date: 2020-12-07T14:24:45+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.2.0\n"
 "X-Domain: digicorpdomain\n"
@@ -62,10 +62,6 @@ msgstr ""
 msgid "Web Services"
 msgstr ""
 
-#: archive-ariana-services.php:27
-msgid "OUR SERVICES"
-msgstr ""
-
 #: backup/_home.php:51
 #: backup/__home.php:56
 #: templates/template-home-sidebar.php:57
@@ -96,7 +92,7 @@ msgstr ""
 
 #. translators: title of other services section in single page of services
 #: backup/_single-ariana-services.php:51
-#: inc/template-tags.php:1011
+#: inc/template-tags.php:1186
 msgid "OTHER SERVICES"
 msgstr ""
 
@@ -175,29 +171,33 @@ msgstr ""
 msgid "Post Comment"
 msgstr ""
 
-#: functions.php:26
+#: functions.php:28
 msgid "Header Vertical Menu"
 msgstr ""
 
-#: functions.php:30
+#: functions.php:32
 msgid "Footer Vertical Menu"
 msgstr ""
 
-#: functions.php:93
+#: functions.php:95
 msgid "Small"
 msgstr ""
 
-#: functions.php:94
+#: functions.php:96
+msgid "Medium"
+msgstr ""
+
+#: functions.php:97
 msgid "Page Header"
 msgstr ""
 
 #. translators: screen reader text for nav icon in small screens
-#: header.php:57
+#: header.php:58
 msgid "Toggle navigation"
 msgstr ""
 
-#: header.php:82
-#: header.php:96
+#: header.php:83
+#: header.php:97
 #: searchform.php:11
 msgid "Search"
 msgstr ""
@@ -205,6 +205,7 @@ msgstr ""
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:116
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:126
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:112
+#: inc/customizer/class-digicorp-customizer-section-v4.php:173
 #: inc/customizer/sections/blog.php:24
 #: inc/customizer/sections/features.php:24
 #: inc/customizer/sections/projects.php:24
@@ -217,6 +218,7 @@ msgstr ""
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:127
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:137
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:123
+#: inc/customizer/class-digicorp-customizer-section-v4.php:189
 #: inc/customizer/sections/blog.php:35
 #: inc/customizer/sections/features.php:35
 #: inc/customizer/sections/projects.php:35
@@ -229,6 +231,7 @@ msgstr ""
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:144
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:154
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:140
+#: inc/customizer/class-digicorp-customizer-section-v4.php:211
 #: inc/customizer/sections/blog.php:51
 #: inc/customizer/sections/features.php:51
 #: inc/customizer/sections/projects.php:51
@@ -239,6 +242,7 @@ msgstr ""
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:161
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:171
+#: inc/customizer/class-digicorp-customizer-section-v4.php:255
 msgid "Description Text"
 msgstr ""
 
@@ -249,6 +253,7 @@ msgstr ""
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:215
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:225
+#: inc/customizer/class-digicorp-customizer-section-v4.php:357
 msgid "Icon Image"
 msgstr ""
 
@@ -260,18 +265,21 @@ msgstr ""
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:227
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:237
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:182
+#: inc/customizer/class-digicorp-customizer-section-v4.php:381
 msgid "Container CSS Class"
 msgstr ""
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:239
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:249
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:194
+#: inc/customizer/class-digicorp-customizer-section-v4.php:403
 msgid "Backgound Color"
 msgstr ""
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:250
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:260
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:205
+#: inc/customizer/class-digicorp-customizer-section-v4.php:424
 #: inc/customizer/sections/slider-typed.php:81
 msgid "Backgound Image"
 msgstr ""
@@ -279,6 +287,7 @@ msgstr ""
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:251
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:261
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:206
+#: inc/customizer/class-digicorp-customizer-section-v4.php:425
 #: inc/customizer/sections/slider-typed.php:82
 msgid "Minimum width: 2kpx"
 msgstr ""
@@ -297,6 +306,106 @@ msgstr ""
 msgid "Call To Action Page"
 msgstr ""
 
+#: inc/customizer/class-digicorp-customizer-section-v4.php:132
+#: inc/customizer/customizer.php:102
+#: inc/customizer/customizer.php:125
+#: inc/customizer/customizer.php:143
+#: inc/customizer/customizer.php:153
+#: inc/customizer/customizer.php:163
+#: inc/customizer/customizer.php:173
+#: inc/customizer/customizer.php:183
+#: inc/customizer/customizer.php:193
+#: inc/customizer/customizer.php:206
+msgid "Add & Edit Widgets"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:233
+msgid "Display seprator line"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:277
+msgid "Image"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:278
+msgid "Set image of this section"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:335
+msgid "Icon CSS Class"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:446
+msgid "Backgound Highlight"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:447
+msgid "Default is dark highlight if background image is set"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:450
+msgid "Default"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:451
+msgid "Drak highlight"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:452
+msgid "Draker highlight"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:453
+msgid "Light highlight"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:454
+msgid "Main color highlight"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:455
+msgid "No Highlight"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:487
+msgid "Background Image Position"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:513
+msgid "Backgound image size"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:535
+msgid "Backgound repeat"
+msgstr ""
+
+#. translators: Default Text for Slider CTA
+#: inc/customizer/class-digicorp-customizer-section-v4.php:575
+#: inc/customizer/customizer.php:259
+#: inc/customizer/sections/slider-typed.php:90
+msgid "CTA Button Text"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:576
+msgid "if set this, it overides buttons section"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:594
+msgid "CTA Button Link"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:612
+msgid "CTA Button Page"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:638
+msgid "Buttons"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:639
+msgid "insert [a] tags, remember to use .btn as class."
+msgstr ""
+
 #: inc/customizer/customizer.php:39
 msgid "Front Page Sections"
 msgstr ""
@@ -305,113 +414,116 @@ msgstr ""
 msgid "Manage front-page sections"
 msgstr ""
 
-#: inc/customizer/customizer.php:82
+#: inc/customizer/customizer.php:45
+msgid "Theme Settings"
+msgstr ""
+
+#: inc/customizer/customizer.php:46
+msgid "Manage theme settings"
+msgstr ""
+
+#: inc/customizer/customizer.php:99
 msgid "Custom Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:83
+#: inc/customizer/customizer.php:100
 msgid "Manage custom section settings."
 msgstr ""
 
-#: inc/customizer/customizer.php:85
-#: inc/customizer/customizer.php:111
-#: inc/customizer/customizer.php:121
-#: inc/customizer/customizer.php:139
-#: inc/customizer/customizer.php:149
-#: inc/customizer/customizer.php:159
-#: inc/customizer/customizer.php:169
-#: inc/customizer/customizer.php:179
-msgid "Add & Edit Widgets"
-msgstr ""
-
-#: inc/customizer/customizer.php:98
+#: inc/customizer/customizer.php:112
 #: inc/customizer/sections/features.php:8
 msgid "Features Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:99
+#: inc/customizer/customizer.php:113
 #: inc/customizer/sections/features.php:9
 msgid "Manage features section settings."
 msgstr ""
 
-#: inc/customizer/customizer.php:101
+#: inc/customizer/customizer.php:115
 #: inc/customizer/sections/features.php:72
 msgid "Add & Edit features"
 msgstr ""
 
-#: inc/customizer/customizer.php:108
+#: inc/customizer/customizer.php:122
+msgid "About us - History"
+msgstr ""
+
+#: inc/customizer/customizer.php:123
+msgid "Manage history section in about us page."
+msgstr ""
+
+#: inc/customizer/customizer.php:132
+msgid "About us - Our Philosophy"
+msgstr ""
+
+#: inc/customizer/customizer.php:133
+msgid "Manage our philosophy section in about us page."
+msgstr ""
+
+#: inc/customizer/customizer.php:140
+msgid "Services - Our Main Services"
+msgstr ""
+
+#: inc/customizer/customizer.php:141
+msgid "Manage our main services section in services page."
+msgstr ""
+
+#: inc/customizer/customizer.php:150
+#: inc/register-sidebars.php:172
+msgid "Contact - Address"
+msgstr ""
+
+#: inc/customizer/customizer.php:151
+msgid "Manage our addresses in contactus or frontpage."
+msgstr ""
+
+#: inc/customizer/customizer.php:160
+#: inc/register-sidebars.php:182
+msgid "Contact - Phone"
+msgstr ""
+
+#: inc/customizer/customizer.php:161
+msgid "Manage our phone numbers in contactus or frontpage."
+msgstr ""
+
+#: inc/customizer/customizer.php:170
+#: inc/register-sidebars.php:192
+msgid "Contact - Social"
+msgstr ""
+
+#: inc/customizer/customizer.php:171
+msgid "Manage our social network links in contactus or frontpage."
+msgstr ""
+
+#: inc/customizer/customizer.php:180
+#: inc/register-sidebars.php:212
+msgid "Contact - Form"
+msgstr ""
+
+#: inc/customizer/customizer.php:181
+msgid "Manage Contact Form in contactus"
+msgstr ""
+
+#: inc/customizer/customizer.php:190
+msgid "Services - CTA"
+msgstr ""
+
+#: inc/customizer/customizer.php:191
+msgid "Manage CTA section in services."
+msgstr ""
+
+#: inc/customizer/customizer.php:203
 #: inc/register-sidebars.php:123
 msgid "About us - Brands"
 msgstr ""
 
-#: inc/customizer/customizer.php:109
+#: inc/customizer/customizer.php:204
 msgid "Manage brands section in about us page."
 msgstr ""
 
-#: inc/customizer/customizer.php:118
-msgid "About us - History"
-msgstr ""
-
-#: inc/customizer/customizer.php:119
-msgid "Manage history section in about us page."
-msgstr ""
-
-#: inc/customizer/customizer.php:128
-msgid "About us - Our Philosophy"
-msgstr ""
-
-#: inc/customizer/customizer.php:129
-msgid "Manage our philosophy section in about us page."
-msgstr ""
-
-#: inc/customizer/customizer.php:136
-msgid "Services - Our Main Services"
-msgstr ""
-
-#: inc/customizer/customizer.php:137
-msgid "Manage our main services section in services page."
-msgstr ""
-
-#: inc/customizer/customizer.php:146
-#: inc/register-sidebars.php:163
-msgid "Contact - Address"
-msgstr ""
-
-#: inc/customizer/customizer.php:147
-msgid "Manage our addresses in contactus or frontpage."
-msgstr ""
-
-#: inc/customizer/customizer.php:156
-#: inc/register-sidebars.php:173
-msgid "Contact - Phone"
-msgstr ""
-
-#: inc/customizer/customizer.php:157
-msgid "Manage our phone numbers in contactus or frontpage."
-msgstr ""
-
-#: inc/customizer/customizer.php:166
-#: inc/register-sidebars.php:183
-msgid "Contact - Social"
-msgstr ""
-
-#: inc/customizer/customizer.php:167
-msgid "Manage our social network links in contactus or frontpage."
-msgstr ""
-
-#: inc/customizer/customizer.php:176
-#: inc/register-sidebars.php:203
-msgid "Contact - Form"
-msgstr ""
-
-#: inc/customizer/customizer.php:177
-msgid "Manage Contact Form in contactus"
-msgstr ""
-
-#. translators: Default Text for Slider CTA
-#: inc/customizer/customizer.php:207
-#: inc/customizer/sections/slider-typed.php:90
-msgid "CTA Button Text"
+#: inc/customizer/customizer.php:230
+msgid "Frontpage - Slider"
 msgstr ""
 
 #: inc/customizer/sections/blog.php:8
@@ -477,6 +589,58 @@ msgstr ""
 
 #: inc/customizer/sections/testimonials.php:9
 msgid "Manage testimonials section settings."
+msgstr ""
+
+#: inc/customizer/settings/settings-default-post-image.php:11
+msgid "Default post images"
+msgstr ""
+
+#: inc/customizer/settings/settings-default-post-image.php:12
+msgid "Set default image of all post types"
+msgstr ""
+
+#: inc/customizer/settings/settings-default-post-image.php:32
+msgid "Default Image"
+msgstr ""
+
+#: inc/customizer/settings/settings-default-post-image.php:33
+msgid "If post has no tumbnail, this image will be used."
+msgstr ""
+
+#: inc/customizer/settings/settings-social.php:11
+msgid "Social media links"
+msgstr ""
+
+#: inc/customizer/settings/settings-social.php:12
+msgid "Set link of your social media"
+msgstr ""
+
+#: inc/customizer/settings/settings-social.php:31
+msgid "Instagram"
+msgstr ""
+
+#: inc/customizer/settings/settings-social.php:50
+#: inc/template-tags.php:540
+msgid "LinkedIn"
+msgstr ""
+
+#: inc/customizer/settings/settings-social.php:69
+#: inc/template-tags.php:568
+msgid "Facebook"
+msgstr ""
+
+#: inc/customizer/settings/settings-social.php:88
+#: inc/template-tags.php:582
+msgid "WhatsApp"
+msgstr ""
+
+#: inc/customizer/settings/settings-social.php:107
+#: inc/template-tags.php:596
+msgid "Telegram"
+msgstr ""
+
+#: inc/customizer/settings/settings-social.php:126
+msgid "twitter"
 msgstr ""
 
 #: inc/register-sidebars.php:7
@@ -603,162 +767,178 @@ msgstr ""
 msgid "CTA under main services section in services or frontpage"
 msgstr ""
 
-#: inc/register-sidebars.php:165
+#: inc/register-sidebars.php:161
+msgid "Services CTA - Service Pages"
+msgstr ""
+
+#: inc/register-sidebars.php:163
+msgid "CTA under services archive and all other services"
+msgstr ""
+
+#: inc/register-sidebars.php:174
 msgid "Contact Address section in contact or frontpage"
 msgstr ""
 
-#: inc/register-sidebars.php:175
+#: inc/register-sidebars.php:184
 msgid "Contact Phone section in contact or frontpage"
 msgstr ""
 
-#: inc/register-sidebars.php:185
+#: inc/register-sidebars.php:194
 msgid "Contact Social section in contact or frontpage"
 msgstr ""
 
-#: inc/register-sidebars.php:193
+#: inc/register-sidebars.php:202
 msgid "Contact - Map"
 msgstr ""
 
-#: inc/register-sidebars.php:195
+#: inc/register-sidebars.php:204
 msgid "Contact Map section in contact or frontpage"
 msgstr ""
 
-#: inc/register-sidebars.php:205
+#: inc/register-sidebars.php:214
 msgid "Contact Form section in contactus"
 msgstr ""
 
-#: inc/template-tags.php:95
-#: inc/template-tags.php:102
+#: inc/template-tags.php:100
+#: inc/template-tags.php:107
 msgid "Back"
 msgstr ""
 
-#: inc/template-tags.php:112
+#: inc/template-tags.php:119
 msgid "Get a free proposal"
 msgstr ""
 
 #. Translators: %s: page title for search page
-#: inc/template-tags.php:164
+#: inc/template-tags.php:240
 msgid "Search results for \"%s\""
 msgstr ""
 
 #. translators: %s: post date.
-#: inc/template-tags.php:219
+#: inc/template-tags.php:358
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
 #. translators: %s: post author.
-#: inc/template-tags.php:247
+#: inc/template-tags.php:386
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
 #. translators: %s: post publish date - Month and Year
-#: inc/template-tags.php:278
+#: inc/template-tags.php:417
 msgid "Click for all articles sent on %s"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:308
+#: inc/template-tags.php:447
 msgid "Edit<span class=\"screen-reader-text sr-only\">%s</span>"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:356
+#: inc/template-tags.php:495
 msgid "<button class=\"btn\">Edit <span class=\"sr-hidden\">This Post</span><span class=\"screen-reader-text sr-only\"> %s</span></button>"
 msgstr ""
 
-#: inc/template-tags.php:465
+#: inc/template-tags.php:554
+msgid "Twitter"
+msgstr ""
+
+#: inc/template-tags.php:604
 msgid "Check this out please"
 msgstr ""
 
-#: inc/template-tags.php:491
+#: inc/template-tags.php:611
+msgid "eMail"
+msgstr ""
+
+#: inc/template-tags.php:630
 msgid "Share This:"
 msgstr ""
 
 #. translators: %s: Display name of the user
-#: inc/template-tags.php:626
+#: inc/template-tags.php:801
 msgid "Visit archive page of %s"
 msgstr ""
 
-#: inc/template-tags.php:648
+#: inc/template-tags.php:823
 msgid "«"
 msgstr ""
 
-#: inc/template-tags.php:649
+#: inc/template-tags.php:824
 msgid "»"
 msgstr ""
 
 #. translators: % is page number
-#: inc/template-tags.php:673
+#: inc/template-tags.php:848
 msgid "Page %"
 msgstr ""
 
-#: inc/template-tags.php:691
+#: inc/template-tags.php:866
 #: searchform.php:44
 msgid "Blog"
 msgstr ""
 
-#: inc/template-tags.php:702
+#: inc/template-tags.php:877
 msgid "Our Services"
 msgstr ""
 
-#: inc/template-tags.php:707
+#: inc/template-tags.php:882
 msgid "Our Projects"
 msgstr ""
 
 #. Translators: %s: Title of post type, in post excerpt view
-#: inc/template-tags.php:718
+#: inc/template-tags.php:893
 msgid "Found in %s"
 msgstr ""
 
 #. Translators: %s: Name of category
-#: inc/template-tags.php:747
+#: inc/template-tags.php:922
 msgid "Visit articles in category of %s"
 msgstr ""
 
-#: inc/template-tags.php:796
+#: inc/template-tags.php:971
 msgid "Read time:"
 msgstr ""
 
-#: inc/template-tags.php:798
+#: inc/template-tags.php:973
 msgid "min"
 msgstr ""
 
-#: inc/template-tags.php:861
+#: inc/template-tags.php:1036
 msgid "<  Previous Post"
 msgstr ""
 
-#: inc/template-tags.php:881
+#: inc/template-tags.php:1056
 msgid "Next Post  >"
 msgstr ""
 
-#: inc/template-tags.php:919
-#: inc/template-tags.php:967
+#: inc/template-tags.php:1094
+#: inc/template-tags.php:1142
 msgid "Related Articles"
 msgstr ""
 
 #. translators: %s: title of service. this text will add to title of sub services section in single page of services
-#: inc/template-tags.php:1047
+#: inc/template-tags.php:1222
 msgid "%s includes the following services"
 msgstr ""
 
 #. translators: %s: title of service. this text will add to title of related services section in single page of services
-#: inc/template-tags.php:1156
+#: inc/template-tags.php:1331
 msgid "%s related services"
 msgstr ""
 
 #. translators: this text will add to pre title of related posts of a service section in single page of services
-#: inc/template-tags.php:1232
+#: inc/template-tags.php:1407
 msgid "Knowledge base"
 msgstr ""
 
 #. translators: %s: title of service. this text will add to title of related posts of a service section in single page of services
-#: inc/template-tags.php:1236
+#: inc/template-tags.php:1411
 msgid "%s related articles"
 msgstr ""
 
-#: inc/template-tags.php:1293
+#: inc/template-tags.php:1468
 msgid "Related services"
 msgstr ""
 
