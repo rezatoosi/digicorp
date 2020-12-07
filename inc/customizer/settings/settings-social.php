@@ -123,7 +123,7 @@ $wp_customize->add_control(
   array(
     'type'          =>  'url',
     'section'       =>  $section,
-    'label'         =>  __( 'twitter', 'digicorpdomain' ),
+    'label'         =>  __( 'Twitter', 'digicorpdomain' ),
     // 'description'   =>  __( '', 'digicorpdomain' ),
     'input_attrs'   =>  array(
       'placeholder' =>  'http://www.'
