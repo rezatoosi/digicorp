@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DIGICORP 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/digicorp\n"
-"POT-Creation-Date: 2020-11-28T09:21:36+00:00\n"
-"PO-Revision-Date: 2020-11-28 12:55+0330\n"
+"POT-Creation-Date: 2020-12-07T14:24:45+00:00\n"
+"PO-Revision-Date: 2020-12-07 18:09+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -66,10 +66,6 @@ msgstr "نمایش همه"
 msgid "Web Services"
 msgstr "خدمات وب"
 
-#: archive-ariana-services.php:27
-msgid "OUR SERVICES"
-msgstr "خدمات ما"
-
 #: backup/_home.php:51 backup/__home.php:56
 #: templates/template-home-sidebar.php:57
 msgid "Latest"
@@ -91,7 +87,7 @@ msgid "More articles in this category"
 msgstr "مطالب بیشتر در این دسته‌بندی"
 
 #. translators: title of other services section in single page of services
-#: backup/_single-ariana-services.php:51 inc/template-tags.php:1011
+#: backup/_single-ariana-services.php:51 inc/template-tags.php:1186
 msgid "OTHER SERVICES"
 msgstr "سایر خدمات"
 
@@ -175,34 +171,39 @@ msgstr "انصراف از پاسخ دادن"
 msgid "Post Comment"
 msgstr "ارسال یادداشت"
 
-#: functions.php:26
+#: functions.php:28
 msgid "Header Vertical Menu"
 msgstr "منوی افقی در هدر"
 
-#: functions.php:30
+#: functions.php:32
 msgid "Footer Vertical Menu"
 msgstr "منوی زیرنویس"
 
-#: functions.php:93
+#: functions.php:95
 msgid "Small"
 msgstr "کوچک"
 
-#: functions.php:94
+#: functions.php:96
+msgid "Medium"
+msgstr "متوسط"
+
+#: functions.php:97
 msgid "Page Header"
 msgstr "هدر صفحه"
 
 #. translators: screen reader text for nav icon in small screens
-#: header.php:57
+#: header.php:58
 msgid "Toggle navigation"
 msgstr "تغییر منو"
 
-#: header.php:82 header.php:96 searchform.php:11
+#: header.php:83 header.php:97 searchform.php:11
 msgid "Search"
 msgstr "جستجو"
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:116
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:126
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:112
+#: inc/customizer/class-digicorp-customizer-section-v4.php:173
 #: inc/customizer/sections/blog.php:24 inc/customizer/sections/features.php:24
 #: inc/customizer/sections/projects.php:24
 #: inc/customizer/sections/services.php:24
@@ -214,6 +215,7 @@ msgstr "این بخش نمایش داده شود؟"
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:127
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:137
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:123
+#: inc/customizer/class-digicorp-customizer-section-v4.php:189
 #: inc/customizer/sections/blog.php:35 inc/customizer/sections/features.php:35
 #: inc/customizer/sections/projects.php:35
 #: inc/customizer/sections/services.php:35
@@ -225,6 +227,7 @@ msgstr "عنوان"
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:144
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:154
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:140
+#: inc/customizer/class-digicorp-customizer-section-v4.php:211
 #: inc/customizer/sections/blog.php:51 inc/customizer/sections/features.php:51
 #: inc/customizer/sections/projects.php:51
 #: inc/customizer/sections/services.php:51
@@ -234,6 +237,7 @@ msgstr "زیر‌عنوان"
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:161
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:171
+#: inc/customizer/class-digicorp-customizer-section-v4.php:255
 msgid "Description Text"
 msgstr "متن تشریح"
 
@@ -244,6 +248,7 @@ msgstr "کلاس آیکون المنت اصلی (Section)"
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:215
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:225
+#: inc/customizer/class-digicorp-customizer-section-v4.php:357
 msgid "Icon Image"
 msgstr "تصویر آیکون"
 
@@ -255,18 +260,21 @@ msgstr "حداکثر ارتفاع: 40px"
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:227
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:237
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:182
+#: inc/customizer/class-digicorp-customizer-section-v4.php:381
 msgid "Container CSS Class"
 msgstr "کلاس المنت اصلی"
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:239
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:249
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:194
+#: inc/customizer/class-digicorp-customizer-section-v4.php:403
 msgid "Backgound Color"
 msgstr "رنگ زمینه"
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:250
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:260
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:205
+#: inc/customizer/class-digicorp-customizer-section-v4.php:424
 #: inc/customizer/sections/slider-typed.php:81
 msgid "Backgound Image"
 msgstr "تصویر زمینه"
@@ -274,6 +282,7 @@ msgstr "تصویر زمینه"
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:251
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:261
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:206
+#: inc/customizer/class-digicorp-customizer-section-v4.php:425
 #: inc/customizer/sections/slider-typed.php:82
 msgid "Minimum width: 2kpx"
 msgstr "حداقل عرض: 2kpx"
@@ -292,6 +301,102 @@ msgstr "پیوند کلید دعوت به عمل"
 msgid "Call To Action Page"
 msgstr "صفحه دعوت به عمل"
 
+#: inc/customizer/class-digicorp-customizer-section-v4.php:132
+#: inc/customizer/customizer.php:102 inc/customizer/customizer.php:125
+#: inc/customizer/customizer.php:143 inc/customizer/customizer.php:153
+#: inc/customizer/customizer.php:163 inc/customizer/customizer.php:173
+#: inc/customizer/customizer.php:183 inc/customizer/customizer.php:193
+#: inc/customizer/customizer.php:206
+msgid "Add & Edit Widgets"
+msgstr "مدیریت ابزارک‌ها"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:233
+msgid "Display seprator line"
+msgstr "نمایش خط جدا کننده"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:277
+msgid "Image"
+msgstr "تصویر"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:278
+msgid "Set image of this section"
+msgstr "تنظیم تصویر این بخش"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:335
+msgid "Icon CSS Class"
+msgstr "کلاس CSS آیکون"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:446
+msgid "Backgound Highlight"
+msgstr "هایلایت پس زمینه"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:447
+msgid "Default is dark highlight if background image is set"
+msgstr "اگر تصویر پس زمینه تنظیم شده باشد، پیش فرض هایلایت تیره تر است"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:450
+msgid "Default"
+msgstr "پیش فرض"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:451
+msgid "Drak highlight"
+msgstr "هایلایت تیره"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:452
+msgid "Draker highlight"
+msgstr "هایلایت تیره تر"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:453
+msgid "Light highlight"
+msgstr "هایلایت روشن"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:454
+msgid "Main color highlight"
+msgstr "هایلایت رنگ اصلی"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:455
+msgid "No Highlight"
+msgstr "بدون هایلایت"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:487
+msgid "Background Image Position"
+msgstr "موقعیت تصویر پس زمینه"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:513
+msgid "Backgound image size"
+msgstr "اندازه تصویر پس زمینه"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:535
+msgid "Backgound repeat"
+msgstr "پس زمینه تکرار شونده"
+
+#. translators: Default Text for Slider CTA
+#: inc/customizer/class-digicorp-customizer-section-v4.php:575
+#: inc/customizer/customizer.php:259
+#: inc/customizer/sections/slider-typed.php:90
+msgid "CTA Button Text"
+msgstr "متن کلید دعوت به عمل"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:576
+msgid "if set this, it overides buttons section"
+msgstr "اگر این قسمت تنظیم شود، تنظیمات قسمت کلیدها نادیده گرفته می شود"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:594
+msgid "CTA Button Link"
+msgstr "متن کلید دعوت به عمل"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:612
+msgid "CTA Button Page"
+msgstr "صفحه کلید دعوت به عمل"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:638
+msgid "Buttons"
+msgstr "کلیدها"
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:639
+msgid "insert [a] tags, remember to use .btn as class."
+msgstr "تگ های [a] اضافه کنید، به خاطر داشته باشید که کلاس .btn اضافه کنید"
+
 #: inc/customizer/customizer.php:39
 msgid "Front Page Sections"
 msgstr "بخش های صفحه اصلی"
@@ -300,102 +405,109 @@ msgstr "بخش های صفحه اصلی"
 msgid "Manage front-page sections"
 msgstr "مدیریت بخش‌های صفحه اصلی"
 
-#: inc/customizer/customizer.php:82
+#: inc/customizer/customizer.php:45
+msgid "Theme Settings"
+msgstr "تنظیمات پوسته"
+
+#: inc/customizer/customizer.php:46
+msgid "Manage theme settings"
+msgstr "مدیریت تنظیمات پوسته"
+
+#: inc/customizer/customizer.php:99
 msgid "Custom Section"
 msgstr "بخش سفارشی"
 
-#: inc/customizer/customizer.php:83
+#: inc/customizer/customizer.php:100
 msgid "Manage custom section settings."
 msgstr "مدیریت تنظیمات بخش سفارشی صفحه اول"
 
-#: inc/customizer/customizer.php:85 inc/customizer/customizer.php:111
-#: inc/customizer/customizer.php:121 inc/customizer/customizer.php:139
-#: inc/customizer/customizer.php:149 inc/customizer/customizer.php:159
-#: inc/customizer/customizer.php:169 inc/customizer/customizer.php:179
-msgid "Add & Edit Widgets"
-msgstr "مدیریت ابزارک‌ها"
-
-#: inc/customizer/customizer.php:98 inc/customizer/sections/features.php:8
+#: inc/customizer/customizer.php:112 inc/customizer/sections/features.php:8
 msgid "Features Section"
 msgstr "بخش ویژگی‌ها"
 
-#: inc/customizer/customizer.php:99 inc/customizer/sections/features.php:9
+#: inc/customizer/customizer.php:113 inc/customizer/sections/features.php:9
 msgid "Manage features section settings."
 msgstr "مدیریت تنظیمات بخش ویژگی‌ها"
 
-#: inc/customizer/customizer.php:101 inc/customizer/sections/features.php:72
+#: inc/customizer/customizer.php:115 inc/customizer/sections/features.php:72
 msgid "Add & Edit features"
 msgstr "افزودن و ویرایش ویژگی‌ها"
 
-#: inc/customizer/customizer.php:108 inc/register-sidebars.php:123
-msgid "About us - Brands"
-msgstr "درباره ما - برندها"
-
-#: inc/customizer/customizer.php:109
-msgid "Manage brands section in about us page."
-msgstr "مدیریت قسمت برندها در صفحه درباره"
-
-#: inc/customizer/customizer.php:118
+#: inc/customizer/customizer.php:122
 msgid "About us - History"
 msgstr "درباره ما - تاریخچه"
 
-#: inc/customizer/customizer.php:119
+#: inc/customizer/customizer.php:123
 msgid "Manage history section in about us page."
 msgstr "مدیریت قسمت تاریخچه در صفحه درباره"
 
-#: inc/customizer/customizer.php:128
+#: inc/customizer/customizer.php:132
 msgid "About us - Our Philosophy"
 msgstr "درباره ما - فلسفه ما"
 
-#: inc/customizer/customizer.php:129
+#: inc/customizer/customizer.php:133
 msgid "Manage our philosophy section in about us page."
 msgstr "مدیریت قسمت فلسفه ما در صفحه درباره"
 
-#: inc/customizer/customizer.php:136
+#: inc/customizer/customizer.php:140
 msgid "Services - Our Main Services"
 msgstr "خدمات - خدمات اصلی ما"
 
-#: inc/customizer/customizer.php:137
+#: inc/customizer/customizer.php:141
 msgid "Manage our main services section in services page."
 msgstr "مدیریت قسمت خدمات اصلی در صفحه خدمات"
 
-#: inc/customizer/customizer.php:146 inc/register-sidebars.php:163
+#: inc/customizer/customizer.php:150 inc/register-sidebars.php:172
 msgid "Contact - Address"
 msgstr "تماس - آدرس"
 
-#: inc/customizer/customizer.php:147
+#: inc/customizer/customizer.php:151
 msgid "Manage our addresses in contactus or frontpage."
 msgstr "مدیریت آدرس ها در صفحه تماس"
 
-#: inc/customizer/customizer.php:156 inc/register-sidebars.php:173
+#: inc/customizer/customizer.php:160 inc/register-sidebars.php:182
 msgid "Contact - Phone"
 msgstr "تماس - تلفن"
 
-#: inc/customizer/customizer.php:157
+#: inc/customizer/customizer.php:161
 msgid "Manage our phone numbers in contactus or frontpage."
 msgstr "مدیریت شماره تلفن ها در صفحه تماس"
 
-#: inc/customizer/customizer.php:166 inc/register-sidebars.php:183
+#: inc/customizer/customizer.php:170 inc/register-sidebars.php:192
 msgid "Contact - Social"
 msgstr "تماس - اجتماعی"
 
-#: inc/customizer/customizer.php:167
+#: inc/customizer/customizer.php:171
 msgid "Manage our social network links in contactus or frontpage."
 msgstr "مدیریت شبکه های اجتماعی در صفحه تماس"
 
-#: inc/customizer/customizer.php:176 inc/register-sidebars.php:203
+#: inc/customizer/customizer.php:180 inc/register-sidebars.php:212
 msgid "Contact - Form"
 msgstr "تماس - فرم"
 
-#: inc/customizer/customizer.php:177
+#: inc/customizer/customizer.php:181
 msgid "Manage Contact Form in contactus"
 msgstr "مدیریت فرم تماس در صفحه تماس"
 
-#. translators: Default Text for Slider CTA
-#: inc/customizer/customizer.php:207
-#: inc/customizer/sections/slider-typed.php:90
-msgid "CTA Button Text"
-msgstr "متن کلید دعوت به عمل"
+#: inc/customizer/customizer.php:190
+msgid "Services - CTA"
+msgstr "خدمات - دعوت به عمل"
+
+#: inc/customizer/customizer.php:191
+msgid "Manage CTA section in services."
+msgstr "مدیریت بخش دعوت به عمل در خدمات"
+
+#: inc/customizer/customizer.php:203 inc/register-sidebars.php:123
+msgid "About us - Brands"
+msgstr "درباره ما - برندها"
+
+#: inc/customizer/customizer.php:204
+msgid "Manage brands section in about us page."
+msgstr "مدیریت قسمت برندها در صفحه درباره"
+
+#: inc/customizer/customizer.php:230
+msgid "Frontpage - Slider"
+msgstr "صفحه اصلی - اسلایدر"
 
 #: inc/customizer/sections/blog.php:8
 msgid "Blog Section"
@@ -463,6 +575,54 @@ msgstr "بخش تصدیق نامه ها"
 #: inc/customizer/sections/testimonials.php:9
 msgid "Manage testimonials section settings."
 msgstr "مدیریت بخش تصدیق نامه ها"
+
+#: inc/customizer/settings/settings-default-post-image.php:11
+msgid "Default post images"
+msgstr "تصویر پیش فرض پست ها"
+
+#: inc/customizer/settings/settings-default-post-image.php:12
+msgid "Set default image of all post types"
+msgstr "تصویر پیش فرض را برای تمام انواع پست تنظیم کنید"
+
+#: inc/customizer/settings/settings-default-post-image.php:32
+msgid "Default Image"
+msgstr "تصویر پیش فرض"
+
+#: inc/customizer/settings/settings-default-post-image.php:33
+msgid "If post has no tumbnail, this image will be used."
+msgstr "اگر پستی تصویر نداشته باشد، این تصویر استفاده می شود"
+
+#: inc/customizer/settings/settings-social.php:11
+msgid "Social media links"
+msgstr "پیوندهای شبکه های اجتماعی"
+
+#: inc/customizer/settings/settings-social.php:12
+msgid "Set link of your social media"
+msgstr "پیوند رسانه های اجتماعی‌تان را تنظیم کنید"
+
+#: inc/customizer/settings/settings-social.php:31
+msgid "Instagram"
+msgstr "اینستاگرام"
+
+#: inc/customizer/settings/settings-social.php:50 inc/template-tags.php:540
+msgid "LinkedIn"
+msgstr "لینکدین"
+
+#: inc/customizer/settings/settings-social.php:69 inc/template-tags.php:568
+msgid "Facebook"
+msgstr "فیس بوک"
+
+#: inc/customizer/settings/settings-social.php:88 inc/template-tags.php:582
+msgid "WhatsApp"
+msgstr "واتزاپ"
+
+#: inc/customizer/settings/settings-social.php:107 inc/template-tags.php:596
+msgid "Telegram"
+msgstr "تلگرام"
+
+#: inc/customizer/settings/settings-social.php:126
+msgid "twitter"
+msgstr "توییتر"
 
 #: inc/register-sidebars.php:7
 msgid "Footer Widget 1"
@@ -588,67 +748,75 @@ msgstr "فراخوان خدمات - زیر بخش خدمات اصلی"
 msgid "CTA under main services section in services or frontpage"
 msgstr "دعوت به عمل زیر بخش خدمات اصلی (صفحه اصلی یا خدمات)"
 
-#: inc/register-sidebars.php:165
+#: inc/register-sidebars.php:161
+msgid "Services CTA - Service Pages"
+msgstr "فراخوان خدمات - صفحات خدمات"
+
+#: inc/register-sidebars.php:163
+msgid "CTA under services archive and all other services"
+msgstr "دعوت به عمل در پایین صفحه آرشیو خدمات و تمام صفحات خدمت دیگر"
+
+#: inc/register-sidebars.php:174
 msgid "Contact Address section in contact or frontpage"
 msgstr "قسمت آدرس تماس در صفحه تماس"
 
-#: inc/register-sidebars.php:175
+#: inc/register-sidebars.php:184
 msgid "Contact Phone section in contact or frontpage"
 msgstr "قسمت تلفن در صفحه تماس"
 
-#: inc/register-sidebars.php:185
+#: inc/register-sidebars.php:194
 msgid "Contact Social section in contact or frontpage"
 msgstr "قسمت شبکه های اجتماعی در صفحه تماس"
 
-#: inc/register-sidebars.php:193
+#: inc/register-sidebars.php:202
 msgid "Contact - Map"
 msgstr "تماس - نقشه"
 
-#: inc/register-sidebars.php:195
+#: inc/register-sidebars.php:204
 msgid "Contact Map section in contact or frontpage"
 msgstr "قسمت نقشه در صفحه تماس"
 
-#: inc/register-sidebars.php:205
+#: inc/register-sidebars.php:214
 msgid "Contact Form section in contactus"
 msgstr "قسمت فرم تماس در صفحه تماس"
 
-#: inc/template-tags.php:95 inc/template-tags.php:102
+#: inc/template-tags.php:100 inc/template-tags.php:107
 msgid "Back"
 msgstr "بازگشت"
 
-#: inc/template-tags.php:112
+#: inc/template-tags.php:119
 msgid "Get a free proposal"
 msgstr "دریافت پروپزال رایگان"
 
 #. Translators: %s: page title for search page
-#: inc/template-tags.php:164
+#: inc/template-tags.php:240
 msgid "Search results for \"%s\""
 msgstr "نتایج جستجو برای \"%s\""
 
 #. translators: %s: post date.
-#: inc/template-tags.php:219
+#: inc/template-tags.php:358
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr "ثبت شده در تاریخ  %s"
 
 #. translators: %s: post author.
-#: inc/template-tags.php:247
+#: inc/template-tags.php:386
 msgctxt "post author"
 msgid "by %s"
 msgstr "توسط %s"
 
 #. translators: %s: post publish date - Month and Year
-#: inc/template-tags.php:278
+#: inc/template-tags.php:417
 msgid "Click for all articles sent on %s"
 msgstr "برای مشاهده تمام مطالب ارسال شده در %s کلیک کنید"
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:308
+#: inc/template-tags.php:447
 msgid "Edit<span class=\"screen-reader-text sr-only\">%s</span>"
 msgstr "ویرایش<span class=\"screen-reader-text sr-only\">%s</span>"
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:356
+#: inc/template-tags.php:495
 msgid ""
 "<button class=\"btn\">Edit <span class=\"sr-hidden\">This Post</span><span "
 "class=\"screen-reader-text sr-only\"> %s</span></button>"
@@ -656,95 +824,103 @@ msgstr ""
 "<button class=\"btn\">ویرایش <span class=\"sr-hidden\">این پست</span><span "
 "class=\"screen-reader-text sr-only\"> %s</span></button>"
 
-#: inc/template-tags.php:465
+#: inc/template-tags.php:554
+msgid "Twitter"
+msgstr "توییتر"
+
+#: inc/template-tags.php:604
 msgid "Check this out please"
 msgstr "لطفا این را بررسی کن"
 
-#: inc/template-tags.php:491
+#: inc/template-tags.php:611
+msgid "eMail"
+msgstr "ایمیل"
+
+#: inc/template-tags.php:630
 msgid "Share This:"
 msgstr "به اشتراک بگذارید:"
 
 #. translators: %s: Display name of the user
-#: inc/template-tags.php:626
+#: inc/template-tags.php:801
 msgid "Visit archive page of %s"
 msgstr "بازدید از صفحه بایگانی  %s"
 
-#: inc/template-tags.php:648
+#: inc/template-tags.php:823
 msgid "«"
 msgstr "«"
 
-#: inc/template-tags.php:649
+#: inc/template-tags.php:824
 msgid "»"
 msgstr "»"
 
 #. translators: % is page number
-#: inc/template-tags.php:673
+#: inc/template-tags.php:848
 msgid "Page %"
 msgstr "صفحه %"
 
-#: inc/template-tags.php:691 searchform.php:44
+#: inc/template-tags.php:866 searchform.php:44
 msgid "Blog"
 msgstr "وبلاگ"
 
-#: inc/template-tags.php:702
+#: inc/template-tags.php:877
 msgid "Our Services"
 msgstr "خدمات ما"
 
-#: inc/template-tags.php:707
+#: inc/template-tags.php:882
 msgid "Our Projects"
 msgstr "پروژه‌های ما"
 
 #. Translators: %s: Title of post type, in post excerpt view
-#: inc/template-tags.php:718
+#: inc/template-tags.php:893
 msgid "Found in %s"
 msgstr "یافت شده در قسمت %s"
 
 #. Translators: %s: Name of category
-#: inc/template-tags.php:747
+#: inc/template-tags.php:922
 msgid "Visit articles in category of %s"
 msgstr "بازدید از مقالات در دسته %s"
 
-#: inc/template-tags.php:796
+#: inc/template-tags.php:971
 msgid "Read time:"
 msgstr "زمان خواندن:"
 
-#: inc/template-tags.php:798
+#: inc/template-tags.php:973
 msgid "min"
 msgstr "دقیقه"
 
-#: inc/template-tags.php:861
+#: inc/template-tags.php:1036
 msgid "<  Previous Post"
 msgstr "< مطلب قبلی"
 
-#: inc/template-tags.php:881
+#: inc/template-tags.php:1056
 msgid "Next Post  >"
 msgstr "مطلب بعدی >"
 
-#: inc/template-tags.php:919 inc/template-tags.php:967
+#: inc/template-tags.php:1094 inc/template-tags.php:1142
 msgid "Related Articles"
 msgstr "مطالب مرتبط"
 
 #. translators: %s: title of service. this text will add to title of sub services section in single page of services
-#: inc/template-tags.php:1047
+#: inc/template-tags.php:1222
 msgid "%s includes the following services"
 msgstr "%s از خدمات زیر تشکیل شده است"
 
 #. translators: %s: title of service. this text will add to title of related services section in single page of services
-#: inc/template-tags.php:1156
+#: inc/template-tags.php:1331
 msgid "%s related services"
 msgstr "خدمات مرتبط با %s"
 
 #. translators: this text will add to pre title of related posts of a service section in single page of services
-#: inc/template-tags.php:1232
+#: inc/template-tags.php:1407
 msgid "Knowledge base"
 msgstr "پایگاه دانش"
 
 #. translators: %s: title of service. this text will add to title of related posts of a service section in single page of services
-#: inc/template-tags.php:1236
+#: inc/template-tags.php:1411
 msgid "%s related articles"
 msgstr "مقالات مرتبط با %s"
 
-#: inc/template-tags.php:1293
+#: inc/template-tags.php:1468
 msgid "Related services"
 msgstr "خدمات مرتبط"
 
@@ -869,6 +1045,9 @@ msgstr "صفحات - بدون هدر و سایدبار"
 #. Template Name of the theme
 msgid "Default Sidebar for singular posts"
 msgstr "پیشفرض با سایدبار، برای پست های تکی"
+
+#~ msgid "OUR SERVICES"
+#~ msgstr "خدمات ما"
 
 #~ msgid "Featured Categories"
 #~ msgstr "دسته‌های ویژه"
