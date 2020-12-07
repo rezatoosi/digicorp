@@ -1045,13 +1045,23 @@ ul.contact-list {
 
 .footer {
     background-color: #002340;
-    padding: 90px 0;
+    padding: 60px 0;
     position: relative;
     display: block;
 }
 
+.footer .footer-col {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .footer h5 {
     color: #ffffff;
+}
+
+.footer ul,
+.copyrights ul {
+  margin-bottom: 0;
 }
 
 .newsletter-widget p {
