@@ -173,9 +173,9 @@ ol {
   padding: 0;
   background-color: #ffffff;
   box-shadow: 0 2px 5px 0px rgba(0,0,0,0.1);
-  // top: -100px;
   transition: top 0.2s ease-in-out;
   position: relative;
+  z-index: 100;
 
   .navbar-default {
       padding: 15px 0;

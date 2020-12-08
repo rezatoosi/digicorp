@@ -6905,7 +6905,8 @@ ol {
   -webkit-transition: top 0.2s ease-in-out;
   -o-transition: top 0.2s ease-in-out;
   transition: top 0.2s ease-in-out;
-  position: relative; }
+  position: relative;
+  z-index: 100; }
   .header .navbar-default {
     padding: 15px 0;
     margin-bottom: 0;
