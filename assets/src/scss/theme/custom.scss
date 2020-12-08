@@ -166,6 +166,7 @@ ol {
 #wrapper {
     background-color: #ffffff;
     padding: 0;
+    overflow: hidden;
 }
 
 .header {
@@ -1240,20 +1241,16 @@ ul.contact-list {
 
     font-size: 16px;
     // line-height: 35px;
-    color: #ddd;
+    color: #eee;
 
     &.show {
       visibility: visible;
       opacity: 1;
     }
-  }
-}
 
-@media screen and (min-width: 992px) {
-  .back-to-top {
-    .back-to-top-btn {
-      bottom: 30px;
+    @media (min-width: 992px) {
       right: 30px;
+      bottom: 30px;
     }
   }
 }

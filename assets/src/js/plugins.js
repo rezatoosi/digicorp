@@ -21,18 +21,7 @@
         $(".search-toggle, .mobile-search-toggle, .header-search").removeClass("active");
     });
 
-    // Scroll to top
-    $(window).scroll(function(){
-      if($(window).scrollTop() > 400){
-        $('#btn-backtop').addClass('show');
-      } else {
-        $('#btn-backtop').removeClass('show');
-      }
-    });
-    $('#btn-backtop').click(function(e){
-      e.preventDefault();
-      $('html, body').animate({scrollTop:0}, '300');
-    });
+
 
     // affix
     $('.fixed-header').affix({
@@ -209,6 +198,37 @@ var ARIANA = {};
 
   };
 
+  ARIANA.backToTop = {
+    init: function() {
+      $('#btn-backtop').click(function(e){
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+      });
+    },
+    onScroll: function() {
+      var visibleOffset = '500';
+      if ($('section').length > 0) {
+        var firstSection = $('section').first();
+        visibleOffset = firstSection.offset().top + firstSection.outerHeight();
+      }
+      if($(window).scrollTop() > visibleOffset){
+        $('#btn-backtop').addClass('show');
+      } else {
+        $('#btn-backtop').removeClass('show');
+      }
+    },
+    dynamicPosition: function() {
+      var visiblePart = $(window).scrollTop() + $(window).innerHeight() - $('.copyrights').offset().top;
+      if( visiblePart >= 0 && ($(window).width() < 1350) ) {
+        $('#btn-backtop').css('bottom',
+          visiblePart + 10
+        );
+      } else {
+        $('#btn-backtop').attr('style','');
+      }
+    }
+  };
+
   ARIANA.yoastFaq = {
     init: function() {
       // $('.schema-faq').wrap('<div class="row"></div>');
@@ -247,11 +267,26 @@ var ARIANA = {};
     init: function() {
       ARIANA.scrollTo.init();
       ARIANA.yoastFaq.init();
-    }
-  }
+      ARIANA.backToTop.init();
 
-  $(document).ready(
-    ARIANA.documentOnReady.init
-  );
+    }
+  };
+
+  ARIANA.windowOnScroll = {
+    init: function() {
+      ARIANA.backToTop.onScroll();
+      ARIANA.backToTop.dynamicPosition();
+    }
+  };
+
+  ARIANA.windowOnResize = {
+    init: function() {
+
+    }
+  };
+
+  $(document).ready(ARIANA.documentOnReady.init);
+  $(window).scroll(ARIANA.windowOnScroll.init);
+  $(window).on('resize',ARIANA.windowOnResize.init);
 
 })(jQuery);
