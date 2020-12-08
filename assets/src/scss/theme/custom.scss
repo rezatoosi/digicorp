@@ -416,7 +416,7 @@ ol {
 
 // search-toggle and lang button
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .navbar-nav .menu-search {
         display:none
     }
@@ -464,7 +464,7 @@ button.navbar-toggle {
   -webkit-appearance: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   button.mobile-search-toggle {
     display: none;
   }
@@ -553,19 +553,15 @@ button.navbar-toggle {
       to { opacity: 1; height: auto; }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 992px) {
     .header-search {
         position:absolute;
         // top: 80px;
         left: 0;
     }
-
-    // .admin-bar .header-search {
-    //     top: 112px
-    // }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .header-search {
         border-radius: 5px;
     }
@@ -588,7 +584,7 @@ button.navbar-toggle {
     transform: scaleY(1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .header-search.active {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -604,7 +600,7 @@ button.navbar-toggle {
     padding: 16px;
 }
 
-@media (max-width:768px) {
+@media (max-width:991px) {
   .header-search {
     // margin-top: 30px;
   }
