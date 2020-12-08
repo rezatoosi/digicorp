@@ -324,10 +324,11 @@ var tasks = {
 }
 
 exports.clean = clean;
-exports.styles = stylesDevelopment;
+exports.styles_dev = stylesDevelopment;
 exports.styles_dev_1 = stylesDev_1;
-exports.styles_prd = stylesProduction;
-exports.scripts = Development.scripts;
+exports.styles = stylesProduction;
+exports.scripts_dev = Development.scripts;
+exports.scripts = Production.scripts;
 exports.images = images;
 exports.fonts = fonts;
 exports.watch = gulp.parallel(watch, browserSync);
