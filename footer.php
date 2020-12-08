@@ -1,7 +1,7 @@
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="footer-col col-md-3 col-sm-6 col-xs-12">
+                    <div class="footer-col col-md-3 col-sm-6 col-xs-12" data-mh="footer-col">
                       <?php
                         if ( is_active_sidebar('footer-widget-1') ) :
                           dynamic_sidebar('footer-widget-1');
@@ -9,7 +9,7 @@
                       ?>
                     </div><!-- end col -->
 
-                    <div class="footer-col col-md-3 col-sm-6 col-xs-12">
+                    <div class="footer-col col-md-3 col-sm-6 col-xs-12" data-mh="footer-col">
                       <?php
                         if ( is_active_sidebar('footer-widget-2') ) :
                           dynamic_sidebar('footer-widget-2');
@@ -17,7 +17,7 @@
                       ?>
                     </div><!-- end col -->
 
-                    <div class="footer-col col-md-3 col-sm-6 col-xs-12">
+                    <div class="footer-col col-md-3 col-sm-6 col-xs-12" data-mh="footer-col">
                       <?php
                         if ( is_active_sidebar('footer-widget-3') ) :
                           dynamic_sidebar('footer-widget-3');
@@ -25,7 +25,7 @@
                       ?>
                     </div><!-- end col -->
 
-                    <div class="footer-col col-md-3 col-sm-6 col-xs-12">
+                    <div class="footer-col col-md-3 col-sm-6 col-xs-12" data-mh="footer-col">
                       <?php
                         if ( is_active_sidebar('footer-widget-4') ) :
                           dynamic_sidebar('footer-widget-4');
