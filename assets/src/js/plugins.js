@@ -22,22 +22,6 @@
     });
 
 
-
-    // affix
-    $('.fixed-header').affix({
-      offset: {
-        top: function () {
-          // return (this.top = $('section').first().offset().top + 200);
-          return (this.top = $('section').first().outerHeight(true)+80);
-        },
-        // bottom: function () {
-        //   if($('.copyrights').length) {
-        //     return (this.bottom = $('.copyrights').outerHeight(true));
-        //   }
-        // }
-      }
-    });
-
     // $(".mobile-search-toggle").click((function() {
     //     $(".mobile-search-toggle, .header-search").toggleClass("active"),
     //     $(this).hasClass("active") && $(".mobile-menu-toggle, .nav-primary").removeClass("active"),
@@ -198,6 +182,39 @@ var ARIANA = {};
 
   };
 
+  ARIANA.headerAffix = {
+    init: function() {
+      var headerHeight = $('header.header').outerHeight();
+      var firstSection = $('section').first();
+      var topOffset = firstSection.offset().top + firstSection.outerHeight();
+      $('.fixed-header').affix({
+        offset: {
+          top: function () {
+            return (this.top = topOffset - 100);
+          },
+          // bottom: function () {
+          //   if($('.footer').length) {
+          //     return (this.bottom = $('.footer').offset().top);
+          //   }
+          // }
+        }
+      });
+      $('.fixed-header').on('affix.bs.affix', function(){
+        $('body').css('padding-top',headerHeight);
+      });
+      $('.fixed-header').on('affix-top.bs.affix', function(){
+        $('body').css('padding-top','0');
+      });
+      $(window).scroll(function(){
+        if ( ($(window).scrollTop() > headerHeight + 100) && ($(window).scrollTop() < topOffset) ) {
+          $('header.header').css('top','-100px')
+        } else {
+          $('header.header').css('top','0')
+        }
+      });
+    }
+  };
+
   ARIANA.backToTop = {
     init: function() {
       $('#btn-backtop').click(function(e){
@@ -268,7 +285,7 @@ var ARIANA = {};
       ARIANA.scrollTo.init();
       ARIANA.yoastFaq.init();
       ARIANA.backToTop.init();
-
+      ARIANA.headerAffix.init();
     }
   };
 

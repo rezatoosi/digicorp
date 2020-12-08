@@ -6913,10 +6913,10 @@ ol {
   background-color: #ffffff;
   -webkit-box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.1);
-  top: -100px;
-  -webkit-transition: top 0.3s ease-in-out;
-  -o-transition: top 0.3s ease-in-out;
-  transition: top 0.3s ease-in-out; }
+  -webkit-transition: top 0.2s ease-in-out;
+  -o-transition: top 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out;
+  position: relative; }
 
 .header .navbar-default {
   padding: 15px 0;
@@ -6929,7 +6929,10 @@ ol {
   /* padding-top: 10px; */
   padding: 5px 0 5px 0 !important;
   height: 50px !important;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none; }
 
 .header .navbar-brand img {
   width: auto;
