@@ -66,7 +66,7 @@ class Digicorp_Customizer_Frontpage_Section_V2
     '_background_image_position'
   );
 
-  function __construct( $section, $section_selector, $section_name, $section_desc = '', $section_priority = 0, $widget_button_text = '', $widget_button_section_id = '', $panel = 'digicorp_frontpage_panel' )
+  function __construct( $section, $section_selector, $section_name = '', $section_desc = '', $section_priority = 0, $widget_button_text = '', $widget_button_section_id = '', $panel = 'digicorp_frontpage_panel' )
   {
     /******************* Set Variables *******************/
     $this->panel = $panel;
@@ -79,6 +79,12 @@ class Digicorp_Customizer_Frontpage_Section_V2
 
     $this->widget_button_text = $widget_button_text;
     $this->widget_button_section_id = $widget_button_section_id;
+
+    if ( $section_name == '' ) {
+      // section name is empty.
+      // this mean instanse created to call remove_settings() method.
+      return;
+    }
 
     // Add Hook
     add_action( 'customize_register', array( $this, 'digicorp_customize_register') );
