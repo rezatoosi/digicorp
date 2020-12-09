@@ -3348,65 +3348,94 @@ span.service-main-bg {
 }
 
 /* cta-box__services --- used in services posttype */
-.cta-box__services {
+.cta-box-services {
   @extend .border-round-5;
   @extend .clearfix;
-  background-color: #0ec8fb;
-  padding: 40px 15px;
+  background-color: $color-light-blue;
+  color: $color-white;
+  padding: 30px 15px;
+  text-align: center;
 }
 
-.cta-box__services-content {
+.cta-box-services__content {
   @extend .col-sm-12;
   @extend .col-md-8;
   @extend .col-lg-9;
-  p {
-    @extend .font-bold;
-    @extend .font-medium;
-    text-align: center;
-    color: $color-white;
+}
+
+.cta-box-services__title {
+  @extend .col-xs-12;
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: inherit;
+  }
+  hr {
+    width: 60px;
+    border: 1px solid $color-light;
+    background-color: $color-light;
   }
 }
 
-.cta-box__services-form {
+.cta-box-services__buttons {
+  margin-left: -10px;
+
+  a.btn {
+    @extend .btn-border;
+    @extend .border-white;
+    @extend .btn-lg;
+    @extend .btn-svg-icon;
+    margin: 10px 10px 0 10px;
+  }
+}
+.cta-box-services__text {
+  p {
+    @extend .font-medium;
+    color: inherit;
+  }
+}
+.cta-box-services__form {
   @extend .col-xs-12;
   @extend .col-sm-8;
   @extend .col-sm-offset-2;
   @extend .col-md-4;
   @extend .col-md-offset-0;
   @extend .col-lg-3;
-  margin-top: 30px;
+  margin-top: 60px;
+
+  .btn {
+    color: #666;
+  }
+}
+
+.cta-box-services .btn:hover,
+.cta-box-services .btn:active,
+.cta-box-services .btn:focus {
+  color: $color-light-blue;
 }
 
 @media (min-width: 768px) {
-  .cta-box__services {
-
+  .cta-box-services {
+    background-image: url('assets/dist/images/bg/bg-20.png');
+    background-size: 15% !important;
+    background-position: right bottom !important;
+    background-repeat: no-repeat;
+    padding: 30px;
   }
 }
 
 @media (min-width: 992px) {
-  .cta-box__services {
-    background-image: url('assets/dist/images/bg/bg-20.png');
-    background-size: contain !important;
-    background-position: right bottom !important;
-    background-repeat: no-repeat;
-    padding: 80px 110px 80px 60px;
+  .cta-box-services {
+    padding: 30px 110px 40px 60px;
+    text-align: left;
   }
-  .cta-box__services-content {
-    p {
-      text-align: left;
-    }
+  .cta-box-services__title hr {
+    margin-left: 0;
   }
-  .cta-box__services-form {
+  .cta-box-services__form {
     margin-top: 0;
   }
 }
-
-@media (min-width: 1200px) {
-  .cta-box__services {
-  }
-}
-
-
 
 /******************************************
     CASE STUDIO

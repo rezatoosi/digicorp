@@ -184,15 +184,17 @@ $contact_section_social = new Digicorp_Customizer_Frontpage_Section_V2(
 	'sidebar-widgets-contact_form'
 );
 
-$frontpage_section_services_cta = new Digicorp_Customizer_Frontpage_Section_V2(
+// we want just remove these settings in production setver
+$removed_frontpage_section_services_cta = new Digicorp_Customizer_Frontpage_Section_V2(
 	'_sections_services_cta',
-	'#section-services-cta',
-	__( 'Services - CTA', 'digicorpdomain' ),
-	__( "Manage CTA section in services.", "digicorpdomain" ),
-	14,
-	__( "Add & Edit Widgets", "digicorpdomain" ),
-	'sidebar-widgets-services_cta'
+	'#section-services-cta'//,
+	// __( 'Services - CTA', 'digicorpdomain' ),
+	// __( "Manage CTA section in services.", "digicorpdomain" ),
+	// 14,
+	// __( "Add & Edit Widgets", "digicorpdomain" ),
+	// 'sidebar-widgets-services_cta'
 );
+$removed_frontpage_section_services_cta->remove_settings();
 
 // add frontpage section creator class - Version 3
 require_once get_template_directory() . '/inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php';
@@ -209,6 +211,8 @@ $about_section_brands = new Digicorp_Customizer_Frontpage_Section_V3(
 
 // add section creator class - Version 4
 require_once get_template_directory() . '/inc/customizer/class-digicorp-customizer-section-v4.php';
+
+// frontpage slider
 $section_frontpage_slider_args = array(
 	// 'description' => __( ''),
 	// 'fields' => array( 'title' ),
@@ -229,6 +233,28 @@ $section_frontpage_slider = new Digicorp_Customizer_Section_V4(
 	'#slider',
 	__( 'Frontpage - Slider', 'digicorpdomain' ),
 	$section_frontpage_slider_args
+);
+
+// frontpage slider
+$section_services_cta_args = array(
+	'description' 				=>	__( "Manage CTA section in services.", "digicorpdomain" ),
+	'priority'						=>	14,
+	'widget-button-text'	=> __( "Add & Edit Widgets", "digicorpdomain" ),
+	'widget-section-id'		=> 'sidebar-widgets-services_cta',
+	'fields' => array( 'subtitle', 'display_hr', 'text', 'widget', 'container_class', 'buttons' ),
+	'selectors'	=>	array(
+		'subtitle' 			=> '.cta-box-services__title h2',
+		'display_hr' 		=> '.cta-box-services__title hr',
+		'text' 					=> '.cta-box-services__text p',
+		'buttons' 			=> '.cta-box-services__buttons'
+	),
+);
+$section_services_cta = new Digicorp_Customizer_Section_V4(
+	'digicorp_frontpage_panel',
+	'section_services_cta',
+	'#section-services-cta',
+	__( 'Services - CTA', 'digicorpdomain' ),
+	$section_services_cta_args
 );
 
 /**

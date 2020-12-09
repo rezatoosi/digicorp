@@ -112,8 +112,8 @@ span.service-main-bg{
   background-position: center right;
 }
 
-@media (min-width: 992px) {
-  .cta-box__services {
+@media (min-width: 768px) {
+  .cta-box-services {
     background-image: url('assets/dist/images/bg/bg-19.png');
     background-position: left bottom !important;
   }
