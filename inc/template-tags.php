@@ -633,7 +633,7 @@ if ( ! function_exists( 'digicorp_footer_share_buttons' ) ) {
    }
 }
 
-if ( ! function_exists( 'digicorp_post_thumbnail' ) ) :
+if ( ! function_exists( 'digicorp_post_thumbnail' ) ) {
 	/**
 	 * Displays an optional post thumbnail.
 	 *
@@ -680,7 +680,7 @@ if ( ! function_exists( 'digicorp_post_thumbnail' ) ) :
         )
     );
 	}
-endif;
+}
 
 if ( ! function_exists( 'digicorp_post_header_image' ) ) {
   /*
@@ -749,7 +749,7 @@ if ( ! function_exists( 'digicorp_get_header_image' ) ) {
   }
 }
 
-if ( ! function_exists( 'digicorp_get_post_default_image_uri' ) ) :
+if ( ! function_exists( 'digicorp_get_post_default_image_uri' ) ) {
   /**
     * Return default image used in posts if post has no image
     */
@@ -760,10 +760,10 @@ if ( ! function_exists( 'digicorp_get_post_default_image_uri' ) ) :
         return wp_get_attachment_image_src( $default_image_id, 'small' )[0];
       }
       else {
-        return esc_url( get_template_directory_uri() . '/assets/dist/images/post-default.png' );
+        return esc_url( get_template_directory_uri() . '/assets/dist/images/default.png' );
       }
     }
-endif;
+}
 
 if ( ! function_exists( 'digicorp_get_post_excerpt_meta' ) ) {
   function digicorp_get_post_excerpt_meta() {
@@ -1168,6 +1168,22 @@ if ( ! function_exists( 'digicorp_related_posts_sidebar' ) ) {
     $post = $orig_post;
     wp_reset_query();
   }
+}
+
+if ( ! function_exists( 'digicorp_get_service_default_image_uri' ) ) {
+  /**
+    * Return default image used in services if post has no image
+    */
+    function digicorp_get_service_default_image_uri() {
+      $default_image_id = get_theme_mod( 'digicorp_settings_default_image_services' );
+      if ( ! empty( $default_image_id ) ) {
+        // var_dump(wp_get_attachment_image_src( $default_image_id, 'small' ));die();
+        return wp_get_attachment_image_src( $default_image_id, 'small' )[0];
+      }
+      else {
+        return esc_url( get_template_directory_uri() . '/assets/dist/images/default.png' );
+      }
+    }
 }
 
 if ( ! function_exists( 'digicorp_all_services_list' ) ) {

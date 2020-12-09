@@ -9,13 +9,15 @@
 ?>
 
 <?php
-$url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
-$img_markup = '';
-if ( ! empty( $url_thumb ) ) {
-  $img_markup = sprintf( '<img src="%s" alt="%s" class="img-responsive" />',
-                        $url_thumb[0],
-                        $post->post_title );
+if ( has_post_thumbnail() ) {
+    $url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' )[0];
+} else {
+  $url_thumb = digicorp_get_service_default_image_uri();
 }
+
+$img_markup = sprintf( '<img src="%s" alt="%s" class="img-responsive" />',
+                      $url_thumb,
+                      $post->post_title );
 $post_home_subtitle = get_post_meta( $post->ID, 'post_home_subtitle', true );
 ?>
 
