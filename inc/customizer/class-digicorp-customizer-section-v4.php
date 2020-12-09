@@ -84,11 +84,12 @@ class Digicorp_Customizer_Section_V4
   //   'buttons' => 'section__content-buttons'
   // );
 
-  public function __construct( $panel,
-                        $section,
-                        $section_selector,
-                        $section_name,
-                        $args = array() )
+  public function __construct(
+    $panel,
+    $section,
+    $section_selector,
+    $section_name,
+    $args = array() )
   {
     /******************* Set Variables *******************/
     $this->panel = $panel;
@@ -130,12 +131,18 @@ class Digicorp_Customizer_Section_V4
       'description' => '',
       'priority'  => 0,
       'widget-button-text' => __( "Add & Edit Widgets", "digicorpdomain" ),
-      'widget-section-id' => 'sidebar-widgets' // set like this -> sidebar-widgets-[widget_id]
+      'widget-section-id' => 'sidebar-widgets-', // set like this:  sidebar-widgets-[widget_id]
+      'remove_section_settings' => false // set this to true to remove all settings of this section.
     );
 
     $this->args = wp_parse_args( $args, $defaults );
 
     // var_dump($this->args);die();
+
+    if ( $this->args['remove_section_settings'] === true ) {
+      $this->remove_settings();
+      return;
+    }
 
     // Add Hook
     add_action( 'customize_register', array( $this, 'digicorp_customize_register') );
@@ -286,12 +293,13 @@ class Digicorp_Customizer_Section_V4
       // ) );
     }
 
-    // add a seprator
-    $this->add_seprator( $wp_customize );
-
     // widget
     $setting = 'widget';
     if ( $this->check_field( $setting ) ) {
+
+      // add a seprator
+      $this->add_seprator( $wp_customize );
+
       $setting_name = $this->section . '_' . $setting;
 
       // Add a button for go to related widget area
@@ -318,7 +326,9 @@ class Digicorp_Customizer_Section_V4
     }
 
     // add a seprator
-    $this->add_seprator( $wp_customize );
+    if ( $this->check_field( 'icon_class' ) || $this->check_field( 'icon_image' ) ) {
+      $this->add_seprator( $wp_customize );
+    }
 
     // Icon Class
     $setting = 'icon_class';
@@ -555,12 +565,14 @@ class Digicorp_Customizer_Section_V4
       ) ) );
     }
 
-    // add a seprator
-    $this->add_seprator( $wp_customize );
 
     // CTA Button
     $setting = 'cta_btn';
     if ( $this->check_field( $setting ) ) {
+
+      // add a seprator
+      $this->add_seprator( $wp_customize );
+
       $selector = $this->selector( $setting );
 
       // CTA button text
@@ -620,16 +632,18 @@ class Digicorp_Customizer_Section_V4
       // ) );
     }
 
-    // add a seprator
-    $this->add_seprator( $wp_customize );
 
     // Buttons
     $setting = 'buttons';
     if ( $this->check_field( $setting ) ) {
+
+      // add a seprator
+      $this->add_seprator( $wp_customize );
+
       $setting_name = $this->section . '_' . $setting;
       $selector = $this->selector( $setting );
       $wp_customize->add_setting( $setting_name, array(
-        'sanitize_callback' => 'wp_kses_post',
+        'sanitize_callback' => '',
         'default'           => '',
         'transport'         => 'postMessage',
         'capability'        => 'edit_theme_options',
@@ -741,7 +755,7 @@ class Digicorp_Customizer_Section_V4
               var sectionClasses = elemSection.attr( 'class' );
 
               // remove old settings first
-              if ( wp.customize.has( '<?php echo $this->section ?>_container_class' ) ) {
+              if ( elemSection.length && wp.customize.has( '<?php echo $this->section ?>_container_class' ) ) {
                 var oldValue = wp.customize.value( '<?php echo $this->section ?>_container_class' ).get();
                 sectionClasses = sectionClasses.replace( oldValue, '' );
               }
@@ -886,7 +900,11 @@ class Digicorp_Customizer_Section_V4
         break;
 
       default:
-        return $this->section_selector . ' ' . $this->args['selectors'][$setting];
+        if ( array_key_exists( $setting, $this->args['selectors'] ) ) {
+          return $this->section_selector . ' ' . $this->args['selectors'][$setting];
+        } else {
+          return false;
+        }
         break;
 
     }
@@ -930,6 +948,292 @@ class Digicorp_Customizer_Section_V4
     $image_id = $_POST['image_id'];
     echo wp_get_attachment_image_src( $image_id, 'medium' )[0];
     wp_die();
+  }
+
+}
+
+class Digicorp_Customizer_Section_V4_Creator
+{
+
+  private $prefix;
+  private $css_classes;
+
+  public function __construct( $prefix, $css_classes = array() ) {
+    $this->prefix = $prefix;
+
+    $css_classes_defaults = array(
+      'container'           =>  array( 'section' ),
+      'icon_container'      =>  'section__content-icon',
+      'title_container'     =>  'section__content-title',
+      'subtitle_container'  =>  'section__content-subtitle',
+      'text_container'      =>  'section__content-text',
+      'image_container'     =>  'section__image',
+      'buttons_container'   =>  'section__content-buttons',
+    );
+    $this->css_classes = wp_parse_args( $css_classes, $css_classes_defaults );
+  }
+
+  public function get_settings() {
+    // read settings from database and input theme into a 2D array
+    $mods = array();
+
+    if ( get_theme_mod( $this->prefix . 'enabled' ) ) :
+      $mod_names = array(
+        'enabled',
+        'title',
+        'subtitle',
+        'display_hr',
+        'text',
+        'image',
+        'widget',
+        'icon_class',
+        'icon_image',
+        'container_class',
+        'bg_color',
+        'bg_img',
+        'bg_highlight',
+        'bg_pos_x',
+        'bg_pos_y',
+        'bg_size',
+        'bg_repeat',
+        'bg_attachment',
+        'cta_btn_text',
+        'cta_btn_link',
+        'cta_btn_page',
+        'buttons'
+      );
+
+      foreach ( $mod_names as $mod_name  ) {
+        $mods[ $mod_name ] = get_theme_mod( $this->prefix . $mod_name );
+      }
+
+      // var_dump( $mods );
+
+      /*
+      ** generate container_class
+      */
+      $mods['container_class'] = explode( ' ', $mods['container_class'] );
+
+      // add necessary classes
+      if ( ! is_array( $this->css_classes['container'] ) ) {
+        $this->css_classes['container'] = [ $this->css_classes['container'] ];
+      }
+
+      $this->css_classes['container'] = array_reverse( $this->css_classes['container'] );
+
+      foreach ( $this->css_classes['container'] as $class ) {
+        if ( ! in_array( $class, $mods['container_class'] ) ) {
+          array_unshift( $mods['container_class'], $class );
+        }
+      }
+
+      // check if background highlight is available
+      switch ( $mods['bg_highlight'] ) {
+        case 'highlight-dark':
+          $mods['container_class'][] = 'bg-highlight';
+          $mods['container_class'][] = 'bg-highlight-lightblack';
+          break;
+
+        case 'highlight-darker':
+          $mods['container_class'][] = 'bg-highlight';
+          break;
+
+        case 'highlight-light':
+          $mods['container_class'][] = 'bg-highlight';
+          $mods['container_class'][] = 'bg-highlight-white';
+          break;
+
+        case 'highlight-main':
+          $mods['container_class'][] = 'bg-highlight';
+          $mods['container_class'][] = 'bg-highlight-main';
+          break;
+
+        case 'highlight-none':
+          // nothing
+          break;
+
+        default:
+          if ( $mods['bg_img'] ) {
+            $mods['container_class'][] = 'bg-highlight';
+          }
+          break;
+      }
+
+      // remove empty elements
+      $mods['container_class'] = array_filter( $mods['container_class'] );
+      // make string
+      $mods['container_class'] = implode( ' ', $mods['container_class'] );
+      $mods['container_class'] = sprintf(
+        ' class="%s"',
+        $mods['container_class']
+      );
+
+      /*
+      ** generate data attribiutes
+      */
+      $data_attr_array = array();
+
+      if ( $mods['bg_color'] )  {
+        $data_attr_array['data-bg-color'] = $mods['bg_color'];
+      }
+      if ( $mods['bg_img'] ) {
+        $data_attr_array['data-bg-img'] = $mods['bg_img'];
+      }
+      if ( $mods['bg_pos_x'] ) {
+        $data_attr_array['data-bg-pos-x'] = $mods['bg_pos_x'];
+      }
+      if ( $mods['bg_pos_y'] ) {
+        $data_attr_array['data-bg-pos-y'] = $mods['bg_pos_y'];
+      }
+      if ( $mods['bg_size'] ) {
+        $data_attr_array['data-bg-size'] = $mods['bg_size'];
+      }
+      if ( $mods['bg_repeat'] !== false ) {
+        $data_attr_array['data-bg-repeat'] = $mods['bg_repeat'] ? 'repeat' : 'no-repeat';
+      }
+      if ( $mods['bg_attachment'] !== false ) {
+        $data_attr_array['data-bg-attachment'] = $mods['bg_attachment'] ? 'scroll' : 'fixed';
+      }
+
+      $mods['data-attr'] = '';
+      foreach ( $data_attr_array as $key => $value ) {
+        $mods['data-attr'] .= sprintf( ' %s="%s"', $key, $value );
+      }
+
+      return $mods;
+    else :
+      return false;
+    endif;
+  }
+
+  public function get_templates( $template = array() ) {
+    // declare output array
+    $out = array();
+
+    $mods = $this->get_settings();
+
+    if ( $mods !== false ) :
+      $out['container_class'] = $mods['container_class'];
+      $out['data-attr'] = $mods['data-attr'];
+
+      /*
+      **  Define Elements Markup
+      */
+      $default_template = [
+        'icon_container'    =>  '<div class="%s">%s</div>',
+        'icon_font'         =>  '<i class="%s"></i>',
+        'icon_image'        =>  '<img src="%s" alt="%s" %s/>',
+        'title'             =>  '<div class="%s"><h2>%s</h2></div>',
+        'subtitle'          =>  '<div class="%s"><span>%s</span>%s</div>',
+        'text'              =>  '<div class="%s"><p>%s</p></div>',
+        'image'             =>  '<div class="%s"><img src="%s" alt="%s"/></div>',
+        'cta-button'        =>  '<a class="btn" href="%s">%s</a>',
+        'buttons'           =>  '<div class="%s">%s</div>',
+      ];
+
+      $template = wp_parse_args( $template, $default_template );
+
+      /*
+      ** icon
+      */
+      if ( $mods['icon_image'] ) {
+        $out['icon'] = sprintf(
+          $template['icon_container'],
+          $this->css_classes['icon_container'],
+          sprintf(
+            $template['icon_image'],
+            $mods['icon_image'],
+            $mods['title'] ? $mods['title'] : '',
+            $mods['icon_class'] ? 'class="' . $mods['icon_class'] . '"' : ''
+            )
+        );
+      } elseif ( $mods['icon_class'] ) {
+        $out['icon'] = sprintf(
+          $template['icon_container'],
+          $this->css_classes['icon_container'],
+          sprintf(
+            $template['icon_font'],
+            $mods['icon_class']
+            )
+        );
+      }
+
+      /*
+      ** title
+      */
+      if ( $mods['title'] ) {
+        $out['title'] = sprintf(
+          $template['title'],
+          $this->css_classes['title_container'],
+          $mods['title']
+        );
+      }
+
+      /*
+      ** subtitle
+      */
+      if ( $mods['subtitle'] ) {
+        $out['subtitle'] = sprintf(
+          $template['subtitle'],
+          $this->css_classes['subtitle_container'],
+          $mods['subtitle'],
+          $mods['display_hr'] ? '<hr/>' : ''
+        );
+      }
+
+      /*
+      ** text
+      */
+      if ( $mods['text'] ) {
+        $out['text'] = sprintf(
+          $template['text'],
+          $this->css_classes['text_container'],
+          $mods['text']
+        );
+      }
+
+      /*
+      ** image
+      */
+      if ( $mods['image'] ) {
+        $out['image'] = sprintf(
+          $template['image'],
+          $this->css_classes['image_container'],
+          wp_get_attachment_image_src( $mods['image'], 'medium' )[0],
+          $mods['title'] ? $mods['title'] : ''
+        );
+      }
+
+      /*
+      ** Generate buttons
+      */
+      if ( $mods['cta_btn_text'] ) {
+        $out['buttons'] = sprintf(
+          $template['buttons'],
+          $this->css_classes['buttons_container'],
+          sprintf(
+            $template['cta-button'],
+            ( $mods['cta_btn_link'] ? $mods['cta_btn_link'] : get_page_link( $mods['cta_btn_page'] ) ),
+            $mods['cta_btn_text']
+            )
+        );
+      } elseif ( $mods['buttons'] ) {
+        $out['buttons'] = sprintf(
+          $template['buttons'],
+          $this->css_classes['buttons_container'],
+          $mods['buttons'] );
+      }
+
+
+
+
+      // var_dump($out);
+      // die();
+
+      return $out;
+    else :
+      return false;
+    endif;
   }
 
 }
