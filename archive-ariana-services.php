@@ -7,6 +7,15 @@ digicorp_page_header_section( array(
   'section_class'   =>  'color13',
   'alt_slug'        => 'services'
 ));
+
+global $wp_query;
+query_posts(
+  array_merge(
+    $wp_query->query,
+    [ 'posts_per_page' => -1 ]
+    )
+);
+
 if ( have_posts() ) {
 ?>
 <section class="section services-list">
