@@ -8,6 +8,13 @@
   }
 }
 
+@mixin trans-box-shadow {
+  transition: box-shadow 0.15s ease-in-out;
+  &:hover {
+    box-shadow: 0 10px 50px -5px rgba(51,71,91,0.12);
+  }
+}
+
 @mixin text-shadow-1 {
   text-shadow: 0 2px 0 rgba(100,100,100,0.2);
 }

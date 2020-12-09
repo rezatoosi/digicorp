@@ -21,26 +21,19 @@ $img_markup = sprintf( '<img src="%s" alt="%s" class="img-responsive" />',
 $post_home_subtitle = get_post_meta( $post->ID, 'post_home_subtitle', true );
 ?>
 
-<div class="col-md-4 col-sm-6">
-  <div class="item">
-    <div class="item-image">
-      <a href="<?php echo get_the_permalink( $post->ID ) ?>"><?php echo $img_markup; ?>
-      <span class="item-icon">
-        <i class="fa fa-link"></i></span></a>
-    </div><!-- end item-image -->
-    <div class="item-desc text-center">
-      <h2 class="item-desc__title h3">
-        <a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>">
-          <?php echo $post->post_title ?>
-        </a>
-      </h2>
-      <?php if ( $post_home_subtitle != '' ) { ?>
-        <h2 class="item-desc__subtitle h4">
-          <a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>">
-            <?php echo $post_home_subtitle ?>
-          </a>
-        </h2>
-      <?php } ?>
-    </div><!-- end service-desc -->
-  </div><!-- end seo-item -->
-</div><!-- end col -->
+<article class="service-box">
+  <div class="service-box__wrapper">
+    <div class="service-box__image">
+      <a href="<?php echo get_the_permalink( $post->ID ) ?>">
+        <?php echo $img_markup; ?>
+        <span class="service-box__icon"><i class="fa fa-link"></i></span>
+      </a>
+    </div>
+    <div class="service-box__content">
+      <a href="<?php echo get_the_permalink( $post->ID ) ?>" title="<?php echo $post->post_title ?>">
+        <h2 class="service-box__title"><?php echo $post->post_title ?></h2>
+        <h2 class="service-box__subtitle"><?php echo $post_home_subtitle ?></h2>
+      </a>
+    </div>
+  </div>
+</article>

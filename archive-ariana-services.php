@@ -18,7 +18,7 @@ query_posts(
 
 if ( have_posts() ) {
 ?>
-<section class="section services-list">
+<section class="section">
     <div class="container">
         <div class="row">
             <?php

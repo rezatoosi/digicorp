@@ -32,6 +32,8 @@
             __( 'Footer Vertical Menu', 'digicorpdomain' )
           );
 
+          add_theme_support( 'html5' );
+
           add_theme_support( 'customize-selective-refresh-widgets' );
 
           add_theme_support( 'custom-logo' );
@@ -99,7 +101,7 @@
       }
     endif;
     add_filter( 'image_size_names_choose', 'ariana_update_image_sizes' );
-    
+
     add_filter( 'intermediate_image_sizes', function( $sizes ) {
       return array_filter( $sizes, function( $val )
       {
