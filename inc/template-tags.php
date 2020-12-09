@@ -1228,25 +1228,25 @@ if ( ! function_exists( 'digicorp_sub_services_list' ) ) {
     $the_query = new WP_Query( $args );
     if ( $the_query->have_posts() ) :
     ?>
-    <section class="section bg-light-gray services-list">
+    <section class="section bg-light-gray">
         <div class="container">
           <div class="section-title text-center">
               <!--<h5><?php// _e( 'What services does it consist of?', 'digicorpdomain' ); ?></h5>-->
-              <h3>
+              <h2>
                 <?php
                   /* translators: %s: title of service. this text will add to title of sub services section in single page of services */
                   printf( __( '%s includes the following services', 'digicorpdomain' ), $service_title )?>
-              </h3>
+              </h2>
               <hr>
           </div><!-- end title -->
-          <?php
-
-
-          while ( $the_query->have_posts() ) :
-            $the_query->the_post();
-            get_template_part('template-parts/services/services','excerpt');
-          endwhile;
-          ?>
+          <div class="row">
+            <?php
+            while ( $the_query->have_posts() ) :
+              $the_query->the_post();
+              get_template_part('template-parts/services/services','excerpt');
+            endwhile;
+            ?>
+          </div>
         </div>
     </section>
     <?php
@@ -1337,25 +1337,25 @@ if ( ! function_exists( 'digicorp_related_services_list' ) ) {
     $the_query = digicorp_related_services_query_2();
     if ( $the_query->have_posts() ) :
     ?>
-    <section class="section services-list">
+    <section class="section">
         <div class="container">
           <div class="section-title text-center">
               <!--<h5><?php// _e( 'What services does it consist of?', 'digicorpdomain' ); ?></h5>-->
-              <h3>
+              <h2>
                 <?php
                   /* translators: %s: title of service. this text will add to title of related services section in single page of services */
                   printf( __( '%s related services', 'digicorpdomain' ), $service_title )?>
-              </h3>
+              </h2>
               <hr>
           </div><!-- end title -->
-          <?php
-
-
-          while ( $the_query->have_posts() ) :
-            $the_query->the_post();
-            get_template_part('template-parts/services/services','excerpt');
-          endwhile;
-          ?>
+          <div class="row">
+            <?php
+            while ( $the_query->have_posts() ) :
+              $the_query->the_post();
+              get_template_part('template-parts/services/services','excerpt');
+            endwhile;
+            ?>
+          </div>
         </div>
     </section>
     <?php
@@ -1421,11 +1421,11 @@ if ( ! function_exists( 'digicorp_related_posts_in_services' ) ) {
               <h5><?php
                 /* translators: this text will add to pre title of related posts of a service section in single page of services */
                 _e( 'Knowledge base', 'digicorpdomain' ); ?></h5>
-              <h3>
+              <h2>
                 <?php
                   /* translators: %s: title of service. this text will add to title of related posts of a service section in single page of services */
                   printf( __( '%s related articles', 'digicorpdomain' ), $service_title )?>
-              </h3>
+              </h2>
               <hr>
           </div><!-- end title -->
           <div class="row">
@@ -1475,7 +1475,7 @@ if ( ! function_exists( 'digicorp_related_services_in_posts' ) ) {
           $the_query = new WP_Query( $args );
           if ( $the_query->have_posts() ) :
           ?>
-          <section class="section services-list">
+          <section class="section">
               <div class="container">
                   <div class="row">
                       <div class="col-md-12">

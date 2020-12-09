@@ -6817,9 +6817,22 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.h1,
+.h2,
+.h3,
+.page-heading__content-desc,
+.post-heading__content-desc,
+.service-box__content .service-box__title,
+.h4,
+.service-box__content .service-box__subtitle,
+.h5,
+.page-heading__content-breadcrumb,
+.post-heading__content-breadcrumb,
+.h6 {
+  color: #111;
   font-weight: normal;
-  color: #111; }
+  line-height: 1.5; }
 
 a {
   color: #111;
@@ -7413,18 +7426,12 @@ button.navbar-toggle {
   text-transform: uppercase;
   padding: 0;
   color: #979797;
-  margin: 0; }
+  margin: 0 0 20px 0; }
 
-.section-title h2 {
-  font-size: 25px;
-  line-height: 1;
-  font-weight: bold; }
-
+.section-title h2,
 .section-title h3 {
-  padding: 20px 0 0;
   margin: 0;
   font-size: 26px;
-  line-height: 1;
   font-weight: bold; }
 
 .section-content p {

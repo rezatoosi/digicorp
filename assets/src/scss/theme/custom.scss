@@ -45,25 +45,21 @@ p {
     font-size: 16px;
     line-height: 35px;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: normal;
-    color: #111;
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6 {
+  color: #111;
+  font-weight: normal;
+  line-height: 1.5;
 }
 
 a {
-    color: #111;
-    text-decoration: none !important;
-    outline: none !important;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+  color: #111;
+  text-decoration: none !important;
+  outline: none !important;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 a:hover,
@@ -780,18 +776,12 @@ button.navbar-toggle {
     text-transform: uppercase;
     padding: 0;
     color: #979797;
-    margin: 0;
+    margin: 0 0 20px 0;
 }
-.section-title h2 {
-  font-size: 25px;
-  line-height: 1;
-  font-weight: bold;
-}
+.section-title h2,
 .section-title h3 {
-    padding: 20px 0 0;
     margin: 0;
     font-size: 26px;
-    line-height: 1;
     font-weight: bold;
 }
 
