@@ -830,7 +830,7 @@ if ( ! function_exists( 'digicorp_the_posts_navigation' ) ) :
     );
 
     $links_output = paginate_links( $pagination );
-    echo '<nav class="clearfix">' . str_replace( "<ul class='page-numbers'>", '<ul class="pagination">', $links_output ) . '</nav>';
+    echo '<div class="col-xs-12"><nav class="clearfix">' . str_replace( "<ul class='page-numbers'>", '<ul class="pagination">', $links_output ) . '</nav></div>';
 	}
 endif;
 
