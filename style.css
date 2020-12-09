@@ -6715,6 +6715,9 @@ fieldset[disabled] .btn-primary.focus,
 .bg-light-blue {
   background-color: #f1f5f6 !important; }
 
+.bg-cyan {
+  background-color: #0ec8fb !important; }
+
 .bg-highlight {
   position: relative; }
   .bg-highlight > div {
@@ -9474,10 +9477,20 @@ span.service-main-bg {
   .cta-box-services__form .btn {
     color: #666; }
 
-.cta-box-services .btn:hover,
-.cta-box-services .btn:active,
-.cta-box-services .btn:focus {
-  color: #0ec8fb; }
+.cta-box-services__buttons a.btn:hover,
+.cta-box-services__buttons a.btn:active,
+.cta-box-services__buttons a.btn:focus,
+.cta-box-services__form .btn:hover,
+.cta-box-services__form .btn:active,
+.cta-box-services__form .btn:focus {
+  color: #0ec8fb !important; }
+  .cta-box-services__buttons a.btn:hover svg,
+  .cta-box-services__buttons a.btn:active svg,
+  .cta-box-services__buttons a.btn:focus svg,
+  .cta-box-services__form .btn:hover svg,
+  .cta-box-services__form .btn:active svg,
+  .cta-box-services__form .btn:focus svg {
+    fill: #0ec8fb !important; }
 
 @media (min-width: 768px) {
   .cta-box-services {

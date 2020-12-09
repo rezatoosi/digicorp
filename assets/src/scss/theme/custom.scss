@@ -3351,7 +3351,7 @@ span.service-main-bg {
 .cta-box-services {
   @extend .border-round-5;
   @extend .clearfix;
-  background-color: $color-light-blue;
+  background-color: $color-cyan;
   color: $color-white;
   padding: 30px 15px;
   text-align: center;
@@ -3408,11 +3408,19 @@ span.service-main-bg {
   }
 }
 
-.cta-box-services .btn:hover,
-.cta-box-services .btn:active,
-.cta-box-services .btn:focus {
-  color: $color-light-blue;
+.cta-box-services__buttons a.btn:hover,
+.cta-box-services__buttons a.btn:active,
+.cta-box-services__buttons a.btn:focus,
+.cta-box-services__form .btn:hover,
+.cta-box-services__form .btn:active,
+.cta-box-services__form .btn:focus {
+  color: $color-cyan !important;
+
+  svg {
+    fill: $color-cyan !important;
+  }
 }
+
 
 @media (min-width: 768px) {
   .cta-box-services {
