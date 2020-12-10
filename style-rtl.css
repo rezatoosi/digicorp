@@ -8085,6 +8085,10 @@ ul.contact-list li a.ltr {
 .post-desc a {
   text-decoration: underline !important; }
 
+.post-desc iframe[src*='youtube.com'],
+.post-desc iframe[src*='aparat.com'] {
+  border: 0; }
+
 .blog-item h3 {
   font-weight: bold;
   padding: 15px 0 10px;
@@ -11247,6 +11251,16 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
 .bg-shape-4:before {
   background-image: url(assets/dist/images/shapes/4.png); }
 
+.alignwide video {
+  width: 100%; }
+
+.wp-block-audio {
+  margin-top: 30px; }
+
+.wp-block-audio audio {
+  border: 0;
+  outline: 0; }
+
 .block-editor-writing-flow__click-redirect {
   margin-bottom: 0 !important; }
 
@@ -11763,6 +11777,19 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
 
 .blog-box .blog-box__image img {
   width: 100%; }
+
+.blog-box .blog-box__post-format-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 15px;
+  left: 15px; }
+
+.blog-box .blog-box__post-format-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: #fff; }
 
 .blog-box .blog-box__content {
   position: absolute;

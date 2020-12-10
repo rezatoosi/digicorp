@@ -280,12 +280,24 @@ var ARIANA = {};
     }
   };
 
+  ARIANA.fitVids = {
+    init: function() {
+      // make embeded videos responsive
+      // $('.single-format-video .post-desc').fitVids({ customSelector: 'iframe[src*="aparat.com"]' });;
+      $('.post-desc').fitVids({ customSelector: 'iframe[src*="aparat.com"]' });;
+      $('.section-content').fitVids({ customSelector: 'iframe[src*="aparat.com"]' });;
+
+      $('.fluid-width-video-wrapper iframe').attr('frameborder','0');
+    },
+  };
+
   ARIANA.documentOnReady = {
     init: function() {
       ARIANA.scrollTo.init();
       ARIANA.yoastFaq.init();
       ARIANA.backToTop.init();
       ARIANA.headerAffix.init();
+      ARIANA.fitVids.init();
     }
   };
 

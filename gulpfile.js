@@ -38,6 +38,7 @@ const jsfiles = [
   src.js + 'isotope.js',
   // src.js + 'imagesloaded.pkgd.js',
   src.js + 'jquery.matchHeight.js',
+  src.js + 'jquery.fitvids.js',
   src.js + 'plugins.js'
 ];
 

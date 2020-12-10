@@ -1576,6 +1576,11 @@ ul.contact-list {
     a {
       text-decoration: underline!important;
     }
+
+    iframe[src*='youtube.com'],
+    iframe[src*='aparat.com'] {
+      border: 0;
+    }
 }
 
 .blog-item h3 {
@@ -5208,6 +5213,19 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
     background-image: url(assets/dist/images/shapes/4.png);
 }
 
+// block editor styles
+.alignwide {
+  video {
+    width: 100%;
+  }
+}
+.wp-block-audio {
+  margin-top: 30px;
+  audio {
+  border: 0;
+  outline: 0;
+  }
+}
 
 // fix gutengerg editor styles
 .block-editor-writing-flow__click-redirect {
