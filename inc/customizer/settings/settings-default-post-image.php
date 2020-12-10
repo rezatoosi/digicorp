@@ -44,3 +44,17 @@ $wp_customize->add_control(  new \WP_Customize_Media_Control( $wp_customize, $pr
   'settings'    => $prefix . 'default_image_services',
 	'section'     => $section,
 ) ) );
+
+// default image for ariana-projects
+$wp_customize->add_setting( $prefix . 'default_image_projects', array(
+	'sanitize_callback' => 'wp_kses_post',
+	'default'           => '',
+	'transport'         => 'postMessage',
+) );
+$wp_customize->add_control(  new \WP_Customize_Media_Control( $wp_customize, $prefix . 'default_image_projects', array(
+	'label'       => __( 'Projects default image', 'digicorpdomain' ),
+	'description' => __( 'If project has no tumbnail, this image will be used.', 'digicorpdomain' ),
+  'mime_type'   => 'image',
+  'settings'    => $prefix . 'default_image_projects',
+	'section'     => $section,
+) ) );

@@ -2,16 +2,20 @@
 
 <?php
 digicorp_page_header_section( array(
-  'section_class' => 'visual color8'
+  'section_class' => 'color7'
 ));
 ?>
 
-<?php if (have_posts()){ the_post();
+<?php
+if ( have_posts() ) {
+  the_post();
+
   $fields = get_post_custom();
   $client = isset( $fields['project_client'] ) ? esc_html( $fields['project_client'][0] ) : '';
   $url = isset( $fields['project_url'] ) ? esc_attr( $fields['project_url'][0] ) : '';
   $pub_date = ( isset( $fields['project_publish_date'] ) && $fields['project_publish_date'][0] != '' ) ? esc_attr( $fields['project_publish_date'][0] ) : '';
   $pub_date = strtotime( $pub_date );
+
   if ( $pub_date ) {
     $pub_date = date( 'j M Y', $pub_date );
   }
@@ -30,8 +34,6 @@ digicorp_page_header_section( array(
                         <div class="magnifier">
                             <div class="magnibutton"><a href="<?php esc_url(the_post_thumbnail_url('full')); ?>" target="_blank"<?php if ( get_the_post_thumbnail_caption() ) { echo ' title="' . get_the_post_thumbnail_caption() . '"'; } ?>><i class="fa fa-search"></i></a></div>
                         </div>
-                      <?php } else { ?>
-                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/dist/images/projects-default.png'); ?>" alt="<?php esc_html(get_the_title()); ?>" class="img-responsive">
                       <?php } ?>
                   </div>
               </div><!-- end col -->
@@ -91,11 +93,11 @@ digicorp_page_header_section( array(
 
 <?php } ?>
 
-<section class="section db casebg">
+<section class="section bg-light-gray">
     <div class="container">
         <div class="section-title text-center">
             <?php //<h5>ALL IN ONE SEARCH ENGINE TOOLS</h5> ?>
-            <h3>OTHER PROJECTS</h3>
+            <h3><?php _e( 'OTHER PROJECTS', 'digicorpdomain' ); ?></h3>
             <hr>
         </div><!-- end title -->
         <div class="row services-list">

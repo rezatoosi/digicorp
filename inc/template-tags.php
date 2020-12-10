@@ -1197,6 +1197,22 @@ if ( ! function_exists( 'digicorp_post_format_icon' ) ) {
     }
 }
 
+if ( ! function_exists( 'digicorp_get_projects_default_image_uri' ) ) {
+  /**
+    * Return default image used in services if post has no image
+    */
+    function digicorp_get_service_default_image_uri() {
+      $default_image_id = get_theme_mod( 'digicorp_settings_default_image_projects' );
+      if ( ! empty( $default_image_id ) ) {
+        // var_dump(wp_get_attachment_image_src( $default_image_id, 'small' ));die();
+        return wp_get_attachment_image_src( $default_image_id, 'small' )[0];
+      }
+      else {
+        return esc_url( get_template_directory_uri() . '/assets/dist/images/default.png' );
+      }
+    }
+}
+
 if ( ! function_exists( 'digicorp_get_service_default_image_uri' ) ) {
   /**
     * Return default image used in services if post has no image

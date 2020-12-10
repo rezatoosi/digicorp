@@ -112,7 +112,7 @@ query_posts( "post_type=ariana-projects&posts_per_page=-1" );
 digicorp_page_header_section( array(
   'page_title' => __( 'OUR PROJECTS', 'digicorpdomain' ),
   'page_desc' => __( 'select a category to filter', 'digicorpdomain' ),
-  'section_class' => 'visual color8'
+  'section_class' => 'color7'
 ));
 ?>
 
