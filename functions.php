@@ -34,13 +34,17 @@
 
           add_theme_support( 'html5' );
 
+          // do nothing? just add a class to body
+          // add_theme_support( 'responsive-embeds' );
+
           add_theme_support( 'customize-selective-refresh-widgets' );
 
           add_theme_support( 'custom-logo' );
 
           add_theme_support( 'custom-background' );
 
-          add_theme_support( 'post-formats', array ( 'aside', 'gallery', 'quote', 'image', 'video', 'audio', 'link', 'status', 'chat' ) );
+          // add_theme_support( 'post-formats', array ( 'aside', 'gallery', 'quote', 'image', 'video', 'audio', 'link', 'status', 'chat' ) );
+          add_theme_support( 'post-formats', array ( 'gallery', 'image', 'video', 'audio' ) );
 
           // ---------------------------------------- Gutenberg ----------------------------------------
 

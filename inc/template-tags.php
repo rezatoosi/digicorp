@@ -152,7 +152,7 @@
       $breadcrumb = 1;
       $subtitle = '';
       // $desc = isset( $post_meta['post_desc'] ) ? esc_attr( $post_meta['post_desc'][0] ) : '';
-      $desc = get_the_excerpt();
+      $desc = has_excerpt() ? get_the_excerpt() : '';
       $image_src = '';
       $bg_image_src = isset( $post_meta['post_header_image'] ) ? esc_attr( $post_meta['post_header_image'][0] ) : '';
       $container_class = array();
@@ -1168,6 +1168,33 @@ if ( ! function_exists( 'digicorp_related_posts_sidebar' ) ) {
     $post = $orig_post;
     wp_reset_query();
   }
+}
+
+if ( ! function_exists( 'digicorp_post_format_icon' ) ) {
+  /**
+    * Return a icon with a container - related to post format audio or video
+    */
+    function digicorp_post_format_icon() {
+      $markup = '<div class="blog-box__post-format-icon" title="%s">%s</div>';
+      switch ( get_post_format() ) {
+        case 'video':
+          printf( $markup,
+          __( 'Video', 'digicorpdomain' ),
+            digicorp_svg( 'icon-video', '', '0 0 512 512' )
+          );
+          break;
+        case 'audio':
+          printf(
+            $markup,
+            __( 'Podcast', 'digicorpdomain' ),
+            digicorp_svg( 'icon-audio', '', '0 0 480 480' )
+          );
+          break;
+        default:
+          return '';
+          break;
+      }
+    }
 }
 
 if ( ! function_exists( 'digicorp_get_service_default_image_uri' ) ) {

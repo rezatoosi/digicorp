@@ -11,6 +11,7 @@
 <article class="blog-box">
   <figure>
     <?php digicorp_post_thumbnail( "blog-box__image" ); ?>
+    <?php digicorp_post_format_icon(); ?>
   </figure>
   <div class="blog-box__content">
     <h2 class="blog-box__content-title h3"><a href="<?php esc_url(the_permalink()); ?>" title="<?php esc_attr(the_title()); ?>"><?php the_title(); ?></a></h2>
