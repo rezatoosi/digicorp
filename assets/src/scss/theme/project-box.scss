@@ -1,0 +1,38 @@
+.project-box {
+  background-color: $color-lighteen;
+  border: 1px solid $color-light;
+  @extend .border-round-5;
+  overflow: hidden;
+  @include trans-box-scale;
+  position: relative;
+
+  a {
+    display: block;
+  }
+  img {
+    @extend .img-responsive;
+    @extend .img-full;
+  }
+}
+.project-box__icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background: rgba( 255,255,255,0.5 );
+}
+.project-box__content {
+  text-align: center;
+  padding: 20px 15px;
+}
+.project-box__title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+.project-box__subtitle {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
