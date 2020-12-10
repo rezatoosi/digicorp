@@ -9,6 +9,19 @@
     position: relative;
     z-index: $zindex-owl-stage;
   }
+
+  .project-box {
+    margin-bottom: 0;
+  }
+}
+
+.owl-projects.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 30px;
+  margin-bottom: -30px;
+}
+.owl-projects.owl-theme .owl-dots .owl-dot.active span,
+.owl-projects.owl-theme .owl-dots .owl-dot:hover span {
+  background: $color-primary;
 }
 
 .owl-projects.owl-theme .owl-nav {

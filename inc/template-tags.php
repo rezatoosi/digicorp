@@ -215,12 +215,23 @@
       <?php
     }
     else {
-      $post_desc = isset( $post_meta['post_desc'] ) ? esc_attr( $post_meta['post_desc'][0] ) : '';
+
+      // set page_title & page_desc
+      if ( is_archive() ) {
+        $page_title = single_term_title( '', false);
+        $page_desc = get_the_archive_description();
+      } elseif ( is_search() ) {
+        $page_title = sprintf( /* Translators: %s: page title for search page */ __( 'Search results for "%s"', 'digicorpdomain' ), get_search_query() );
+        $page_desc = '';
+      } else {
+        $page_title = get_the_title( $object_id );
+        $page_desc = isset( $post_meta['post_desc'] ) ? esc_attr( $post_meta['post_desc'][0] ) : '';
+      }
       $post_header_image = isset( $post_meta['post_header_image'] ) ? esc_attr( $post_meta['post_header_image'][0] ) : '';
       $defaults = array(
         'section_class' => 'visual',
-        'page_title' => get_the_title( $object_id ),
-        'page_desc' => $post_desc,
+        'page_title' => $page_title,
+        'page_desc' => $page_desc,
         'page_header_image_src' => $post_header_image
       );
       $args = wp_parse_args( $args, $defaults );
@@ -230,20 +241,18 @@
       }
 
       if ( '' !== $args['page_desc'] ) {
-        $args['page_desc'] = sprintf( '<p class="tagline">%s</p>', wp_strip_all_tags( $args['page_desc'] ) );
+        $args['page_desc'] = sprintf( '<div class="tagline">%s</div>', $args['page_desc'] );
       }
       if ( '' !== $args['page_header_image_src'] && false !== $args['page_header_image_src'] ) {
         $args['page_header_image_src'] = sprintf( ' data-bg-img="%s"', $args['page_header_image_src'] );
         $args['section_class'] .= ' imagebg bg-highlight bg-highlight-lightblack';
       }
 
-      $page_title = ( is_search() ) ? sprintf( /* Translators: %s: page title for search page */ __( 'Search results for "%s"', 'digicorpdomain' ), get_search_query() ) : esc_html( $args['page_title'] );
-
       echo '<section id="page-header" class="' . esc_attr( $args['section_class'] ) . '"' . $args['page_header_image_src'] . '>';
       echo     '<div class="container">';
       echo         '<div class="text-block">';
       echo             '<div class="heading-holder">';
-      echo                 '<h1>' . $page_title . '</h1>';
+      echo                 '<h1>' . $args['page_title'] . '</h1>';
       echo             '</div>';
       echo             $args['page_desc'];
       echo         '</div>';
@@ -1201,7 +1210,7 @@ if ( ! function_exists( 'digicorp_get_projects_default_image_uri' ) ) {
   /**
     * Return default image used in services if post has no image
     */
-    function digicorp_get_service_default_image_uri() {
+    function digicorp_get_projects_default_image_uri() {
       $default_image_id = get_theme_mod( 'digicorp_settings_default_image_projects' );
       if ( ! empty( $default_image_id ) ) {
         // var_dump(wp_get_attachment_image_src( $default_image_id, 'small' ));die();
@@ -1210,6 +1219,143 @@ if ( ! function_exists( 'digicorp_get_projects_default_image_uri' ) ) {
       else {
         return esc_url( get_template_directory_uri() . '/assets/dist/images/default.png' );
       }
+    }
+}
+
+if ( ! function_exists( 'digicorp_get_project_technology_image' ) ) {
+  /**
+    * create and print the image of each technology for projects
+    */
+    function digicorp_get_project_technology_image( $technology ) {
+      $technology = strtolower( $technology );
+
+      switch ( $technology ) {
+        case 'android':
+            $technology = array( 'android.png', 'Android' );
+            break;
+
+        case 'angular':
+        case 'angularjs':
+        case 'angular-js':
+            $technology = array( 'angular.png', 'AngularJS' );
+            break;
+
+        case 'asp':
+        case 'asp.net':
+            $technology = array( 'asp.png', 'ASP.NET' );
+            break;
+
+        case 'bbpress':
+            $technology = array( 'bbpress.png', 'bbPress' );
+            break;
+
+        case 'bootstrap':
+            $technology = array( 'bootstrap.png', 'Bootstrap' );
+            break;
+
+        case 'css':
+        case 'css3':
+          $technology = array( 'css.png', 'CSS3' );
+          break;
+
+        case 'drupal':
+          $technology = array( 'drupal.png', 'Drupal' );
+          break;
+
+        case 'html':
+        case 'html5':
+        case 'xhtml':
+          $technology = array( 'html.png', 'HTML5' );
+          break;
+
+        case 'java':
+          $technology = array( 'java.png', 'Java' );
+          break;
+
+        case 'joomla':
+          $technology = array( 'joomla.png', 'Joomla' );
+          break;
+
+        case 'jquery':
+            $technology = array( 'jquery.png', 'JQuery' );
+            break;
+
+        case 'js':
+        case 'javascript':
+          $technology = array( 'js.png', 'Javascript' );
+          break;
+
+        case 'less':
+          $technology = array( 'less.png', 'less' );
+          break;
+
+        case 'ms':
+        case 'microsoft':
+          $technology = array( 'microsoft.png', 'Microsoft' );
+          break;
+
+        case 'mysql':
+        case 'my-sql':
+          $technology = array( 'mysql.png', 'MySQL' );
+          break;
+
+        case 'node':
+        case 'nodejs':
+        case 'node.js':
+        case 'node-js':
+        case 'node js':
+          $technology = array( 'node.png', 'Node.js' );
+          break;
+
+        case 'paypal':
+        case 'pay-pal':
+        case 'pay pal':
+          $technology = array( 'paypal.png', 'PayPal' );
+          break;
+
+        case 'php':
+        case 'php5':
+        case 'php7':
+            $technology = array( 'php_3.png', 'php' );
+            break;
+
+        case 'ruby':
+          $technology = array( 'ruby.png', 'Ruby' );
+          break;
+
+        case 'sass':
+          $technology = array( 'sass.png', 'sass' );
+          break;
+
+        case 'mssql':
+        case 'sql':
+          $technology = array( 'sql.png', 'MS SQL Server' );
+          break;
+
+        case 'themeforest':
+          $technology = array( 'themeforest.png', 'ThemeForest' );
+          break;
+
+        case 'woocommerce':
+        case 'woo':
+            $technology = array( 'woocommerce.png', 'WooCommerce' );
+            break;
+
+        case 'wp':
+        case 'wordpress':
+          $technology = array( 'wordpress.png', 'WordPress' );
+          break;
+
+        default:
+            $technology = array( 'default.png' );
+            break;
+      }
+
+      printf(
+        '<div class="project-tech"><figure class="project-tech__figure"><img src="%1$s" alt="%2$s" title="%2$s" class="project-tech__image"/></figure></div>',
+        get_template_directory_uri() . '/assets/dist/images/technologies/' . $technology[0],
+        $technology[1]
+      );
     }
 }
 
@@ -1534,7 +1680,7 @@ if ( ! function_exists( 'digicorp_related_services_in_posts' ) ) {
                     <?php
                     while ( $the_query->have_posts() ) :
                       $the_query->the_post();
-                      get_template_part('template-parts/services/services','excerpt');
+                      get_template_part('template-parts/services/services', 'excerpt');
                     endwhile;
                     ?>
                   </div>

@@ -50,6 +50,9 @@ if ( have_posts() ) {
                       <ul class="check m20">
                           <li><?php _e( 'Published Date:', 'digicorpdomain' ) ?> <?php echo $pub_date; //21 June 2016 ?></li>
                         <?php
+                        if ( has_term( '', 'ariana-portfolio' ) ) { ?>
+                          <li><?php _e( 'In Portfolio(s):', 'digicorpdomain' ) ?> <?php the_terms( $post->ID, 'ariana-portfolio', '', ', ', ''); ?></li>
+                        <?php }
                         if ( has_term( '', 'ariana-type-tags' ) ) { ?>
                           <li><?php _e( 'Project Type:', 'digicorpdomain' ) ?> <?php the_terms( $post->ID, 'ariana-type-tags', '', ', ', '');  //<a href="#">SEO</a>, <a href="#">SEM</a>, <a href="#">Backlink</a> ?></li>
                         <?php }
@@ -89,21 +92,73 @@ if ( have_posts() ) {
       </div><!-- end container -->
   </section>
 
-  <?php echo do_shortcode('[ariana_projects_techs section=true]'); ?>
+  <?php
+  $max = 6;
+  $current = 0;
+  $techs = get_the_terms( get_the_id(), 'ariana-technologies' );
+  if ( $techs && ! is_wp_error( $techs ) ) {
+  ?>
+    <section class="section lb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title text-center">
+                        <h2><?php _e( 'WHAT TECHNOLOGIES ARE USED IN THIS PROJECT', 'digicorpdomain' ) ?></h2>
+                        <hr>
+                    </div><!-- end title -->
+
+                    <div class="projects-row">
+                      <?php
+                      foreach ( $techs as $tech ) {
+                        if ( ++$current <= $max ) {
+                          digicorp_get_project_technology_image( $tech->slug );
+                        }
+                      }
+                      ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <?php } ?>
 
 <?php } ?>
 
-<section class="section bg-light-gray">
-    <div class="container">
-        <div class="section-title text-center">
-            <?php //<h5>ALL IN ONE SEARCH ENGINE TOOLS</h5> ?>
-            <h3><?php _e( 'OTHER PROJECTS', 'digicorpdomain' ); ?></h3>
-            <hr>
-        </div><!-- end title -->
-        <div class="row services-list">
-            <?php echo do_shortcode('[ariana_projects]'); ?>
-        </div><!-- end row -->
-    </div><!-- end container -->
-</section>
+
+<?php
+// load other projects
+$args = array(
+  "post_type" => "ariana-projects",
+  "order" => "ASC",
+  "orderby" => "menu_order",
+  "posts_per_page" => -1
+);
+$the_query = new WP_Query( $args );
+
+if ( $the_query->have_posts() ) {
+?>
+  <section class="section bg-light-gray">
+      <div class="container">
+          <div class="section-title text-center">
+              <h2><?php _e( 'OTHER PROJECTS', 'digicorpdomain' ); ?></h2>
+              <hr>
+          </div><!-- end title -->
+          <div class="row">
+            <?php
+            while ( $the_query->have_posts() ) :
+              $the_query->the_post();
+              echo '<div class="col-lg-3 col-md-4 col-sm-6">';
+              get_template_part('template-parts/projects/projects', 'excerpt');
+              echo '</div>';
+            endwhile;
+            ?>
+          </div><!-- end row -->
+      </div><!-- end container -->
+  </section>
+<?php
+}
+wp_reset_postdata();
+?>
+
 
 <?php get_footer(); ?>

@@ -4416,12 +4416,43 @@ function(t,e,i,s){var n=function(e){this._core=e,this._timeout=null,this._paused
   }); // end $(document).ready();
 })(jQuery);
 
-var ARIANA = {};
+var DIGICORP = {};
 
 (function($){
   "use strict";
 
-  ARIANA.scrollTo = {
+  DIGICORP.isMobile = {
+     Android: function() {
+         return navigator.userAgent.match(/Android/i);
+     },
+     BlackBerry: function() {
+         return navigator.userAgent.match(/BlackBerry/i);
+     },
+     iOS: function() {
+         return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+     },
+     Opera: function() {
+         return navigator.userAgent.match(/Opera Mini/i);
+     },
+     Windows: function() {
+         return navigator.userAgent.match(/IEMobile/i);
+     },
+     any: function() {
+         return (THEMEMASCOT.isMobile.Android() || THEMEMASCOT.isMobile.BlackBerry() || THEMEMASCOT.isMobile.iOS() || THEMEMASCOT.isMobile.Opera() || THEMEMASCOT.isMobile.Windows());
+     }
+ };
+
+  DIGICORP.DIR = {
+     isRTL: function() {
+         if ($("html").attr("dir") == "rtl") {
+             return true;
+         } else {
+             return false;
+         }
+     }
+  };
+
+  DIGICORP.scrollTo = {
 
     init: function() {
       $('.scrollto').each(function(){
@@ -4437,7 +4468,7 @@ var ARIANA = {};
 
   };
 
-  ARIANA.headerAffix = {
+  DIGICORP.headerAffix = {
     init: function() {
       var headerHeight = $('header.header').outerHeight();
       var firstSection = $('section').first();
@@ -4470,7 +4501,7 @@ var ARIANA = {};
     }
   };
 
-  ARIANA.backToTop = {
+  DIGICORP.backToTop = {
     init: function() {
       $('#btn-backtop').click(function(e){
         e.preventDefault();
@@ -4501,7 +4532,7 @@ var ARIANA = {};
     }
   };
 
-  ARIANA.yoastFaq = {
+  DIGICORP.yoastFaq = {
     init: function() {
       // $('.schema-faq').wrap('<div class="row"></div>');
       $('.schema-faq-answer').wrap('<div class="schema-faq-answer"></div>');
@@ -4535,7 +4566,7 @@ var ARIANA = {};
     }
   };
 
-  ARIANA.fitVids = {
+  DIGICORP.fitVids = {
     init: function() {
       // make embeded videos responsive
       // $('.single-format-video .post-desc').fitVids({ customSelector: 'iframe[src*="aparat.com"]' });;
@@ -4546,32 +4577,76 @@ var ARIANA = {};
     },
   };
 
-  ARIANA.documentOnReady = {
+  DIGICORP.owlCarousel = {
     init: function() {
-      ARIANA.scrollTo.init();
-      ARIANA.yoastFaq.init();
-      ARIANA.backToTop.init();
-      ARIANA.headerAffix.init();
-      ARIANA.fitVids.init();
+      $('.owl-projects').owlCarousel({
+          loop:true,
+          margin:10,
+          dots:false,
+          rtl: DIGICORP.DIR.isRTL(),
+          responsiveClass:true,
+          navText: [
+             '<i class="fa fa-angle-' + (DIGICORP.DIR.isRTL() ? 'right' : 'left') + '"></i>',
+             '<i class="fa fa-angle-' + (DIGICORP.DIR.isRTL() ? 'left' : 'right') + '"></i>'
+          ],
+          responsive:{
+              0:{
+                  items: 1,
+                  nav: false,
+                  dots: true
+              },
+              501:{
+                  items: 2,
+                  nav: false,
+                  dots: true
+              },
+              768:{
+                  items: 3,
+                  nav: false,
+                  dots: true
+              },
+              992:{
+                  items: 5,
+                  nav: true,
+                  loop: false
+              },
+              1200:{
+                  items: 6,
+                  nav: true,
+                  loop: false
+              }
+          }
+      });
     }
   };
 
-  ARIANA.windowOnScroll = {
+  DIGICORP.documentOnReady = {
     init: function() {
-      ARIANA.backToTop.onScroll();
-      ARIANA.backToTop.dynamicPosition();
+      DIGICORP.scrollTo.init();
+      DIGICORP.yoastFaq.init();
+      DIGICORP.backToTop.init();
+      DIGICORP.headerAffix.init();
+      DIGICORP.fitVids.init();
+      DIGICORP.owlCarousel.init();
     }
   };
 
-  ARIANA.windowOnResize = {
+  DIGICORP.windowOnScroll = {
+    init: function() {
+      DIGICORP.backToTop.onScroll();
+      DIGICORP.backToTop.dynamicPosition();
+    }
+  };
+
+  DIGICORP.windowOnResize = {
     init: function() {
 
     }
   };
 
-  $(document).ready(ARIANA.documentOnReady.init);
-  $(window).scroll(ARIANA.windowOnScroll.init);
-  $(window).on('resize',ARIANA.windowOnResize.init);
+  $(document).ready(DIGICORP.documentOnReady.init);
+  $(window).scroll(DIGICORP.windowOnScroll.init);
+  $(window).on('resize',DIGICORP.windowOnResize.init);
 
 })(jQuery);
 

@@ -47,62 +47,7 @@
       ?>
 
       <?php
-      if ( get_theme_mod( 'digicorp_sections_projects_enabled' ) ):
-      ?>
-        <section class="section bg-light-gray" id="section-projects">
-            <div class="container-fluid">
-              <?php if ( ! empty( get_theme_mod( 'digicorp_sections_projects_title' ) ) ): ?>
-                <div class="section-title text-center">
-                    <h5><?php echo get_theme_mod( 'digicorp_sections_projects_subtitle' ); ?></h5>
-                    <h3><?php echo get_theme_mod( 'digicorp_sections_projects_title' ); ?></h3>
-                    <hr>
-                </div><!-- end title -->
-              <?php endif;?>
-
-                <div class="seo-studio owl-carousel owl-theme text-center">
-                    <?php echo do_shortcode('[ariana_projects mode=carousel]'); ?>
-                </div>
-            </div>
-        </section>
-        <?php
-        // TODO: Move this script to .js files
-        add_action( "wp_footer", function() {
-          $locale = get_locale();
-        ?>
-        <script type="text/javascript">
-          jQuery(document).ready(function(){
-            var $ = jQuery.noConflict();
-            $('.seo-studio').owlCarousel({
-                loop:true,
-                margin:10,
-                dots:false,
-                rtl: <?php echo ('fa_IR' == $locale ? 'true' : 'false'); ?>,
-                responsiveClass:true,
-                navText: [
-                   "<i class='fa fa-angle-<?php echo ('fa_IR' == $locale ? 'right' : 'left'); ?>'></i>",
-                   "<i class='fa fa-angle-<?php echo ('fa_IR' == $locale ? 'left' : 'right'); ?>'></i>"
-                ],
-                responsive:{
-                    0:{
-                        items:1,
-                        nav:false
-                    },
-                    600:{
-                        items:3,
-                        nav:false
-                    },
-                    1000:{
-                        items:6,
-                        nav:true,
-                        loop:false
-                    }
-                }
-            });
-          });
-        </script>
-      <?php
-      });
-      endif;
+        get_template_part( 'template-parts/sections/frontpage', 'projects' );
       ?>
 
 

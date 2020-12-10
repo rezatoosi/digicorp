@@ -2355,28 +2355,43 @@ li .fa-warning {
     text-align: center;
 }
 
-.tech-wrapper {
-    display: block;
-    width: 100%;
-    margin-bottom: 30px;
-    background-color: #ffffff;
-    position: relative;
-    padding: 10px;
+// project technologies box
+.projects-row {
+  @extend .row;
+  // gutter: 10px
+  margin: 0 -5px -10px;
 }
+.project-tech {
+  @extend .col-sm-2;
+  @extend .col-xs-4;
+  // gutter: 10px
+  padding: 0 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.project-tech__figure{
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  background-color: $color-white;
+  position: relative;
+  margin: 0 auto;
+  padding: 5px;
 
-.tech-wrapper img {
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(70%);
-    cursor: pointer;
-    transition: filter 0.5s;
+  @media (min-width: 992px) {
+    padding: 10px;
+  }
 }
-.tech-wrapper img:focus,
-.tech-wrapper img:active,
-.tech-wrapper img:hover {
-    -webkit-filter: none; /* Safari 6.0 - 9.0 */
+.project-tech__image {
+  @extend .img-responsive;
+  @extend .img-full;
+  filter: grayscale(70%);
+  cursor: pointer;
+  transition: filter 0.25s;
+}
+.project-tech__figure:focus img,
+.project-tech__figure:active img,
+.project-tech__figure:hover img, {
     filter: none;
 }
 
@@ -3852,7 +3867,9 @@ hr.invis {
 }
 
 .visual p.tagline,
-.visual h3.tagline {
+.visual h3.tagline,
+.visual .tagline p,
+.visual .tagline {
     line-height: 1.7;
     font-size: 21px;
 }
@@ -4868,6 +4885,12 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
 .gutter-10 div[class^="col"]{padding-left:5px; padding-right:5px;}
 // .gutter-10 div[class^="col"]:first-child{padding-left:15px}
 // .gutter-10 div[class^="col"]:last-child{padding-right:15px}
+
+.gutter-5 {
+  margin-left: -2.5px;
+  margin-right: -2.5px;
+}
+.gutter-5 div[class^="col"]{padding-left:2.5px; padding-right:2.5px;}
 
 /* Section Edges */
 

@@ -1,10 +1,7 @@
 <?php get_header(); ?>
 
 <?php
-  digicorp_page_header_section( array(
-    'page_title'  => single_term_title( '', false),
-    'page_desc'   => get_the_archive_description()
-  ));
+  digicorp_page_header_section();
 ?>
 
 <?php // TODO: add a search form for archive ?>
