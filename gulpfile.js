@@ -31,14 +31,15 @@ dist  = {
   fonts:  './assets/dist/fonts/'
 }
 const jsfiles = [
-  src.js + 'bootstrap.js',
+  src.js + 'vendor/jquery.min.js',
+  // src.js + 'vendor/bootstrap.js',
   src.js + 'vendor/owlcarousel.js',
-  // src.js + 'bootstrap-affix.js',
-  // src.js + 'bootstrap-collapse.js',
-  src.js + 'isotope.js',
-  // src.js + 'imagesloaded.pkgd.js',
-  src.js + 'jquery.matchHeight.js',
-  src.js + 'jquery.fitvids.js',
+  src.js + 'vendor/bootstrap-affix.js',
+  src.js + 'vendor/bootstrap-collapse.js',
+  src.js + 'vendor/isotope.js',
+  // src.js + 'vendor/imagesloaded.pkgd.js',
+  src.js + 'vendor/jquery.matchHeight.js',
+  src.js + 'vendor/jquery.fitvids.js',
   src.js + 'plugins.js'
 ];
 
@@ -123,7 +124,7 @@ var Development = {
     return gulp
     .src(jsfiles, {sourcemaps: true})
   	.pipe(concat('bundle.js'))
-    .pipe(browserify())
+    // .pipe(browserify())
   	// .pipe(gulp.dest('assets/dist/js'))
   	// .pipe(gulpif(isProduction, uglify()))
     // .pipe(uglify())
@@ -218,7 +219,7 @@ var Production = {
     return gulp
     .src(jsfiles)
   	.pipe(concat('bundle.js'))
-    .pipe(browserify())
+    // .pipe(browserify())
   	// .pipe(gulp.dest('assets/dist/js'))
   	// .pipe(gulpif(isProduction, uglify()))
     .pipe(uglify())

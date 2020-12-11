@@ -151,6 +151,7 @@
     // remove w3 total cache comments form bottom of pages html
     add_filter( 'w3tc_can_print_comment', function( $w3tc_setting ) { return false; }, 10, 1 );
 
+    // remove last link from breadcrumb if is single post view
     add_filter('wpseo_breadcrumb_single_link', function( $link_output) {
         $post_type = get_post_type();
         if ( true ) {
