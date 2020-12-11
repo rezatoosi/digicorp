@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
 <?php
+// TODO: Move this script to bundle.jd
+
 // enqueue styles and scripts
 function ariana_projects_archive_scripts() {
   // wp_enqueue_script( 'isotope-js', get_template_directory_uri() . '/js/isotope.js' );
@@ -115,8 +117,6 @@ digicorp_page_header_section( array(
   'section_class' => 'color7'
 ));
 ?>
-
-<?php // TODO: add a search form for archive ?>
 
 <?php
 
