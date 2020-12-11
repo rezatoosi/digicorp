@@ -28,10 +28,6 @@
   position: relative;
   z-index: $zindex-owl-nav;
 }
-.owl-projects.owl-theme .owl-prev {
-}
-.owl-projects.owl-theme .owl-next {
-}
 
 .owl-projects.owl-theme .owl-nav [class*="owl-"] {
     cursor: pointer;
@@ -39,6 +35,10 @@
     width: 40px;
     height: 40px;
     line-height: 44px;
+}
+
+.owl-projects.owl-theme .owl-nav [class*="owl-"] {
+  background: $color-primary;
 }
 
 .owl-projects.owl-theme .owl-nav [class*="owl-"]:hover,
