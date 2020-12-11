@@ -21,8 +21,8 @@ $img_markup = sprintf( '<img src="%s" alt="%s" class="img-responsive" />',
 $post_home_subtitle = get_post_meta( $post->ID, 'post_home_subtitle', true );
 ?>
 
-<article class="service-box" data-mh="service-box">
-  <div class="service-box__wrapper">
+<article class="service-box">
+  <div class="service-box__wrapper" data-mh="service-box">
     <figure class="service-box__image">
       <a href="<?php echo get_the_permalink( $post->ID ) ?>">
         <?php echo $img_markup; ?>
