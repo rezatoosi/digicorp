@@ -31,11 +31,12 @@ dist  = {
   fonts:  './assets/dist/fonts/'
 }
 const jsfiles = [
-  src.js + 'vendor/jquery.min.js',
-  // src.js + 'vendor/bootstrap.js',
+  // src.js + 'vendor/jquery.min.js',
+  src.js + 'vendor/jquery-1.10.0.js',
+  src.js + 'vendor/bootstrap.js',
   src.js + 'vendor/owlcarousel.js',
-  src.js + 'vendor/bootstrap-affix.js',
-  src.js + 'vendor/bootstrap-collapse.js',
+  // src.js + 'vendor/bootstrap-affix.js',
+  // src.js + 'vendor/bootstrap-collapse.js',
   src.js + 'vendor/isotope.js',
   // src.js + 'vendor/imagesloaded.pkgd.js',
   src.js + 'vendor/jquery.matchHeight.js',
