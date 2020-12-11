@@ -218,15 +218,6 @@ ol {
   }
 }
 
-.affix + .visual {
-    padding-top: 90px!important;
-}
-.affix + .visual.visual-2 {
-    padding-top: 200px!important;
-    min-height: 480px!important;
-}
-
-
 @media (max-width: 767px) {
   .navbar-collapse {
     margin-top: 10px;
