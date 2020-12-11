@@ -55,13 +55,11 @@ if ( get_theme_mod( 'digicorp_sections_service_mainservices' . '_enabled' ) ):
                   endif;
                 ?>
               </div>
-              <?php if ( is_active_sidebar('services_mainservice_cta') ) : ?>
-              <div class="row">
-                  <div class="col-xs-12">
-                      <?php dynamic_sidebar('services_mainservice_cta'); ?>
-                  </div>
-              </div>
-              <?php endif; ?>
+              <?php
+              if ( is_active_sidebar('services_mainservice_cta') ) :
+                dynamic_sidebar('services_mainservice_cta');
+              endif;
+              ?>
           </div>
       </div>
   </section>
