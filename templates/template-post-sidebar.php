@@ -13,10 +13,10 @@ digicorp_page_header_section( array(
 ));
 ?>
 
-<section class="section lb">
+<section class="section section-single-post-sidebar lb">
     <div class="container">
         <div class="row">
-            <div class="content col-md-9 col-sm-12">
+            <div class="content col-md-9">
               <?php
                 while ( have_posts() ) :
 
@@ -28,7 +28,7 @@ digicorp_page_header_section( array(
               ?>
             </div><!-- end content -->
 
-            <div class="sidebar col-md-3 col-sm-12">
+            <div class="sidebar col-md-3">
               <?php get_sidebar(); ?>
             </div><!-- end sidebar -->
         </div><!-- end row -->
