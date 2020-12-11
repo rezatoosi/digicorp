@@ -99,24 +99,20 @@ if ( have_posts() ) {
   if ( $techs && ! is_wp_error( $techs ) ) {
   ?>
     <section class="section lb">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="section-title text-center">
-                        <h2><?php _e( 'WHAT TECHNOLOGIES ARE USED IN THIS PROJECT', 'digicorpdomain' ) ?></h2>
-                        <hr>
-                    </div><!-- end title -->
+        <div class="container mb-n10">
+            <div class="section-title text-center">
+                <h2><?php _e( 'WHAT TECHNOLOGIES ARE USED IN THIS PROJECT', 'digicorpdomain' ) ?></h2>
+                <hr>
+            </div><!-- end title -->
 
-                    <div class="projects-row">
-                      <?php
-                      foreach ( $techs as $tech ) {
-                        if ( ++$current <= $max ) {
-                          digicorp_get_project_technology_image( $tech->slug );
-                        }
-                      }
-                      ?>
-                    </div>
-                </div>
+            <div class="projects-row">
+              <?php
+              foreach ( $techs as $tech ) {
+                if ( ++$current <= $max ) {
+                  digicorp_get_project_technology_image( $tech->slug );
+                }
+              }
+              ?>
             </div>
         </div>
     </section>
@@ -138,7 +134,7 @@ $the_query = new WP_Query( $args );
 if ( $the_query->have_posts() ) {
 ?>
   <section class="section bg-light-gray">
-      <div class="container">
+      <div class="container mb-n30">
           <div class="section-title text-center">
               <h2><?php _e( 'OTHER PROJECTS', 'digicorpdomain' ); ?></h2>
               <hr>

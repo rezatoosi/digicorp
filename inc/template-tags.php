@@ -1096,26 +1096,22 @@ if ( ! function_exists( 'digicorp_related_posts' ) ) {
       if( $my_query->have_posts() ) {
         ?>
         <section class="section bg-light-gray">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title text-left">
-                          <h4><?php _e( 'Related Articles', 'digicorpdomain' ); ?></h4>
-                          <hr>
-                        </div>
-                        <div class="row">
-                        <?php
-                          while( $my_query->have_posts() ) {
-                            $my_query->the_post();
-                            // get_template_part('template-parts/post/blog','related');
-                            echo '<div class="col-md-4 col-sm-6">';
-                            get_template_part('template-parts/content/content','excerptv3');
-                            echo '</div>';
-                          }
-                        ?>
-                        </div>
-                    </div>
-                </div>
+            <div class="container mb-n30">
+              <div class="section-title text-left">
+                <h4><?php _e( 'Related Articles', 'digicorpdomain' ); ?></h4>
+                <hr>
+              </div>
+              <div class="row">
+              <?php
+                while( $my_query->have_posts() ) {
+                  $my_query->the_post();
+                  // get_template_part('template-parts/post/blog','related');
+                  echo '<div class="col-md-4 col-sm-6">';
+                  get_template_part('template-parts/content/content','excerptv3');
+                  echo '</div>';
+                }
+              ?>
+              </div>
             </div>
         </section>
     <?php
@@ -1418,7 +1414,7 @@ if ( ! function_exists( 'digicorp_sub_services_list' ) ) {
     if ( $the_query->have_posts() ) :
     ?>
     <section class="section bg-light-gray">
-        <div class="container">
+        <div class="container mb-n30">
           <div class="section-title text-center">
               <!--<h5><?php// _e( 'What services does it consist of?', 'digicorpdomain' ); ?></h5>-->
               <h2>
@@ -1527,7 +1523,7 @@ if ( ! function_exists( 'digicorp_related_services_list' ) ) {
     if ( $the_query->have_posts() ) :
     ?>
     <section class="section">
-        <div class="container">
+        <div class="container mb-n30">
           <div class="section-title text-center">
               <!--<h5><?php// _e( 'What services does it consist of?', 'digicorpdomain' ); ?></h5>-->
               <h2>
@@ -1604,8 +1600,8 @@ if ( ! function_exists( 'digicorp_related_posts_in_services' ) ) {
     $my_query = new wp_query( $args );
     if( $my_query->have_posts() ) {
       ?>
-      <section class="section lb blog-related-posts-in-services">
-        <div class="container">
+      <section class="section lb">
+        <div class="container mb-n30">
           <div class="section-title text-center">
               <h5><?php
                 /* translators: this text will add to pre title of related posts of a service section in single page of services */
@@ -1665,17 +1661,13 @@ if ( ! function_exists( 'digicorp_related_services_in_posts' ) ) {
           if ( $the_query->have_posts() ) :
           ?>
           <section class="section">
-              <div class="container">
-                  <div class="row">
-                      <div class="col-md-12">
-                          <div class="section-title text-left">
-                              <h4>
-                                <?php _e( 'Related services', 'digicorpdomain' ) ?>
-                              </h4>
-                              <hr>
-                          </div><!-- end title -->
-                      </div>
-                  </div>
+              <div class="container mb-n30">
+                  <div class="section-title text-left">
+                      <h4>
+                        <?php _e( 'Related services', 'digicorpdomain' ) ?>
+                      </h4>
+                      <hr>
+                  </div><!-- end title -->
                   <div class="row">
                     <?php
                     while ( $the_query->have_posts() ) :

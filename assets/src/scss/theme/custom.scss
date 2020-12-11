@@ -677,10 +677,16 @@ button.navbar-toggle {
 
 .section {
     padding: 90px 0;
-    padding-top: 40px;
     position: relative;
     display: block;
     background-color: #ffffff;
+}
+.section-single-post {
+  padding-top: 0;
+  padding-bottom: 60px;
+}
+.section-single-post-sidebar {
+  padding: 60px 0;
 }
 
 .section-twice {
@@ -711,10 +717,6 @@ button.navbar-toggle {
 
   }
 
-}
-
-.section ~ .section{
-  padding-top: 90px;
 }
 
 .nopadbot {
@@ -776,7 +778,7 @@ button.navbar-toggle {
     text-transform: uppercase;
     padding: 0;
     color: #979797;
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0;
 }
 .section-title h2,
 .section-title h3 {
@@ -1638,27 +1640,6 @@ ul.contact-list {
     }
   }
 
-}
-
-.blog-related-posts-in-services {
-
-  &.section {
-    padding-bottom: 60px;
-  }
-
-  .col-sm-6,
-  .col-md-4,
-  .col-md-3 {
-      margin-bottom: 30px;
-  }
-
-  .blog-item {
-    p {
-      margin: 0;
-      line-height: 150%;
-      padding-top: 10px;
-    }
-  }
 }
 
 .post-micro {
@@ -3872,6 +3853,7 @@ hr.invis {
 .visual .tagline {
     line-height: 1.7;
     font-size: 21px;
+    color: $color-white;
 }
 
 .visual .info {
@@ -4595,6 +4577,14 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
 
 .mb-30 {
   margin-bottom: 30px!important;
+}
+
+.mb-n10 {
+  margin-bottom: -10px!important;
+}
+
+.mb-n30 {
+  margin-bottom: -30px!important;
 }
 
 .pv-30 {

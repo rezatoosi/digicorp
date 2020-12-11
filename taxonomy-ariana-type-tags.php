@@ -7,7 +7,7 @@ digicorp_page_header_section( array(
 ?>
 
 <section class="section">
-    <div class="container">
+    <div class="container mb-n30">
         <div class="row">
           <?php
             if ( have_posts() ) {
