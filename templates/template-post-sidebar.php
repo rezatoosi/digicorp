@@ -13,7 +13,7 @@ digicorp_page_header_section( array(
 ));
 ?>
 
-<section class="section section-single-post-sidebar lb">
+<section class="section lb">
     <div class="container">
         <div class="row">
             <div class="content col-md-9">
