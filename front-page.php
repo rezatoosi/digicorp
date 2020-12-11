@@ -2,7 +2,7 @@
 
       <?php
         get_template_part( 'template-parts/sections/frontpage', 'sliderv1' );
-        get_template_part( 'template-parts/sections/frontpage', 'notypedslider2' );
+        // get_template_part( 'template-parts/sections/frontpage', 'notypedslider2' );
       ?>
 
       <?php get_template_part( 'template-parts/sections/about', 'brands' ); ?>
