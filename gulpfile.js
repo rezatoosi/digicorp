@@ -32,7 +32,8 @@ dist  = {
 }
 const jsfiles = [
   // src.js + 'vendor/jquery.min.js',
-  src.js + 'vendor/jquery-1.10.0.js',
+  // src.js + 'vendor/jquery-1.10.0.js',
+  src.js + 'vendor/jquery-2.2.4.js',
   // src.js + 'vendor/bootstrap.js',
   src.js + 'vendor/bootstrap-transition.js',
   src.js + 'vendor/bootstrap-affix.js',
