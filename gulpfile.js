@@ -36,6 +36,7 @@ const jsfiles = [
   // src.js + 'vendor/bootstrap.js',
   src.js + 'vendor/bootstrap-transition.js',
   src.js + 'vendor/bootstrap-affix.js',
+  src.js + 'vendor/bootstrap-dropdown.js',
   src.js + 'vendor/bootstrap-collapse.js',
   src.js + 'vendor/owlcarousel.js',
   src.js + 'vendor/isotope.js',
