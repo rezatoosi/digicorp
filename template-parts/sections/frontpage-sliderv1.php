@@ -26,7 +26,8 @@ $css_classes = array(
 $settings = new Digicorp_Customizer_Section_V4_Creator( $setting_prefix, $css_classes );
 $out = $settings->get_templates(
   array(
-    'title' =>  '<div class="%s"><h1>%s</h1></div>'
+    'title' =>  '<div class="%s"><h1>%s</h1></div>',
+    'image' =>  '<div class="%s" data-mh="slider-col"><img src="%s" alt="%s"/></div>'
   )
 );
 // var_dump($settings->get_settings());
@@ -38,7 +39,7 @@ if ( $out !== false ) :
 <section id="slider"<?php echo array_key_exists( 'container_class', $out ) ? $out['container_class'] : ''; ?><?php echo array_key_exists( 'data-attr', $out ) ? $out['data-attr'] : ''; ?>>
   <div class="container">
     <div class="row">
-      <div class="slider__content">
+      <div class="slider__content" data-mh="slider-col">
         <?php
           echo array_key_exists( 'icon', $out ) ? $out['icon'] : '';
           echo array_key_exists( 'subtitle', $out ) ? $out['subtitle'] : '';

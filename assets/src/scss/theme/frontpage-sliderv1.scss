@@ -5,13 +5,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: $color-light;
-  padding-top: 60px;
-  padding-bottom: 60px;
-
-  @media (min-width: 992px) {
-    padding-top: 90px;
-    padding-bottom: 90px;
-  }
 }
 
 .slider__image {
@@ -25,14 +18,29 @@
   img {
     @extend .img-responsive;
     @extend .img-full;
+    margin: 0;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
   }
+}
+.slider.float-image .slider__image img {
+  width: auto;
+  max-width: none;
 }
 
 .slider__content {
   @extend .col-md-7;
+  padding-top: 60px;
+  padding-bottom: 60px;
   text-align: center;
 
   @media (min-width: 992px) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    padding-right: 60px;
     text-align: left;
     hr {
       margin-left: 0;

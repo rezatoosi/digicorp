@@ -300,7 +300,7 @@ fieldset[disabled] .btn-primary.focus,
 
 .bg-highlight:before {
   content: ' ';
-  display: table;
+  display: block;
   position: absolute;
   top:0;
   left:0;
