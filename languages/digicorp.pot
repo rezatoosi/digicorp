@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-12-13T14:18:49+00:00\n"
+"POT-Creation-Date: 2020-12-13T19:22:28+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.2.0\n"
 "X-Domain: digicorpdomain\n"
@@ -181,12 +181,12 @@ msgid "Footer Vertical Menu"
 msgstr ""
 
 #: functions.php:101
-#: inc/customizer/class-digicorp-customizer-section-v4.php:316
+#: inc/customizer/class-digicorp-customizer-section-v4.php:318
 msgid "Small"
 msgstr ""
 
 #: functions.php:102
-#: inc/customizer/class-digicorp-customizer-section-v4.php:317
+#: inc/customizer/class-digicorp-customizer-section-v4.php:319
 msgid "Medium"
 msgstr ""
 
@@ -208,7 +208,7 @@ msgstr ""
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:122
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:126
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:112
-#: inc/customizer/class-digicorp-customizer-section-v4.php:184
+#: inc/customizer/class-digicorp-customizer-section-v4.php:186
 #: inc/customizer/sections/blog.php:24
 #: inc/customizer/sections/features.php:24
 #: inc/customizer/sections/projects.php:24
@@ -221,7 +221,7 @@ msgstr ""
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:133
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:137
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:123
-#: inc/customizer/class-digicorp-customizer-section-v4.php:200
+#: inc/customizer/class-digicorp-customizer-section-v4.php:202
 #: inc/customizer/sections/blog.php:35
 #: inc/customizer/sections/features.php:35
 #: inc/customizer/sections/projects.php:35
@@ -234,7 +234,7 @@ msgstr ""
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:150
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:154
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:140
-#: inc/customizer/class-digicorp-customizer-section-v4.php:222
+#: inc/customizer/class-digicorp-customizer-section-v4.php:224
 #: inc/customizer/sections/blog.php:51
 #: inc/customizer/sections/features.php:51
 #: inc/customizer/sections/projects.php:51
@@ -245,7 +245,7 @@ msgstr ""
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:167
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:171
-#: inc/customizer/class-digicorp-customizer-section-v4.php:266
+#: inc/customizer/class-digicorp-customizer-section-v4.php:268
 msgid "Description Text"
 msgstr ""
 
@@ -256,7 +256,7 @@ msgstr ""
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:221
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:225
-#: inc/customizer/class-digicorp-customizer-section-v4.php:395
+#: inc/customizer/class-digicorp-customizer-section-v4.php:413
 msgid "Icon Image"
 msgstr ""
 
@@ -268,21 +268,21 @@ msgstr ""
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:233
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:237
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:182
-#: inc/customizer/class-digicorp-customizer-section-v4.php:419
+#: inc/customizer/class-digicorp-customizer-section-v4.php:437
 msgid "Container CSS Class"
 msgstr ""
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:245
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:249
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:194
-#: inc/customizer/class-digicorp-customizer-section-v4.php:465
+#: inc/customizer/class-digicorp-customizer-section-v4.php:483
 msgid "Backgound Color"
 msgstr ""
 
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:256
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:260
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:205
-#: inc/customizer/class-digicorp-customizer-section-v4.php:486
+#: inc/customizer/class-digicorp-customizer-section-v4.php:504
 #: inc/customizer/sections/slider-typed.php:81
 msgid "Backgound Image"
 msgstr ""
@@ -290,7 +290,7 @@ msgstr ""
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v2.php:257
 #: inc/customizer/class-digicorp-customizer-frontpage-sections-v3.php:261
 #: inc/customizer/class-digicorp-customizer-frontpage-sections.php:206
-#: inc/customizer/class-digicorp-customizer-section-v4.php:487
+#: inc/customizer/class-digicorp-customizer-section-v4.php:505
 #: inc/customizer/sections/slider-typed.php:82
 msgid "Minimum width: 2kpx"
 msgstr ""
@@ -309,7 +309,7 @@ msgstr ""
 msgid "Call To Action Page"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:137
+#: inc/customizer/class-digicorp-customizer-section-v4.php:139
 #: inc/customizer/customizer.php:102
 #: inc/customizer/customizer.php:125
 #: inc/customizer/customizer.php:143
@@ -322,129 +322,133 @@ msgstr ""
 msgid "Add & Edit Widgets"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:244
+#: inc/customizer/class-digicorp-customizer-section-v4.php:246
 msgid "Display seprator line"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:288
+#: inc/customizer/class-digicorp-customizer-section-v4.php:290
 msgid "Image"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:289
+#: inc/customizer/class-digicorp-customizer-section-v4.php:291
 msgid "Set image of this section"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:311
+#: inc/customizer/class-digicorp-customizer-section-v4.php:313
 msgid "Image size"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:312
+#: inc/customizer/class-digicorp-customizer-section-v4.php:314
 msgid "Wich size of image do you want to load in page?"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:315
-#: inc/customizer/class-digicorp-customizer-section-v4.php:445
-#: inc/customizer/class-digicorp-customizer-section-v4.php:512
+#: inc/customizer/class-digicorp-customizer-section-v4.php:317
+#: inc/customizer/class-digicorp-customizer-section-v4.php:463
+#: inc/customizer/class-digicorp-customizer-section-v4.php:530
 msgid "Default"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:318
+#: inc/customizer/class-digicorp-customizer-section-v4.php:320
 msgid "Orginal"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:373
+#: inc/customizer/class-digicorp-customizer-section-v4.php:336
+msgid "Image float"
+msgstr ""
+
+#: inc/customizer/class-digicorp-customizer-section-v4.php:391
 msgid "Icon CSS Class"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:441
+#: inc/customizer/class-digicorp-customizer-section-v4.php:459
 msgid "Text color adjust"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:446
-#: inc/customizer/class-digicorp-customizer-section-v4.php:515
+#: inc/customizer/class-digicorp-customizer-section-v4.php:464
+#: inc/customizer/class-digicorp-customizer-section-v4.php:533
 msgid "Light"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:447
+#: inc/customizer/class-digicorp-customizer-section-v4.php:465
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:508
+#: inc/customizer/class-digicorp-customizer-section-v4.php:526
 msgid "Backgound Highlight"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:509
+#: inc/customizer/class-digicorp-customizer-section-v4.php:527
 msgid "Default is dark highlight if background image is set"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:513
+#: inc/customizer/class-digicorp-customizer-section-v4.php:531
 msgid "Drak"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:514
+#: inc/customizer/class-digicorp-customizer-section-v4.php:532
 msgid "Draker"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:516
+#: inc/customizer/class-digicorp-customizer-section-v4.php:534
 msgid "Lighter"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:517
+#: inc/customizer/class-digicorp-customizer-section-v4.php:535
 msgid "Red"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:518
+#: inc/customizer/class-digicorp-customizer-section-v4.php:536
 msgid "Blue"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:519
+#: inc/customizer/class-digicorp-customizer-section-v4.php:537
 msgid "Green"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:520
+#: inc/customizer/class-digicorp-customizer-section-v4.php:538
 msgid "Yellow"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:521
+#: inc/customizer/class-digicorp-customizer-section-v4.php:539
 msgid "No Highlight"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:553
+#: inc/customizer/class-digicorp-customizer-section-v4.php:571
 msgid "Background Image Position"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:579
+#: inc/customizer/class-digicorp-customizer-section-v4.php:597
 msgid "Backgound image size"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:601
+#: inc/customizer/class-digicorp-customizer-section-v4.php:619
 msgid "Backgound repeat"
 msgstr ""
 
 #. translators: Default Text for Slider CTA
-#: inc/customizer/class-digicorp-customizer-section-v4.php:643
+#: inc/customizer/class-digicorp-customizer-section-v4.php:661
 #: inc/customizer/customizer.php:285
 #: inc/customizer/sections/slider-typed.php:90
 msgid "CTA Button Text"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:644
+#: inc/customizer/class-digicorp-customizer-section-v4.php:662
 msgid "if set this, it overides buttons section"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:662
+#: inc/customizer/class-digicorp-customizer-section-v4.php:680
 msgid "CTA Button Link"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:680
+#: inc/customizer/class-digicorp-customizer-section-v4.php:698
 msgid "CTA Button Page"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:708
+#: inc/customizer/class-digicorp-customizer-section-v4.php:726
 msgid "Buttons"
 msgstr ""
 
-#: inc/customizer/class-digicorp-customizer-section-v4.php:709
+#: inc/customizer/class-digicorp-customizer-section-v4.php:727
 msgid "insert [a] tags, remember to use .btn as class."
 msgstr ""
 
