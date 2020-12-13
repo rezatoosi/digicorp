@@ -36,6 +36,7 @@ class Digicorp_Customizer_Section_V4
     'text',
     'image',
     'image_size',
+    'image_float',
     'widget',
     'icon_class',
     'icon_image',
@@ -107,6 +108,7 @@ class Digicorp_Customizer_Section_V4
                     'text',
                     'image',
                     'image_size',
+                    'image_float',
                     'widget',
                     'icon_class',
                     'icon_image',
@@ -284,7 +286,7 @@ class Digicorp_Customizer_Section_V4
         'transport'         => 'postMessage',
         'capability'        => 'edit_theme_options',
       ) );
-      $wp_customize->add_control(  new \WP_Customize_Upload_Control( $wp_customize, $setting_name, array(
+      $wp_customize->add_control(  new \WP_Customize_Media_Control( $wp_customize, $setting_name, array(
       	'label'       => __( 'Image', 'digicorpdomain' ),
       	'description' => __( 'Set image of this section', 'digicorpdomain' ),
         'mime_type'   => 'image',
@@ -317,6 +319,22 @@ class Digicorp_Customizer_Section_V4
             'medium'  =>  __( 'Medium', 'digicorpdomain' ),
             'full'  =>  __( 'Orginal', 'digicorpdomain' ),
           ),
+      	'section'     => $this->section,
+      ) ) );
+    }
+    // float image
+    $setting = 'image_float';
+    if ( $this->check_field( $setting ) ) {
+      $setting_name = $this->section . '_' . $setting;
+      $wp_customize->add_setting( $setting_name, array(
+      	'sanitize_callback' => 'digicorp_sanitize_checkbox',
+      	'default'           => 0,
+      	'transport'         => 'postMessage',
+        'capability'        => 'edit_theme_options',
+      ) );
+      $wp_customize->add_control(  new WP_Customize_Control( $wp_customize, $setting_name, array(
+      	'label'       => __( 'Image float', 'digicorpdomain' ),
+        'type'        => 'checkbox',
       	'section'     => $this->section,
       ) ) );
     }
@@ -778,6 +796,7 @@ class Digicorp_Customizer_Section_V4
                   if ( false == to ) {
                     elem.addClass( 'customizer-display-none' );
                   } else {
+                    console.log(to);
                     var data = {
                       action: 'digicorp_customizer_get_attachment_image_src',
                       image_id: to,
@@ -811,6 +830,16 @@ class Digicorp_Customizer_Section_V4
                         elem.removeClass( 'customizer-display-none' );
                       }
                     );
+                  }
+                } );
+              } );
+
+              wp.customize( '<?php echo $this->section ?>_image_float', function( value ) {
+                value.bind( function( to ) {
+                  if ( 1 == to ) {
+                    $( '<?php echo $this->selector( 'section' ); ?>' ).addClass( 'float-image' );
+                  } else if ( 0 == to ) {
+                    $( '<?php echo $this->selector( 'section' ); ?>' ).removeClass( 'float-image' );
                   }
                 } );
               } );
@@ -1097,6 +1126,7 @@ class Digicorp_Customizer_Section_V4_Creator
         'text',
         'image',
         'image_size',
+        'image_float',
         'widget',
         'icon_class',
         'icon_image',
@@ -1201,6 +1231,10 @@ class Digicorp_Customizer_Section_V4_Creator
 
       if ( in_array( $mods['text_color_adjust'], array( 'text-light', 'text-dark' ) ) ) {
         $mods['container_class'][] = $mods['text_color_adjust'];
+      }
+
+      if( $mods['image_float'] ) {
+        $mods['container_class'][] = 'float-image';
       }
 
       // remove empty elements
