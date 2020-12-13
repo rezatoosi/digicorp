@@ -37,15 +37,15 @@ if( ! function_exists('digicorp_enqueue_scripts') ):
 
     // wp_enqueue_style( 'ariana-style', get_stylesheet_uri() );
     if ( is_rtl() /* && 'fa_IR' == get_locale() */) {
-      wp_enqueue_style( 'digicorp-styles', get_template_directory_uri() . '/style-rtl.css' );
+      wp_enqueue_style( 'digicorp-styles', get_template_directory_uri() . '/style-rtl.css', array(), '1.0.1' );
     }
     else {
-      wp_enqueue_style( 'digicorp-styles', get_template_directory_uri() . '/style.css' );
+      wp_enqueue_style( 'digicorp-styles', get_template_directory_uri() . '/style.css', array(), '1.0.1' );
       wp_enqueue_style( 'google-fonts-montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:400,700' );
       wp_enqueue_style( 'google-fonts-ubuntu', 'https://fonts.googleapis.com/css?family=Ubuntu:400,700italic,700,500italic,500,400italic,300italic,300&amp;subset=latin,latin-ext' );
     }
 
-    wp_enqueue_script( 'digicorp-scripts', get_template_directory_uri() . '/assets/dist/js/bundle.js', array(), '1.0', true);
+    wp_enqueue_script( 'digicorp-scripts', get_template_directory_uri() . '/assets/dist/js/bundle.js', array(), '1.0.1', true);
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
       wp_enqueue_script( 'comment-reply' );
