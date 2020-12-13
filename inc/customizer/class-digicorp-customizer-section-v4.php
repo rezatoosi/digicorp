@@ -284,7 +284,7 @@ class Digicorp_Customizer_Section_V4
         'transport'         => 'postMessage',
         'capability'        => 'edit_theme_options',
       ) );
-      $wp_customize->add_control(  new \WP_Customize_Media_Control( $wp_customize, $setting_name, array(
+      $wp_customize->add_control(  new \WP_Customize_Upload_Control( $wp_customize, $setting_name, array(
       	'label'       => __( 'Image', 'digicorpdomain' ),
       	'description' => __( 'Set image of this section', 'digicorpdomain' ),
         'mime_type'   => 'image',
