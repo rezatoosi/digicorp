@@ -35,10 +35,12 @@ class Digicorp_Customizer_Section_V4
     'display_hr',
     'text',
     'image',
+    'image_size',
     'widget',
     'icon_class',
     'icon_image',
     'container_class',
+    'text-color',
     'bg_color',
     'bg_img',
     'bg_highlight',
@@ -104,10 +106,12 @@ class Digicorp_Customizer_Section_V4
                     'display_hr',
                     'text',
                     'image',
+                    'image_size',
                     'widget',
                     'icon_class',
                     'icon_image',
                     'container_class',
+                    'text_color_adjust',
                     'bg_color',
                     'bg_img',
                     'bg_highlight',
@@ -287,10 +291,34 @@ class Digicorp_Customizer_Section_V4
         'settings'    => $setting_name,
       	'section'     => $this->section,
       ) ) );
-      // $wp_customize->selective_refresh->add_partial( $setting_name, array(
-      //   'selector'        => $selector,
-      //   'render_callback' => function() { return get_theme_mod( $this->section . '_image' ); },
-      // ) );
+      $wp_customize->selective_refresh->add_partial( $setting_name, array(
+        'selector'        => $selector,
+        'render_callback' => function() { return '<img src="' . get_theme_mod( $this->section . '_image' ) . '"/>'; },
+      ) );
+    }
+
+    // image size
+    $setting = 'image_size';
+    if ( $this->check_field( $setting ) ) {
+      $setting_name = $this->section . '_' . $setting;
+      $wp_customize->add_setting( $setting_name, array(
+      	'sanitize_callback' => 'digicorp_sanitize_select',
+      	'default'           => 'default',
+      	'transport'         => 'postMessage',
+        'capability'        => 'edit_theme_options',
+      ) );
+      $wp_customize->add_control(  new WP_Customize_Control( $wp_customize, $setting_name, array(
+      	'label'       => __( 'Image size', 'digicorpdomain' ),
+      	'description' => __( 'Wich size of image do you want to load in page?', 'digicorpdomain' ),
+        'type'        => 'select',
+        'choices'     =>  array(
+            'default'  =>  __( 'Default', 'digicorpdomain' ),
+            'small'  =>  __( 'Small', 'digicorpdomain' ),
+            'medium'  =>  __( 'Medium', 'digicorpdomain' ),
+            'full'  =>  __( 'Orginal', 'digicorpdomain' ),
+          ),
+      	'section'     => $this->section,
+      ) ) );
     }
 
     // widget
@@ -398,6 +426,30 @@ class Digicorp_Customizer_Section_V4
       // ) );
     }
 
+    // text color
+    $setting = 'text_color_adjust';
+    if ( $this->check_field( $setting ) ) {
+      $setting_name = $this->section . '_' . $setting;
+      $selector = $this->selector( 'section' );
+      $wp_customize->add_setting( $setting_name, array(
+      	'sanitize_callback' => 'digicorp_sanitize_select',
+      	'default'           => 'default',
+      	'transport'         => 'postMessage',
+        'capability'        => 'edit_theme_options',
+      ) );
+      $wp_customize->add_control(  new WP_Customize_Control( $wp_customize, $setting_name, array(
+      	'label'       => __( 'Text color adjust', 'digicorpdomain' ),
+      	// 'description' => __( '', 'digicorpdomain' ),
+        'type'        => 'select',
+        'choices'     =>  array(
+            'default'     =>  __( 'Default', 'digicorpdomain' ),
+            'text-light'  =>  __( 'Light', 'digicorpdomain' ),
+            'text-dark'   =>  __( 'Dark', 'digicorpdomain' ),
+          ),
+      	'section'     => $this->section,
+      ) ) );
+    }
+
     // Background color
     $setting = 'bg_color';
     if ( $this->check_field( $setting ) ) {
@@ -457,12 +509,16 @@ class Digicorp_Customizer_Section_V4
       	'description' => __( 'Default is dark highlight if background image is set', 'digicorpdomain' ),
         'type'        => 'select',
         'choices'     =>  array(
-            'default'  =>  __( 'Default', 'digicorpdomain' ),
-            'highlight-dark'  =>  __( 'Drak highlight', 'digicorpdomain' ),
-            'highlight-darker'  =>  __( 'Draker highlight', 'digicorpdomain' ),
-            'highlight-light'  =>  __( 'Light highlight', 'digicorpdomain' ),
-            'highlight-main'  =>  __( 'Main color highlight', 'digicorpdomain' ),
-            'highlight-none'  =>  __( 'No Highlight', 'digicorpdomain' ),
+            'default'           =>  __( 'Default', 'digicorpdomain' ),
+            'highlight-dark'    =>  __( 'Drak', 'digicorpdomain' ),
+            'highlight-darker'  =>  __( 'Draker', 'digicorpdomain' ),
+            'highlight-light'   =>  __( 'Light', 'digicorpdomain' ),
+            'highlight-lighter' =>  __( 'Lighter', 'digicorpdomain' ),
+            'highlight-red'     =>  __( 'Red', 'digicorpdomain' ),
+            'highlight-blue'    =>  __( 'Blue', 'digicorpdomain' ),
+            'highlight-green'   =>  __( 'Green', 'digicorpdomain' ),
+            'highlight-yellow'  =>  __( 'Yellow', 'digicorpdomain' ),
+            'highlight-none'    =>  __( 'No Highlight', 'digicorpdomain' ),
           ),
       	'section'     => $this->section,
       ) ) );
@@ -716,15 +772,36 @@ class Digicorp_Customizer_Section_V4
               } );
 
               var ajaxurl = '<?php echo admin_url( 'admin-ajax.php' ); ?>';
-              wp.customize( '<?php echo $this->section ?>_image', function( value ) {
-                value.bind( function( to ) {
+              wp.customize( '<?php echo $this->section ?>_image','<?php echo $this->section ?>_image_size', function( image, image_size ) {
+                image.bind( function( to ) {
                   var elem = $( '<?php echo $this->selector( 'image' ); ?>' );
                   if ( false == to ) {
                     elem.addClass( 'customizer-display-none' );
                   } else {
                     var data = {
                       action: 'digicorp_customizer_get_attachment_image_src',
-                      image_id: to
+                      image_id: to,
+                      image_size: image_size
+                    };
+                    $.post(
+                      ajaxurl,
+                      data,
+                      function(res) {
+                        elem.attr('src',res);
+                        elem.removeClass( 'customizer-display-none' );
+                      }
+                    );
+                  }
+                } );
+                image_size.bind( function( to ) {
+                  var elem = $( '<?php echo $this->selector( 'image' ); ?>' );
+                  if ( ! wp.customize.value('<?php echo $this->section ?>_image').get() ) {
+                    elem.addClass( 'customizer-display-none' );
+                  } else {
+                    var data = {
+                      action: 'digicorp_customizer_get_attachment_image_src',
+                      image_id: image,
+                      image_size: to
                     };
                     $.post(
                       ajaxurl,
@@ -766,6 +843,20 @@ class Digicorp_Customizer_Section_V4
                 } );
               } );
 
+              wp.customize( '<?php echo $this->section ?>_text_color_adjust', function( value ) {
+                value.bind( function( to ) {
+                  var elem = $( '<?php echo $this->selector( 'section' ); ?>' );
+
+                  elem.removeClass('text-light')
+                    .removeClass('text-dark');
+
+                  if (to != 'default') {
+                    elem.addClass(to);
+                  }
+
+                } );
+              } );
+
               wp.customize( '<?php echo $this->section ?>_bg_color', function( value ) {
                 value.bind( function( to ) {
                   $( '<?php echo $this->selector( 'section' ); ?>' ).css( 'background-color', to );
@@ -788,9 +879,13 @@ class Digicorp_Customizer_Section_V4
 
                   var removeAll = function(el) {
                     el.removeClass('bg-highlight')
-                        .removeClass('bg-highlight-lightblack')
-                        .removeClass('bg-highlight-white')
-                        .removeClass('bg-highlight-main');
+                      .removeClass('bg-highlight-lightblack')
+                      .removeClass('bg-highlight-light')
+                      .removeClass('bg-highlight-lighter')
+                      .removeClass('bg-highlight-red')
+                      .removeClass('bg-highlight-blue')
+                      .removeClass('bg-highlight-green')
+                      .removeClass('bg-highlight-yellow');
                   };
 
                   removeAll(elem);
@@ -803,10 +898,22 @@ class Digicorp_Customizer_Section_V4
                       elem.addClass( 'bg-highlight' );
                       break;
                     case 'highlight-light':
-                      elem.addClass( 'bg-highlight' ).addClass('bg-highlight-white');
+                      elem.addClass( 'bg-highlight' ).addClass('bg-highlight-light');
                       break;
-                    case 'highlight-main':
-                      elem.addClass( 'bg-highlight' ).addClass('bg-highlight-main');
+                    case 'highlight-lighter':
+                      elem.addClass( 'bg-highlight' ).addClass('bg-highlight-lighter');
+                      break;
+                    case 'highlight-red':
+                      elem.addClass( 'bg-highlight' ).addClass('bg-highlight-red');
+                      break;
+                    case 'highlight-blue':
+                      elem.addClass( 'bg-highlight' ).addClass('bg-highlight-blue');
+                      break;
+                    case 'highlight-green':
+                      elem.addClass( 'bg-highlight' ).addClass('bg-highlight-green');
+                      break;
+                    case 'highlight-yellow':
+                      elem.addClass( 'bg-highlight' ).addClass('bg-highlight-yellow');
                       break;
                     case 'highlight-none':
                       removeAll(elem);
@@ -946,7 +1053,11 @@ class Digicorp_Customizer_Section_V4
 
   function digicorp_customizer_get_attachment_image_src() {
     $image_id = $_POST['image_id'];
-    echo wp_get_attachment_image_src( $image_id, 'medium' )[0];
+    $image_size = $_POST['image_size'];
+    if ( ! in_array( $image_size, array( 'small', 'medium', 'full' ) ) ) {
+      $image_size = 'medium';
+    }
+    echo wp_get_attachment_image_src( $image_id, $image_size )[0];
     wp_die();
   }
 
@@ -985,10 +1096,12 @@ class Digicorp_Customizer_Section_V4_Creator
         'display_hr',
         'text',
         'image',
+        'image_size',
         'widget',
         'icon_class',
         'icon_image',
         'container_class',
+        'text_color_adjust',
         'bg_color',
         'bg_img',
         'bg_highlight',
@@ -1008,6 +1121,13 @@ class Digicorp_Customizer_Section_V4_Creator
       }
 
       // var_dump( $mods );
+
+      /*
+      ** set default image size
+      */
+      if ( ! ( $mods['image_size'] ) || $mods['image_size'] == 'default' ) {
+        $mods['image_size'] = 'medium';
+      }
 
       /*
       ** generate container_class
@@ -1040,12 +1160,32 @@ class Digicorp_Customizer_Section_V4_Creator
 
         case 'highlight-light':
           $mods['container_class'][] = 'bg-highlight';
-          $mods['container_class'][] = 'bg-highlight-white';
+          $mods['container_class'][] = 'bg-highlight-light';
           break;
 
-        case 'highlight-main':
+        case 'highlight-lighter':
           $mods['container_class'][] = 'bg-highlight';
-          $mods['container_class'][] = 'bg-highlight-main';
+          $mods['container_class'][] = 'bg-highlight-lighter';
+          break;
+
+        case 'highlight-red':
+          $mods['container_class'][] = 'bg-highlight';
+          $mods['container_class'][] = 'bg-highlight-red';
+          break;
+
+        case 'highlight-blue':
+          $mods['container_class'][] = 'bg-highlight';
+          $mods['container_class'][] = 'bg-highlight-blue';
+          break;
+
+        case 'highlight-green':
+          $mods['container_class'][] = 'bg-highlight';
+          $mods['container_class'][] = 'bg-highlight-green';
+          break;
+
+        case 'highlight-yellow':
+          $mods['container_class'][] = 'bg-highlight';
+          $mods['container_class'][] = 'bg-highlight-yellow';
           break;
 
         case 'highlight-none':
@@ -1057,6 +1197,10 @@ class Digicorp_Customizer_Section_V4_Creator
             $mods['container_class'][] = 'bg-highlight';
           }
           break;
+      }
+
+      if ( in_array( $mods['text_color_adjust'], array( 'text-light', 'text-dark' ) ) ) {
+        $mods['container_class'][] = $mods['text_color_adjust'];
       }
 
       // remove empty elements
@@ -1199,7 +1343,7 @@ class Digicorp_Customizer_Section_V4_Creator
         $out['image'] = sprintf(
           $template['image'],
           $this->css_classes['image_container'],
-          wp_get_attachment_image_src( $mods['image'], 'medium' )[0],
+          wp_get_attachment_image_src( $mods['image'], $mods['image_size'] )[0],
           $mods['title'] ? $mods['title'] : ''
         );
       }

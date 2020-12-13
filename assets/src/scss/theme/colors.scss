@@ -313,12 +313,28 @@ fieldset[disabled] .btn-primary.focus,
   background-color: rgba(0,0,0,0.4);
 }
 
-.bg-highlight.bg-highlight-main:before {
+.bg-highlight.bg-highlight-light:before {
+  background-color: rgba(255,255,255,0.4);
+}
+
+.bg-highlight.bg-highlight-lighter:before {
+  background-color: rgba(255,255,255,0.6);
+}
+
+.bg-highlight.bg-highlight-red:before {
   background-color: rgba(255,0,34,0.8);
 }
 
-.bg-highlight.bg-highlight-white:before {
-  background-color: rgba(255,255,255,0.6);
+.bg-highlight.bg-highlight-blue:before {
+  background-color: rgba(0,200,255,0.5);
+}
+
+.bg-highlight.bg-highlight-green:before {
+  background-color: rgba(0,255,0,0.5);
+}
+
+.bg-highlight.bg-highlight-yellow:before {
+  background-color: rgba(255,255,0,0.5);
 }
 
 @media (max-width: 768px) {

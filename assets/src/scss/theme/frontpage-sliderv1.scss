@@ -4,6 +4,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: $color-light;
   padding-top: 60px;
   padding-bottom: 60px;
 
@@ -29,7 +30,6 @@
 
 .slider__content {
   @extend .col-md-7;
-  color: $color-light;
   text-align: center;
 
   @media (min-width: 992px) {
@@ -116,4 +116,36 @@
       padding: 8px 15px;
     }
   }
+}
+
+
+// text-dark
+.slider.text-dark {
+  color: $color-dark;
+
+  .slider__content hr {
+    border-color: $color-dark;
+    background-color: $color-dark;
+  }
+
+  .slider__content-title h1 {
+    color: $color-darker;
+  }
+
+  .slider__content-buttons .btn {
+    border-color: $color-dark !important;
+    color: $color-dark !important;
+    svg {
+      fill: $color-dark !important;
+    }
+
+    &:hover {
+      background-color: $color-dark !important;
+      color: $color-light !important;
+      svg {
+        fill: $color-light !important;
+      }
+    }
+  }
+
 }
