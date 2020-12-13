@@ -637,13 +637,17 @@ button.navbar-toggle {
     position: absolute;
     top: 50%;
     margin-top: -10px;
-    right: 28px
+    right: 28px;
+    border: 0;
+    outline: 0;
 }
 
 .search-form .search-submit svg,.search-form-wrapper .search-submit svg {
     fill: #333;
     width: 20px;
-    height: 20px
+    height: 20px;
+    border: 0;
+    outline: 0;
 }
 
 .search-form-wrapper {
