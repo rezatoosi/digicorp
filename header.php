@@ -48,9 +48,8 @@
         <header class="header fixed-header">
             <div class="container">
                 <nav class="navbar navbar-default navbar-static-top">
-
                         <div class="navbar-header">
-                            <?php the_custom_logo(); ?>
+                            <?php digicorp_the_logo(); ?>
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                 <span class="sr-only">
                                   <?php

@@ -267,6 +267,47 @@
  	}
  endif;
 
+ if ( ! function_exists( 'digicorp_the_logo' ) ) {
+   /*
+   ** Generate the logo markup
+   */
+   function digicorp_the_logo() {
+      $title = sprintf( '%s | %s', get_bloginfo('name'), get_bloginfo( 'description' ) );
+      $url = home_url('/');
+      $logo_url = wp_get_attachment_image_url( get_theme_mod( 'custom_logo' ), 'full' );
+      $markup =
+        '<div itemscope itemtype="http://schema.org/Organization">
+          <a itemprop="url" href="%1$s" title="%2$s" class="%3$s">
+            <img itemprop="logo" src="%4$s" alt="%2$s" />
+            <span class="sr-only">%2$s</span>
+          </a>
+        </div>';
+
+      printf(
+        $markup,
+        $url,
+        $title,
+        'navbar-brand',
+        $logo_url
+      );
+
+      $json = '<script type="application/ld+json">
+                {
+                "@context": "http://schema.org/",
+                "@type": "Organization",
+                "url": "%s",
+                "logo": "%s"
+                }
+              </script>';
+
+      printf(
+        $json,
+        $url,
+        $logo_url
+      );
+   }
+ }
+
  if ( ! function_exists( 'digicorp_breadcrumb' ) ) :
  	/**
  	 * Prints HTML with meta information for the current post-date/time.
