@@ -24,7 +24,7 @@
       var css = '.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}';
       var div = document.createElement("div");
       div.innerHTML = '<p>x</p><style id="fit-vids-style">' + css + '</style>';
-      head.appendChild(div.childNodes[1]);
+      // head.appendChild(div.childNodes[1]); //commented by reza: moved to tyles (fit-vids.scss)
     }
 
     if ( options ) {
@@ -79,9 +79,9 @@
       });
     });
   };
-  
+
   // Internal counter for unique video names.
   $.fn.fitVids._count = 0;
-  
+
 // Works with either jQuery or Zepto
 })( window.jQuery || window.Zepto );
