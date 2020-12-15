@@ -60,7 +60,9 @@
 
       <div class="back-to-top"><button id="btn-backtop" class="back-to-top-btn"><i class="fa fa-chevron-up"></i></button></div>
       <?php wp_footer(); ?>
-      <!-- W3TC-include-css -->
+
       <!-- W3TC-include-js-head -->
+      <!-- W3TC-include-js-body-start -->
+      <!-- W3TC-include-js-body-end -->
   </body>
 </html>
