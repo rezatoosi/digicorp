@@ -32,7 +32,7 @@ if( ! function_exists('ariana_theme_setup') ):
         __( 'Footer Vertical Menu', 'digicorpdomain' )
       );
 
-      add_theme_support( 'html5' );
+      add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
 
       // do nothing? just add a class to body
       // add_theme_support( 'responsive-embeds' );
