@@ -163,3 +163,7 @@ add_filter('wpseo_breadcrumb_single_link', function( $link_output) {
   });
 
 add_filter( 'feed_links_show_comments_feed', '__return_false' );
+
+
+// Remove <p> and <br/> from Contact Form 7
+add_filter('wpcf7_autop_or_not', '__return_false');
