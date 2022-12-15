@@ -86,9 +86,12 @@ class Digicorp_MslsOutput extends MslsOutput {
 				// 	);
 				// }
 			}
+		} else {
+			$url = "";
 		}
 
 		$url = str_replace( '%', '%%', $url);
+		// echo $url;
 
 		return $url;
 	}
